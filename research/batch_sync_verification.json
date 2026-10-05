@@ -1,0 +1,121 @@
+{
+  "verified_at": "2026-10-05T09:18:05.640168+00:00",
+  "batch_summary": {
+    "details": {
+      "saved": 10
+    },
+    "schedules": {
+      "saved": 5,
+      "failed": 5
+    }
+  },
+  "database_counts": {
+    "certificates": 613,
+    "details": 10,
+    "schedule_phases": 36,
+    "certificates_with_schedules": 6
+  },
+  "duplicate_schedule_keys": 0,
+  "api_checks": [
+    {
+      "qnet_code": "1320",
+      "name": "정보처리기사",
+      "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 6,
+      "batch_schedule_status": "saved",
+      "schedule_error_type": null
+    },
+    {
+      "qnet_code": "1431",
+      "name": "산업안전기사",
+      "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 6,
+      "batch_schedule_status": "failed",
+      "schedule_error_type": "timeout"
+    },
+    {
+      "qnet_code": "1150",
+      "name": "전기기사",
+      "certificate_id": "1b76163a-8229-4cd8-b7d0-f277195a2b74",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 6,
+      "batch_schedule_status": "saved",
+      "schedule_error_type": null
+    },
+    {
+      "qnet_code": "1630",
+      "name": "건축기사",
+      "certificate_id": "d8edfdba-b9ca-43dc-9aa6-4ea6d0515765",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 6,
+      "batch_schedule_status": "saved",
+      "schedule_error_type": null
+    },
+    {
+      "qnet_code": "1250",
+      "name": "토목기사",
+      "certificate_id": "aca18d37-a53a-452b-87c0-8165a4fb78ba",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 0,
+      "batch_schedule_status": "failed",
+      "schedule_error_type": "provider_error"
+    },
+    {
+      "qnet_code": "2290",
+      "name": "정보처리산업기사",
+      "certificate_id": "2b635f4b-55ff-4107-8d8a-96f8b2ef01e7",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 6,
+      "batch_schedule_status": "saved",
+      "schedule_error_type": null
+    },
+    {
+      "qnet_code": "2140",
+      "name": "전기산업기사",
+      "certificate_id": "15c4e260-6e04-4126-ba82-53b4cd6daa0b",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 6,
+      "batch_schedule_status": "saved",
+      "schedule_error_type": null
+    },
+    {
+      "qnet_code": "7910",
+      "name": "한식조리기능사",
+      "certificate_id": "76f9e2b0-e3d5-47c9-916a-5cf5623f2105",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 0,
+      "batch_schedule_status": "failed",
+      "schedule_error_type": "timeout"
+    },
+    {
+      "qnet_code": "7780",
+      "name": "전기기능사",
+      "certificate_id": "51fd9532-b931-4603-8732-439c3ef3d095",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 0,
+      "batch_schedule_status": "failed",
+      "schedule_error_type": "timeout"
+    },
+    {
+      "qnet_code": "6892",
+      "name": "정보기기운용기능사",
+      "certificate_id": "bc4c547f-af0c-4694-ad29-16159ec94e77",
+      "detail_http_status": 200,
+      "schedule_http_status": 200,
+      "stored_schedule_count": 0,
+      "batch_schedule_status": "failed",
+      "schedule_error_type": "timeout"
+    }
+  ]
+}

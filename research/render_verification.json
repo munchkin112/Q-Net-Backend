@@ -1,0 +1,45 @@
+{
+  "database_health": {
+    "configured": true,
+    "connected": true,
+    "tables_ready": true,
+    "missing_tables": [],
+    "status": "ready"
+  },
+  "counts": {
+    "certificates": 613,
+    "schedules": 6,
+    "users": 0,
+    "user_profiles": 0
+  },
+  "categories": [
+    {
+      "category": "S",
+      "count": 100
+    },
+    {
+      "category": "T",
+      "count": 513
+    }
+  ],
+  "certificate": {
+    "id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+    "qnet_code": "1320",
+    "name": "정보처리기사"
+  },
+  "schedule_phases": {
+    "practical": 3,
+    "written": 3
+  },
+  "api_statuses": {
+    "health_database": 200,
+    "certificate_search": 200,
+    "schedules": 200,
+    "docs": 200
+  },
+  "leading_zero_preserved": true,
+  "integration_test": "passed_in_temporary_schema_and_rolled_back",
+  "temporary_schemas_remaining": 0,
+  "verified_at": "2026-10-05T07:33:50.763815+00:00",
+  "ssl_verified": true
+}

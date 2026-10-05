@@ -1,0 +1,704 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+			contResizeH("contents_frame_2");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_2", "contents_text_2", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					<b class="headLine3">
+						검정형 자격 시험일정
+					</b>
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기능사 1회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.01.06<br/> ~ <br/>2026.01.09
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.01.14<br/> ~ <br/>2026.01.15]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.01.20<br/>~<br/>2026.01.24
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.01.30</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.02.02<br/>~<br/>2026.02.05<br/>빈자리접수 :<br/>2026.03.08<br/> ~ <br/>2026.03.09</td><td>2026.03.14<br/> ~ <br/>2026.04.05</td><td>2026.04.10</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능사 2회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.03.16<br/> ~ <br/>2026.03.20
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.03.29<br/> ~ <br/>2026.03.30]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.04.04<br/>~<br/>2026.04.09
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.04.22</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.04.27<br/>~<br/>2026.04.30<br/>빈자리접수 :<br/>2026.05.24<br/> ~ <br/>2026.05.25</td><td>2026.05.30<br/> ~ <br/>2026.06.14</td><td>2026.06.26</td>
+								</tr>
+	
+								<tr>
+								
+									<td>2026년 정기 기능사</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+									<td colspan="3" class="txt_center">산업수요 맞춤형 고등학교 및 특성화 고등학교<br/>필기시험 면제자 검정<br/>※ 일반인 필기시험 면제자 응시 불가</td>
+	
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.05.11<br/>~<br/>2026.05.14<td>2026.06.13<br/> ~ <br/>2026.06.24</td><td>2026.07.10</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능사 3회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.06.08<br/> ~ <br/>2026.06.11
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.06.21<br/> ~ <br/>2026.06.22]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.06.27<br/>~<br/>2026.07.02
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.07.15</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.07.27<br/>~<br/>2026.07.30<br/>빈자리접수 :<br/>2026.08.23<br/> ~ <br/>2026.08.24</td><td>2026.08.29<br/> ~ <br/>2026.09.16</td><td>2026.10.02</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능사 4회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.08.24<br/> ~ <br/>2026.08.27
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.09.10<br/> ~ <br/>2026.09.11]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.09.16<br/>~<br/>2026.09.21
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.10.07</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.10.12<br/>~<br/>2026.10.15<br/>빈자리접수 :<br/>2026.11.08<br/> ~ <br/>2026.11.09</td><td>2026.11.14<br/> ~ <br/>2026.12.02</td><td>2026.12.11</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3">검정형 자격 시험정보 </b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">14,500원</td><td scope="col">36,600원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>컴퓨터응용선반기능사 출제경향</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" /><link rel="stylesheet" href="http://www.q-net.or.kr/editor_css/editor_default.css" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p><span style="FONT-FAMILY: 휴먼명조,한컴돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0.1pt; BACKGROUND-COLOR: #ffffff">- 필기시험의 내용은 고객만족&gt;자료실의 출제기준을 참고바랍니다.</span></p>
+<p><span style="FONT-FAMILY: 휴먼명조,한컴돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0.1pt; BACKGROUND-COLOR: #ffffff">- 정밀한 부품을 가공하기 위하여 가공 도면을 해독하고 작업계획을 수립하며 적합한 공구를 이용하여 내외경 단차,홈 및 테이퍼, 나사 등을 선반과 CNC선반을 운용하여 가공한 후, 공작물을 측정하여 필요시 수정하고, 장비를 점검, 정비, 관리하는 능력을 평가(공개도면 참조)</span><span style="FONT-SIZE: 20pt; FONT-FAMILY: MD아트체,한컴돋움; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 11pt; FONT-FAMILY: '굴림체'; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 11pt; FONT-FAMILY: '굴림체'; LINE-HEIGHT: 130%"><span style="FONT-FAMILY: '한컴바탕'"></p></span></span></span></span>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">시험과목 및 활용 국가직무능력표준(NCS)</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="시험과목 및 활용 국가직무능력표준(NCS) 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>컴퓨터응용선반기능사 시험과목 및 활용 국가직무능력표준(NCS)</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment--><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">◎ </span><span style="FONT-FAMILY: HY울릉도M">국가기술자격의 현장성과 활용성 제고를 위해 국가직무능력표준</span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">(NCS)</span><span style="FONT-FAMILY: HY울릉도M">를 기반으로 자격의 내용 </span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: HY울릉도M">시험과목</span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: HY울릉도M">출제</span> 
+<p class="0" style="MARGIN-LEFT: 20px; TEXT-AUTOSPACE: ; TEXT-INDENT: -15.5pt"><span style="FONT-FAMILY: HY울릉도M">&nbsp;&nbsp;&nbsp; 기준 등</span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: HY울릉도M">을 직무 중심으로 개편하여 시행합니다</span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">. (</span><span style="FONT-FAMILY: HY울릉도M">적용시기</span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">&lsquo;22.1.1.</span><span style="FONT-FAMILY: HY울릉도M">부터</span><span style="FONT-FAMILY: HY울릉도M; LETTER-SPACING: 0pt">)</span></p>
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 79px; VERTICAL-ALIGN: middle; BACKGROUND: #dfeaf5; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">필기과목명</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BACKGROUND: #dfeaf5; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">NCS </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">능력단위</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 75px; VERTICAL-ALIGN: middle; BACKGROUND: #dfeaf5; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">NCS </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">세분류</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 79px; VERTICAL-ALIGN: middle; BACKGROUND: #dfeaf5; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 2px solid">
+<p class="1" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">실기과목명</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BACKGROUND: #dfeaf5; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="1" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">NCS </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">능력단위</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 85px; VERTICAL-ALIGN: middle; BACKGROUND: #dfeaf5; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">NCS </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">세분류</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 263px; BORDER-RIGHT: #000000 1px solid; WIDTH: 79px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="12">
+<p class="0" style="VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; LAYOUT-GRID-MODE: none; TEXT-ALIGN: center; LINE-HEIGHT: 120%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">도면해독</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">측정 및 선반가공</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">도면해독</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 131px; BORDER-RIGHT: #000000 2px solid; WIDTH: 75px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="6">
+<p class="0" style="FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201600615&amp;ncsClCd=1502010107_14v2&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=01&amp;ncsCompeUnitCd=07&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff">선반가공</span></u></a></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 197px; BORDER-RIGHT: #000000 1px solid; WIDTH: 79px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 2px solid" rowspan="9">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; MARGIN-LEFT: 4px; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: ; MARGIN-RIGHT: 4px"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">컴퓨터응용선반가공 실무</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">기본 작업</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 109px; BORDER-RIGHT: #000000 2px solid; WIDTH: 85px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid" rowspan="5">
+<p class="0" style="FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201600615&amp;ncsClCd=1502010107_14v2&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=01&amp;ncsCompeUnitCd=07&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff">선반가공</span></u></a></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">안전규정준수</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">단순형상 작업</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">공구선정 </span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">홈 </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&middot; </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">테이퍼 작업</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">기본 작업</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">도면해독</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">단순형상 작업</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">안전규정준수 </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">홈 </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&middot; </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">테이퍼 작업</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">작업장유지관리 </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">밀링가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 85px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="0" style="FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201600616&amp;ncsClCd=1502010214_16v4&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=02&amp;ncsCompeUnitCd=14&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff">밀링가공</span></u></a></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 110%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">작업장유지관리</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">밀링가공</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 75px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201600616&amp;ncsClCd=1502010214_16v4&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=02&amp;ncsCompeUnitCd=14&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff">밀링가공</span></u></a></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">육안검사</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 43px; BORDER-RIGHT: #000000 2px solid; WIDTH: 85px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid" rowspan="2">
+<p class="0" style="FONT-SIZE: 8pt; WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201900119&amp;ncsClCd=1502010501_14v2&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=05&amp;ncsCompeUnitCd=01&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff">측정</span></u></a></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">기본측정기 사용</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">측정</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 65px; BORDER-RIGHT: #000000 2px solid; WIDTH: 75px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="3">
+<p class="0" style="FONT-SIZE: 8pt; WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201900119&amp;ncsClCd=1502010501_14v2&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=05&amp;ncsCompeUnitCd=01&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff">측정</span></u></a></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">기본측정기 사용</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">육안검사</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">측정</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">CNC</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반 조작</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 85px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">
+<p class="0" style="FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201900118&amp;ncsClCd=1502010413_18v2&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=04&amp;ncsCompeUnitCd=13&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff; LETTER-SPACING: 0pt">CAM</span></u></a></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">정밀측정</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 65px; BORDER-RIGHT: #000000 1px solid; WIDTH: 79px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; BORDER-LEFT: #000000 2px solid" rowspan="3">
+<p class="0" style="FONT-SIZE: 8pt; WORD-BREAK: keep-all; TEXT-ALIGN: center; MARGIN-LEFT: 4px; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: ; MARGIN-RIGHT: 4px"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">&nbsp; </span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 65px; BORDER-RIGHT: #000000 1px solid; WIDTH: 169px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; BORDER-LEFT: #000000 1px solid" rowspan="3">
+<p class="2" style="FONT-SIZE: 8pt; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">&nbsp; </span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 65px; BORDER-RIGHT: #000000 2px solid; WIDTH: 85px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; BORDER-LEFT: #000000 1px solid" rowspan="3">
+<p class="3" style="FONT-SIZE: 8pt; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">CNC</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반 조작</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 43px; BORDER-RIGHT: #000000 2px solid; WIDTH: 75px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><a href="https://www.ncs.go.kr/unity/hmn01/hmn0101/ncsResultSearch.do?dutySvcNo=SVC201900118&amp;ncsClCd=1502010413_18v2&amp;ncsLclasCd=15&amp;ncsMclasCd=02&amp;ncsSclasCd=01&amp;ncsSubdCd=04&amp;ncsCompeUnitCd=13&amp;doCompeUnit=false&amp;output=ncsRsnInfo" target="_blank"><u style="text-underline: #0000ff single"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; COLOR: #0000ff; LETTER-SPACING: 0pt">CAM</span></u></a></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 181px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="2" style="TEXT-ALIGN: center; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">CNC</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 한양중고딕">선반 가공 매뉴얼 프로그래밍</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="0" style="MARGIN-TOP: 13px; MARGIN-LEFT: 32px; TEXT-AUTOSPACE: ; TEXT-INDENT: -24.3pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">☞ </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">NCS </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">세분류를 클릭하시면 관련 정보를 확인하실 수 있습니다</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">. </span></p>
+<p class="0" style="MARGIN-TOP: 13px; MARGIN-LEFT: 21px; TEXT-AUTOSPACE: ; TEXT-INDENT: -16.2pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체"></span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: 0pt">※ </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">국가직무능력표준</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">(NCS)</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">란</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">? </span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">산업현장에서 직무를 수행하기 위해 요구되는 지식</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">&middot;</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">기술</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: -1px">&middot;</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체">태도 등의 내용을 국가가 산업부문별</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체; LETTER-SPACING: 0pt">&middot;</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 굴림체">수준별로 체계화한 것</span></p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_2" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_2" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>컴퓨터응용선반기능사 취득방법</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9312; 시 행 처 : 한국산업인력공단</span></p>
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9313; </span></span></span>시험과목</span></p>
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 필기 1.&nbsp;도면해독 2.&nbsp;측정 3.&nbsp;선반가공</span></p>
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 실기 :&nbsp;컴퓨터응용선반가공 실무</span></p>
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9314;</span>&nbsp;</span></span>검정방법</span></p>
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 필기 : 객관식 4지 택일형 60 문항(60분)&nbsp;</span></p>
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 실기 : 작업형(3시간30분, 100점)</span></p>
+<p><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9315;</span>&nbsp;</span>합격기준&nbsp;</span></p>
+<p><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 필기 : </span>100점을 만점으로 하여 60점 이상</span></p>
+<p><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 실기 : 100점을&nbsp;만점으로 하여 60점 이상</span></span></p><!-- 3등급------------------------------------------------------------------------------------------- -->
+<table style="FONT-SIZE: 12px; WIDTH: 700px; BORDER-BOTTOM: #000 1px solid; MARGIN: 20px 0px">
+<tbody>
+<tr>
+<td style="FONT-SIZE: 14px; BORDER-TOP: #000 1px solid; BACKGROUND: #ccc; FONT-WEIGHT: bold; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" colspan="3">작업형 실기시험 기본정보</td>
+</tr>
+<tr>
+<td style="WIDTH: 140px" rowspan="3"><img style="HEIGHT: 120px; WIDTH: 120px" alt="" src="http://www.q-net.or.kr/crsedt/websource/jsp/NamoCrsEdtMediaView.jsp?fileName=/images/000040/20210819141540688.jpg" /></td>
+<td style="WIDTH: 270px; FONT-WEIGHT: bold; TEXT-ALIGN: left; PADDING-TOP: 25px">안전등급(safety Level) : 3 등급</td>
+<td style="WIDTH: 190px; TEXT-ALIGN: right">
+<table style="WIDTH: 100%; BORDER-COLLAPSE: collapse; TEXT-ALIGN: center">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>▼</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr style="FONT-SIZE: 12px; COLOR: #fff">
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #5f6062; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">위험</td>
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #ff8800; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">경고</td>
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #7f8084; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">주의</td>
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #a7abae; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">관심</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td colspan="2">
+<table style="FONT-SIZE: 12px; BORDER-TOP: #000 2px solid; BORDER-RIGHT: #000 2px solid; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #000 2px solid; BORDER-LEFT: #000 2px solid">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; WIDTH: 30%; BORDER-BOTTOM: #999 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #999 1px solid; PADDING-RIGHT: 5px">&middot; 시험장소 구분</td>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #000 2px solid; PADDING-RIGHT: 5px">실내 &middot; 외</td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; WIDTH: 30%; BORDER-BOTTOM: #999 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #999 1px solid; PADDING-RIGHT: 5px">&middot; 주요시설 및 장비</td>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #000 2px solid; PADDING-RIGHT: 5px">CNC선반, 범용선반, 컴퓨터 등</td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; WIDTH: 30%; BORDER-BOTTOM: #999 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #999 1px solid; PADDING-RIGHT: 5px">&middot; 보호구</td>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #000 2px solid; PADDING-RIGHT: 5px">보안경, 안전화, 안전보호구 등</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td style="TEXT-ALIGN: justify" colspan="2">
+<ul style="LIST-STYLE-TYPE: circle; PADDING-LEFT: 20px; MARGIN: 0px">
+<li>보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.<br />반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다. </li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<p>○ 실기시험 안전작업 교육영상 url: <a href="https://youtu.be/jmu3CK8Y8n8?si=ULDAQSQIspCONitD" target="_blank">https://youtu.be/jmu3CK8Y8n8?si=ULDAQSQIspCONitD</a> </p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('6012', '94');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 컴퓨터응용선반기능사 (2022.1.1 ~ 2026.12.31)</span>
+			</a>
+			<br/>
+							
+			<a href="#" onclick="cst006Report('6012', '1374');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>2. 컴퓨터응용선반기능사 (2027.1.1 ~ 2031.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+		
+     <br/>
+		<b class="contTit1">과정평가형 자격 취득정보</b>
+			<ul class="txtList dot">
+				<li>
+				위 자격은 과정평가형으로도 취득할 수 있습니다.
+					<ul class="txtList hyphen">
+						<li>단, 해당종목을 운영하는 교육훈련기관이 있어야 가능</li>
+					</ul>
+				</li>
+				<li>
+					과정평가형 자격은 국가직무능력표준(NCS)을 기반으로 설계되어 지정된 교육·훈련과정을 충실히 이수한 후, 내·외부평가를 거쳐 일정 합격기준을 충족하는 교육훈련생에게 국가기술자격을 부여하는 제도입니다.
+				</li>
+				<li>
+					더 자세한 사항은 아래의 링크를 통하여 확인하시기 바랍니다.
+				<ul class="txtList hyphen">
+					<li>과정평가형 자격 홈페이지(CQ-Net) <a href="https://c.q-net.or.kr" target="_blank" title="과정평가형 자격 홈페이지(CQ-Net)  새창 열림" class="c_Point underline">https://c.q-net.or.kr</a></li>
+					<li>과정평가형 자격 편성기준
+						<a href="https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do" target="_blank" title="과정평가형 자격 편성기준 새창 열림" class="c_Point underline">
+							https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do
+						</a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+
+
+	
+
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

@@ -1,0 +1,44 @@
+{
+  "mode": "live",
+  "qnet_code": "1320",
+  "name": "정보처리기사",
+  "information": {
+    "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+    "subjects": {
+      "status": "available",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+      "retrieved_at": "2026-10-05T07:55:27.092705Z",
+      "written": [
+        "소프트웨어설계",
+        "소프트웨어개발",
+        "데이터베이스구축",
+        "프로그래밍언어활용",
+        "정보시스템구축관리"
+      ],
+      "practical": [
+        "정보처리 실무"
+      ]
+    },
+    "pass_criteria": {
+      "status": "available",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+      "retrieved_at": "2026-10-05T07:55:27.092705Z",
+      "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.",
+      "practical": "100점을 만점으로 하여 60점 이상."
+    },
+    "fees": {
+      "status": "available",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1320",
+      "retrieved_at": "2026-10-05T07:55:27.501161Z",
+      "written": 19400,
+      "practical": 22600,
+      "currency": "KRW"
+    },
+    "raw_acquisition_text": "정보처리기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 :모든 학과 응시가능\n시험과목\n- 필기 1. 소프트웨어설계 2. 소프트웨어개발 3. 데이터베이스구축 4. 프로그래밍언어활용 5. 정보시스템구축관리\n- 실기 : 정보처리 실무\n검정방법\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분)\n- 실기 : 필답형(2시간30분)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.\n- 실기 : 100점을 만점으로 하여 60점 이상.",
+    "raw_fee_text": "1차 : 19400, 2차 : 22600"
+  },
+  "detail_retry_count": 0,
+  "fee_retry_count": 1,
+  "database_applied": true,
+  "saved_retrieved_at": "2026-10-05T07:55:27.501161+00:00"
+}

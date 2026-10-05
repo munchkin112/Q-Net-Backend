@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-10-05T07:57:12.448116+00:00",
+  "counts": {
+    "certificates": 613,
+    "schedules": 6,
+    "exam_information": 1
+  },
+  "api_statuses": {
+    "detail": 200,
+    "uncollected_detail": 200,
+    "missing_certificate": 404,
+    "schedules": 200,
+    "database_health": 200
+  },
+  "detail": {
+    "id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+    "qnet_code": "1320",
+    "name": "정보처리기사",
+    "category": "T",
+    "career_tags": [],
+    "description": null,
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryListNationalQualifcationSVC/getList",
+    "last_synced_at": "2026-10-05T07:30:20.111489Z",
+    "updated_at": "2026-10-05T07:30:10.248547Z",
+    "exam_information": {
+      "subjects": {
+        "status": "available",
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+        "retrieved_at": "2026-10-05T07:55:27.092705Z",
+        "written": [
+          "소프트웨어설계",
+          "소프트웨어개발",
+          "데이터베이스구축",
+          "프로그래밍언어활용",
+          "정보시스템구축관리"
+        ],
+        "practical": [
+          "정보처리 실무"
+        ]
+      },
+      "pass_criteria": {
+        "status": "available",
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+        "retrieved_at": "2026-10-05T07:55:27.092705Z",
+        "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.",
+        "practical": "100점을 만점으로 하여 60점 이상."
+      },
+      "fees": {
+        "status": "available",
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1320",
+        "retrieved_at": "2026-10-05T07:55:27.501161Z",
+        "written": 19400,
+        "practical": 22600,
+        "currency": "KRW"
+      },
+      "retrieved_at": "2026-10-05T07:55:27.501161Z",
+      "updated_at": "2026-10-05T07:55:16.551052Z"
+    },
+    "data_status": "complete",
+    "source_type": "database",
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1320",
+    "message": "저장된 공식 시험정보입니다. 원본 조회 시각을 확인해주세요."
+  },
+  "integration_test": "passed_in_temporary_schema_and_rolled_back",
+  "temporary_schemas_remaining": 0
+}

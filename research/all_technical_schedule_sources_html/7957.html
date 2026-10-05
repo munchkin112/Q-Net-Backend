@@ -1,0 +1,368 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					<b class="headLine3">
+						검정형 자격 시험일정
+					</b>
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+									<td colspan="7" align="center" class="noArticle">
+										
+											<p class="no_article">시험 일정이 없습니다.</p>
+										
+									</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3">검정형 자격 시험정보 </b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">14,500원</td><td scope="col">17,200원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>미용사(네일) 취득방법</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p>&nbsp;</p>
+<p><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&#9312; </span><span style="FONT-FAMILY: 굴림">시 행 처 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 굴림">한국산업인력공단</span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&#9313; <span style="FONT-FAMILY: 굴림">시험과목</span></span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림">&nbsp;<span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">- </span></span></span></span>필기 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">: 네일화장품 적용 및 네일미용관리<span style="FONT-FAMILY: 굴림">(<span style="FONT-FAMILY: 굴림">공중위생관리학, 피부의 이해, 화장품 분류 포함) </span></span><span style="FONT-FAMILY: 굴림">등에 관한 사항</span></span></span></span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 굴림">실기 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">:&nbsp;네일미용실무</span></span></span></span></p>
+<p><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&#9314; </span><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림">검정방법</span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림">&nbsp;</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 굴림">필기 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 굴림">객관식 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">4</span><span style="FONT-FAMILY: 굴림">지 택일형</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">, 60</span><span style="FONT-FAMILY: 굴림">문항</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">(60</span><span style="FONT-FAMILY: 굴림">분</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">)</span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 굴림">실기 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">: 작업형(2시간 30분 정도, 100점)</span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&#9315;</span> </span><span style="FONT-FAMILY: 굴림">합격기준</span></span></p><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"></span>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림">&nbsp;</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 굴림">필기 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">:&nbsp;</span><span style="FONT-FAMILY: 굴림">100<span style="FONT-FAMILY: 굴림">점을 만점으로 하여 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">60</span><span style="FONT-FAMILY: 굴림">점 이상</span></span></span><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&nbsp;</span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 굴림">실기 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">: <span style="FONT-FAMILY: 굴림">100<span style="FONT-FAMILY: 굴림">점을 만점으로 하여 </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt">60</span><span style="FONT-FAMILY: 굴림">점 이상</span></span></span></span></p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림"></span></span></span></span>&nbsp;</p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림"><!--StartFragment--></span></span></span></span>
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #7f7f7f 1px solid; HEIGHT: 129px; BORDER-RIGHT: medium none; WIDTH: 128px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px" rowspan="5">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><img title="" style="BORDER-TOP: #000000 0px solid; HEIGHT: 120px; BORDER-RIGHT: #000000 0px solid; WIDTH: 120px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid" alt="" src="http://www.q-net.or.kr/crsedt/websource/jsp/NamoCrsEdtMediaView.jsp?fileName=/images/000037/20210812161636928.jpg" />&nbsp;&nbsp;</p></td>
+<td style="BORDER-TOP: #7f7f7f 1px solid; HEIGHT: 42px; BORDER-RIGHT: medium none; WIDTH: 221px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="FONT-SIZE: 6pt; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 6pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">&nbsp; </span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">안전등급</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">(Safety Level) : 1</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">등급</span></p></td>
+<td style="BORDER-TOP: #7f7f7f 1px solid; HEIGHT: 42px; BORDER-RIGHT: medium none; WIDTH: 227px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: 0pt">▼</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #5f6062; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">위험</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #7f8084; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">경고</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #a7abae; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">주의</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #86c140; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">관심</span></p></td>
+</tr>
+</tbody>
+</table></td>
+<td style="BORDER-TOP: #7f7f7f 1px solid; HEIGHT: 42px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999999 2px solid; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 124px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c; LETTER-SPACING: 0pt">&bull; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c">시험장소 구분</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c"> </span></p></td>
+<td style="BORDER-TOP: #999999 2px solid; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 324px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">실내 </span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 124px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c; LETTER-SPACING: 0pt">&bull; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c">주요시설 및 장비</span></p></td>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 324px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="FONT-SIZE: 9pt; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold">가위 등</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -0.6pt">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 124px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c; LETTER-SPACING: 0pt">&bull; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c">보호구</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림"> </span></p></td>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 324px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">보안경</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999999 2px solid; HEIGHT: 39px; BORDER-RIGHT: medium none; WIDTH: 448px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px" colspan="3">
+<p class="0" style="MARGIN-LEFT: 13px; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: ; TEXT-INDENT: -10.1pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -0.7pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">보호구</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">작업복 등</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">) </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">착용</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">정리정돈 상태</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">안전사항 등이 채점 대상이 될 수 있습니다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">.</span></p>
+<p class="0" style="MARGIN-LEFT: 13px; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: ; TEXT-INDENT: -10.1pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -0.7pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: 0pt">.</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 39px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; MARGIN-LEFT: 14px; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: ; TEXT-INDENT: -10.6pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 굴림"><span style="FONT-FAMILY: 굴림"></span></span></span></span>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('7957', '538');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 미용사(네일) (2022.1.1 ~ 2026.12.31)</span>
+			</a>
+			<br/>
+							
+			<a href="#" onclick="cst006Report('7957', '1343');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>2. 미용사(네일) (2027.1.1 ~ 2031.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+		
+     <br/>
+		<b class="contTit1">과정평가형 자격 취득정보</b>
+			<ul class="txtList dot">
+				<li>
+				위 자격은 과정평가형으로도 취득할 수 있습니다.
+					<ul class="txtList hyphen">
+						<li>단, 해당종목을 운영하는 교육훈련기관이 있어야 가능</li>
+					</ul>
+				</li>
+				<li>
+					과정평가형 자격은 국가직무능력표준(NCS)을 기반으로 설계되어 지정된 교육·훈련과정을 충실히 이수한 후, 내·외부평가를 거쳐 일정 합격기준을 충족하는 교육훈련생에게 국가기술자격을 부여하는 제도입니다.
+				</li>
+				<li>
+					더 자세한 사항은 아래의 링크를 통하여 확인하시기 바랍니다.
+				<ul class="txtList hyphen">
+					<li>과정평가형 자격 홈페이지(CQ-Net) <a href="https://c.q-net.or.kr" target="_blank" title="과정평가형 자격 홈페이지(CQ-Net)  새창 열림" class="c_Point underline">https://c.q-net.or.kr</a></li>
+					<li>과정평가형 자격 편성기준
+						<a href="https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do" target="_blank" title="과정평가형 자격 편성기준 새창 열림" class="c_Point underline">
+							https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do
+						</a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+
+
+	
+
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

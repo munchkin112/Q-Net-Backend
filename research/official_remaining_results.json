@@ -1,0 +1,858 @@
+{
+  "operation_documentation": [
+    {
+      "label": "operation_7196",
+      "source_url": "https://www.data.go.kr/tcs/dss/selectApiDetailFunction.do",
+      "params": {},
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:10:26.806155+09:00",
+      "http_method": "POST",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 9391,
+      "sha256": "d7ab4cbe22cc80afc0be3d5b1d48c3da9b9e94b3619f47c889bc139a53931cc3",
+      "response_file": "responses/operation_7196.html",
+      "elapsed_seconds": 0.11,
+      "operation_id": "7196",
+      "extracted": {
+        "tables": [
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "인증키",
+              "serviceKey",
+              "45",
+              "필수",
+              "공공데이터포털에서 받은 인증키",
+              "발급받은 인증키"
+            ]
+          ],
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "회차",
+              "description",
+              "30",
+              "필수",
+              "기사,산업기사(2014년도 제1회)",
+              "회차"
+            ],
+            [
+              "필기시험원서접수시작일자",
+              "docRegStartDt",
+              "8",
+              "필수",
+              "20140207",
+              "필기시험원서접수시작일자"
+            ],
+            [
+              "필기시험원서접수종료일자",
+              "docRegEndDt",
+              "8",
+              "필수",
+              "20140213",
+              "필기시험원서접수종료일자"
+            ],
+            [
+              "필기시험일자",
+              "docExamDt",
+              "8",
+              "필수",
+              "20140302",
+              "필기시험일자"
+            ],
+            [
+              "필기시험 합격(예정)자 발표일자",
+              "docPassDt",
+              "8",
+              "필수",
+              "20140314",
+              "필기시험 합격(예정)자 발표일자"
+            ],
+            [
+              "응시자격 서류제출 및 필기시험 합격자 결정시작일자",
+              "docSubmitStartDt",
+              "8",
+              "필수",
+              "20140317",
+              "응시자격 서류제출 및 필기시험 합격자 결정시작일자"
+            ],
+            [
+              "응시자격 서류제출 및 필기시험 합격자 결정종료일자",
+              "docSubmitEntDt",
+              "8",
+              "필수",
+              "20140327",
+              "응시자격 서류제출 및 필기시험 합격자 결정종료일자"
+            ],
+            [
+              "실기시험원서접수시작일자",
+              "pracRegStartDt",
+              "8",
+              "필수",
+              "20140317",
+              "실기시험원서접수시작일자"
+            ],
+            [
+              "실기시험원서접수종료일자",
+              "pracRegEndDt",
+              "8",
+              "필수",
+              "20140321",
+              "실기시험원서접수종료일자"
+            ],
+            [
+              "실기시험시작일자",
+              "pracExamStartDt",
+              "8",
+              "필수",
+              "20140419",
+              "실기시험시작일자"
+            ],
+            [
+              "실기시험종료일자",
+              "pracExamEndDt",
+              "8",
+              "필수",
+              "20140502",
+              "실기시험종료일자"
+            ],
+            [
+              "합격자발표일자",
+              "pracPassDt",
+              "8",
+              "필수",
+              "20140530",
+              "합격자발표일자"
+            ]
+          ]
+        ],
+        "content_markers": {
+          "시험일정": false,
+          "관련학과": false,
+          "시험과목": false,
+          "합격기준": false,
+          "수수료": false
+        },
+        "fees": [],
+        "visible_text": "\n 기사 및 산업기사 등급 시험 시행일정을 조회할 수 있습니다.\nAPI 기본 정보\n활용승인 절차\n 개발단계 :\n 자동승인\n / 운영단계 :\n 자동승인\n신청 가능 트래픽\n 개발계정 : 1,000\n / 운영계정 : 활용사례 등록시 신청하면 트래픽 증가 가능\n요청주소\n서비스 URL\n http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getEList\n요청변수(Request Parameter)\n해당 오픈API의 요청변수(Request Parameter) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n인증키\nserviceKey\n45\n필수\n공공데이터포털에서 받은 인증키\n발급받은 인증키\n출력결과(Response Element)\n해당 오픈API의 출력결과(Response Element) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n회차\ndescription\n30\n필수\n기사,산업기사(2014년도 제1회)\n회차\n필기시험원서접수시작일자\ndocRegStartDt\n8\n필수\n20140207\n필기시험원서접수시작일자\n필기시험원서접수종료일자\ndocRegEndDt\n8\n필수\n20140213\n필기시험원서접수종료일자\n필기시험일자\ndocExamDt\n8\n필수\n20140302\n필기시험일자\n필기시험 합격(예정)자 발표일자\ndocPassDt\n8\n필수\n20140314\n필기시험 합격(예정)자 발표일자\n응시자격 서류제출 및 필기시험 합격자 결정시작일자\ndocSubmitStartDt\n8\n필수\n20140317\n응시자격 서류제출 및 필기시험 합격자 결정시작일자\n응시자격 서류제출 및 필기시험 합격자 결정종료일자\ndocSubmitEntDt\n8\n필수\n20140327\n응시자격 서류제출 및 필기시험 합격자 결정종료일자\n실기시험원서접수시작일자\npracRegStartDt\n8\n필수\n20140317\n실기시험원서접수시작일자\n실기시험원서접수종료일자\npracRegEndDt\n8\n필수\n20140321\n실기시험원서접수종료일자\n실기시험시작일자\npracExamStartDt\n8\n필수\n20140419\n실기시험시작일자\n실기시험종료일자\npracExamEndDt\n8\n필수\n20140502\n실기시험종료일자\n합격자발표일자\npracPassDt\n8\n필수\n20140530\n합격자발표일자\n",
+        "links": []
+      },
+      "endpoint_urls": [
+        "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getEList"
+      ]
+    },
+    {
+      "label": "operation_7197",
+      "source_url": "https://www.data.go.kr/tcs/dss/selectApiDetailFunction.do",
+      "params": {},
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:10:26.922709+09:00",
+      "http_method": "POST",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 9366,
+      "sha256": "554eef569479152d6c715780ed9506eb11c97232e3d7d0c4e617ab2de3f2cbea",
+      "response_file": "responses/operation_7197.html",
+      "elapsed_seconds": 0.094,
+      "operation_id": "7197",
+      "extracted": {
+        "tables": [
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "인증키",
+              "serviceKey",
+              "45",
+              "필수",
+              "공공데이터포털에서 받은 인증키",
+              "발급받은 인증키"
+            ]
+          ],
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "회차",
+              "description",
+              "30",
+              "필수",
+              "기능사(2014년도 제1회",
+              "회차"
+            ],
+            [
+              "필기시험원서접수시작일자",
+              "docregstartdt",
+              "8",
+              "필수",
+              "20140207",
+              "필기시험원서접수시작일자"
+            ],
+            [
+              "필기시험원서접수종료일자",
+              "docregenddt",
+              "8",
+              "필수",
+              "20140213",
+              "필기시험원서접수종료일자"
+            ],
+            [
+              "필기시험일자",
+              "docexamdt",
+              "8",
+              "필수",
+              "20140302",
+              "필기시험일자"
+            ],
+            [
+              "필기시험 합격(예정)자 발표일자",
+              "docpassdt",
+              "8",
+              "필수",
+              "20140314",
+              "필기시험 합격(예정)자 발표일자"
+            ],
+            [
+              "응시자격 서류제출 및 필기시험 합격자 결정시작일자",
+              "docsubmitstartdt",
+              "8",
+              "필수",
+              "20140317",
+              "응시자격 서류제출 및 필기시험 합격자 결정시작일자"
+            ],
+            [
+              "응시자격 서류제출 및 필기시험 합격자 결정종료일자",
+              "docsubmitentdt",
+              "8",
+              "필수",
+              "20140327",
+              "응시자격 서류제출 및 필기시험 합격자 결정종료일자"
+            ],
+            [
+              "실기시험원서접수시작일자",
+              "pracregstartdt",
+              "8",
+              "필수",
+              "20140317",
+              "실기시험원서접수시작일자"
+            ],
+            [
+              "실기시험원서접수종료일자",
+              "pracregenddt",
+              "8",
+              "필수",
+              "20140321",
+              "실기시험원서접수종료일자"
+            ],
+            [
+              "실기시험시작일자",
+              "pracexamstartdt",
+              "8",
+              "필수",
+              "20140419",
+              "실기시험시작일자"
+            ],
+            [
+              "실기시험종료일자",
+              "pracexamenddt",
+              "8",
+              "필수",
+              "20140502",
+              "실기시험종료일자"
+            ],
+            [
+              "합격자발표일자",
+              "pracpassdt",
+              "8",
+              "필수",
+              "20140530",
+              "합격자발표일자"
+            ]
+          ]
+        ],
+        "content_markers": {
+          "시험일정": false,
+          "관련학과": false,
+          "시험과목": false,
+          "합격기준": false,
+          "수수료": false
+        },
+        "fees": [],
+        "visible_text": "\n 기능사 등급 시험 시행일정을 조회할 수 있습니다.\nAPI 기본 정보\n활용승인 절차\n 개발단계 :\n 자동승인\n / 운영단계 :\n 자동승인\n신청 가능 트래픽\n 개발계정 : 1,000\n / 운영계정 : 활용사례 등록시 신청하면 트래픽 증가 가능\n요청주소\n서비스 URL\n http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getCList\n요청변수(Request Parameter)\n해당 오픈API의 요청변수(Request Parameter) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n인증키\nserviceKey\n45\n필수\n공공데이터포털에서 받은 인증키\n발급받은 인증키\n출력결과(Response Element)\n해당 오픈API의 출력결과(Response Element) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n회차\ndescription\n30\n필수\n기능사(2014년도 제1회\n회차\n필기시험원서접수시작일자\ndocregstartdt\n8\n필수\n20140207\n필기시험원서접수시작일자\n필기시험원서접수종료일자\ndocregenddt\n8\n필수\n20140213\n필기시험원서접수종료일자\n필기시험일자\ndocexamdt\n8\n필수\n20140302\n필기시험일자\n필기시험 합격(예정)자 발표일자\ndocpassdt\n8\n필수\n20140314\n필기시험 합격(예정)자 발표일자\n응시자격 서류제출 및 필기시험 합격자 결정시작일자\ndocsubmitstartdt\n8\n필수\n20140317\n응시자격 서류제출 및 필기시험 합격자 결정시작일자\n응시자격 서류제출 및 필기시험 합격자 결정종료일자\ndocsubmitentdt\n8\n필수\n20140327\n응시자격 서류제출 및 필기시험 합격자 결정종료일자\n실기시험원서접수시작일자\npracregstartdt\n8\n필수\n20140317\n실기시험원서접수시작일자\n실기시험원서접수종료일자\npracregenddt\n8\n필수\n20140321\n실기시험원서접수종료일자\n실기시험시작일자\npracexamstartdt\n8\n필수\n20140419\n실기시험시작일자\n실기시험종료일자\npracexamenddt\n8\n필수\n20140502\n실기시험종료일자\n합격자발표일자\npracpassdt\n8\n필수\n20140530\n합격자발표일자\n",
+        "links": []
+      },
+      "endpoint_urls": [
+        "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getCList"
+      ]
+    },
+    {
+      "label": "operation_7198",
+      "source_url": "https://www.data.go.kr/tcs/dss/selectApiDetailFunction.do",
+      "params": {},
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:10:27.015039+09:00",
+      "http_method": "POST",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 7806,
+      "sha256": "60e6787c94823295ad21fe6acb1bf30e7d96b2dca911dd92a0aa0afbbe27d14f",
+      "response_file": "responses/operation_7198.html",
+      "elapsed_seconds": 0.093,
+      "operation_id": "7198",
+      "extracted": {
+        "tables": [
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "종목코드",
+              "jmCd",
+              "4",
+              "필수",
+              "1320",
+              "종목코드"
+            ],
+            [
+              "인증키",
+              "serviceKey",
+              "45",
+              "필수",
+              "공공데이터 포털에서 받은 인증키",
+              "발급받은 인증키"
+            ]
+          ],
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "종목명",
+              "jmfldnm",
+              "30",
+              "필수",
+              "정보처리기사",
+              "종목명"
+            ],
+            [
+              "정보구분",
+              "infogb",
+              "30",
+              "필수",
+              "응시 수수료",
+              "정보구분"
+            ],
+            [
+              "내용",
+              "contents",
+              "100",
+              "필수",
+              "1차:18800, 2차: 20200",
+              "내용"
+            ],
+            [
+              "대직무분야코드",
+              "obligfldcd",
+              "2",
+              "필수",
+              "21",
+              "대직무분야코드"
+            ],
+            [
+              "대직무분야명",
+              "obligfldnm",
+              "200",
+              "필수",
+              "정보통신",
+              "대직무분야명"
+            ],
+            [
+              "중직무분야코드",
+              "mdobligfldcd",
+              "3",
+              "필수",
+              "211",
+              "중직무분야코드"
+            ],
+            [
+              "중직무분야명",
+              "mdobligfldnm",
+              "200",
+              "필수",
+              "정보기술",
+              "중직무분야명"
+            ]
+          ]
+        ],
+        "content_markers": {
+          "시험일정": false,
+          "관련학과": false,
+          "시험과목": false,
+          "합격기준": false,
+          "수수료": true
+        },
+        "fees": [],
+        "visible_text": "\n 국가기술자격 종목별 응시 수수료를 조회할 수 있습니다.\nAPI 기본 정보\n활용승인 절차\n 개발단계 :\n 자동승인\n / 운영단계 :\n 자동승인\n신청 가능 트래픽\n 개발계정 : 1,000\n / 운영계정 : 활용사례 등록시 신청하면 트래픽 증가 가능\n요청주소\n서비스 URL\n http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList\n요청변수(Request Parameter)\n해당 오픈API의 요청변수(Request Parameter) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n종목코드\njmCd\n4\n필수\n1320\n종목코드\n인증키\nserviceKey\n45\n필수\n공공데이터 포털에서 받은 인증키\n발급받은 인증키\n출력결과(Response Element)\n해당 오픈API의 출력결과(Response Element) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n종목명\njmfldnm\n30\n필수\n정보처리기사\n종목명\n정보구분\ninfogb\n30\n필수\n응시 수수료\n정보구분\n내용\ncontents\n100\n필수\n1차:18800, 2차: 20200\n내용\n대직무분야코드\nobligfldcd\n2\n필수\n21\n대직무분야코드\n대직무분야명\nobligfldnm\n200\n필수\n정보통신\n대직무분야명\n중직무분야코드\nmdobligfldcd\n3\n필수\n211\n중직무분야코드\n중직무분야명\nmdobligfldnm\n200\n필수\n정보기술\n중직무분야명\n",
+        "links": []
+      },
+      "endpoint_urls": [
+        "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList"
+      ]
+    },
+    {
+      "label": "operation_7199",
+      "source_url": "https://www.data.go.kr/tcs/dss/selectApiDetailFunction.do",
+      "params": {},
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:10:27.107818+09:00",
+      "http_method": "POST",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 12204,
+      "sha256": "d7665372d3ddea9f39505da1dbb4d9a48bc89e427e6f610483717a720c99fbcd",
+      "response_file": "responses/operation_7199.html",
+      "elapsed_seconds": 0.094,
+      "operation_id": "7199",
+      "extracted": {
+        "tables": [
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "종목코드",
+              "jmCd",
+              "4",
+              "필수",
+              "1320",
+              "종목코드"
+            ],
+            [
+              "인증키",
+              "serviceKey",
+              "45",
+              "필수",
+              "공공데이터포털에서 받은 인증키",
+              "발급받은 인증키"
+            ]
+          ],
+          [
+            [
+              "항목명(국문)",
+              "항목명(영문)",
+              "항목크기",
+              "항목구분",
+              "샘플데이터",
+              "항목설명"
+            ],
+            [
+              "종목명",
+              "jmfldmm",
+              "100",
+              "필수",
+              "정보처리기능사",
+              "종목명"
+            ],
+            [
+              "회차",
+              "implplannm",
+              "200",
+              "필수",
+              "기능사(2014년도 제1회)",
+              "회차"
+            ],
+            [
+              "필기시험원서접수시작일자",
+              "docregstartdt",
+              "8",
+              "필수",
+              "20140103",
+              "필기시험원서접수시작일자"
+            ],
+            [
+              "필기시험원서접수종료일자",
+              "docregenddt",
+              "8",
+              "필수",
+              "20140109",
+              "필기시험원서접수종료일자"
+            ],
+            [
+              "필기시험시작일자",
+              "docexamstartdt",
+              "8",
+              "필수",
+              "20140126",
+              "필기시험시작일자"
+            ],
+            [
+              "필기시험종료일자",
+              "docexamenddt",
+              "8",
+              "필수",
+              "20140126",
+              "필기시험종료일자"
+            ],
+            [
+              "필기시험 합격(예정)자 발표일자",
+              "docpassdt",
+              "8",
+              "필수",
+              "20140221",
+              "필기시험 합격(예정)자 발표일자"
+            ],
+            [
+              "응시자격서류제출시작일자",
+              "docsubmitstartdt",
+              "8",
+              "필수",
+              "20140226",
+              "응시자격서류제출시작일자"
+            ],
+            [
+              "응시자격서류제출종료일자",
+              "docsubmitenddt",
+              "8",
+              "필수",
+              "20140226",
+              "응시자격서류제출종료일자"
+            ],
+            [
+              "실기시험원서접수시작일자",
+              "pracregstartdt",
+              "8",
+              "필수",
+              "20140224",
+              "실기시험원서접수시작일자"
+            ],
+            [
+              "실기시험원서접수종료일자",
+              "pracregenddt",
+              "8",
+              "필수",
+              "20140227",
+              "실기시험원서접수종료일자"
+            ],
+            [
+              "실기시험시작일자",
+              "pracexamstartdt",
+              "8",
+              "필수",
+              "20140322",
+              "실기시험시작일자"
+            ],
+            [
+              "실기시험종료일자",
+              "pracexamenddt",
+              "8",
+              "필수",
+              "20140404",
+              "실기시험종료일자"
+            ],
+            [
+              "합격자발표시작일자",
+              "pracpassstartdt",
+              "8",
+              "필수",
+              "20140418",
+              "합격자발표시작일자"
+            ],
+            [
+              "합격자발표종료일자",
+              "pracpassenddt",
+              "8",
+              "필수",
+              "20140418",
+              "합격자발표종료일자"
+            ],
+            [
+              "대직무분야코드",
+              "obligfldcd",
+              "2",
+              "필수",
+              "21",
+              "대직무분야코드"
+            ],
+            [
+              "대직무분야명",
+              "obligfldnm",
+              "200",
+              "필수",
+              "정보통신",
+              "대직무분야명"
+            ],
+            [
+              "중직무분야코드",
+              "mdobligfldcd",
+              "3",
+              "필수",
+              "211",
+              "중직무분야코드"
+            ],
+            [
+              "중직무분야명",
+              "mdobligfldnm",
+              "200",
+              "필수",
+              "정보기술",
+              "중직무분야명"
+            ]
+          ]
+        ],
+        "content_markers": {
+          "시험일정": true,
+          "관련학과": false,
+          "시험과목": false,
+          "합격기준": false,
+          "수수료": false
+        },
+        "fees": [],
+        "visible_text": "\n 현재연도의 국가기술자격 종목별 시험 시행일정을 조회할 수 있다.\n국가기술자격 종목별 시험일정이 각 등급 시험 시행일정과 상이할 수 있으므로, 종목에 따른\n시험일정은 종목별 시험 시행일정 조회를 이용하시기 바랍니다.\nAPI 기본 정보\n활용승인 절차\n 개발단계 :\n 자동승인\n / 운영단계 :\n 자동승인\n신청 가능 트래픽\n 개발계정 : 1,000\n / 운영계정 : 활용사례 등록시 신청하면 트래픽 증가 가능\n요청주소\n서비스 URL\n http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList\n요청변수(Request Parameter)\n해당 오픈API의 요청변수(Request Parameter) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n종목코드\njmCd\n4\n필수\n1320\n종목코드\n인증키\nserviceKey\n45\n필수\n공공데이터포털에서 받은 인증키\n발급받은 인증키\n출력결과(Response Element)\n해당 오픈API의 출력결과(Response Element) 항목에 대한 표로, 국문항목명, 영문 항목명, 항목크기, 항목구분, 샘플데이터, 항목 설명순으로 나열됩니다.\n항목명(국문)\n항목명(영문)\n항목크기\n항목구분\n샘플데이터\n항목설명\n종목명\njmfldmm\n100\n필수\n정보처리기능사\n종목명\n회차\nimplplannm\n200\n필수\n기능사(2014년도 제1회)\n회차\n필기시험원서접수시작일자\ndocregstartdt\n8\n필수\n20140103\n필기시험원서접수시작일자\n필기시험원서접수종료일자\ndocregenddt\n8\n필수\n20140109\n필기시험원서접수종료일자\n필기시험시작일자\ndocexamstartdt\n8\n필수\n20140126\n필기시험시작일자\n필기시험종료일자\ndocexamenddt\n8\n필수\n20140126\n필기시험종료일자\n필기시험 합격(예정)자 발표일자\ndocpassdt\n8\n필수\n20140221\n필기시험 합격(예정)자 발표일자\n응시자격서류제출시작일자\ndocsubmitstartdt\n8\n필수\n20140226\n응시자격서류제출시작일자\n응시자격서류제출종료일자\ndocsubmitenddt\n8\n필수\n20140226\n응시자격서류제출종료일자\n실기시험원서접수시작일자\npracregstartdt\n8\n필수\n20140224\n실기시험원서접수시작일자\n실기시험원서접수종료일자\npracregenddt\n8\n필수\n20140227\n실기시험원서접수종료일자\n실기시험시작일자\npracexamstartdt\n8\n필수\n20140322\n실기시험시작일자\n실기시험종료일자\npracexamenddt\n8\n필수\n20140404\n실기시험종료일자\n합격자발표시작일자\npracpassstartdt\n8\n필수\n20140418\n합격자발표시작일자\n합격자발표종료일자\npracpassenddt\n8\n필수\n20140418\n합격자발표종료일자\n대직무분야코드\nobligfldcd\n2\n필수\n21\n대직무분야코드\n대직무분야명\nobligfldnm\n200\n필수\n정보통신\n대직무분야명\n중직무분야코드\nmdobligfldcd\n3\n필수\n211\n중직무분야코드\n중직무분야명\nmdobligfldnm\n200\n필수\n정보기술\n중직무분야명\n",
+        "links": []
+      },
+      "endpoint_urls": [
+        "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList"
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "label": "eligibility_all",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryExamQualItemSVC/getList",
+      "params": {
+        "pageNo": "1",
+        "numOfRows": "200"
+      },
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:10:27.199624+09:00",
+      "http_method": "GET",
+      "http_status": 200,
+      "content_type": "application/xml",
+      "byte_count": 32648,
+      "sha256": "b525a832803574ba1f01da838449bd74894bd336e26d622d80b030426c748c76",
+      "response_file": "responses/eligibility_all.txt",
+      "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><emqualCd>T101</emqualCd><emqualDispNm>기사 자격 취득후 동일 및 유사직무분야에서 4년이상 실무에 종사한 자</emqualDispNm><grdCd>10</grdCd><grdNm>기술사</grdNm><qualgbCd>T</qualgbCd><qualgbNm>국가기술자격</qualgbNm></item><item><emqualCd>T104</emqualCd><emqualDispNm>동일 및 유사직무분야의 다른 종목 기술사 자격을 취득한 자</emqualDispNm><grdCd>10</grdCd><grdNm>기술사</grdNm><qualgbCd>T</qualgbCd><qualgbNm>국가기술자격</qualgbNm></item><item><emqualCd>T120</emqualCd><emqualDispNm>외국에서 동일한 종목에 해당하는 자격을 취득한 자</emqualDispNm><grdCd>10</grdCd><grdNm>기술사</grdNm><qualgbCd>T</qualgbCd><qualgbNm>국가기술자격</qualgbNm></item><item><emqualCd>T123</emqualCd><emqualDispNm>산업기사 자격 취득후 동일 및 유사직무분야에서 5년이상 실무에 종사한 자</emqualDispNm><grdCd>10</grdCd><grdNm>기술사</grdNm><qualgbCd>T</qualgbCd><qualgbNm>국가기술자격</qualgbNm></item><item><emqualCd>T124</emqualCd><emqualDispNm>기능사 자격 취득후 동일 및 유사직무분야에서 7년이상 실무에 종사한 자</emqualDispNm><grdCd>10</grdCd><grdNm>기술사</grdNm><qualgbCd>T</qualgbCd><qualgbNm>국가기술자격</qualgbNm></item><item><emqualCd>T125</emqualCd><emqualDispNm>대학 관련학과 졸업 후 동일 및 유사직무분야에서 6년이상 실무에 종사한 자</emqualDispNm><grdCd>1",
+      "elapsed_seconds": 0.266,
+      "result_code": "00",
+      "result_message": "NORMAL SERVICE.",
+      "item_count": 128,
+      "sample_items": [
+        {
+          "emqualCd": "T101",
+          "emqualDispNm": "기사 자격 취득후 동일 및 유사직무분야에서 4년이상 실무에 종사한 자",
+          "grdCd": "10",
+          "grdNm": "기술사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T104",
+          "emqualDispNm": "동일 및 유사직무분야의 다른 종목 기술사 자격을 취득한 자",
+          "grdCd": "10",
+          "grdNm": "기술사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        }
+      ],
+      "total_count": "128",
+      "grade_counts": {
+        "기술사": 15,
+        "기능장": 9,
+        "기사": 18,
+        "산업기사": 21,
+        "1급": 17,
+        "2급": 16,
+        "단일등급": 31,
+        "기능사": 1
+      },
+      "engineer_items": [
+        {
+          "emqualCd": "T301",
+          "emqualDispNm": "산업기사 등급 이상 자격 취득 후 동일 및 유사직무분야에서 1년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T302",
+          "emqualDispNm": "기능사 자격 취득 후 동일 및 유사직무분야에서 3년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T303",
+          "emqualDispNm": "동일 및 유사직무분야의 다른 종목 기사 이상의 자격을 취득한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T304",
+          "emqualDispNm": "관련학과 대학졸업자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T305",
+          "emqualDispNm": "관련학과 대학졸업예정자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T306",
+          "emqualDispNm": "학점인정등에관한법률 제7조 규정에 의하여 관련학과 106학점 이상을 인정받은 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T308",
+          "emqualDispNm": "관련학과 3년제 전문대학 졸업후 동일 및 유사직무분야에서 1년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T310",
+          "emqualDispNm": "관련학과 2년제 전문대학 졸업후 동일 및 유사직무분야에서 2년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T312",
+          "emqualDispNm": "4년제 대학 관련학과 1/2이상 마친 후 동일 및 유사직무분야에서 2년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T313",
+          "emqualDispNm": "6년제 대학 관련학과 1/2이상 마친 후 동일 및 유사직무분야에서 2년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T317",
+          "emqualDispNm": "5년제 대학 관련학과 1/2이상 마친 후 동일 및 유사직무분야에서 2년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T321",
+          "emqualDispNm": "동일 및 유사직무분야에서 4년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T322",
+          "emqualDispNm": "외국에서 동일한 종목에 해당하는 자격을 취득한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T323",
+          "emqualDispNm": "관련학과 전공심화과정의 학사학위 취득자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T324",
+          "emqualDispNm": "관련학과 전공심화과정의 학사학위 취득예정자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T326",
+          "emqualDispNm": "동일 및 유사직무분야의 고용노동부령이 정하는 교육훈련기관의 \"기사 수준 기술훈련과정\" 이수자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T327",
+          "emqualDispNm": "동일 및 유사직무분야의 고용노동부령이 정하는 교육훈련기관의 \"기사 수준 기술훈련과정\" 이수예정자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        },
+        {
+          "emqualCd": "T328",
+          "emqualDispNm": "동일 및 유사직무분야의 고용노동부령이 정하는 교육훈련기관의 \"산업기사 수준의 기술훈련과정\" 이수자로서 이수후 동일 및 유사직무분야에서 2년이상 실무에 종사한 자",
+          "grdCd": "30",
+          "grdNm": "기사",
+          "qualgbCd": "T",
+          "qualgbNm": "국가기술자격"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1057 @@
+[
+  {
+    "label": "api_operation_7196",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getEList",
+    "params": {},
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:22.594408+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 3644,
+    "sha256": "cd97ae8a9eb4434aed6785e8dbdf7bbb1856906c3c7d7a7225088a0d696d5dd2",
+    "response_file": "responses/api_operation_7196.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><description>기사,산업기사(2026년도 제1회)</description><docexamdt>20260130</docexamdt><docpassdt>20260311</docpassdt><docregenddt>20260115</docregenddt><docregstartdt>20260112</docregstartdt><docsubmitentdt>20260320</docsubmitentdt><docsubmitstartdt>20260130</docsubmitstartdt><pracexamenddt>20260506</pracexamenddt><pracexamstartdt>20260418</pracexamstartdt><pracpassdt>20260605</pracpassdt><pracregenddt>20260326</pracregenddt><pracregstartdt>20260323</pracregstartdt></item><item><description>기사,산업기사(2026년도 제1회)</description><docexamdt>20260130</docexamdt><docpassdt>20260311</docpassdt><docregenddt>20260125</docregenddt><docregstartdt>20260124</docregstartdt><docsubmitentdt>20260320</docsubmitentdt><docsubmitstartdt>20260130</docsubmitstartdt><pracexamenddt>20260506</pracexamenddt><pracexamstartdt>20260418</pracexamstartdt><pracpassdt>20260605</pracpassdt><pracregenddt>20260413</pracregenddt><pracregstartdt>20260412</pracregstartdt></item><item><description>기사,산업기사(2026년도 제2회)</description><docexamdt>20260509</docexamdt><docpassd",
+    "elapsed_seconds": 0.297,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 7,
+    "sample_items": [
+      {
+        "description": "기사,산업기사(2026년도 제1회)",
+        "docexamdt": "20260130",
+        "docpassdt": "20260311",
+        "docregenddt": "20260115",
+        "docregstartdt": "20260112",
+        "docsubmitentdt": "20260320",
+        "docsubmitstartdt": "20260130",
+        "pracexamenddt": "20260506",
+        "pracexamstartdt": "20260418",
+        "pracpassdt": "20260605",
+        "pracregenddt": "20260326",
+        "pracregstartdt": "20260323"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제1회)",
+        "docexamdt": "20260130",
+        "docpassdt": "20260311",
+        "docregenddt": "20260125",
+        "docregstartdt": "20260124",
+        "docsubmitentdt": "20260320",
+        "docsubmitstartdt": "20260130",
+        "pracexamenddt": "20260506",
+        "pracexamstartdt": "20260418",
+        "pracpassdt": "20260605",
+        "pracregenddt": "20260413",
+        "pracregstartdt": "20260412"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "description": "기사,산업기사(2026년도 제1회)",
+        "docexamdt": "20260130",
+        "docpassdt": "20260311",
+        "docregenddt": "20260115",
+        "docregstartdt": "20260112",
+        "docsubmitentdt": "20260320",
+        "docsubmitstartdt": "20260130",
+        "pracexamenddt": "20260506",
+        "pracexamstartdt": "20260418",
+        "pracpassdt": "20260605",
+        "pracregenddt": "20260326",
+        "pracregstartdt": "20260323"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제1회)",
+        "docexamdt": "20260130",
+        "docpassdt": "20260311",
+        "docregenddt": "20260125",
+        "docregstartdt": "20260124",
+        "docsubmitentdt": "20260320",
+        "docsubmitstartdt": "20260130",
+        "pracexamenddt": "20260506",
+        "pracexamstartdt": "20260418",
+        "pracpassdt": "20260605",
+        "pracregenddt": "20260413",
+        "pracregstartdt": "20260412"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제2회)",
+        "docexamdt": "20260509",
+        "docpassdt": "20260610",
+        "docregenddt": "20260423",
+        "docregstartdt": "20260420",
+        "docsubmitentdt": "20260619",
+        "docsubmitstartdt": "20260511",
+        "pracexamenddt": "20260805",
+        "pracexamstartdt": "20260718",
+        "pracpassdt": "20260904",
+        "pracregenddt": "20260625",
+        "pracregstartdt": "20260622"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제2회)",
+        "docexamdt": "20260509",
+        "docpassdt": "20260610",
+        "docregenddt": "20260504",
+        "docregstartdt": "20260503",
+        "docsubmitentdt": "20260619",
+        "docsubmitstartdt": "20260511",
+        "pracexamenddt": "20260805",
+        "pracexamstartdt": "20260718",
+        "pracpassdt": "20260904",
+        "pracregenddt": "20260713",
+        "pracregstartdt": "20260712"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제3회)",
+        "docexamdt": "20260807",
+        "docpassdt": "20260909",
+        "docregenddt": "20260723",
+        "docregstartdt": "20260720",
+        "docsubmitentdt": "20260918",
+        "docsubmitstartdt": "20260807",
+        "pracexamenddt": "20261113",
+        "pracexamstartdt": "20261024",
+        "pracpassdt": "20261211",
+        "pracregenddt": "20260923",
+        "pracregstartdt": "20260921"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제3회)",
+        "docexamdt": "20260807",
+        "docpassdt": "20260909",
+        "docregenddt": "20260723",
+        "docregstartdt": "20260720",
+        "docsubmitentdt": "20260918",
+        "docsubmitstartdt": "20260807",
+        "pracexamenddt": "20261113",
+        "pracexamstartdt": "20261024",
+        "pracpassdt": "20261211",
+        "pracregenddt": "20260928",
+        "pracregstartdt": "20260928"
+      },
+      {
+        "description": "기사,산업기사(2026년도 제3회)",
+        "docexamdt": "20260807",
+        "docpassdt": "20260909",
+        "docregenddt": "20260802",
+        "docregstartdt": "20260801",
+        "docsubmitentdt": "20260918",
+        "docsubmitstartdt": "20260807",
+        "pracexamenddt": "20261113",
+        "pracexamstartdt": "20261024",
+        "pracpassdt": "20261211",
+        "pracregenddt": "20261019",
+        "pracregstartdt": "20261018"
+      }
+    ]
+  },
+  {
+    "label": "api_operation_7197",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getCList",
+    "params": {},
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:22.886434+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 13779,
+    "sha256": "3fb1697de5f06274533d97af5558d7517cf76f1ff1437fb59b64d50511281266",
+    "response_file": "responses/api_operation_7197.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><description>2026년 정기 기능사 산업별 맞춤형 고교등 필기면제검정</description><docexamdt>XXXXXXXX</docexamdt><docpassdt>XXXXXXXX</docpassdt><docregenddt>XXXXXXXX</docregenddt><docregstartdt>XXXXXXXX</docregstartdt><pracexamenddt>20260624</pracexamenddt><pracexamstartdt>20260613</pracexamstartdt><pracpassdt>20260710</pracpassdt><pracregenddt>20260514</pracregenddt><pracregstartdt>20260511</pracregstartdt></item><item><description>2026년 정기 기능사 1회</description><docexamdt>20260120</docexamdt><docpassdt>20260130</docpassdt><docregenddt>20260109</docregenddt><docregstartdt>20260106</docregstartdt><pracexamenddt>20260405</pracexamenddt><pracexamstartdt>20260314</pracexamstartdt><pracpassdt>20260410</pracpassdt><pracregenddt>20260205</pracregenddt><pracregstartdt>20260202</pracregstartdt></item><item><description>2026년 정기 기능사 1회</description><docexamdt>20260120</docexamdt><docpassdt>20260130</docpassdt><docregenddt>20260115</docregenddt><docregstartdt>20260114</docregstartdt><pracexamenddt>20260405</pracexamenddt><pracexamstartdt>20260314</pracex",
+    "elapsed_seconds": 0.203,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 34,
+    "sample_items": [
+      {
+        "description": "2026년 정기 기능사 산업별 맞춤형 고교등 필기면제검정",
+        "docexamdt": "XXXXXXXX",
+        "docpassdt": "XXXXXXXX",
+        "docregenddt": "XXXXXXXX",
+        "docregstartdt": "XXXXXXXX",
+        "pracexamenddt": "20260624",
+        "pracexamstartdt": "20260613",
+        "pracpassdt": "20260710",
+        "pracregenddt": "20260514",
+        "pracregstartdt": "20260511"
+      },
+      {
+        "description": "2026년 정기 기능사 1회",
+        "docexamdt": "20260120",
+        "docpassdt": "20260130",
+        "docregenddt": "20260109",
+        "docregstartdt": "20260106",
+        "pracexamenddt": "20260405",
+        "pracexamstartdt": "20260314",
+        "pracpassdt": "20260410",
+        "pracregenddt": "20260205",
+        "pracregstartdt": "20260202"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "description": "2026년 정기 기능사 산업별 맞춤형 고교등 필기면제검정",
+        "docexamdt": "XXXXXXXX",
+        "docpassdt": "XXXXXXXX",
+        "docregenddt": "XXXXXXXX",
+        "docregstartdt": "XXXXXXXX",
+        "pracexamenddt": "20260624",
+        "pracexamstartdt": "20260613",
+        "pracpassdt": "20260710",
+        "pracregenddt": "20260514",
+        "pracregstartdt": "20260511"
+      },
+      {
+        "description": "2026년 정기 기능사 1회",
+        "docexamdt": "20260120",
+        "docpassdt": "20260130",
+        "docregenddt": "20260109",
+        "docregstartdt": "20260106",
+        "pracexamenddt": "20260405",
+        "pracexamstartdt": "20260314",
+        "pracpassdt": "20260410",
+        "pracregenddt": "20260205",
+        "pracregstartdt": "20260202"
+      },
+      {
+        "description": "2026년 정기 기능사 1회",
+        "docexamdt": "20260120",
+        "docpassdt": "20260130",
+        "docregenddt": "20260115",
+        "docregstartdt": "20260114",
+        "pracexamenddt": "20260405",
+        "pracexamstartdt": "20260314",
+        "pracpassdt": "20260410",
+        "pracregenddt": "20260309",
+        "pracregstartdt": "20260308"
+      },
+      {
+        "description": "2026년 정기 기능사 2회",
+        "docexamdt": "20260404",
+        "docpassdt": "20260422",
+        "docregenddt": "20260320",
+        "docregstartdt": "20260316",
+        "pracexamenddt": "20260614",
+        "pracexamstartdt": "20260530",
+        "pracpassdt": "20260626",
+        "pracregenddt": "20260430",
+        "pracregstartdt": "20260427"
+      },
+      {
+        "description": "2026년 정기 기능사 2회",
+        "docexamdt": "20260404",
+        "docpassdt": "20260422",
+        "docregenddt": "20260330",
+        "docregstartdt": "20260329",
+        "pracexamenddt": "20260614",
+        "pracexamstartdt": "20260530",
+        "pracpassdt": "20260626",
+        "pracregenddt": "20260525",
+        "pracregstartdt": "20260524"
+      },
+      {
+        "description": "2026년 정기 기능사 3회",
+        "docexamdt": "20260627",
+        "docpassdt": "20260715",
+        "docregenddt": "20260611",
+        "docregstartdt": "20260608",
+        "pracexamenddt": "20260916",
+        "pracexamstartdt": "20260829",
+        "pracpassdt": "20261002",
+        "pracregenddt": "20260730",
+        "pracregstartdt": "20260727"
+      },
+      {
+        "description": "2026년 정기 기능사 3회",
+        "docexamdt": "20260627",
+        "docpassdt": "20260715",
+        "docregenddt": "20260622",
+        "docregstartdt": "20260621",
+        "pracexamenddt": "20260916",
+        "pracexamstartdt": "20260829",
+        "pracpassdt": "20261002",
+        "pracregenddt": "20260824",
+        "pracregstartdt": "20260823"
+      },
+      {
+        "description": "2026년 정기 기능사 4회",
+        "docexamdt": "20260916",
+        "docpassdt": "20261007",
+        "docregenddt": "20260827",
+        "docregstartdt": "20260824",
+        "pracexamenddt": "20261202",
+        "pracexamstartdt": "20261114",
+        "pracpassdt": "20261211",
+        "pracregenddt": "20261015",
+        "pracregstartdt": "20261012"
+      },
+      {
+        "description": "2026년 정기 기능사 4회",
+        "docexamdt": "20260916",
+        "docpassdt": "20261007",
+        "docregenddt": "20260911",
+        "docregstartdt": "20260910",
+        "pracexamenddt": "20261202",
+        "pracexamstartdt": "20261114",
+        "pracpassdt": "20261211",
+        "pracregenddt": "20261109",
+        "pracregstartdt": "20261108"
+      },
+      {
+        "description": "2026년 상시 기능사 1회",
+        "docexamdt": "20260112",
+        "docpassdt": "20260112",
+        "docregenddt": "20260107",
+        "docregstartdt": "20260106",
+        "pracexamenddt": "20260130",
+        "pracexamstartdt": "20260119",
+        "pracpassdt": "20260205",
+        "pracregenddt": "20260109",
+        "pracregstartdt": "20260108"
+      },
+      {
+        "description": "2026년 상시 기능사 2회",
+        "docexamdt": "20260119",
+        "docpassdt": "20260119",
+        "docregenddt": "20260114",
+        "docregstartdt": "20260113",
+        "pracexamenddt": "20260210",
+        "pracexamstartdt": "20260202",
+        "pracpassdt": "20260219",
+        "pracregenddt": "20260123",
+        "pracregstartdt": "20260122"
+      },
+      {
+        "description": "2026년 상시 기능사 3회",
+        "docexamdt": "20260126",
+        "docpassdt": "20260126",
+        "docregenddt": "20260121",
+        "docregstartdt": "20260120",
+        "pracexamenddt": "20260227",
+        "pracexamstartdt": "20260223",
+        "pracpassdt": "20260305",
+        "pracregenddt": "20260206",
+        "pracregstartdt": "20260205"
+      },
+      {
+        "description": "2026년 상시 기능사 4회",
+        "docexamdt": "20260202",
+        "docpassdt": "20260202",
+        "docregenddt": "20260128",
+        "docregstartdt": "20260127",
+        "pracexamenddt": "20260313",
+        "pracexamstartdt": "20260303",
+        "pracpassdt": "20260319",
+        "pracregenddt": "20260220",
+        "pracregstartdt": "20260219"
+      },
+      {
+        "description": "2026년 상시 기능사 5회",
+        "docexamdt": "20260209",
+        "docpassdt": "20260209",
+        "docregenddt": "20260204",
+        "docregstartdt": "20260203",
+        "pracexamenddt": "20260327",
+        "pracexamstartdt": "20260316",
+        "pracpassdt": "20260402",
+        "pracregenddt": "20260306",
+        "pracregstartdt": "20260305"
+      },
+      {
+        "description": "2026년 상시 기능사 6회",
+        "docexamdt": "20260303",
+        "docpassdt": "20260303",
+        "docregenddt": "20260226",
+        "docregstartdt": "20260225",
+        "pracexamenddt": "20260410",
+        "pracexamstartdt": "20260330",
+        "pracpassdt": "20260416",
+        "pracregenddt": "20260320",
+        "pracregstartdt": "20260319"
+      },
+      {
+        "description": "2026년 상시 기능사 7회",
+        "docexamdt": "20260309",
+        "docpassdt": "20260309",
+        "docregenddt": "20260304",
+        "docregstartdt": "20260303",
+        "pracexamenddt": "20260424",
+        "pracexamstartdt": "20260413",
+        "pracpassdt": "20260429",
+        "pracregenddt": "20260403",
+        "pracregstartdt": "20260402"
+      },
+      {
+        "description": "2026년 상시 기능사 8회",
+        "docexamdt": "20260316",
+        "docpassdt": "20260316",
+        "docregenddt": "20260311",
+        "docregstartdt": "20260310",
+        "pracexamenddt": "20260508",
+        "pracexamstartdt": "20260427",
+        "pracpassdt": "20260514",
+        "pracregenddt": "20260417",
+        "pracregstartdt": "20260416"
+      },
+      {
+        "description": "2026년 상시 기능사 9회",
+        "docexamdt": "20260323",
+        "docpassdt": "20260323",
+        "docregenddt": "20260319",
+        "docregstartdt": "20260317",
+        "pracexamenddt": "20260522",
+        "pracexamstartdt": "20260511",
+        "pracpassdt": "20260528",
+        "pracregenddt": "20260430",
+        "pracregstartdt": "20260429"
+      },
+      {
+        "description": "2026년 상시 기능사 10회",
+        "docexamdt": "20260330",
+        "docpassdt": "20260330",
+        "docregenddt": "20260325",
+        "docregstartdt": "20260324",
+        "pracexamenddt": "20260605",
+        "pracexamstartdt": "20260526",
+        "pracpassdt": "20260611",
+        "pracregenddt": "20260515",
+        "pracregstartdt": "20260514"
+      },
+      {
+        "description": "2026년 상시 기능사 11회",
+        "docexamdt": "20260406",
+        "docpassdt": "20260406",
+        "docregenddt": "20260401",
+        "docregstartdt": "20260331",
+        "pracexamenddt": "20260619",
+        "pracexamstartdt": "20260608",
+        "pracpassdt": "20260625",
+        "pracregenddt": "20260529",
+        "pracregstartdt": "20260528"
+      },
+      {
+        "description": "2026년 상시 기능사 12회",
+        "docexamdt": "20260413",
+        "docpassdt": "20260413",
+        "docregenddt": "20260408",
+        "docregstartdt": "20260407",
+        "pracexamenddt": "20260703",
+        "pracexamstartdt": "20260622",
+        "pracpassdt": "20260709",
+        "pracregenddt": "20260612",
+        "pracregstartdt": "20260611"
+      },
+      {
+        "description": "2026년 상시 기능사 13회",
+        "docexamdt": "20260420",
+        "docpassdt": "20260420",
+        "docregenddt": "20260415",
+        "docregstartdt": "20260414",
+        "pracexamenddt": "20260716",
+        "pracexamstartdt": "20260706",
+        "pracpassdt": "20260723",
+        "pracregenddt": "20260626",
+        "pracregstartdt": "20260625"
+      },
+      {
+        "description": "2026년 상시 기능사 14회",
+        "docexamdt": "20260427",
+        "docpassdt": "20260427",
+        "docregenddt": "20260422",
+        "docregstartdt": "20260421",
+        "pracexamenddt": "20260731",
+        "pracexamstartdt": "20260720",
+        "pracpassdt": "20260806",
+        "pracregenddt": "20260710",
+        "pracregstartdt": "20260709"
+      },
+      {
+        "description": "2026년 상시 기능사 15회",
+        "docexamdt": "20260511",
+        "docpassdt": "20260511",
+        "docregenddt": "20260507",
+        "docregstartdt": "20260506",
+        "pracexamenddt": "20260814",
+        "pracexamstartdt": "20260803",
+        "pracpassdt": "20260820",
+        "pracregenddt": "20260724",
+        "pracregstartdt": "20260723"
+      },
+      {
+        "description": "2026년 상시 기능사 16회",
+        "docexamdt": "20260518",
+        "docpassdt": "20260518",
+        "docregenddt": "20260513",
+        "docregstartdt": "20260512",
+        "pracexamenddt": "20260828",
+        "pracexamstartdt": "20260818",
+        "pracpassdt": "20260903",
+        "pracregenddt": "20260807",
+        "pracregstartdt": "20260806"
+      },
+      {
+        "description": "2026년 상시 기능사 17회",
+        "docexamdt": "20260601",
+        "docpassdt": "20260601",
+        "docregenddt": "20260527",
+        "docregstartdt": "20260526",
+        "pracexamenddt": "20260911",
+        "pracexamstartdt": "20260831",
+        "pracpassdt": "20260917",
+        "pracregenddt": "20260821",
+        "pracregstartdt": "20260820"
+      },
+      {
+        "description": "2026년 상시 기능사 18회",
+        "docexamdt": "20260608",
+        "docpassdt": "20260608",
+        "docregenddt": "20260603",
+        "docregstartdt": "20260602",
+        "pracexamenddt": "20260921",
+        "pracexamstartdt": "20260914",
+        "pracpassdt": "20261001",
+        "pracregenddt": "20260904",
+        "pracregstartdt": "20260903"
+      },
+      {
+        "description": "2026년 상시 기능사 19회",
+        "docexamdt": "20260615",
+        "docpassdt": "20260615",
+        "docregenddt": "20260610",
+        "docregstartdt": "20260609",
+        "pracexamenddt": "20261008",
+        "pracexamstartdt": "20260930",
+        "pracpassdt": "20261015",
+        "pracregenddt": "20260918",
+        "pracregstartdt": "20260917"
+      },
+      {
+        "description": "2026년 상시 기능사 20회",
+        "docexamdt": "20260622",
+        "docpassdt": "20260622",
+        "docregenddt": "20260617",
+        "docregstartdt": "20260616",
+        "pracexamenddt": "20261023",
+        "pracexamstartdt": "20261012",
+        "pracpassdt": "20261029",
+        "pracregenddt": "20261002",
+        "pracregstartdt": "20261001"
+      },
+      {
+        "description": "2026년 상시 기능사 21회",
+        "docexamdt": "20260629",
+        "docpassdt": "20260629",
+        "docregenddt": "20260624",
+        "docregstartdt": "20260623",
+        "pracexamenddt": "20261106",
+        "pracexamstartdt": "20261026",
+        "pracpassdt": "20261112",
+        "pracregenddt": "20261016",
+        "pracregstartdt": "20261015"
+      },
+      {
+        "description": "2026년 상시 기능사 22회",
+        "docexamdt": "20260720",
+        "docpassdt": "20260720",
+        "docregenddt": "20260715",
+        "docregstartdt": "20260714",
+        "pracexamenddt": "20261120",
+        "pracexamstartdt": "20261109",
+        "pracpassdt": "20261126",
+        "pracregenddt": "20261030",
+        "pracregstartdt": "20261029"
+      },
+      {
+        "description": "2026년 상시 기능사 23회",
+        "docexamdt": "20260727",
+        "docpassdt": "20260727",
+        "docregenddt": "20260722",
+        "docregstartdt": "20260721",
+        "pracexamenddt": "20261204",
+        "pracexamstartdt": "20261123",
+        "pracpassdt": "20261210",
+        "pracregenddt": "20261113",
+        "pracregstartdt": "20261112"
+      },
+      {
+        "description": "2026년 상시 기능사 24회",
+        "docexamdt": "20260803",
+        "docpassdt": "20260803",
+        "docregenddt": "20260729",
+        "docregstartdt": "20260728",
+        "pracexamenddt": "20261216",
+        "pracexamstartdt": "20261207",
+        "pracpassdt": "20261222",
+        "pracregenddt": "20261127",
+        "pracregstartdt": "20261126"
+      },
+      {
+        "description": "2026년 상시 기능사 201회",
+        "docexamdt": "20260822",
+        "docpassdt": "20260902",
+        "docregenddt": "20260729",
+        "docregstartdt": "20260728",
+        "pracexamenddt": "20261003",
+        "pracexamstartdt": "20261003",
+        "pracpassdt": "20261015",
+        "pracregenddt": "20260918",
+        "pracregstartdt": "20260917"
+      }
+    ]
+  },
+  {
+    "label": "api_operation_7198_1320",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList",
+    "params": {
+      "jmCd": "1320"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:23.097666+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 453,
+    "sha256": "7250668ae04081b2051c9332154fa783810a371b3f45c207b3dd60c54ebc4636",
+    "response_file": "responses/api_operation_7198_1320.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>1차 : 19400, 2차 : 22600 </contents><infogb>응시수수료</infogb><jmfldnm>정보처리기사</jmfldnm><mdobligfldcd>211</mdobligfldcd><mdobligfldnm>정보기술</mdobligfldnm><obligfldcd>21</obligfldcd><obligfldnm>정보통신</obligfldnm></item></items></body></response>",
+    "elapsed_seconds": 0.078,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 1,
+    "sample_items": [
+      {
+        "contents": "1차 : 19400, 2차 : 22600 ",
+        "infogb": "응시수수료",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "contents": "1차 : 19400, 2차 : 22600 ",
+        "infogb": "응시수수료",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신"
+      }
+    ]
+  },
+  {
+    "label": "api_operation_7198_1431",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList",
+    "params": {
+      "jmCd": "1431"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:23.177425+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 453,
+    "sha256": "7127e8ebde947c02a85b3063aecaa5901f06292ca3435639941ecda738dc2d27",
+    "response_file": "responses/api_operation_7198_1431.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>1차 : 19400, 2차 : 34600 </contents><infogb>응시수수료</infogb><jmfldnm>산업안전기사</jmfldnm><mdobligfldcd>251</mdobligfldcd><mdobligfldnm>안전관리</mdobligfldnm><obligfldcd>25</obligfldcd><obligfldnm>안전관리</obligfldnm></item></items></body></response>",
+    "elapsed_seconds": 0.078,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 1,
+    "sample_items": [
+      {
+        "contents": "1차 : 19400, 2차 : 34600 ",
+        "infogb": "응시수수료",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "contents": "1차 : 19400, 2차 : 34600 ",
+        "infogb": "응시수수료",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      }
+    ]
+  },
+  {
+    "label": "api_operation_7198_7910",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList",
+    "params": {
+      "jmCd": "7910"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:23.252105+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 453,
+    "sha256": "a04904a0b145f05235a2e169458a100ca882a68072c889091e618a5f05e6ee15",
+    "response_file": "responses/api_operation_7198_7910.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>1차 : 14500, 2차 : 26900 </contents><infogb>응시수수료</infogb><jmfldnm>한식조리기능사</jmfldnm><mdobligfldcd>131</mdobligfldcd><mdobligfldnm>조리</mdobligfldnm><obligfldcd>13</obligfldcd><obligfldnm>음식서비스</obligfldnm></item></items></body></response>",
+    "elapsed_seconds": 0.078,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 1,
+    "sample_items": [
+      {
+        "contents": "1차 : 14500, 2차 : 26900 ",
+        "infogb": "응시수수료",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "contents": "1차 : 14500, 2차 : 26900 ",
+        "infogb": "응시수수료",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      }
+    ]
+  },
+  {
+    "label": "api_operation_7199_1320",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+    "params": {
+      "jmCd": "1320"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:23.321827+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 2433,
+    "sha256": "847398a30ede625a04d4433ba7dff96d1bf4a72c9e868a378fbabe14f5c8776b",
+    "response_file": "responses/api_operation_7199_1320.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><docexamenddt>20260303</docexamenddt><docexamstartdt>20260130</docexamstartdt><docpassdt>20260311</docpassdt><docregenddt>20260115</docregenddt><docregstartdt>20260112</docregstartdt><docsubmitenddt>20260320</docsubmitenddt><docsubmitstartdt>20260130</docsubmitstartdt><implplannm>2026년 정기 기사 1회</implplannm><jmfldnm>정보처리기사</jmfldnm><mdobligfldcd>211</mdobligfldcd><mdobligfldnm>정보기술</mdobligfldnm><obligfldcd>21</obligfldcd><obligfldnm>정보통신</obligfldnm><pracexamenddt>20260506</pracexamenddt><pracexamstartdt>20260418</pracexamstartdt><pracpassenddt>20260811</pracpassenddt><pracpassstartdt>20260612</pracpassstartdt><pracregenddt>20260326</pracregenddt><pracregstartdt>20260323</pracregstartdt></item><item><docexamenddt>20260529</docexamenddt><docexamstartdt>20260509</docexamstartdt><docpassdt>20260610</docpassdt><docregenddt>20260423</docregenddt><docregstartdt>20260420</docregstartdt><docsubmitenddt>20260619</docsubmitenddt><docsubmitstartdt>20260511</docsubmitstartdt><implplannm>2026년 정기 기사 2회</implplannm><jmfldnm>정보처리기사</",
+    "elapsed_seconds": 1.734,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 3,
+    "sample_items": [
+      {
+        "docexamenddt": "20260303",
+        "docexamstartdt": "20260130",
+        "docpassdt": "20260311",
+        "docregenddt": "20260115",
+        "docregstartdt": "20260112",
+        "docsubmitenddt": "20260320",
+        "docsubmitstartdt": "20260130",
+        "implplannm": "2026년 정기 기사 1회",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신",
+        "pracexamenddt": "20260506",
+        "pracexamstartdt": "20260418",
+        "pracpassenddt": "20260811",
+        "pracpassstartdt": "20260612",
+        "pracregenddt": "20260326",
+        "pracregstartdt": "20260323"
+      },
+      {
+        "docexamenddt": "20260529",
+        "docexamstartdt": "20260509",
+        "docpassdt": "20260610",
+        "docregenddt": "20260423",
+        "docregstartdt": "20260420",
+        "docsubmitenddt": "20260619",
+        "docsubmitstartdt": "20260511",
+        "implplannm": "2026년 정기 기사 2회",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신",
+        "pracexamenddt": "20260805",
+        "pracexamstartdt": "20260718",
+        "pracpassenddt": "20261110",
+        "pracpassstartdt": "20260911",
+        "pracregenddt": "20260625",
+        "pracregstartdt": "20260622"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "docexamenddt": "20260303",
+        "docexamstartdt": "20260130",
+        "docpassdt": "20260311",
+        "docregenddt": "20260115",
+        "docregstartdt": "20260112",
+        "docsubmitenddt": "20260320",
+        "docsubmitstartdt": "20260130",
+        "implplannm": "2026년 정기 기사 1회",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신",
+        "pracexamenddt": "20260506",
+        "pracexamstartdt": "20260418",
+        "pracpassenddt": "20260811",
+        "pracpassstartdt": "20260612",
+        "pracregenddt": "20260326",
+        "pracregstartdt": "20260323"
+      },
+      {
+        "docexamenddt": "20260529",
+        "docexamstartdt": "20260509",
+        "docpassdt": "20260610",
+        "docregenddt": "20260423",
+        "docregstartdt": "20260420",
+        "docsubmitenddt": "20260619",
+        "docsubmitstartdt": "20260511",
+        "implplannm": "2026년 정기 기사 2회",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신",
+        "pracexamenddt": "20260805",
+        "pracexamstartdt": "20260718",
+        "pracpassenddt": "20261110",
+        "pracpassstartdt": "20260911",
+        "pracregenddt": "20260625",
+        "pracregstartdt": "20260622"
+      },
+      {
+        "docexamenddt": "20260901",
+        "docexamstartdt": "20260807",
+        "docpassdt": "20260909",
+        "docregenddt": "20260723",
+        "docregstartdt": "20260720",
+        "docsubmitenddt": "20260918",
+        "docsubmitstartdt": "20260807",
+        "implplannm": "2026년 정기 기사 3회",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신",
+        "pracexamenddt": "20261113",
+        "pracexamstartdt": "20261024",
+        "pracpassenddt": "20270217",
+        "pracpassstartdt": "20261218",
+        "pracregenddt": "20260928",
+        "pracregstartdt": "20260921"
+      }
+    ]
+  },
+  {
+    "label": "api_operation_7199_1431",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+    "params": {
+      "jmCd": "1431"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:25.062496+09:00",
+    "http_method": "GET",
+    "error": "TimeoutError",
+    "elapsed_seconds": 20.032,
+    "xml": false,
+    "retry_attempt": {
+      "label": "api_operation_7199_1431_retry",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+      "params": {
+        "jmCd": "1431"
+      },
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:14:28.876454+09:00",
+      "http_method": "GET",
+      "error": "TimeoutError",
+      "elapsed_seconds": 20.062,
+      "xml": false
+    }
+  },
+  {
+    "label": "api_operation_7199_7910",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+    "params": {
+      "jmCd": "7910"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:11:45.088215+09:00",
+    "http_method": "GET",
+    "error": "TimeoutError",
+    "elapsed_seconds": 20.031,
+    "xml": false,
+    "retry_attempt": {
+      "label": "api_operation_7199_7910_retry",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+      "params": {
+        "jmCd": "7910"
+      },
+      "auth": "missing",
+      "retrieved_at": "2026-10-05T14:14:48.943390+09:00",
+      "http_method": "GET",
+      "error": "TimeoutError",
+      "elapsed_seconds": 290.532,
+      "xml": false
+    }
+  },
+  {
+    "label": "api_information_1431",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList",
+    "params": {
+      "jmCd": "1431"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:12:05.120508+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 2742,
+    "sha256": "197a06e5bb600148a61dda4b817498bdb88e62bb28571fd9753b8d05ffe84c52",
+    "response_file": "responses/api_information_1431.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>&#xD;\n&#xD;\n&#xD;\n산업안전기사 출제경향&#xD;\n&#xD;\n&#xD;\n&#xD;\n&#xD;\n- 필기시험의 내용은 고객만족&gt;자료실의 출제기준을 참고바랍니다.&#xD;\n&#xD;\n- 실기시험은 복합형(필답형+작업형)으로 시행되며 고객만족&gt;자료실의 출제기준을 참고바랍니다.&#xD;\n&#xD;\n산업안전기사 -영상자료을 이용하여 시행되며, 제조(기계, 전기, 화공, 건설 등) 및 서비스 등 각 사업현장에서의 안전관리에 관한 이론적 지식과 관련 법령을 바탕으로 일반지식, 전문지식과 응용 및 실무 능력을 평가&#xD;\n&#xD;\n&#xD;\n</contents><infogb>출제경향</infogb><jmfldnm>산업안전기사</jmfldnm><mdobligfldcd>251</mdobligfldcd><mdobligfldnm>안전관리</mdobligfldnm><obligfldcd>25</obligfldcd><obligfldnm>안전관리</obligfldnm></item><item><contents>&#xD;\n&#xD;\n&#xD;\n산업안전기사 출제기준&#xD;\n&#xD;\n&#xD;\n&#xD;\n&#xD;\n산업안전기사 출제기준 입니다.&#xD;\n&#xD;\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.&#xD;\n&#xD;\n</contents><infogb>출제기준</infogb><jmfldnm>산업안전기사</jmfldnm><mdobligfldcd>251</mdobligfldcd><mdobligfldnm>안전관리</mdobligfldnm><obligfldcd>25</obligfldcd><obligfldnm>안전관리</obligfldnm></item><item><contents>&#xD;\n&#xD;\n&#xD;\n산업안전기사 취득방법&#xD;\n&#xD;\n&#xD;\n&#xD;\n&#xD;\n 시 행 처 : 한국산업인력공단&#xD;\n&#xD;\n 관련학과 : 대학 및 전문대학의 안전공학, 산업안전공학, 보건안전학 관련학과&#xD;\n&#xD;\n 시험과목 &#xD;\n&#xD;\n- 필기 : 1. 산업재해 예방",
+    "elapsed_seconds": 1.359,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 3,
+    "sample_items": [
+      {
+        "contents": "\r\n\r\n\r\n산업안전기사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n\r\n- 실기시험은 복합형(필답형+작업형)으로 시행되며 고객만족>자료실의 출제기준을 참고바랍니다.\r\n\r\n산업안전기사 -영상자료을 이용하여 시행되며, 제조(기계, 전기, 화공, 건설 등) 및 서비스 등 각 사업현장에서의 안전관리에 관한 이론적 지식과 관련 법령을 바탕으로 일반지식, 전문지식과 응용 및 실무 능력을 평가\r\n\r\n\r\n",
+        "infogb": "출제경향",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      },
+      {
+        "contents": "\r\n\r\n\r\n산업안전기사 출제기준\r\n\r\n\r\n\r\n\r\n산업안전기사 출제기준 입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.\r\n\r\n",
+        "infogb": "출제기준",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "contents": "\r\n\r\n\r\n산업안전기사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n\r\n- 실기시험은 복합형(필답형+작업형)으로 시행되며 고객만족>자료실의 출제기준을 참고바랍니다.\r\n\r\n산업안전기사 -영상자료을 이용하여 시행되며, 제조(기계, 전기, 화공, 건설 등) 및 서비스 등 각 사업현장에서의 안전관리에 관한 이론적 지식과 관련 법령을 바탕으로 일반지식, 전문지식과 응용 및 실무 능력을 평가\r\n\r\n\r\n",
+        "infogb": "출제경향",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      },
+      {
+        "contents": "\r\n\r\n\r\n산업안전기사 출제기준\r\n\r\n\r\n\r\n\r\n산업안전기사 출제기준 입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.\r\n\r\n",
+        "infogb": "출제기준",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      },
+      {
+        "contents": "\r\n\r\n\r\n산업안전기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단\r\n\r\n 관련학과 : 대학 및 전문대학의 안전공학, 산업안전공학, 보건안전학 관련학과\r\n\r\n 시험과목 \r\n\r\n- 필기 : 1. 산업재해 예방 및 안전보건교육 2. 인간공학 및 위험성 평가&middot;관리 3. 기계&middot;기구 및 설비 안전 관리 4. 전기설비 안전 관리 5. 화학설비 안전 관리 6. 건설공사 안전 관리\r\n\r\n- 실기 :산업안전관리실무 \r\n\r\n 검정방법\r\n\r\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)\r\n- 실기 : 복합형[필답형(1시간 30분, 55점) + 작업형(1시간 정도, 45점)] \r\n\r\n 합격기준\r\n\r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상\r\n- 실기 : 100점을 만점으로 하여 60점 이상\r\n\r\n\r\n",
+        "infogb": "취득방법",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리"
+      }
+    ]
+  },
+  {
+    "label": "api_information_7910",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList",
+    "params": {
+      "jmCd": "7910"
+    },
+    "auth": "missing",
+    "retrieved_at": "2026-10-05T14:12:06.481951+09:00",
+    "http_method": "GET",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "byte_count": 3123,
+    "sha256": "5030e975372b64b968b9f82948b65b928321f7a5342fe896eac1af43fb77877a",
+    "response_file": "responses/api_information_7910.txt",
+    "body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>&#xD;\n&#xD;\n&#xD;\n한식조리기능사 출제경향&#xD;\n&#xD;\n&#xD;\n&#xD;\n&#xD;\n- 필기시험의 내용은 고객만족&gt;자료실의 출제기준을 참고바랍니다.&#xD;\n- 실기시험은 작업형으로 시행되며 고객만족&gt;자료실의 공개문제를 참고바랍니다.&#xD;\n (※ 요구사항의 내용과 지급된 재료로 과제를 제한시간 내에 만들어 내는 작업으로 &#xD;\n 주요평가내용은 위생상태 및 안전관리, 조리기술, 작품완성도 등을 평가합니다.) &#xD;\n&#xD;\n</contents><infogb>출제경향</infogb><jmfldnm>한식조리기능사</jmfldnm><mdobligfldcd>131</mdobligfldcd><mdobligfldnm>조리</mdobligfldnm><obligfldcd>13</obligfldcd><obligfldnm>음식서비스</obligfldnm></item><item><contents>&#xD;\n&#xD;\n&#xD;\n한식조리기능사 출제기준&#xD;\n&#xD;\n&#xD;\n&#xD;\n&#xD;\n한식조리기능사 출제기준입니다.&#xD;\n&#xD;\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.&#xD;\n&#xD;\n</contents><infogb>출제기준</infogb><jmfldnm>한식조리기능사</jmfldnm><mdobligfldcd>131</mdobligfldcd><mdobligfldnm>조리</mdobligfldnm><obligfldcd>13</obligfldcd><obligfldnm>음식서비스</obligfldnm></item><item><contents>&#xD;\n&#xD;\n&#xD;\n한식조리기능사 취득방법&#xD;\n&#xD;\n&#xD;\n&#xD;\n&#xD;\n1. 시 행 처 : 한국산업인력공단&#xD;\n2. 시험과목 &#xD;\n - 필기 : 한식 재료관리, 음식조리 및 위생관리&#xD;\n - 실기 : 조리작업&#xD;\n3. 검정방법 &#xD;\n - 필기 : 객관식 4지 택일형, 60문항(60분)&#xD;\n - 실기 : 작업형(70분 정도)&#xD;\n",
+    "elapsed_seconds": 3.11,
+    "result_code": "00",
+    "result_message": "NORMAL SERVICE.",
+    "item_count": 3,
+    "sample_items": [
+      {
+        "contents": "\r\n\r\n\r\n한식조리기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 실기시험은 작업형으로 시행되며 고객만족>자료실의 공개문제를 참고바랍니다.\r\n (※ 요구사항의 내용과 지급된 재료로 과제를 제한시간 내에 만들어 내는 작업으로 \r\n 주요평가내용은 위생상태 및 안전관리, 조리기술, 작품완성도 등을 평가합니다.) \r\n\r\n",
+        "infogb": "출제경향",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      },
+      {
+        "contents": "\r\n\r\n\r\n한식조리기능사 출제기준\r\n\r\n\r\n\r\n\r\n한식조리기능사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.\r\n\r\n",
+        "infogb": "출제기준",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      }
+    ],
+    "total_count": null,
+    "items": [
+      {
+        "contents": "\r\n\r\n\r\n한식조리기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 실기시험은 작업형으로 시행되며 고객만족>자료실의 공개문제를 참고바랍니다.\r\n (※ 요구사항의 내용과 지급된 재료로 과제를 제한시간 내에 만들어 내는 작업으로 \r\n 주요평가내용은 위생상태 및 안전관리, 조리기술, 작품완성도 등을 평가합니다.) \r\n\r\n",
+        "infogb": "출제경향",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      },
+      {
+        "contents": "\r\n\r\n\r\n한식조리기능사 출제기준\r\n\r\n\r\n\r\n\r\n한식조리기능사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.\r\n\r\n",
+        "infogb": "출제기준",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      },
+      {
+        "contents": "\r\n\r\n\r\n한식조리기능사 취득방법\r\n\r\n\r\n\r\n\r\n1. 시 행 처 : 한국산업인력공단\r\n2. 시험과목 \r\n - 필기 : 한식 재료관리, 음식조리 및 위생관리\r\n - 실기 : 조리작업\r\n3. 검정방법 \r\n - 필기 : 객관식 4지 택일형, 60문항(60분)\r\n - 실기 : 작업형(70분 정도)\r\n4. 합격기준 \r\n - 필기 : 100점을 만점으로 하여 60점 이상\r\n - 실기 : 100점을 만점으로 하여 60점 이상\r\n\r\n\r\n\r\n작업형 실기시험 기본정보\r\n\r\n\r\n \r\n안전등급(safety Level) : 4 등급\r\n\r\n\r\n\r\n\r\n▼\r\n\r\n\r\n\r\n\r\n\r\n위험\r\n경고\r\n주의\r\n관심\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&middot; 시험장소 구분\r\n실내\r\n\r\n\r\n&middot; 주요시설 및 장비\r\n가스레인지, 칼, 도마 등 조리기구\r\n\r\n\r\n&middot; 보호구\r\n긴소매 위생복, 앞치마, 안전화(운동화) 등\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n보호구(긴소매 위생복, 안전화(운동화) 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다. \r\n\r\n\r\n\r\n\r\n○ 실기시험 안전작업 교육영상 url: https://youtu.be/LvNOizxImyc\r\n\r\n\r\n\r\n\r\n",
+        "infogb": "취득방법",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스"
+      }
+    ]
+  }
+]

@@ -1,0 +1,333 @@
+{
+  "assessment_date": "2026-10-05",
+  "catalog": {
+    "count": 613,
+    "categories": {
+      "T": 513,
+      "S": 100
+    },
+    "unique_codes": 613,
+    "selected": [
+      {
+        "jmcd": "1431",
+        "jmfldnm": "산업안전기사",
+        "mdobligfldcd": "251",
+        "mdobligfldnm": "안전관리",
+        "obligfldcd": "25",
+        "obligfldnm": "안전관리",
+        "qualgbcd": "T",
+        "qualgbnm": "국가기술자격",
+        "seriescd": "03",
+        "seriesnm": "기사"
+      },
+      {
+        "jmcd": "1320",
+        "jmfldnm": "정보처리기사",
+        "mdobligfldcd": "211",
+        "mdobligfldnm": "정보기술",
+        "obligfldcd": "21",
+        "obligfldnm": "정보통신",
+        "qualgbcd": "T",
+        "qualgbnm": "국가기술자격",
+        "seriescd": "03",
+        "seriesnm": "기사"
+      },
+      {
+        "jmcd": "7910",
+        "jmfldnm": "한식조리기능사",
+        "mdobligfldcd": "131",
+        "mdobligfldnm": "조리",
+        "obligfldcd": "13",
+        "obligfldnm": "음식서비스",
+        "qualgbcd": "T",
+        "qualgbnm": "국가기술자격",
+        "seriescd": "04",
+        "seriesnm": "기능사"
+      },
+      {
+        "jmcd": "9630",
+        "jmfldnm": "공인중개사",
+        "mdobligfldcd": " ",
+        "mdobligfldnm": " ",
+        "obligfldcd": " ",
+        "obligfldnm": " ",
+        "qualgbcd": "S",
+        "qualgbnm": "국가전문자격",
+        "seriescd": "08",
+        "seriesnm": "공인중개사"
+      }
+    ]
+  },
+  "eligibility_item_count": 128,
+  "grade_counts": {
+    "기술사": 15,
+    "기능장": 9,
+    "기사": 18,
+    "산업기사": 21,
+    "1급": 17,
+    "2급": 16,
+    "단일등급": 31,
+    "기능사": 1
+  },
+  "fee_comparisons": [
+    {
+      "certificate": "정보처리기사",
+      "code": "1320",
+      "name_matches": true,
+      "api_values": [
+        "19400",
+        "22600"
+      ],
+      "page_values": [
+        "19400",
+        "22600"
+      ],
+      "matches": true
+    },
+    {
+      "certificate": "산업안전기사",
+      "code": "1431",
+      "name_matches": true,
+      "api_values": [
+        "19400",
+        "34600"
+      ],
+      "page_values": [
+        "19400",
+        "34600"
+      ],
+      "matches": true
+    },
+    {
+      "certificate": "한식조리기능사",
+      "code": "7910",
+      "name_matches": true,
+      "api_values": [
+        "14500",
+        "26900"
+      ],
+      "page_values": [
+        "14500",
+        "26900"
+      ],
+      "matches": true
+    }
+  ],
+  "schedule_comparisons": [
+    {
+      "certificate": "정보처리기사",
+      "item_count": 3,
+      "compared_phases": 6,
+      "all_compared_fields_match": true,
+      "checks": [
+        {
+          "round": "2026년 정기 기사 1회",
+          "phase": "written",
+          "name_matches": true,
+          "field_matches": {
+            "registration_start": true,
+            "registration_end": true,
+            "exam_start": true,
+            "exam_end": true,
+            "result_date": true
+          }
+        },
+        {
+          "round": "2026년 정기 기사 1회",
+          "phase": "practical",
+          "name_matches": true,
+          "field_matches": {
+            "registration_start": true,
+            "registration_end": true,
+            "exam_start": true,
+            "exam_end": true,
+            "result_date": true
+          }
+        },
+        {
+          "round": "2026년 정기 기사 2회",
+          "phase": "written",
+          "name_matches": true,
+          "field_matches": {
+            "registration_start": true,
+            "registration_end": true,
+            "exam_start": true,
+            "exam_end": true,
+            "result_date": true
+          }
+        },
+        {
+          "round": "2026년 정기 기사 2회",
+          "phase": "practical",
+          "name_matches": true,
+          "field_matches": {
+            "registration_start": true,
+            "registration_end": true,
+            "exam_start": true,
+            "exam_end": true,
+            "result_date": true
+          }
+        },
+        {
+          "round": "2026년 정기 기사 3회",
+          "phase": "written",
+          "name_matches": true,
+          "field_matches": {
+            "registration_start": true,
+            "registration_end": true,
+            "exam_start": true,
+            "exam_end": true,
+            "result_date": true
+          }
+        },
+        {
+          "round": "2026년 정기 기사 3회",
+          "phase": "practical",
+          "name_matches": true,
+          "field_matches": {
+            "registration_start": true,
+            "registration_end": true,
+            "exam_start": true,
+            "exam_end": true,
+            "result_date": true
+          }
+        }
+      ]
+    }
+  ],
+  "operation_results": [
+    {
+      "label": "api_operation_7196",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 7,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getEList",
+      "params": {}
+    },
+    {
+      "label": "api_operation_7197",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 34,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getCList",
+      "params": {}
+    },
+    {
+      "label": "api_operation_7198_1320",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 1,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList",
+      "params": {
+        "jmCd": "1320"
+      }
+    },
+    {
+      "label": "api_operation_7198_1431",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 1,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList",
+      "params": {
+        "jmCd": "1431"
+      }
+    },
+    {
+      "label": "api_operation_7198_7910",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 1,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList",
+      "params": {
+        "jmCd": "7910"
+      }
+    },
+    {
+      "label": "api_operation_7199_1320",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 3,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+      "params": {
+        "jmCd": "1320"
+      }
+    },
+    {
+      "label": "api_operation_7199_1431",
+      "result_code": null,
+      "http_status": null,
+      "item_count": null,
+      "error": "TimeoutError",
+      "retry_used": true,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+      "params": {
+        "jmCd": "1431"
+      }
+    },
+    {
+      "label": "api_operation_7199_7910",
+      "result_code": null,
+      "http_status": null,
+      "item_count": null,
+      "error": "TimeoutError",
+      "retry_used": true,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList",
+      "params": {
+        "jmCd": "7910"
+      }
+    },
+    {
+      "label": "api_information_1431",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 3,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList",
+      "params": {
+        "jmCd": "1431"
+      }
+    },
+    {
+      "label": "api_information_7910",
+      "result_code": "00",
+      "http_status": 200,
+      "item_count": 3,
+      "error": null,
+      "retry_used": false,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList",
+      "params": {
+        "jmCd": "7910"
+      }
+    }
+  ],
+  "limitations": [
+    "인증 없는 성공은 이번 조사에서 관찰한 결과이며, 공식 문서는 인증키를 필수로 요구한다.",
+    "종목 목록 613건 전체의 상세정보·최신성·일정은 검증하지 않았다.",
+    "시험장소 API는 최초 호출과 1회 재시도 모두 20초 시간초과였다.",
+    "응시요건 원문 확보는 개인별 최종 응시자격 판정·증빙심사 성공을 뜻하지 않는다.",
+    "상시시험 일정 및 개인별 확정 시험일·배정 시험장은 추가 연동 검증이 필요하다.",
+    "RAG 검색·PDF 본문 추출·Google OAuth·Calendar 이벤트 생성은 이번 조사 범위에서 실행하지 않았다."
+  ],
+  "discarded_initial_probe": {
+    "label": "certificate_1470",
+    "reason": "처음 사용한 산업안전기사 코드가 실제 공식 목록과 달랐으며, 공식 목록의 1431로 수정해 재검증했다."
+  },
+  "date_validation": {
+    "checked_phases": 12,
+    "errors": [],
+    "assessment_date": "2026-10-05"
+  }
+}

@@ -1,0 +1,311 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+			contResizeH("contents_frame_2");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_2", "contents_text_2", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					
+					<b class="headLine3">시험일정</b>
+					
+
+
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 10:00부터 <span class="c_Red">마지막 날 18:00까지 </span>임)</p>
+					
+
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+									<td colspan="7" align="center" class="noArticle">
+										
+											<p class="no_article">시험 일정이 없습니다.</p>
+										
+									</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">11,900원</td><td scope="col">41,600원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><HTML>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=euc-kr">
+<META content="TAGFREE Active Designer v3.0" name=GENERATOR>
+<LINK href="http://www.q-net.or.kr/editor_css/editor_default.css" rel=stylesheet>
+</HEAD>
+<BODY style="FONT-SIZE: 9pt; FONT-FAMILY: gulim" text=#00cd00>- 장비를 운전하여 지정된 코스에 따라 일정한 양과 간격으로 포장하는 작업을 하며 작 업전후 점검능력, 기관회전 및 장비조작, 주행, 포장작업 상태를 평가 </BODY></HTML></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">공개문제</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="공개문제 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><HTML>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=euc-kr">
+<META content="TAGFREE Active Designer v3.0" name=GENERATOR>
+<LINK href="http://www.q-net.or.kr/editor_css/editor_default.css" rel=stylesheet>
+</HEAD>
+<BODY style="FONT-SIZE: 9pt; FONT-FAMILY: gulim">
+<P class=바탕글><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">메뉴상단 </SPAN><SPAN style="FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #ff0000; FONT-FAMILY: 굴림">고객만족&gt;자료실</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 바탕"><SPAN style="FONT-FAMILY: 새굴림"><SPAN style="FONT-FAMILY: 굴림">에서도 보실 수 있습니다.</SPAN></SPAN></SPAN></P>
+</BODY>
+</HTML></textarea>
+<div class="infoBlueBox"><div class="download"><p class="txtBody3">[공개문제]아스팔트피니셔운전기능사.pdf</p><button type="button" class="btn_downBox" onclick="fileDown('bbs/Q006/Q006_2017959','[공개문제]아스팔트피니셔운전기능사.pdf','','');"><span>다운로드</span></button></div></div>
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_2" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_2" style="width:100%;display:none;" rows="10">① 시 행 처 : 한국산업인력공단 
+② 훈련기관 : 보통 관련업체의 건설기계관리부서에 무기능자로 취업한 후 도로포장건
+               설기계에 대한 기능과 지식을 익힌 후 시험에 응시하며, 직업훈련원이
+               나 일반 사설학원에는 훈련과정이 설치되어 있지 않음.
+③ 시험과목 
+   - 필기 
+    1.건설기계기관
+    2.전기 및 작업장치
+    3.유압일반 
+    4. 건설기계관리법규 및 도로통행방법 
+    5.안전관리
+   - 실기 : 아스팔트피니셔운전 작업
+④ 검정방법
+   - 필기 : 전과목 혼합, 객관식 60문항(60분)
+   - 실기 : 작업형 (15분 정도)
+⑤ 합격기준
+   - 필기·실기 : 100점을 만점으로 하여 60점 이상 </textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

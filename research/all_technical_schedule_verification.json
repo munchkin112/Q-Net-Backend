@@ -1,0 +1,120 @@
+{
+  "verified_at": "2026-10-05T11:00:52.954917+00:00",
+  "certificate_count": 613,
+  "exam_information_count": 510,
+  "schedule_count": 1922,
+  "scheduled_certificate_count": 475,
+  "phases": {
+    "practical": 848,
+    "written": 937,
+    "interview": 137
+  },
+  "duplicate_keys": 0,
+  "preserved_old_ids": 36,
+  "all_known_old_dates_preserved": true,
+  "split_registration_rows": 305,
+  "vacancy_registration_rows": 1744,
+  "http_results": [
+    {
+      "path": "/health",
+      "status_code": 200
+    },
+    {
+      "path": "/health/database",
+      "status_code": 200
+    },
+    {
+      "path": "/docs",
+      "status_code": 200
+    },
+    {
+      "path": "/openapi.json",
+      "status_code": 200
+    },
+    {
+      "qnet_code": "1320",
+      "name": "정보처리기사",
+      "path": "/api/v1/certificates/79a6a7a3-5fbc-4b64-80dd-732206f3fb81/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 6
+    },
+    {
+      "qnet_code": "1431",
+      "name": "산업안전기사",
+      "path": "/api/v1/certificates/f194811b-b634-426d-9e1b-20b2a39def11/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 6
+    },
+    {
+      "qnet_code": "0012",
+      "name": "금형기술사",
+      "path": "/api/v1/certificates/4c79d74e-3e3e-4eb4-9ab8-250bf526941d/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 4
+    },
+    {
+      "qnet_code": "0011",
+      "name": "용접기술사",
+      "path": "/api/v1/certificates/873c7a1a-119b-4734-abc9-1809d4feb955/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 4
+    },
+    {
+      "qnet_code": "3021",
+      "name": "기계가공기능장",
+      "path": "/api/v1/certificates/584d6339-cdb5-42b4-8029-de2b313157d3/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 4
+    },
+    {
+      "qnet_code": "6032",
+      "name": "컴퓨터응용밀링기능사",
+      "path": "/api/v1/certificates/b3e545a4-b173-439d-9d41-9cc347653bdd/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 8
+    },
+    {
+      "qnet_code": "6990",
+      "name": "석공기능사",
+      "path": "/api/v1/certificates/efd3074b-b082-4a53-ab4a-b59715ad23d4/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 1
+    },
+    {
+      "qnet_code": "9777",
+      "name": "공공조달관리사",
+      "path": "/api/v1/certificates/28c7c8db-75aa-4d38-ab42-ae60b80c049d/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 1
+    },
+    {
+      "qnet_code": "7030",
+      "name": "방수기능사",
+      "path": "/api/v1/certificates/16b239ba-5dc0-41fd-9a32-83826f9a4cc9/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 4
+    },
+    {
+      "qnet_code": "7910",
+      "name": "한식조리기능사",
+      "path": "/api/v1/certificates/76f9e2b0-e3d5-47c9-916a-5cf5623f2105/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 0
+    },
+    {
+      "qnet_code": "9771",
+      "name": "스마트공장기능사",
+      "path": "/api/v1/certificates/0933686a-85d7-4dbf-ac3f-4d3a53639767/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 0
+    },
+    {
+      "qnet_code": "8070",
+      "name": "공구제작기능사보",
+      "path": "/api/v1/certificates/524d2cb9-3146-45f9-b43b-3a6db604ebcb/schedules?year=2026",
+      "status_code": 200,
+      "schedule_rows": 0
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,972 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					
+					<b class="headLine3">시험일정</b>
+					
+
+
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 10:00부터 <span class="c_Red">마지막 날 18:00까지 </span>임)</p>
+					
+
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기사 1회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.01.12<br/> ~ <br/>2026.01.15
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.01.24<br/> ~ <br/>2026.01.25]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.01.30<br/>~<br/>2026.03.03
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.03.11</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.03.23<br/>~<br/>2026.03.26<br/>빈자리접수 :<br/>2026.04.12<br/> ~ <br/>2026.04.13</td><td>2026.04.18<br/> ~ <br/>2026.05.06</td><td>2026.06.12</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기사 3회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.07.20<br/> ~ <br/>2026.07.23
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.08.01<br/> ~ <br/>2026.08.02]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.08.07<br/>~<br/>2026.09.01
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.09.09</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.09.21<br/>~<br/>2026.09.28<br/>빈자리접수 :<br/>2026.10.18<br/> ~ <br/>2026.10.19</td><td>2026.10.24<br/> ~ <br/>2026.11.13</td><td>2026.12.18</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">19,400원</td><td scope="col">22,600원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>의공기사 출제경향</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" /><link rel="stylesheet" href="http://www.q-net.or.kr/editor_css/editor_default.css" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment-->
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 190%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필기시험의 내용은 고객만족</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&gt;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자료실의 출제기준을 참고바랍니다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 190%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">실기시험은 필답형으로 시행되며 고객만족</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&gt;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자료실의 출제기준을 참고바랍니다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+<div id="hwpEditorBoardContent" class="hwp_editor_board_content" data-jsonlen="7018" data-hjsonver="1.0"><!--[data-hwpjson]{
+"documentPr": {
+"di": "",
+"dp": {
+"dn": "test.hwp",
+"ta": 1,
+"d1": 5,
+"d2": 0,
+"dv": 5,
+"dr": 1,
+"do": 1,
+"vj": "1.0",
+"an": "Hancom Office Hangul",
+"av": "9, 1, 1, 4673",
+"ao": "WIN",
+"ab": "32",
+"ar": "LE",
+"as": "Windows_Unknown_Version"
+},
+"dis": false,
+"ds": {
+"ti": "",
+"la": "ko",
+"cr": "",
+"su": "",
+"de": "",
+"cd": "2020-11-18T14:43:24.128Z",
+"md": "1601-01-01T09:00:00.000Z",
+"pd": "1601-01-01T09:00:00.000Z",
+"ke": ""
+}
+},
+"dh": {
+"do": {
+"pa": 1,
+"fo": 1,
+"en": 1,
+"pi": 1,
+"tb": 1,
+"eq": 1
+},
+"fo": [ ],
+"cd": {
+"tp": 0,
+"lc": {
+"af": false,
+"ui": false,
+"fu": false,
+"dn": false,
+"ul": false,
+"el": false,
+"at": false,
+"tq": false,
+"da": false,
+"dw": false,
+"dj": false,
+"bc": false,
+"bu": false,
+"al": false,
+"ab": false,
+"ap": false,
+"an": false,
+"aa": false,
+"ds": false,
+"de": false,
+"as": false,
+"cp": false,
+"ao": false,
+"et": false,
+"ay": false,
+"am": false,
+"a1": false,
+"bt": false,
+"av": false,
+"dh": false,
+"dp": false,
+"d1": false,
+"mf": false,
+"bl": false,
+"ag": false,
+"dg": false,
+"ae": false,
+"df": false,
+"do": false,
+"dl": false,
+"di": false,
+"d2": false,
+"d3": false,
+"ob": false,
+"d4": false,
+"ev": false,
+"d5": false,
+"d6": false,
+"a2": false,
+"dc": false
+}
+},
+"ld": {
+"pa": "",
+"pi": true,
+"fo": false
+}
+},
+"bf": {
+"01D6BD6DBCB7B7D000000056": {
+"id": 1,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01D6BD6DBCB7B7D000000057": {
+"id": 2,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 4278190080,
+"al": 0,
+"hs": -1
+}
+}
+}
+},
+"cp": {
+"01D6BD6DBCB7B7D000000058": {
+"id": 0,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01D6BD6DBCB7B7D000000057",
+"f1": "바탕",
+"t1": 1,
+"f2": "바탕",
+"t2": 1,
+"f3": "바탕",
+"t3": 1,
+"f4": "바탕",
+"t4": 1,
+"f5": "바탕",
+"t5": 1,
+"f6": "바탕",
+"t6": 1,
+"f7": "바탕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01D6BD6DBCB7B7D000000059": {
+"id": 1,
+"he": 800,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01D6BD6DBCB7B7D000000057",
+"f1": "#중고딕",
+"t1": 2,
+"f2": "굴림",
+"t2": 1,
+"f3": "굴림",
+"t3": 1,
+"f4": "굴림",
+"t4": 1,
+"f5": "굴림",
+"t5": 1,
+"f6": "굴림",
+"t6": 1,
+"f7": "굴림",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+}
+},
+"tp": {
+"01D6BD6DBCB7B7D00000005A": {
+"id": 0,
+"al": false,
+"ar": false,
+"tp": [ ]
+}
+},
+"nu": { },
+"bu": { },
+"pp": {
+"01D6BD6DBCB7B7D00000005B": {
+"id": 0,
+"ah": 0,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01D6BD6DBCB7B7D00000005A",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": false,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01D6BD6DBCB7B7D000000057",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01D6BD6DBCB7B7D00000005C": {
+"id": 1,
+"ah": 1,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01D6BD6DBCB7B7D00000005A",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": false,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 190,
+"bf": "01D6BD6DBCB7B7D000000057",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+}
+},
+"st": {
+"01D6BD6DBCB7B7D00000005D": {
+"id": 0,
+"ty": 0,
+"na": "바탕글",
+"en": "Normal",
+"pp": "01D6BD6DBCB7B7D00000005B",
+"cp": "01D6BD6DBCB7B7D000000058",
+"ns": "01D6BD6DBCB7B7D00000005D",
+"li": 1042,
+"lf": false
+}
+},
+"mp": { },
+"ro": {
+"hp": "01D6BD6DBCB7B7D000000054",
+"01D6BD6DBCB7B7D000000054": {
+"np": "01D6BD6DBCB7B7D000000055",
+"id": 0,
+"pp": "01D6BD6DBCB7B7D00000005C",
+"si": "01D6BD6DBCB7B7D00000005D",
+"bf": 3,
+"ru": [
+{
+"cp": "01D6BD6DBCB7B7D000000059",
+"ch": [
+{
+"cc": 2,
+"ci": 1668246628,
+"co": "01D6BD6DBCB7B7D000000052"
+}
+,
+{
+"cc": 2,
+"ci": 1936024420,
+"co": "01D6BD6DBCB7B7D000000053"
+}
+,
+{
+"t": "- 필기시험의 내용은 고객만족\u003E자료실의 출제기준을 참고바랍니다."
+}
+]
+}
+]
+},
+"01D6BD6DBCB7B7D000000055": {
+"np": "",
+"id": -2147483648,
+"pp": "01D6BD6DBCB7B7D00000005C",
+"si": "01D6BD6DBCB7B7D00000005D",
+"bf": 0,
+"ru": [
+{
+"cp": "01D6BD6DBCB7B7D000000059",
+"ch": [
+{
+"t": "- 실기시험은 필답형으로 시행되며 고객만족\u003E자료실의 출제기준을 참고바랍니다."
+}
+]
+}
+]
+}
+},
+"sl": { },
+"cs": {
+"01D6BD6DBCB7B7D000000052": {
+"cc": 2,
+"ci": 1668246628,
+"ty": 0,
+"la": 0,
+"co": 1,
+"ss": true,
+"sg": 0,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"cs": [ ]
+}
+,
+"01D6BD6DBCB7B7D000000053": {
+"cc": 2,
+"ci": 1936024420,
+"td": 0,
+"tv": false,
+"sc": 1134,
+"ts": 8000,
+"ms": "",
+"os": "",
+"gl": 0,
+"gc": 0,
+"gw": false,
+"ns": 0,
+"np": 0,
+"ni": 0,
+"nt": 0,
+"ne": 0,
+"hh": false,
+"hf": false,
+"hm": false,
+"fb": false,
+"hb": false,
+"fi": false,
+"hi": false,
+"hp": false,
+"he": false,
+"sl": false,
+"lr": 0,
+"lc": 0,
+"ld": 0,
+"ls": 0,
+"pp": {
+"ls": false,
+"wi": 59528,
+"he": 84188,
+"gt": 0,
+"ml": 8504,
+"mr": 8504,
+"mt": 5668,
+"mb": 4252,
+"mh": 4252,
+"mf": 4252,
+"mg": 0
+},
+"fn": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -1,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 283
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"en": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": 0,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 0
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"pb": [
+{
+"ty": 0,
+"bf": "01D6BD6DBCB7B7D000000056",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 1,
+"bf": "01D6BD6DBCB7B7D000000056",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 2,
+"bf": "01D6BD6DBCB7B7D000000056",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+}
+],
+"mp": [ ]
+}
+},
+"bi": [ ],
+"bidt": { }
+}--></div>
+<p><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>의공기사 취득방법</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9312; 시행처 : 한국산업인력공단 </span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9313; 관련학과 : 의공학과, 의료공학과, 의용생체공학과, 의공(의료기기)관련 학과 등</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9314; 시험과목</span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">- 필기 : 1.의료기기 기초의학 2. 의료기기 공학 3. 의료기기 구조원리 4. 의료기기 인허가 5. 의료기기 관리</span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">- 실기 : 의공 실무 </span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9315; 검정방법 - 필기 : 객관식 4지택일형(시험시간 : 2시간 30분) - 실기 : 필답형(시험시간 : 2시간 30분)</span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9316; 합격기준</span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상</span></p>
+<p style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">- 실기 : 100점 만점에 60점 이상 </span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('1176', '330');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 의공기사 (2024.1.1 ~ 2028.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

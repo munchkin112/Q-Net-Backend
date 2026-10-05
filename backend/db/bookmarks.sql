@@ -1,0 +1,9 @@
+-- FUTURE BOOKMARK: intentionally disabled. Remove the leading '-- ' from
+-- the SQL lines below, then apply this file to the existing database.
+-- CREATE TABLE bookmarks (
+--     id uuid PRIMARY KEY,
+--     user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+--     certificate_id uuid NOT NULL REFERENCES certificates(id) ON DELETE RESTRICT,
+--     created_at timestamptz NOT NULL DEFAULT now(),
+--     UNIQUE (user_id, certificate_id)
+-- );

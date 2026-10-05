@@ -1,0 +1,18 @@
+{
+  "label": "industrial_safety_current_page",
+  "source_url": "https://www.q-net.or.kr/crf005.do",
+  "params": {
+    "id": "crf00503s02",
+    "jmCd": "1431",
+    "jmInfoDivCcd": "B0"
+  },
+  "auth": "missing",
+  "retrieved_at": "2026-10-05T17:13:43.258476+09:00",
+  "http_method": "GET",
+  "http_status": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "byte_count": 23932,
+  "sha256": "3554a4ece5a2a56dee78ccb982795e62a8ef58154c9fb80f1b4d611e3737049d",
+  "response_file": "responses/industrial_safety_current_page.html",
+  "elapsed_seconds": 0.437
+}

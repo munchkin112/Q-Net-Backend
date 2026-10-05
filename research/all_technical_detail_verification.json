@@ -1,0 +1,147 @@
+{
+  "checked_at": "2026-10-05T10:00:28.871616+00:00",
+  "catalog_count": 613,
+  "detail_count": 510,
+  "schedule_count": 36,
+  "data_status_counts": {
+    "complete": 464,
+    "partial": 46
+  },
+  "phase_counts": {
+    "written+practical": 414,
+    "written+interview": 79,
+    "practical": 17
+  },
+  "validation_errors": [],
+  "http_checks": [
+    {
+      "code": "0011",
+      "name": "용접기술사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "partial",
+      "certificate_id": "873c7a1a-119b-4734-abc9-1809d4feb955"
+    },
+    {
+      "code": "0012",
+      "name": "금형기술사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "4c79d74e-3e3e-4eb4-9ab8-250bf526941d"
+    },
+    {
+      "code": "0410",
+      "name": "항만및해안기술사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "e883ae04-bc94-4997-b324-581abb510c48"
+    },
+    {
+      "code": "1121",
+      "name": "임베디드기사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "partial",
+      "certificate_id": "2ce28d86-df04-4190-9521-6421e73fc31b"
+    },
+    {
+      "code": "1150",
+      "name": "전기기사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "1b76163a-8229-4cd8-b7d0-f277195a2b74"
+    },
+    {
+      "code": "1320",
+      "name": "정보처리기사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81"
+    },
+    {
+      "code": "1431",
+      "name": "산업안전기사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11"
+    },
+    {
+      "code": "2290",
+      "name": "정보처리산업기사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "2b635f4b-55ff-4107-8d8a-96f8b2ef01e7"
+    },
+    {
+      "code": "6892",
+      "name": "정보기기운용기능사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "bc4c547f-af0c-4694-ad29-16159ec94e77"
+    },
+    {
+      "code": "6990",
+      "name": "석공기능사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "efd3074b-b082-4a53-ab4a-b59715ad23d4"
+    },
+    {
+      "code": "7890",
+      "name": "도자공예기능사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "4248f530-c300-4a97-a0ef-2b7a8e6b7b35"
+    },
+    {
+      "code": "7910",
+      "name": "한식조리기능사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "complete",
+      "certificate_id": "76f9e2b0-e3d5-47c9-916a-5cf5623f2105"
+    },
+    {
+      "code": "8070",
+      "name": "공구제작기능사보",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "unavailable",
+      "certificate_id": "524d2cb9-3146-45f9-b43b-3a6db604ebcb"
+    },
+    {
+      "code": "8080",
+      "name": "프레스금형기능사보",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "unavailable",
+      "certificate_id": "0e25b372-7084-488c-af63-309722abef0c"
+    },
+    {
+      "code": "8090",
+      "name": "사출금형기능사보",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "unavailable",
+      "certificate_id": "cea89cee-7998-4d4f-b5c4-276e02207e03"
+    },
+    {
+      "code": "9500",
+      "name": "공인노무사",
+      "http_status": 200,
+      "passed": true,
+      "data_status": "unavailable",
+      "certificate_id": "d13f85b0-e4ae-4cbc-bb79-1c1d9c6eaf55"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,1004 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+			contResizeH("contents_frame_2");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_2", "contents_text_2", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					<b class="headLine3">
+						검정형 자격 시험일정
+					</b>
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기능사 1회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td></td>
+	
+									<!--  필기시험    -->
+									<td>
+	
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td> </td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.02.02<br/>~<br/>2026.02.05<br/>빈자리접수 :<br/>2026.03.08<br/> ~ <br/>2026.03.09</td><td>2026.03.14<br/> ~ <br/>2026.04.05</td><td>2026.04.10</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능사 2회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td></td>
+	
+									<!--  필기시험    -->
+									<td>
+	
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td> </td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.04.27<br/>~<br/>2026.04.30<br/>빈자리접수 :<br/>2026.05.24<br/> ~ <br/>2026.05.25</td><td>2026.05.30<br/> ~ <br/>2026.06.14</td><td>2026.06.26</td>
+								</tr>
+	
+								<tr>
+								
+									<td>2026년 정기 기능사</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+									<td colspan="3" class="txt_center">산업수요 맞춤형 고등학교 및 특성화 고등학교<br/>필기시험 면제자 검정<br/>※ 일반인 필기시험 면제자 응시 불가</td>
+	
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.05.11<br/>~<br/>2026.05.14<td>2026.06.13<br/> ~ <br/>2026.06.24</td><td>2026.07.10</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능사 4회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td></td>
+	
+									<!--  필기시험    -->
+									<td>
+	
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td> </td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.10.12<br/>~<br/>2026.10.15<br/>빈자리접수 :<br/>2026.11.08<br/> ~ <br/>2026.11.09</td><td>2026.11.14<br/> ~ <br/>2026.12.02</td><td>2026.12.11</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3">검정형 자격 시험정보 </b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">46,200원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>건축목공기능사 출제경향</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" /><link rel="stylesheet" href="http://www.q-net.or.kr/editor_css/editor_default.css" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic" text="#00cd00">
+<p>건축목공기능사 -&nbsp;각종 수공구와 목공기계를 사용하여 지붕틀을 비롯한 다양한 목구조의 골조구성과 이음, 맞춤, 직선 및 곡선부재의 가공조립 및 실내수장 작업능력을 평가</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">공개문제</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="공개문제 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><HTML>
+<HEAD>
+<META content="text/html; charset=euc-kr" http-equiv=Content-Type>
+<META name=GENERATOR content="TAGFREE Active Designer v3.0">
+<LINK rel=stylesheet href="http://www.q-net.or.kr/editor_css/editor_default.css">
+</HEAD>
+<BODY style="FONT-FAMILY: gulim; FONT-SIZE: 9pt">
+<P class=바탕글><SPAN style="FONT-FAMILY: 굴림; FONT-SIZE: 9pt">메뉴상단 </SPAN><SPAN style="FONT-FAMILY: 굴림; COLOR: #ff0000; FONT-SIZE: 9pt; FONT-WEIGHT: bold">고객만족&gt;자료실</SPAN><SPAN style="FONT-FAMILY: 바탕; FONT-SIZE: 9pt"><SPAN style="FONT-FAMILY: 새굴림"><SPAN style="FONT-FAMILY: 굴림">에서도 보실 수 있습니다.</SPAN></SPAN></SPAN></P>
+</BODY>
+</HTML></textarea>
+<div class="infoBlueBox"><div class="download"><p class="txtBody3">건축목공기능사(표준화문제)-2025.pdf</p><button type="button" class="btn_downBox" onclick="fileDown('bbs/Q006/Q006_2245423','건축목공기능사(표준화문제)-2025.pdf','','');"><span>다운로드</span></button></div></div>
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_2" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_2" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>건축목공기능사 취득방법</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p style="FONT-SIZE: 9pt; FONT-FAMILY: gulim"><strong>&#9312; 시 행 처</strong> : <span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">한국산업인력공단</span></p>
+<p>&nbsp;&nbsp;</p>
+<p><strong>&#9313;</strong><strong> 시험과목</strong> </p>
+<p>&nbsp;</p>
+<p>- 실기 :&nbsp;건축목공작업 </p>
+<p>&nbsp;</p>
+<p><strong>&#9314;</strong><strong> 검정방법</strong></p>
+<p>&nbsp;</p>
+<p>- 실기 : 작업형(5시간&nbsp;정도, 100점) </p>
+<p>&nbsp;</p>
+<p><strong>&#9315;</strong><strong> 합격기준</strong></p>
+<p>&nbsp;</p>
+<p>- 실기 : 100점을 만점으로 하여 60점 이상</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!--StartFragment-->
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #999999 1px solid; HEIGHT: 158px; BORDER-RIGHT: medium none; WIDTH: 128px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px" rowspan="5">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><img style="BORDER-TOP: #000000 0px solid; HEIGHT: 120px; BORDER-RIGHT: #000000 0px solid; WIDTH: 120px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid" alt="" src="http://www.q-net.or.kr/crsedt/websource/jsp/NamoCrsEdtMediaView.jsp?fileName=/images/000038/20210813110031233.jpg" />&nbsp;</p></td>
+<td style="BORDER-TOP: #999999 1px solid; HEIGHT: 42px; BORDER-RIGHT: medium none; WIDTH: 217px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="FONT-SIZE: 6pt; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 6pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">&nbsp; </span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">안전등급</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">(Safety Level) : 4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">등급</span></p></td>
+<td style="BORDER-TOP: #999999 1px solid; HEIGHT: 42px; BORDER-RIGHT: medium none; WIDTH: 231px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: 0pt">▼</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 52px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; COLOR: #4c4c4c; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #ed2b2b; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">위험</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #7f8084; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">경고</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #a7abae; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">주의</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 52px; VERTICAL-ALIGN: middle; BACKGROUND: #cfd1d3; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #ffffff">관심</span></p></td>
+</tr>
+</tbody>
+</table></td>
+<td style="BORDER-TOP: #999999 1px solid; HEIGHT: 42px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999999 2px solid; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 124px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c; LETTER-SPACING: 0pt">&bull; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c">시험장소 구분</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c"> </span></p></td>
+<td style="BORDER-TOP: #999999 2px solid; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 324px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">실내</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 124px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c; LETTER-SPACING: 0pt">&bull; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c">주요시설 및 장비</span></p></td>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 15px; BORDER-RIGHT: #999999 2px solid; WIDTH: 324px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #7f7f7f 1px dotted; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; LETTER-SPACING: -0.6pt">각도절단기, 자동대패, 전기대패 등</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 15px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -0.6pt">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 37px; BORDER-RIGHT: #999999 2px solid; WIDTH: 124px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c; LETTER-SPACING: 0pt">&bull; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; FONT-WEIGHT: bold; COLOR: #4c4c4c">보호구</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림"> </span></p></td>
+<td style="BORDER-TOP: #7f7f7f 1px dotted; HEIGHT: 37px; BORDER-RIGHT: #999999 2px solid; WIDTH: 324px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="MARGIN-LEFT: 16px; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: ; TEXT-INDENT: -12.4pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; LETTER-SPACING: -0.6pt">안전모, 안전화 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; LETTER-SPACING: -0.4pt">등</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 37px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #999999 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999999 2px solid; HEIGHT: 47px; BORDER-RIGHT: medium none; WIDTH: 448px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px" colspan="3">
+<p class="0" style="MARGIN-LEFT: 13px; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: ; TEXT-INDENT: -10.1pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -0.7pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">보호구</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">작업복 등</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">) </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">착용</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">정리정돈 상태</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">안전사항 등이 채점 대상이 될 수 있습니다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -1.1pt">.</span></p>
+<p class="0" style="MARGIN-LEFT: 13px; LINE-HEIGHT: 130%; TEXT-AUTOSPACE: ; TEXT-INDENT: -10.1pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: -0.7pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c; LETTER-SPACING: 0pt">.</span></p></td>
+<td style="BORDER-TOP: medium none; HEIGHT: 47px; BORDER-RIGHT: medium none; WIDTH: 17px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #999999 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; COLOR: #4c4c4c; MARGIN-LEFT: 14px; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: ; TEXT-INDENT: -10.6pt"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림; COLOR: #4c4c4c">&nbsp; </span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p>&nbsp;</p><!--StartFragment-->
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬바탕; LETTER-SPACING: 0pt">○ </span><span style="FONT-FAMILY: 함초롬바탕">실기시험 안전작업 교육영상 </span><span style="FONT-FAMILY: 함초롬바탕; LETTER-SPACING: 0pt">url: <a href="https://youtu.be/XassfG72EsE" target="_blank">https://youtu.be/XassfG72EsE</a></span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬바탕; LETTER-SPACING: 0pt"></span></p>
+<div id="hwpEditorBoardContent" class="hwp_editor_board_content" data-hjsonver="1.0" data-jsonlen="5475"><!--[data-hwpjson]{
+"documentPr": {
+"di": "",
+"dp": {
+"dn": "test.hwp",
+"ta": 1,
+"d1": 5,
+"d2": 1,
+"dv": 0,
+"dr": 1,
+"do": 1,
+"vj": "1.1",
+"an": "Hancom Office Hangul",
+"av": "11, 0, 0, 4585",
+"ao": "WIN",
+"ab": "32",
+"ar": "LE",
+"as": "Windows_8"
+},
+"dis": false,
+"ds": {
+"ti": "",
+"la": "ko",
+"cr": "",
+"su": "",
+"de": "",
+"cd": "2024-07-10T13:10:42.693Z",
+"md": "1601-01-01T09:00:00.000Z",
+"pd": "1601-01-01T09:00:00.000Z",
+"ke": ""
+}
+},
+"dh": {
+"do": {
+"pa": 1,
+"fo": 1,
+"en": 1,
+"pi": 1,
+"tb": 1,
+"eq": 1
+},
+"fo": [ ],
+"cd": {
+"tp": 0,
+"lc": {
+"af": false,
+"ui": false,
+"fu": false,
+"dn": false,
+"ul": false,
+"el": false,
+"at": false,
+"tq": false,
+"da": false,
+"dw": false,
+"dj": false,
+"bc": false,
+"bu": false,
+"al": false,
+"ab": false,
+"ap": false,
+"an": false,
+"aa": false,
+"ds": false,
+"de": false,
+"as": false,
+"cp": false,
+"ao": false,
+"et": false,
+"ay": false,
+"am": false,
+"a1": false,
+"bt": false,
+"av": false,
+"dh": false,
+"dp": false,
+"d1": false,
+"mf": false,
+"bl": false,
+"ag": false,
+"dg": false,
+"ae": false,
+"df": false,
+"do": false,
+"dl": false,
+"di": false,
+"d2": false,
+"d3": false,
+"ob": false,
+"d4": false,
+"ev": false,
+"d5": false,
+"d6": false,
+"a2": false,
+"dc": false
+}
+},
+"ld": {
+"pa": "",
+"pi": true,
+"fo": false
+}
+},
+"bf": {
+"01DAD27F526E97B000000039": {
+"id": 1,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DAD27F526E97B00000003A": {
+"id": 2,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 10066329,
+"al": 0,
+"hs": -1
+}
+}
+}
+},
+"cp": {
+"01DAD27F526E97B00000003B": {
+"id": 0,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DAD27F526E97B00000003A",
+"f1": "함초롬바탕",
+"t1": 1,
+"f2": "함초롬바탕",
+"t2": 1,
+"f3": "함초롬바탕",
+"t3": 1,
+"f4": "함초롬바탕",
+"t4": 1,
+"f5": "함초롬바탕",
+"t5": 1,
+"f6": "함초롬바탕",
+"t6": 1,
+"f7": "함초롬바탕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+}
+},
+"tp": {
+"01DAD27F526E97B00000003C": {
+"id": 0,
+"al": false,
+"ar": false,
+"tp": [ ]
+}
+},
+"nu": { },
+"bu": { },
+"pp": {
+"01DAD27F526E97B00000003D": {
+"id": 0,
+"ah": 0,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DAD27F526E97B00000003C",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DAD27F526E97B00000003A",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+}
+},
+"st": {
+"01DAD27F526E97B00000003E": {
+"id": 0,
+"ty": 0,
+"na": "바탕글",
+"en": "Normal",
+"pp": "01DAD27F526E97B00000003D",
+"cp": "01DAD27F526E97B00000003B",
+"ns": "01DAD27F526E97B00000003E",
+"li": 1042,
+"lf": false
+}
+},
+"mp": { },
+"ro": {
+"hp": "01DAD27F526E97B000000038",
+"01DAD27F526E97B000000038": {
+"np": "",
+"id": 0,
+"pp": "01DAD27F526E97B00000003D",
+"si": "01DAD27F526E97B00000003E",
+"bf": 3,
+"ru": [
+{
+"cp": "01DAD27F526E97B00000003B",
+"ch": [
+{
+"cc": 2,
+"ci": 1936024420,
+"co": "01DAD27F526E97B000000036"
+}
+,
+{
+"cc": 2,
+"ci": 1668246628,
+"co": "01DAD27F526E97B000000037"
+}
+,
+{
+"t": "○ 실기시험 안전작업 교육영상 url: https://youtu.be/XassfG72EsE"
+}
+]
+}
+]
+}
+},
+"sl": { },
+"cs": {
+"01DAD27F526E97B000000036": {
+"cc": 2,
+"ci": 1936024420,
+"td": 0,
+"tv": false,
+"sc": 1134,
+"ts": 8000,
+"ms": "",
+"os": "",
+"gl": 0,
+"gc": 0,
+"gw": false,
+"ns": 0,
+"np": 0,
+"ni": 0,
+"nt": 0,
+"ne": 0,
+"hh": false,
+"hf": false,
+"hm": false,
+"fb": false,
+"hb": false,
+"fi": false,
+"hi": false,
+"hp": false,
+"he": false,
+"sl": false,
+"lr": 0,
+"lc": 0,
+"ld": 0,
+"ls": 0,
+"pp": {
+"ls": false,
+"wi": 59528,
+"he": 84188,
+"gt": 0,
+"ml": 8504,
+"mr": 8504,
+"mt": 5668,
+"mb": 4252,
+"mh": 4252,
+"mf": 4252,
+"mg": 0
+},
+"fn": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -1,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 283
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"en": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -4,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 0
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"pb": [
+{
+"ty": 0,
+"bf": "01DAD27F526E97B000000039",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 1,
+"bf": "01DAD27F526E97B000000039",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 2,
+"bf": "01DAD27F526E97B000000039",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+}
+],
+"mp": [ ]
+}
+,
+"01DAD27F526E97B000000037": {
+"cc": 2,
+"ci": 1668246628,
+"ty": 0,
+"la": 0,
+"co": 1,
+"ss": true,
+"sg": 0,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"cs": [ ]
+}
+},
+"bi": [ ],
+"bidt": { }
+}--></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('7130', '925');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 건축목공기능사 (2026.1.1 ~ 2029.12.31)</span>
+			</a>
+			<br/>
+							
+			<a href="#" onclick="cst006Report('7130', '646');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>2. 건축목공기능사 (2024.1.1 ~ 2025.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	
