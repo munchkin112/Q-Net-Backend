@@ -1,0 +1,4 @@
+# 수집 원문과 검증 자료는 Windows에서도 바이트·SHA-256을 유지한다.
+research/responses/** -text -whitespace
+research/*.json -text
+research/preparation/** -text

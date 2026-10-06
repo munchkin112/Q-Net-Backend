@@ -1,0 +1,10 @@
+test_duplicate_series_stage_does_not_make_two_candidates (research.test_preparation.PreparationTests.test_duplicate_series_stage_does_not_make_two_candidates) ... ok
+test_empty_success_is_not_retried (research.test_preparation.PreparationTests.test_empty_success_is_not_retried) ... ok
+test_invalid_dates_are_retained_as_review_issues (research.test_preparation.PreparationTests.test_invalid_dates_are_retained_as_review_issues) ... ok
+test_next_year_display_end_preserves_first_phase (research.test_preparation.PreparationTests.test_next_year_display_end_preserves_first_phase) ... ok
+test_provider_error_retries_once_and_keeps_both_attempts (research.test_preparation.PreparationTests.test_provider_error_retries_once_and_keeps_both_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.007s
+
+OK

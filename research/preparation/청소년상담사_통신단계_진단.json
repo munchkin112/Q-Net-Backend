@@ -1,0 +1,127 @@
+{
+  "purpose": "선정한 청소년상담사 2개 종목의 접속 단계와 응답 대기 단계 구분",
+  "results": [
+    {
+      "qnet_code": "9754",
+      "retrieved_at": "2026-10-06T01:55:43.309210+00:00",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList",
+      "params": {
+        "jmCd": "9754"
+      },
+      "timeout_seconds": 20,
+      "events": [
+        {
+          "event": "connection.connect_tcp.started",
+          "elapsed_seconds": 0.285
+        },
+        {
+          "event": "connection.connect_tcp.complete",
+          "elapsed_seconds": 0.325
+        },
+        {
+          "event": "http11.send_request_headers.started",
+          "elapsed_seconds": 0.325
+        },
+        {
+          "event": "http11.send_request_headers.complete",
+          "elapsed_seconds": 0.325
+        },
+        {
+          "event": "http11.send_request_body.started",
+          "elapsed_seconds": 0.325
+        },
+        {
+          "event": "http11.send_request_body.complete",
+          "elapsed_seconds": 0.325
+        },
+        {
+          "event": "http11.receive_response_headers.started",
+          "elapsed_seconds": 0.325
+        },
+        {
+          "event": "http11.receive_response_headers.complete",
+          "elapsed_seconds": 0.442
+        },
+        {
+          "event": "http11.receive_response_body.started",
+          "elapsed_seconds": 0.443
+        },
+        {
+          "event": "http11.receive_response_body.complete",
+          "elapsed_seconds": 0.443
+        },
+        {
+          "event": "http11.response_closed.started",
+          "elapsed_seconds": 0.443
+        },
+        {
+          "event": "http11.response_closed.complete",
+          "elapsed_seconds": 0.443
+        }
+      ],
+      "retry_count": 0,
+      "http_status": 200,
+      "response_file": "research/responses/cause_probe_trace_9754.txt",
+      "sha256": "2ef1ad816be949aa9f7cebf3dc7f85193f692c291bf6aaad01adb269706ac0a9",
+      "result_code": "99",
+      "result_message": "Failed to validate a newly established connection.",
+      "item_count": 0,
+      "elapsed_seconds": 0.458
+    },
+    {
+      "qnet_code": "9755",
+      "retrieved_at": "2026-10-06T01:55:43.767722+00:00",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList",
+      "params": {
+        "jmCd": "9755"
+      },
+      "timeout_seconds": 20,
+      "events": [
+        {
+          "event": "connection.connect_tcp.started",
+          "elapsed_seconds": 0.165
+        },
+        {
+          "event": "connection.connect_tcp.complete",
+          "elapsed_seconds": 0.222
+        },
+        {
+          "event": "http11.send_request_headers.started",
+          "elapsed_seconds": 0.222
+        },
+        {
+          "event": "http11.send_request_headers.complete",
+          "elapsed_seconds": 0.222
+        },
+        {
+          "event": "http11.send_request_body.started",
+          "elapsed_seconds": 0.222
+        },
+        {
+          "event": "http11.send_request_body.complete",
+          "elapsed_seconds": 0.223
+        },
+        {
+          "event": "http11.receive_response_headers.started",
+          "elapsed_seconds": 0.223
+        },
+        {
+          "event": "http11.receive_response_headers.failed",
+          "elapsed_seconds": 20.222,
+          "exception_type": "ReadTimeout"
+        },
+        {
+          "event": "http11.response_closed.started",
+          "elapsed_seconds": 20.222
+        },
+        {
+          "event": "http11.response_closed.complete",
+          "elapsed_seconds": 20.223
+        }
+      ],
+      "retry_count": 0,
+      "error_type": "ReadTimeout",
+      "elapsed_seconds": 20.223
+    }
+  ]
+}

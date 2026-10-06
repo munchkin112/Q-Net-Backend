@@ -1,0 +1,1442 @@
+[
+  {
+    "series_code": "05",
+    "year": 2026,
+    "round_label": "2026년도 35회 1차",
+    "phase": "first",
+    "registration_start": "2026-03-30",
+    "registration_end": "2026-04-03",
+    "exam_start": "2026-05-23",
+    "exam_end": "2026-05-23",
+    "result_date": "2026-06-24",
+    "result_display_end": "2026-08-22",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "05"
+    },
+    "retrieved_at": "2026-10-06T09:19:54.592766+09:00",
+    "response_file": "responses/preparation_schedules_05_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "05",
+    "year": 2026,
+    "round_label": "2026년도 35회 2차",
+    "phase": "second",
+    "registration_start": "2026-07-13",
+    "registration_end": "2026-07-20",
+    "exam_start": "2026-08-29",
+    "exam_end": "2026-08-30",
+    "result_date": "2026-11-18",
+    "result_display_end": "2027-01-16",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "05"
+    },
+    "retrieved_at": "2026-10-06T09:19:54.592766+09:00",
+    "response_file": "responses/preparation_schedules_05_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "05",
+    "year": 2026,
+    "round_label": "2026년도 35회 3차",
+    "phase": "other",
+    "registration_start": "2026-07-13",
+    "registration_end": "2026-07-20",
+    "exam_start": "2026-11-27",
+    "exam_end": "2026-11-27",
+    "result_date": "2026-12-09",
+    "result_display_end": "2027-02-07",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "05"
+    },
+    "retrieved_at": "2026-10-06T09:19:54.592766+09:00",
+    "response_file": "responses/preparation_schedules_05_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "07",
+    "year": 2026,
+    "round_label": "2026년도 24회 1차",
+    "phase": "first",
+    "registration_start": "2026-01-26",
+    "registration_end": "2026-01-30",
+    "exam_start": "2026-03-07",
+    "exam_end": "2026-03-07",
+    "result_date": "2026-04-15",
+    "result_display_end": "2026-06-13",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "07"
+    },
+    "retrieved_at": "2026-10-06T09:19:55.939124+09:00",
+    "response_file": "responses/preparation_schedules_07_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "07",
+    "year": 2026,
+    "round_label": "2026년도 24회 2차",
+    "phase": "second",
+    "registration_start": "2026-05-18",
+    "registration_end": "2026-05-22",
+    "exam_start": "2026-06-20",
+    "exam_end": "2026-06-20",
+    "result_date": "2026-08-12",
+    "result_display_end": "2026-10-10",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "07"
+    },
+    "retrieved_at": "2026-10-06T09:19:55.939124+09:00",
+    "response_file": "responses/preparation_schedules_07_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "08",
+    "year": 2026,
+    "round_label": "2026년도 37회 1차",
+    "phase": "first",
+    "registration_start": "2026-08-03",
+    "registration_end": "2026-08-07",
+    "exam_start": "2026-10-31",
+    "exam_end": "2026-10-31",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-31",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "08"
+    },
+    "retrieved_at": "2026-10-06T09:19:56.707776+09:00",
+    "response_file": "responses/preparation_schedules_08_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "08",
+    "year": 2026,
+    "round_label": "2026년도 37회 2차",
+    "phase": "second",
+    "registration_start": "2026-08-03",
+    "registration_end": "2026-08-07",
+    "exam_start": "2026-10-31",
+    "exam_end": "2026-10-31",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-31",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "08"
+    },
+    "retrieved_at": "2026-10-06T09:19:56.707776+09:00",
+    "response_file": "responses/preparation_schedules_08_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "09",
+    "year": 2026,
+    "round_label": "2026년도 28회 1차",
+    "phase": "first",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-11-21",
+    "exam_end": "2026-11-21",
+    "result_date": "2026-12-31",
+    "result_display_end": "2027-02-28",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "09"
+    },
+    "retrieved_at": "2026-10-06T09:19:57.493848+09:00",
+    "response_file": "responses/preparation_schedules_09_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "09",
+    "year": 2026,
+    "round_label": "2026년도 28회 2차",
+    "phase": "second",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-11-21",
+    "exam_end": "2026-11-21",
+    "result_date": "2026-12-31",
+    "result_display_end": "2027-02-28",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "09"
+    },
+    "retrieved_at": "2026-10-06T09:19:57.493848+09:00",
+    "response_file": "responses/preparation_schedules_09_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "22",
+    "year": 2026,
+    "round_label": "2026년도 63회 1차",
+    "phase": "first",
+    "registration_start": "2026-03-23",
+    "registration_end": "2026-03-27",
+    "exam_start": "2026-04-25",
+    "exam_end": "2026-04-25",
+    "result_date": "2026-05-27",
+    "result_display_end": "2026-07-25",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "22"
+    },
+    "retrieved_at": "2026-10-06T09:19:58.722466+09:00",
+    "response_file": "responses/preparation_schedules_22_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "22",
+    "year": 2026,
+    "round_label": "2026년도 63회 2차",
+    "phase": "second",
+    "registration_start": "2026-06-15",
+    "registration_end": "2026-06-19",
+    "exam_start": "2026-07-18",
+    "exam_end": "2026-07-18",
+    "result_date": "2026-10-28",
+    "result_display_end": "2026-12-26",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "22"
+    },
+    "retrieved_at": "2026-10-06T09:19:58.722466+09:00",
+    "response_file": "responses/preparation_schedules_22_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "24",
+    "year": 2026,
+    "round_label": "2026년도 43회 1차",
+    "phase": "first",
+    "registration_start": "2026-02-02",
+    "registration_end": "2026-02-06",
+    "exam_start": "2026-03-14",
+    "exam_end": "2026-03-14",
+    "result_date": "2026-04-15",
+    "result_display_end": "2026-06-13",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "24"
+    },
+    "retrieved_at": "2026-10-06T09:19:59.649170+09:00",
+    "response_file": "responses/preparation_schedules_24_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "24",
+    "year": 2026,
+    "round_label": "2026년도 43회 2차",
+    "phase": "second",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-06-13",
+    "exam_end": "2026-06-13",
+    "result_date": "2026-10-14",
+    "result_display_end": "2026-12-12",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "24"
+    },
+    "retrieved_at": "2026-10-06T09:19:59.649170+09:00",
+    "response_file": "responses/preparation_schedules_24_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "31",
+    "year": 2026,
+    "round_label": "2026년도 14회 1차",
+    "phase": "first",
+    "registration_start": "2026-04-13",
+    "registration_end": "2026-04-17",
+    "exam_start": "2026-05-30",
+    "exam_end": "2026-05-30",
+    "result_date": "2026-07-01",
+    "result_display_end": "2026-08-29",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "31"
+    },
+    "retrieved_at": "2026-10-06T09:20:00.508039+09:00",
+    "response_file": "responses/preparation_schedules_31_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "31",
+    "year": 2026,
+    "round_label": "2026년도 14회 2차",
+    "phase": "second",
+    "registration_start": "2026-07-27",
+    "registration_end": "2026-07-31",
+    "exam_start": "2026-10-03",
+    "exam_end": "2026-10-03",
+    "result_date": "2026-12-16",
+    "result_display_end": "2027-02-13",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "31"
+    },
+    "retrieved_at": "2026-10-06T09:20:00.508039+09:00",
+    "response_file": "responses/preparation_schedules_31_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "33",
+    "year": 2026,
+    "round_label": "2026년도 12회 1차",
+    "phase": "first",
+    "registration_start": "2026-06-08",
+    "registration_end": "2026-06-12",
+    "exam_start": "2026-08-15",
+    "exam_end": "2026-08-15",
+    "result_date": "2026-10-14",
+    "result_display_end": "2026-12-12",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "33"
+    },
+    "retrieved_at": "2026-10-06T09:20:01.460198+09:00",
+    "response_file": "responses/preparation_schedules_33_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "33",
+    "year": 2026,
+    "round_label": "2026년도 12회 2차",
+    "phase": "second",
+    "registration_start": "2026-06-08",
+    "registration_end": "2026-06-12",
+    "exam_start": "2026-08-15",
+    "exam_end": "2026-08-15",
+    "result_date": "2026-12-09",
+    "result_display_end": "2027-02-06",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "33"
+    },
+    "retrieved_at": "2026-10-06T09:20:01.460198+09:00",
+    "response_file": "responses/preparation_schedules_33_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "35",
+    "year": 2026,
+    "round_label": "2026년도 27회 1차",
+    "phase": "first",
+    "registration_start": "2026-10-12",
+    "registration_end": "2026-10-16",
+    "exam_start": "2026-11-14",
+    "exam_end": "2026-11-14",
+    "result_date": "2026-12-23",
+    "result_display_end": "2027-02-20",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "35"
+    },
+    "retrieved_at": "2026-10-06T09:20:03.989390+09:00",
+    "response_file": "responses/preparation_schedules_35_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "36",
+    "year": 2026,
+    "round_label": "2026년도 21회 필기",
+    "phase": "other",
+    "registration_start": "2026-07-06",
+    "registration_end": "2026-07-10",
+    "exam_start": "2026-08-08",
+    "exam_end": "2026-08-08",
+    "result_date": "2026-09-16",
+    "result_display_end": "2026-11-14",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "36"
+    },
+    "retrieved_at": "2026-10-06T09:20:04.830800+09:00",
+    "response_file": "responses/preparation_schedules_36_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "36",
+    "year": 2026,
+    "round_label": "2026년도 21회 면접",
+    "phase": "other",
+    "registration_start": "2026-10-19",
+    "registration_end": "2026-10-23",
+    "exam_start": "2026-11-07",
+    "exam_end": "2026-11-07",
+    "result_date": "2026-11-25",
+    "result_display_end": "2027-01-23",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "36"
+    },
+    "retrieved_at": "2026-10-06T09:20:04.830800+09:00",
+    "response_file": "responses/preparation_schedules_36_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "37",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-07-06",
+    "registration_end": "2026-07-10",
+    "exam_start": "2026-09-05",
+    "exam_end": "2026-09-05",
+    "result_date": "2026-10-21",
+    "result_display_end": "2026-12-19",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "37"
+    },
+    "retrieved_at": "2026-10-06T09:20:05.595205+09:00",
+    "response_file": "responses/preparation_schedules_37_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "37",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-07-06",
+    "registration_end": "2026-07-10",
+    "exam_start": "2026-11-14",
+    "exam_end": "2026-11-15",
+    "result_date": "2026-12-16",
+    "result_display_end": "2027-02-13",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "37"
+    },
+    "retrieved_at": "2026-10-06T09:20:05.595205+09:00",
+    "response_file": "responses/preparation_schedules_37_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "38",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-11-07",
+    "exam_end": "2026-11-07",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-30",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "38"
+    },
+    "retrieved_at": "2026-10-06T09:20:09.078644+09:00",
+    "response_file": "responses/preparation_schedules_38_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "38",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-12-12",
+    "exam_end": "2026-12-12",
+    "result_date": "2026-12-30",
+    "result_display_end": "2027-02-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "38"
+    },
+    "retrieved_at": "2026-10-06T09:20:09.078644+09:00",
+    "response_file": "responses/preparation_schedules_38_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "39",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-11-07",
+    "exam_end": "2026-11-07",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-30",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "39"
+    },
+    "retrieved_at": "2026-10-06T09:20:10.004516+09:00",
+    "response_file": "responses/preparation_schedules_39_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "39",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-12-12",
+    "exam_end": "2026-12-12",
+    "result_date": "2026-12-30",
+    "result_display_end": "2027-02-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "39"
+    },
+    "retrieved_at": "2026-10-06T09:20:10.004516+09:00",
+    "response_file": "responses/preparation_schedules_39_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "40",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-11-07",
+    "exam_end": "2026-11-07",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-30",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "40"
+    },
+    "retrieved_at": "2026-10-06T09:20:10.760541+09:00",
+    "response_file": "responses/preparation_schedules_40_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "40",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-12-12",
+    "exam_end": "2026-12-12",
+    "result_date": "2026-12-30",
+    "result_display_end": "2027-02-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "40"
+    },
+    "retrieved_at": "2026-10-06T09:20:10.760541+09:00",
+    "response_file": "responses/preparation_schedules_40_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "41",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-11-07",
+    "exam_end": "2026-11-07",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-30",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "41"
+    },
+    "retrieved_at": "2026-10-06T09:20:11.544941+09:00",
+    "response_file": "responses/preparation_schedules_41_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "41",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-09-14",
+    "registration_end": "2026-09-18",
+    "exam_start": "2026-12-12",
+    "exam_end": "2026-12-12",
+    "result_date": "2026-12-30",
+    "result_display_end": "2027-02-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "41"
+    },
+    "retrieved_at": "2026-10-06T09:20:11.544941+09:00",
+    "response_file": "responses/preparation_schedules_41_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "42",
+    "year": 2026,
+    "round_label": "2026년도 44회 필기",
+    "phase": "other",
+    "registration_start": "2026-02-23",
+    "registration_end": "2026-02-27",
+    "exam_start": "2026-03-21",
+    "exam_end": "2026-03-21",
+    "result_date": "2026-05-13",
+    "result_display_end": "2026-07-12",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "42"
+    },
+    "retrieved_at": "2026-10-06T09:20:13.460796+09:00",
+    "response_file": "responses/preparation_schedules_42_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "42",
+    "year": 2026,
+    "round_label": "2026년도 44회 면접",
+    "phase": "other",
+    "registration_start": "2026-06-22",
+    "registration_end": "2026-06-26",
+    "exam_start": "2026-07-25",
+    "exam_end": "2026-07-25",
+    "result_date": "2026-08-12",
+    "result_display_end": "2026-10-11",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "42"
+    },
+    "retrieved_at": "2026-10-06T09:20:13.460796+09:00",
+    "response_file": "responses/preparation_schedules_42_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "43",
+    "year": 2026,
+    "round_label": "2026년도 1회 실기",
+    "phase": "other",
+    "registration_start": "2026-02-09",
+    "registration_end": "2026-02-13",
+    "exam_start": "2026-04-11",
+    "exam_end": "2026-04-24",
+    "result_date": "2026-05-27",
+    "result_display_end": "2026-07-25",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "43"
+    },
+    "retrieved_at": "2026-10-06T09:20:15.266678+09:00",
+    "response_file": "responses/preparation_schedules_43_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "43",
+    "year": 2026,
+    "round_label": "2026년도 2회 실기",
+    "phase": "other",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-06-26",
+    "exam_end": "2026-07-16",
+    "result_date": "2026-08-19",
+    "result_display_end": "2026-10-17",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "43"
+    },
+    "retrieved_at": "2026-10-06T09:20:15.266678+09:00",
+    "response_file": "responses/preparation_schedules_43_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "45",
+    "year": 2026,
+    "round_label": "2026년도 23회 1차",
+    "phase": "first",
+    "registration_start": "2026-02-23",
+    "registration_end": "2026-02-27",
+    "exam_start": "2026-04-04",
+    "exam_end": "2026-04-04",
+    "result_date": "2026-05-06",
+    "result_display_end": "2026-07-04",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "45"
+    },
+    "retrieved_at": "2026-10-06T09:20:20.864600+09:00",
+    "response_file": "responses/preparation_schedules_45_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "45",
+    "year": 2026,
+    "round_label": "2026년도 23회 2차",
+    "phase": "second",
+    "registration_start": "2026-05-18",
+    "registration_end": "2026-05-22",
+    "exam_start": "2026-07-04",
+    "exam_end": "2026-07-04",
+    "result_date": "2026-08-12",
+    "result_display_end": "2026-10-10",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "45"
+    },
+    "retrieved_at": "2026-10-06T09:20:20.864600+09:00",
+    "response_file": "responses/preparation_schedules_45_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "46",
+    "year": 2026,
+    "round_label": "2026년도 24회 1차",
+    "phase": "first",
+    "registration_start": "2026-02-02",
+    "registration_end": "2026-02-06",
+    "exam_start": "2026-03-07",
+    "exam_end": "2026-03-07",
+    "result_date": "2026-04-08",
+    "result_display_end": "2026-06-06",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "46"
+    },
+    "retrieved_at": "2026-10-06T09:20:21.809571+09:00",
+    "response_file": "responses/preparation_schedules_46_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "46",
+    "year": 2026,
+    "round_label": "2026년도 24회 2차",
+    "phase": "second",
+    "registration_start": "2026-05-18",
+    "registration_end": "2026-05-22",
+    "exam_start": "2026-06-20",
+    "exam_end": "2026-06-20",
+    "result_date": "2026-07-15",
+    "result_display_end": "2026-09-12",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "46"
+    },
+    "retrieved_at": "2026-10-06T09:20:21.809571+09:00",
+    "response_file": "responses/preparation_schedules_46_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "49",
+    "year": 2026,
+    "round_label": "2026년도 41회 1차",
+    "phase": "first",
+    "registration_start": "2026-03-09",
+    "registration_end": "2026-03-13",
+    "exam_start": "2026-04-11",
+    "exam_end": "2026-04-11",
+    "result_date": "2026-05-13",
+    "result_display_end": "2026-07-12",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "49"
+    },
+    "retrieved_at": "2026-10-06T09:20:22.799783+09:00",
+    "response_file": "responses/preparation_schedules_49_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "49",
+    "year": 2026,
+    "round_label": "2026년도 41회 2차",
+    "phase": "second",
+    "registration_start": "2026-06-15",
+    "registration_end": "2026-06-19",
+    "exam_start": "2026-07-11",
+    "exam_end": "2026-07-11",
+    "result_date": "2026-10-07",
+    "result_display_end": "2026-12-06",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "49"
+    },
+    "retrieved_at": "2026-10-06T09:20:22.799783+09:00",
+    "response_file": "responses/preparation_schedules_49_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "50",
+    "year": 2026,
+    "round_label": "2026년도 41회 1차",
+    "phase": "first",
+    "registration_start": "2026-03-09",
+    "registration_end": "2026-03-13",
+    "exam_start": "2026-04-11",
+    "exam_end": "2026-04-11",
+    "result_date": "2026-05-13",
+    "result_display_end": "2026-07-12",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "50"
+    },
+    "retrieved_at": "2026-10-06T09:20:23.729068+09:00",
+    "response_file": "responses/preparation_schedules_50_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "50",
+    "year": 2026,
+    "round_label": "2026년도 41회 2차",
+    "phase": "second",
+    "registration_start": "2026-06-15",
+    "registration_end": "2026-06-19",
+    "exam_start": "2026-07-11",
+    "exam_end": "2026-07-11",
+    "result_date": "2026-10-07",
+    "result_display_end": "2026-12-06",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "50"
+    },
+    "retrieved_at": "2026-10-06T09:20:23.729068+09:00",
+    "response_file": "responses/preparation_schedules_50_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "51",
+    "year": 2026,
+    "round_label": "2026년도 63회 1차",
+    "phase": "first",
+    "registration_start": "2026-01-12",
+    "registration_end": "2026-01-16",
+    "exam_start": "2026-02-28",
+    "exam_end": "2026-02-28",
+    "result_date": "2026-03-25",
+    "result_display_end": "2026-05-23",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "51"
+    },
+    "retrieved_at": "2026-10-06T09:20:25.970722+09:00",
+    "response_file": "responses/preparation_schedules_51_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "51",
+    "year": 2026,
+    "round_label": "2026년도 63회 2차",
+    "phase": "second",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-07-31",
+    "exam_end": "2026-08-01",
+    "result_date": "2026-10-28",
+    "result_display_end": "2026-12-26",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "51"
+    },
+    "retrieved_at": "2026-10-06T09:20:25.970722+09:00",
+    "response_file": "responses/preparation_schedules_51_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "52",
+    "year": 2026,
+    "round_label": "2026년도 24회 필기",
+    "phase": "other",
+    "registration_start": "2025-12-08",
+    "registration_end": "2025-12-12",
+    "exam_start": "2026-01-17",
+    "exam_end": "2026-01-17",
+    "result_date": "2026-03-25",
+    "result_display_end": "2026-05-23",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "52"
+    },
+    "retrieved_at": "2026-10-06T09:20:26.949262+09:00",
+    "response_file": "responses/preparation_schedules_52_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "54",
+    "year": 2026,
+    "round_label": "2026년도 39회 1차",
+    "phase": "first",
+    "registration_start": "2026-02-23",
+    "registration_end": "2026-02-27",
+    "exam_start": "2026-03-28",
+    "exam_end": "2026-03-28",
+    "result_date": "2026-06-04",
+    "result_display_end": "2026-08-02",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "54"
+    },
+    "retrieved_at": "2026-10-06T09:20:27.641645+09:00",
+    "response_file": "responses/preparation_schedules_54_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "54",
+    "year": 2026,
+    "round_label": "2026년도 39회 2차",
+    "phase": "second",
+    "registration_start": "2026-02-23",
+    "registration_end": "2026-02-27",
+    "exam_start": "2026-03-28",
+    "exam_end": "2026-03-28",
+    "result_date": "2026-06-04",
+    "result_display_end": "2026-08-02",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "54"
+    },
+    "retrieved_at": "2026-10-06T09:20:27.641645+09:00",
+    "response_file": "responses/preparation_schedules_54_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "54",
+    "year": 2026,
+    "round_label": "2026년도 40회 1차",
+    "phase": "first",
+    "registration_start": "2026-07-06",
+    "registration_end": "2026-07-10",
+    "exam_start": "2026-08-08",
+    "exam_end": "2026-08-08",
+    "result_date": "2026-11-04",
+    "result_display_end": "2027-02-01",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "54"
+    },
+    "retrieved_at": "2026-10-06T09:20:27.641645+09:00",
+    "response_file": "responses/preparation_schedules_54_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "54",
+    "year": 2026,
+    "round_label": "2026년도 40회 2차",
+    "phase": "second",
+    "registration_start": "2026-07-06",
+    "registration_end": "2026-07-10",
+    "exam_start": "2026-08-08",
+    "exam_end": "2026-08-08",
+    "result_date": "2026-11-04",
+    "result_display_end": "2027-02-01",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "54"
+    },
+    "retrieved_at": "2026-10-06T09:20:27.641645+09:00",
+    "response_file": "responses/preparation_schedules_54_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "56",
+    "year": 2026,
+    "round_label": "2026년도 16회 1차",
+    "phase": "first",
+    "registration_start": "2026-02-23",
+    "registration_end": "2026-02-27",
+    "exam_start": "2026-03-28",
+    "exam_end": "2026-03-28",
+    "result_date": "2026-04-29",
+    "result_display_end": "2026-06-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "56"
+    },
+    "retrieved_at": "2026-10-06T09:20:30.380547+09:00",
+    "response_file": "responses/preparation_schedules_56_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "56",
+    "year": 2026,
+    "round_label": "2026년도 16회 2차",
+    "phase": "second",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-06-06",
+    "exam_end": "2026-06-06",
+    "result_date": "2026-07-22",
+    "result_display_end": "2026-09-21",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "56"
+    },
+    "retrieved_at": "2026-10-06T09:20:30.380547+09:00",
+    "response_file": "responses/preparation_schedules_56_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "56",
+    "year": 2026,
+    "round_label": "2026년도 16회 3차",
+    "phase": "other",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-08-12",
+    "exam_end": "2026-08-15",
+    "result_date": "2026-09-23",
+    "result_display_end": "2026-11-22",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "56"
+    },
+    "retrieved_at": "2026-10-06T09:20:30.380547+09:00",
+    "response_file": "responses/preparation_schedules_56_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "57",
+    "year": 2026,
+    "round_label": "2026년도 16회 1차",
+    "phase": "first",
+    "registration_start": "2026-02-23",
+    "registration_end": "2026-02-27",
+    "exam_start": "2026-03-28",
+    "exam_end": "2026-03-28",
+    "result_date": "2026-04-29",
+    "result_display_end": "2026-06-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "57"
+    },
+    "retrieved_at": "2026-10-06T09:20:31.870430+09:00",
+    "response_file": "responses/preparation_schedules_57_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "57",
+    "year": 2026,
+    "round_label": "2026년도 16회 2차",
+    "phase": "second",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-06-06",
+    "exam_end": "2026-06-06",
+    "result_date": "2026-07-22",
+    "result_display_end": "2026-09-21",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "57"
+    },
+    "retrieved_at": "2026-10-06T09:20:31.870430+09:00",
+    "response_file": "responses/preparation_schedules_57_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "57",
+    "year": 2026,
+    "round_label": "2026년도 16회 3차",
+    "phase": "other",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-08-12",
+    "exam_end": "2026-08-15",
+    "result_date": "2026-09-23",
+    "result_display_end": "2026-11-22",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "57"
+    },
+    "retrieved_at": "2026-10-06T09:20:31.870430+09:00",
+    "response_file": "responses/preparation_schedules_57_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "59",
+    "year": 2026,
+    "round_label": "2026년도 29회 1차",
+    "phase": "first",
+    "registration_start": "2026-05-11",
+    "registration_end": "2026-05-15",
+    "exam_start": "2026-06-27",
+    "exam_end": "2026-06-27",
+    "result_date": "2026-07-29",
+    "result_display_end": "2026-09-26",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "59"
+    },
+    "retrieved_at": "2026-10-06T09:20:32.837925+09:00",
+    "response_file": "responses/preparation_schedules_59_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "59",
+    "year": 2026,
+    "round_label": "2026년도 29회 2차",
+    "phase": "second",
+    "registration_start": "2026-08-10",
+    "registration_end": "2026-08-14",
+    "exam_start": "2026-09-19",
+    "exam_end": "2026-09-19",
+    "result_date": "2026-12-02",
+    "result_display_end": "2027-01-30",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "59"
+    },
+    "retrieved_at": "2026-10-06T09:20:32.837925+09:00",
+    "response_file": "responses/preparation_schedules_59_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "61",
+    "year": 2026,
+    "round_label": "2026년도 30회 필기",
+    "phase": "other",
+    "registration_start": "2026-06-22",
+    "registration_end": "2026-06-26",
+    "exam_start": "2026-07-25",
+    "exam_end": "2026-07-25",
+    "result_date": "2026-08-26",
+    "result_display_end": "2026-10-24",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "61"
+    },
+    "retrieved_at": "2026-10-06T09:20:35.397484+09:00",
+    "response_file": "responses/preparation_schedules_61_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "62",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-05-30",
+    "exam_end": "2026-05-30",
+    "result_date": "2026-07-01",
+    "result_display_end": "2026-08-29",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "62"
+    },
+    "retrieved_at": "2026-10-06T09:20:36.239013+09:00",
+    "response_file": "responses/preparation_schedules_62_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "62",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-08-21",
+    "exam_end": "2026-08-21",
+    "result_date": "2026-09-16",
+    "result_display_end": "2026-11-14",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "62"
+    },
+    "retrieved_at": "2026-10-06T09:20:36.239013+09:00",
+    "response_file": "responses/preparation_schedules_62_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "63",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-05-30",
+    "exam_end": "2026-05-30",
+    "result_date": "2026-07-01",
+    "result_display_end": "2026-08-29",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "63"
+    },
+    "retrieved_at": "2026-10-06T09:20:36.986818+09:00",
+    "response_file": "responses/preparation_schedules_63_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "63",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-08-21",
+    "exam_end": "2026-08-21",
+    "result_date": "2026-09-16",
+    "result_display_end": "2026-11-14",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "63"
+    },
+    "retrieved_at": "2026-10-06T09:20:36.986818+09:00",
+    "response_file": "responses/preparation_schedules_63_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "64",
+    "year": 2026,
+    "round_label": "2026년도 26회 필기",
+    "phase": "other",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-05-30",
+    "exam_end": "2026-05-30",
+    "result_date": "2026-07-01",
+    "result_display_end": "2026-08-29",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "64"
+    },
+    "retrieved_at": "2026-10-06T09:20:37.722212+09:00",
+    "response_file": "responses/preparation_schedules_64_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "64",
+    "year": 2026,
+    "round_label": "2026년도 26회 면접",
+    "phase": "other",
+    "registration_start": "2026-04-20",
+    "registration_end": "2026-04-24",
+    "exam_start": "2026-08-21",
+    "exam_end": "2026-08-21",
+    "result_date": "2026-09-16",
+    "result_display_end": "2026-11-14",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "64"
+    },
+    "retrieved_at": "2026-10-06T09:20:37.722212+09:00",
+    "response_file": "responses/preparation_schedules_64_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "66",
+    "year": 2026,
+    "round_label": "2026년도 34회 필기",
+    "phase": "other",
+    "registration_start": "2026-06-29",
+    "registration_end": "2026-07-03",
+    "exam_start": "2026-08-22",
+    "exam_end": "2026-08-22",
+    "result_date": "2026-11-04",
+    "result_display_end": "2027-01-02",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "66"
+    },
+    "retrieved_at": "2026-10-06T09:20:39.612107+09:00",
+    "response_file": "responses/preparation_schedules_66_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "66",
+    "year": 2026,
+    "round_label": "2026년도 34회 면접",
+    "phase": "other",
+    "registration_start": "2026-11-16",
+    "registration_end": "2026-11-20",
+    "exam_start": "2026-12-07",
+    "exam_end": "2026-12-12",
+    "result_date": "2026-12-30",
+    "result_display_end": "2027-02-27",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "66"
+    },
+    "retrieved_at": "2026-10-06T09:20:39.612107+09:00",
+    "response_file": "responses/preparation_schedules_66_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "67",
+    "year": 2026,
+    "round_label": "2026년도 25회 필기",
+    "phase": "other",
+    "registration_start": "2026-07-20",
+    "registration_end": "2026-07-24",
+    "exam_start": "2026-09-12",
+    "exam_end": "2026-09-12",
+    "result_date": "2026-10-21",
+    "result_display_end": "2026-12-20",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "67"
+    },
+    "retrieved_at": "2026-10-06T09:20:40.925592+09:00",
+    "response_file": "responses/preparation_schedules_67_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "67",
+    "year": 2026,
+    "round_label": "2026년도 25회 면접",
+    "phase": "other",
+    "registration_start": "2026-11-02",
+    "registration_end": "2026-11-06",
+    "exam_start": "2026-11-30",
+    "exam_end": "2026-12-05",
+    "result_date": "2026-12-23",
+    "result_display_end": "2027-02-22",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "67"
+    },
+    "retrieved_at": "2026-10-06T09:20:40.925592+09:00",
+    "response_file": "responses/preparation_schedules_67_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "72",
+    "year": 2026,
+    "round_label": "2026년도 12회 1차",
+    "phase": "first",
+    "registration_start": "2026-04-06",
+    "registration_end": "2026-04-10",
+    "exam_start": "2026-05-09",
+    "exam_end": "2026-05-09",
+    "result_date": "2026-06-10",
+    "result_display_end": "2026-08-08",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "72"
+    },
+    "retrieved_at": "2026-10-06T09:20:42.045312+09:00",
+    "response_file": "responses/preparation_schedules_72_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "72",
+    "year": 2026,
+    "round_label": "2026년도 12회 2차",
+    "phase": "second",
+    "registration_start": "2026-08-10",
+    "registration_end": "2026-08-14",
+    "exam_start": "2026-09-19",
+    "exam_end": "2026-09-19",
+    "result_date": "2026-10-28",
+    "result_display_end": "2026-12-26",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "72"
+    },
+    "retrieved_at": "2026-10-06T09:20:42.045312+09:00",
+    "response_file": "responses/preparation_schedules_72_attempt0.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "73",
+    "year": 2026,
+    "round_label": "2026년도 12회 1차",
+    "phase": "first",
+    "registration_start": "2026-04-06",
+    "registration_end": "2026-04-10",
+    "exam_start": "2026-05-09",
+    "exam_end": "2026-05-09",
+    "result_date": "2026-06-10",
+    "result_display_end": "2026-08-08",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "73"
+    },
+    "retrieved_at": "2026-10-06T09:20:43.893903+09:00",
+    "response_file": "responses/preparation_schedules_73_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  },
+  {
+    "series_code": "73",
+    "year": 2026,
+    "round_label": "2026년도 12회 2차",
+    "phase": "second",
+    "registration_start": "2026-07-20",
+    "registration_end": "2026-07-24",
+    "exam_start": "2026-08-29",
+    "exam_end": "2026-08-29",
+    "result_date": "2026-11-18",
+    "result_display_end": "2027-01-16",
+    "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestDatesNationalProfessionalQualificationSVC/getList",
+    "source_params": {
+      "seriesCd": "73"
+    },
+    "retrieved_at": "2026-10-06T09:20:43.893903+09:00",
+    "response_file": "responses/preparation_schedules_73_attempt1.txt",
+    "review_status": "unreviewed",
+    "database_applied": false
+  }
+]

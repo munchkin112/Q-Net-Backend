@@ -1,0 +1,1502 @@
+[
+  {
+    "qnet_code": "9500",
+    "name": "공인노무사",
+    "series_code": "05",
+    "series_name": "공인노무사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "공인노무사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9500_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9503",
+    "name": "가맹거래사",
+    "series_code": "07",
+    "series_name": "가맹거래사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "가맹거래사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9503_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9630",
+    "name": "공인중개사",
+    "series_code": "08",
+    "series_name": "공인중개사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "공인중개사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9630_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9502",
+    "name": "기계경비지도사",
+    "series_code": "09",
+    "series_name": "경비지도사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9501",
+    "name": "일반경비지도사",
+    "series_code": "09",
+    "series_name": "경비지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "일반경비지도사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9501_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9641",
+    "name": "세무사",
+    "series_code": "22",
+    "series_name": "세무사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "세무사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9641_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9640",
+    "name": "관세사",
+    "series_code": "24",
+    "series_name": "관세사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "관세사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9640_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9722",
+    "name": "외국어번역행정사",
+    "series_code": "31",
+    "series_name": "행정사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "외국어번역행정사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9722_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9721",
+    "name": "일반행정사",
+    "series_code": "31",
+    "series_name": "행정사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "일반행정사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9721_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9723",
+    "name": "해사행정사",
+    "series_code": "31",
+    "series_name": "행정사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "해사행정사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9723_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9657",
+    "name": "소방안전교육사",
+    "series_code": "33",
+    "series_name": "소방안전교육사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "소방안전교육사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9657_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9658",
+    "name": "소방시설관리사",
+    "series_code": "34",
+    "series_name": "소방시설관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "소방시설관리사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9658_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9659",
+    "name": "박물관및미술관준학예사",
+    "series_code": "35",
+    "series_name": "박물관 및 미술관 준학예사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "박물관및미술관준학예사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9659_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9660",
+    "name": "한국어교육능력검정시험",
+    "series_code": "36",
+    "series_name": "한국어교육능력검정시험",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "한국어교육능력검정시험"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9660_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9625",
+    "name": "관광통역안내사(독어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(독어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9625_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9627",
+    "name": "관광통역안내사(러시아어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(러시아어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9627_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9634",
+    "name": "관광통역안내사(말레이/인도네시아어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(말레이/인도네시아어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9634_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9633",
+    "name": "관광통역안내사(베트남어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(베트남어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9633_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9624",
+    "name": "관광통역안내사(불어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(불어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9624_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9626",
+    "name": "관광통역안내사(스페인어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(스페인어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9626_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9635",
+    "name": "관광통역안내사(아랍어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(아랍어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9635_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9661",
+    "name": "관광통역안내사(영어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(영어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9661_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9631",
+    "name": "관광통역안내사(이탈리아어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9628",
+    "name": "관광통역안내사(일본어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(일본어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9628_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9629",
+    "name": "관광통역안내사(중국어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(중국어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9629_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9632",
+    "name": "관광통역안내사(태국어)",
+    "series_code": "37",
+    "series_name": "관광통역안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "관광통역안내사(태국어)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9632_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9663",
+    "name": "호텔관리사",
+    "series_code": "38",
+    "series_name": "호텔관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "호텔관리사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9663_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9662",
+    "name": "호텔경영사",
+    "series_code": "39",
+    "series_name": "호텔경영사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9664",
+    "name": "국내여행안내사",
+    "series_code": "40",
+    "series_name": "국내여행안내사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "국내여행안내사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9664_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9665",
+    "name": "호텔서비스사",
+    "series_code": "41",
+    "series_name": "호텔서비스사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "호텔서비스사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9665_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9667",
+    "name": "국가유산수리기술자(단청)",
+    "series_code": "42",
+    "series_name": "국가유산수리기술자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9667_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9666",
+    "name": "국가유산수리기술자(보수)",
+    "series_code": "42",
+    "series_name": "국가유산수리기술자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9666_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9670",
+    "name": "국가유산수리기술자(보존과학)",
+    "series_code": "42",
+    "series_name": "국가유산수리기술자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9670_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9671",
+    "name": "국가유산수리기술자(식물보호)",
+    "series_code": "42",
+    "series_name": "국가유산수리기술자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9671_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9668",
+    "name": "국가유산수리기술자(실측설계)",
+    "series_code": "42",
+    "series_name": "국가유산수리기술자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9668_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9669",
+    "name": "국가유산수리기술자(조경)",
+    "series_code": "42",
+    "series_name": "국가유산수리기술자",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9674",
+    "name": "국가유산수리기능자(가공석공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9674_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9672",
+    "name": "국가유산수리기능자(대목수)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9672_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9685",
+    "name": "국가유산수리기능자(도금공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9685_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9677",
+    "name": "국가유산수리기능자(드잡이공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9677_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9706",
+    "name": "국가유산수리기능자(모사공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9706_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9682",
+    "name": "국가유산수리기능자(목조각공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9682_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9693",
+    "name": "국가유산수리기능자(박제및표본제작공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9693_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9678",
+    "name": "국가유산수리기능자(번와와공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9678_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9690",
+    "name": "국가유산수리기능자(보존처리공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9690_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9683",
+    "name": "국가유산수리기능자(석조각공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9683_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9688",
+    "name": "국가유산수리기능자(세척공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9688_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9673",
+    "name": "국가유산수리기능자(소목수)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9673_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9691",
+    "name": "국가유산수리기능자(식물보호공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9691_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9692",
+    "name": "국가유산수리기능자(실측설계사보)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9692_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9675",
+    "name": "국가유산수리기능자(쌓기석공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9675_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9694",
+    "name": "국가유산수리기능자(온돌공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9694_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9679",
+    "name": "국가유산수리기능자(제작와공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9679_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9687",
+    "name": "국가유산수리기능자(조경공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9687_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9681",
+    "name": "국가유산수리기능자(철물공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9681_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9684",
+    "name": "국가유산수리기능자(칠공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9684_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9686",
+    "name": "국가유산수리기능자(표구공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9686_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9680",
+    "name": "국가유산수리기능자(한식미장공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9680_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9676",
+    "name": "국가유산수리기능자(화공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9676_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9689",
+    "name": "국가유산수리기능자(훈증공)",
+    "series_code": "43",
+    "series_name": "국가유산수리기능자",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9689_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9695",
+    "name": "농산물품질관리사",
+    "series_code": "45",
+    "series_name": "농산물품질관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "농산물품질관리사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9695_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9697",
+    "name": "경매사(수산)",
+    "series_code": "46",
+    "series_name": "경매사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9697_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9700",
+    "name": "경매사(약용)",
+    "series_code": "46",
+    "series_name": "경매사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9700_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9728",
+    "name": "경매사(양곡)",
+    "series_code": "46",
+    "series_name": "경매사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9728_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9696",
+    "name": "경매사(청과)",
+    "series_code": "46",
+    "series_name": "경매사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9696_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9698",
+    "name": "경매사(축산)",
+    "series_code": "46",
+    "series_name": "경매사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "경매사(축산)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9698_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9699",
+    "name": "경매사(화훼)",
+    "series_code": "46",
+    "series_name": "경매사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9699_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9705",
+    "name": "경영지도사(1차공통)",
+    "series_code": "49",
+    "series_name": "경영지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "경영지도사(1차공통)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9705_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9704",
+    "name": "경영지도사(마케팅)",
+    "series_code": "49",
+    "series_name": "경영지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "경영지도사(마케팅)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9704_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9703",
+    "name": "경영지도사(생산관리)",
+    "series_code": "49",
+    "series_name": "경영지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "경영지도사(생산관리)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9703_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9701",
+    "name": "경영지도사(인적자원관리)",
+    "series_code": "49",
+    "series_name": "경영지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "경영지도사(인적자원관리)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9701_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9702",
+    "name": "경영지도사(재무관리)",
+    "series_code": "49",
+    "series_name": "경영지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "경영지도사(재무관리)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9702_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9729",
+    "name": "기술지도사(1차공통)",
+    "series_code": "50",
+    "series_name": "기술지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "기술지도사(1차공통)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9729_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9758",
+    "name": "기술지도사(기술혁신관리)",
+    "series_code": "50",
+    "series_name": "기술지도사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9758_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9759",
+    "name": "기술지도사(정보기술관리)",
+    "series_code": "50",
+    "series_name": "기술지도사",
+    "collection_status": "empty",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": "responses/preparation_details_9759_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9737",
+    "name": "변리사",
+    "series_code": "51",
+    "series_name": "변리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "변리사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9737_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9738",
+    "name": "사회복지사 1급",
+    "series_code": "52",
+    "series_name": "사회복지사 1급",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "사회복지사 1급"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9738_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9739",
+    "name": "정수시설운영관리사1급",
+    "series_code": "54",
+    "series_name": "정수시설운영관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "정수시설운영관리사1급"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9739_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9740",
+    "name": "정수시설운영관리사2급",
+    "series_code": "54",
+    "series_name": "정수시설운영관리사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9741",
+    "name": "정수시설운영관리사3급",
+    "series_code": "54",
+    "series_name": "정수시설운영관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "정수시설운영관리사3급"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9741_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9714",
+    "name": "산업안전지도사(건설안전)",
+    "series_code": "56",
+    "series_name": "산업안전지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "산업안전지도사(건설안전)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9714_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9711",
+    "name": "산업안전지도사(기계안전)",
+    "series_code": "56",
+    "series_name": "산업안전지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "산업안전지도사(기계안전)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9711_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9712",
+    "name": "산업안전지도사(전기안전)",
+    "series_code": "56",
+    "series_name": "산업안전지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "산업안전지도사(전기안전)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9712_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9713",
+    "name": "산업안전지도사(화공안전)",
+    "series_code": "56",
+    "series_name": "산업안전지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "산업안전지도사(화공안전)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9713_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9716",
+    "name": "산업보건지도사(산업위생공학)",
+    "series_code": "57",
+    "series_name": "산업보건지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "산업보건지도사(산업위생공학)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9716_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9715",
+    "name": "산업보건지도사(직업환경의학)",
+    "series_code": "57",
+    "series_name": "산업보건지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "산업보건지도사(직업환경의학)"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9715_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9744",
+    "name": "주택관리사보",
+    "series_code": "59",
+    "series_name": "주택관리사보",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "주택관리사보"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9744_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9745",
+    "name": "감정평가사",
+    "series_code": "60",
+    "series_name": "감정평가사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "감정평가사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9745_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9746",
+    "name": "물류관리사",
+    "series_code": "61",
+    "series_name": "물류관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "물류관리사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9746_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9747",
+    "name": "검수사",
+    "series_code": "62",
+    "series_name": "검수사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "검수사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9747_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9748",
+    "name": "검량사",
+    "series_code": "63",
+    "series_name": "검량사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "검량사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9748_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9749",
+    "name": "감정사",
+    "series_code": "64",
+    "series_name": "감정사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "감정사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9749_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9750",
+    "name": "1급 청소년지도사",
+    "series_code": "66",
+    "series_name": "청소년지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "1급 청소년지도사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9750_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9751",
+    "name": "2급 청소년지도사",
+    "series_code": "66",
+    "series_name": "청소년지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "2급 청소년지도사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9751_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9752",
+    "name": "3급 청소년지도사",
+    "series_code": "66",
+    "series_name": "청소년지도사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점"
+    ],
+    "reported_names": [
+      "3급 청소년지도사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9752_attempt1.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9753",
+    "name": "1급 청소년상담사",
+    "series_code": "67",
+    "series_name": "청소년상담사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9754",
+    "name": "2급 청소년상담사",
+    "series_code": "67",
+    "series_name": "청소년상담사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9755",
+    "name": "3급 청소년상담사",
+    "series_code": "67",
+    "series_name": "청소년상담사",
+    "collection_status": "failed",
+    "section_labels": [],
+    "reported_names": [],
+    "exact_name_match": false,
+    "response_file": null,
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9762",
+    "name": "수산물품질관리사",
+    "series_code": "72",
+    "series_name": "수산물품질관리사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "수산물품질관리사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9762_attempt0.txt",
+    "review_status": "unreviewed"
+  },
+  {
+    "qnet_code": "9763",
+    "name": "손해평가사",
+    "series_code": "73",
+    "series_name": "손해평가사",
+    "collection_status": "fetched",
+    "section_labels": [
+      "응시자격",
+      "시험과목 및 배점",
+      "취득방법"
+    ],
+    "reported_names": [
+      "손해평가사"
+    ],
+    "exact_name_match": true,
+    "response_file": "responses/preparation_details_9763_attempt1.txt",
+    "review_status": "unreviewed"
+  }
+]

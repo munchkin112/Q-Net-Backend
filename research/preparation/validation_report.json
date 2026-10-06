@@ -1,0 +1,30 @@
+{
+  "prepared_at": "2026-10-06T00:29:41.467135+00:00",
+  "database_checked": false,
+  "professional_collection_completed": true,
+  "catalog_count": 613,
+  "technical_information_count": 510,
+  "technical_schedule_count": 1922,
+  "technical_scheduled_certificates": 475,
+  "professional_detail_statuses": {
+    "fetched": 56,
+    "empty": 36,
+    "failed": 8
+  },
+  "professional_series_statuses": {
+    "fetched": 35,
+    "empty": 0,
+    "failed": 2
+  },
+  "professional_series_schedule_rows": 72,
+  "professional_schedule_issues": 0,
+  "official_document_count": 1574,
+  "source_file_count": 719,
+  "technical_detail_review_count": 49,
+  "technical_schedule_review_count": 38,
+  "notes": [
+    "기술자격은 과거 저장 결과를 현재 입력 모델로 재검증했습니다. 현재 Render DB 검증 결과가 아닙니다.",
+    "전문자격은 공식 원본과 계열별 후보 일정입니다. 상세 정규화·종목별 연결·DB 반영은 하지 않았습니다.",
+    "RAG 문서는 원문 준비 단계이며 최신성 검토·청킹·임베딩·검색 구현은 별도 결정이 필요합니다."
+  ]
+}
