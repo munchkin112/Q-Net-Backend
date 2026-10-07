@@ -52,7 +52,7 @@ def verify() -> dict:
     selected = {cert['id']: cert for cert in samples}
     with httpx.Client(base_url='http://127.0.0.1:8000', timeout=30) as client:
         for cert in selected.values():
-            response = client.get('/api/v1/certificates/' + str(cert['id']))
+            response = client.get('/certificates/' + str(cert['id']))
             check = {'code': cert['qnet_code'], 'name': cert['name'], 'http_status': response.status_code, 'passed': False}
             if response.status_code == 200:
                 payload = response.json()

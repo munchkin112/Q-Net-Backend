@@ -47,7 +47,7 @@ def main() -> None:
         assert 'registration_periods' in schema['components']['schemas']['ScheduleResponse']['properties']
         for code in codes:
             certificate = catalog_by_code[code]
-            path = f"/api/v1/certificates/{certificate['id']}/schedules?year=2026"
+            path = f"/certificates/{certificate['id']}/schedules?year=2026"
             response = client.get(path)
             assert response.status_code == 200, certificate['name']
             data = response.json()

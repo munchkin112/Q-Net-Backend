@@ -4,7 +4,7 @@
 
 ## 2026-10-07 협업용 경로 초안
 
-새 API 경로는 `/api`·`/v1` 접두어 없이 작성한다. 문서 버전 v0.2는 API 주소의 버전과 관계없다. 이번 변경은 문서와 협업 계약 초안이며 서버 코드·DB·인증 설정을 변경하지 않았다. 아래 14개 API는 모두 미구현이다.
+API 경로는 `/api`·`/v1` 접두어 없이 통일한다. 문서 버전 v0.2는 API 주소의 버전과 관계없다. 2026-10-07 조회 API의 코드·호출 테스트·검증 스크립트도 접두어 없는 경로로 변경했다. DB·인증 설정은 변경하지 않았다. 아래 14개 API는 모두 미구현이다.
 
 Google 로그인 구현 1명, Google Calendar 연동 구현 1명이 각각 담당한다. 프로필·응시요건·Agent·RAG의 담당자는 회의에서 확정한다. 로그인과 Calendar 접근 동의는 별도이며 로그인만으로 Calendar 등록 권한이 생기지 않는다.
 
@@ -25,7 +25,7 @@ Google 로그인 구현 1명, Google Calendar 연동 구현 1명이 각각 담�
 | Calendar 등록 | POST | `/calendar/register` | 사용자 확인 후 실제 등록·중복 방지 | Calendar 담당 |
 | Calendar 등록 내역 | GET | `/calendar/events` | 서비스에서 등록한 이벤트와 처리 상태 조회 | Calendar 담당 |
 
-기존 조회 API의 향후 경로도 `GET /certificates`, `GET /certificates/{certificate_id}`, `GET /certificates/{certificate_id}/schedules`로 맞추는 안이다. **현재 서버는 아래 표의 `/api/v1/certificates...`를 사용한다.** 실제 경로 변경은 코드·테스트·프론트 호출을 함께 수정하는 별도 작업으로 진행한다. 접두어 없는 조회 경로는 아직 호출할 수 없다.
+기존 조회 API는 `GET /certificates`, `GET /certificates/{certificate_id}`, `GET /certificates/{certificate_id}/schedules`로 변경했다. **아래 실제 구현 표의 경로를 호출한다.** 이전 접두어 경로는 제공하지 않으므로 프론트 호출 주소도 함께 변경해야 한다. 검색 인자·UUID·응답 구조는 유지했다.
 
 ### 담당 파일과 연결 규칙
 
@@ -59,7 +59,7 @@ AI는 도구 선택·추가 질문·근거 설명·잘못된 도구 인자 수�
 
 **2026-10-05 검토 반영:** DB는 Render PostgreSQL. 프로필 저장과 단계별 일정 저장을 위한 DB 기반 코드를 작성했다. A06 응시조건 비교와 A08 Calendar는 보류, 로드맵은 제외했다. 북마크는 향후 포함하지만 현재 SQL/처리 코드는 주석으로 비활성화한다. 아래의 전체 API 목록은 검토용 제안으로 유지한다.
 
-**현재 연결된 HTTP API:** /health, /health/database, /api/v1/certificates, /api/v1/certificates/{certificate_id}, /api/v1/certificates/{certificate_id}/schedules. 종목 검색의 현재 페이지 방식은 limit+offset이며 cursor는 향후 검토안이다. Render DB 미설정 상태에서는 검색·상세·일정 조회가 503을 반환한다. 공식 데이터 변환·동기화는 로컬 실행 명령으로 제공하며 공개 쓰기 API를 추가하지 않았다.
+**현재 연결된 HTTP API:** /health, /health/database, /certificates, /certificates/{certificate_id}, /certificates/{certificate_id}/schedules. 종목 검색의 현재 페이지 방식은 limit+offset이며 cursor는 향후 검토안이다. Render DB 미설정 상태에서는 검색·상세·일정 조회가 503을 반환한다. 공식 데이터 변환·동기화는 로컬 실행 명령으로 제공하며 공개 쓰기 API를 추가하지 않았다.
 
 ## 현재 구현과 다음 단계
 
@@ -67,9 +67,9 @@ AI는 도구 선택·추가 질문·근거 설명·잘못된 도구 인자 수�
 | --- | --- | --- |
 | GET | `/health` | 서버 실행과 DB 설정 여부 |
 | GET | `/health/database` | DB 접속·필수 테이블 존재 검사 |
-| GET | `/api/v1/certificates` | 목록 613종목 검색. q/category/limit/offset 지원 |
-| GET | `/api/v1/certificates/{certificate_id}` | 기술자격 510종목 상세정보. 미확보 자료는 null과 확인 상태 |
-| GET | `/api/v1/certificates/{certificate_id}/schedules?year=2026` | 기술자격 475종목·1,922단계. UUID와 연도 필요 |
+| GET | `/certificates` | 목록 613종목 검색. q/category/limit/offset 지원 |
+| GET | `/certificates/{certificate_id}` | 기술자격 510종목 상세정보. 미확보 자료는 null과 확인 상태 |
+| GET | `/certificates/{certificate_id}/schedules?year=2026` | 기술자격 475종목·1,922단계. UUID와 연도 필요 |
 
 전문자격 100종목은 목록 검색만 연동했다. 다음 순서는 공식 상세정보·일정 제공 범위 조사와 실제 테스트 → 가능한 종목 확대 → Google 로그인 → 프로필 HTTP API → AI 기능이다. 구현 범위와 보류 사항은 [작업 현황](프로젝트_진행현황.md)을 따른다.
 
@@ -79,7 +79,7 @@ AI는 도구 선택·추가 질문·근거 설명·잘못된 도구 인자 수�
 
 ## A01. 범위와 기본 방식
 
-향후 업무 API 초안은 FastAPI에서 `/api`·`/v1` 없이 제공하며 서버 상태 경로는 `/health` 아래에 둔다. 현재 구현된 조회 API는 `/api/v1`을 유지한다. 현재 구현 흐름은 직접 검색 → 상세정보 조회 → 단계별 일정 조회다. 이후 로그인·프로필·AI 연결을 진행한다. 응시조건 비교·Calendar는 코드상 미구현이며 향후 범위는 위 협업 초안을 따른다. 북마크는 주석 상태, 로드맵은 범위 제외다.
+업무 API는 FastAPI에서 `/api`·`/v1` 없이 제공하며 서버 상태 경로는 `/health` 아래에 둔다. 현재 구현 흐름은 직접 검색 → 상세정보 조회 → 단계별 일정 조회다. 이후 로그인·프로필·AI 연결을 진행한다. 응시조건 비교·Calendar는 코드상 미구현이며 향후 범위는 위 협업 초안을 따른다. 북마크는 주석 상태, 로드맵은 범위 제외다.
 
 일반 화면은 구현한 개별 API를 호출한다. A09의 대화 Agent는 향후 같은 서비스를 재사용하는 제안이다. 현재 공식 데이터 호출과 날짜 검증은 Python 코드가 수행하며 LLM은 아직 연결하지 않았다.
 
@@ -129,7 +129,7 @@ AI는 도구 선택·추가 질문·근거 설명·잘못된 도구 인자 수�
 
 ## A04. 자격증 검색 및 상세
 
-현재 검색·단계별 일정 API에 더해 `GET /api/v1/certificates/{certificate_id}`를 구현했다. 기술자격 510종목의 과목·합격기준·응시료를 `exam_information.subjects`, `pass_criteria`, `fees`로 반환하며 각각 written/practical/interview/phases/status/source_url/retrieved_at을 포함한다. 과목·기준은 단계 구분 없는 common 문구도 제공한다. 응시료는 currency=KRW다. 세 정보 확보 464개는 data_status=complete, 일부 미확인 46개는 partial이다. 미수집 종목은 200과 data_status=unavailable, 값 null, 공식 페이지 링크로 응답한다. 없는 UUID는 404다. 아래 예시는 이전 제안이며 실제 응답과 실행 방법은 [시험 상세정보 설명](시험_상세정보_연동.md), 종목별 현황은 [확대 결과](기술자격_상세정보_확대결과.md)를 따른다.
+현재 검색·단계별 일정 API에 더해 `GET /certificates/{certificate_id}`를 구현했다. 기술자격 510종목의 과목·합격기준·응시료를 `exam_information.subjects`, `pass_criteria`, `fees`로 반환하며 각각 written/practical/interview/phases/status/source_url/retrieved_at을 포함한다. 과목·기준은 단계 구분 없는 common 문구도 제공한다. 응시료는 currency=KRW다. 세 정보 확보 464개는 data_status=complete, 일부 미확인 46개는 partial이다. 미수집 종목은 200과 data_status=unavailable, 값 null, 공식 페이지 링크로 응답한다. 없는 UUID는 404다. 아래 예시는 이전 제안이며 실제 응답과 실행 방법은 [시험 상세정보 설명](시험_상세정보_연동.md), 종목별 현황은 [확대 결과](기술자격_상세정보_확대결과.md)를 따른다.
 
 | 메서드 | 경로 | 역할 |
 | --- | --- | --- |

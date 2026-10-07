@@ -187,7 +187,7 @@ class ExamInformationTests(unittest.TestCase):
         with patch.dict(os.environ, {"DATABASE_URL": "test-only"}):
             with patch("backend.main.certificate_detail", return_value=result):
                 with TestClient(app) as client:
-                    response = client.get(f"/api/v1/certificates/{identifier}")
+                    response = client.get(f"/certificates/{identifier}")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["data_status"], "unavailable")
         self.assertIsNone(response.json()["exam_information"]["fees"]["written"])
@@ -197,9 +197,9 @@ class ExamInformationTests(unittest.TestCase):
         with TestClient(app) as client:
             with patch.dict(os.environ, {"DATABASE_URL": "test-only"}):
                 with patch("backend.main.certificate_detail", return_value=None):
-                    self.assertEqual(client.get(f"/api/v1/certificates/{uuid4()}").status_code, 404)
+                    self.assertEqual(client.get(f"/certificates/{uuid4()}").status_code, 404)
             with patch.dict(os.environ, {}, clear=True):
-                self.assertEqual(client.get(f"/api/v1/certificates/{uuid4()}").status_code, 503)
+                self.assertEqual(client.get(f"/certificates/{uuid4()}").status_code, 503)
 
 
 @unittest.skipUnless(os.environ.get("TEST_DATABASE_URL"), "테스트 PostgreSQL 연결 정보 미제공")

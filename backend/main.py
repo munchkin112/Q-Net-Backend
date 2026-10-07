@@ -111,7 +111,7 @@ def database_health(response: Response) -> dict:
 
 
 @app.get(
-    "/api/v1/certificates", response_model=list[CertificateResponse],
+    "/certificates", response_model=list[CertificateResponse],
     tags=["자격증 검색"], summary="공식 종목명·코드로 검색",
     responses={503: {"description": "Render DB 미설정 또는 조회 불가"}},
 )
@@ -131,7 +131,7 @@ def certificates(
 
 
 @app.get(
-    "/api/v1/certificates/{certificate_id}", response_model=CertificateDetailResponse,
+    "/certificates/{certificate_id}", response_model=CertificateDetailResponse,
     tags=["자격증 상세정보"], summary="시험과목·합격기준·응시료 조회",
     responses={404: {"description": "해당 종목이 없음"}, 503: {"description": "DB 조회 불가"}},
 )
@@ -149,7 +149,7 @@ def detail(certificate_id: UUID) -> dict:
 
 
 @app.get(
-    "/api/v1/certificates/{certificate_id}/schedules",
+    "/certificates/{certificate_id}/schedules",
     response_model=list[ScheduleResponse],
     tags=["시험일정"],
     summary="종목·연도별 필기·실기·면접 일정 조회",
