@@ -51,3 +51,5 @@ if (-not (Test-Path backend/.env)) { Copy-Item backend/.env.example backend/.env
 ## 협업
 
 현재 개발 결과는 `dev`에서 공유한다. 기능별 브랜치에서 작업한 뒤 PR로 dev에 반영하고 검증된 배포 버전을 main에 반영한다. 팀원 초대와 리뷰 정책은 팀이 결정한다.
+
+2026-10-07 협업 경로 초안은 [API 설계 문서](docs/API_설계_초안.md)의 첫 표를 따른다. 새 API는 `/api`·`/v1` 없이 설계하고, Google 로그인 1명(`/auth/*`)과 Calendar 연동 1명(`/calendar/*`)이 나누어 구현한다. 공통 인증과 요청·응답 규칙은 함께 합의하며 Router 연결은 취합한다. 현재 실행 중인 자격증 조회 경로는 `/api/v1/certificates...`이며 이번 문서 수정에서는 서버 경로를 변경하지 않았다.

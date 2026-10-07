@@ -1,6 +1,61 @@
-# Q-Net API 설계 초안 v0.1
+# Q-Net API 설계 초안 v0.2
 
 상태: 조회 API 일부 구현 완료. 아래의 실제 구현과 향후 검토안을 구분한다. 서버 배포·팀 합의는 진행 전이다.
+
+## 2026-10-07 협업용 경로 초안
+
+새 API 경로는 `/api`·`/v1` 접두어 없이 작성한다. 문서 버전 v0.2는 API 주소의 버전과 관계없다. 이번 변경은 문서와 협업 계약 초안이며 서버 코드·DB·인증 설정을 변경하지 않았다. 아래 14개 API는 모두 미구현이다.
+
+Google 로그인 구현 1명, Google Calendar 연동 구현 1명이 각각 담당한다. 프로필·응시요건·Agent·RAG의 담당자는 회의에서 확정한다. 로그인과 Calendar 접근 동의는 별도이며 로그인만으로 Calendar 등록 권한이 생기지 않는다.
+
+| 기능 | 메서드 | 경로 초안 | 역할 | 담당 범위 |
+| --- | --- | --- | --- | --- |
+| Google 로그인·회원가입 | POST | `/auth/google` | 구글 인증 정보 검증 후 회원 생성·로그인 | 로그인 담당 |
+| 내 로그인 정보 | GET | `/auth/me` | 현재 로그인한 사용자 조회 | 로그인 담당 |
+| 로그아웃 | POST | `/auth/logout` | 서비스 로그인 종료 | 로그인 담당 |
+| 프로필 조회 | GET | `/me/profile` | 저장된 학력·전공·경력 조회 | 별도 확정 |
+| 프로필 저장·수정 | PATCH | `/me/profile` | 입력한 항목만 저장·수정 | 별도 확정 |
+| 응시요건 확인 | POST | `/certificates/{certificate_id}/eligibility` | 저장된 프로필과 검토된 공식 조건 비교 | 별도 확정 |
+| Agent 실행·추가 답변 | POST | `/agent/run` | 요청 처리 또는 추가 질문에 대한 답변 전달 | 별도 확정 |
+| Agent 작업 상태 조회 | GET | `/agent/tasks/{task_id}` | 진행 상태·추가 질문·최종 결과 조회 | 별도 확정 |
+| 공식 문서 정보 보완 | POST | `/certificates/{certificate_id}/supplement` | 지정한 항목을 RAG로 검색해 설명·출처 반환 | 별도 확정 |
+| Calendar 권한 연결 시작 | GET | `/calendar/connect` | 구글 Calendar 접근 동의 절차 시작 | Calendar 담당 |
+| Calendar 권한 연결 완료 | GET | `/calendar/callback` | 구글 인증 결과를 받아 권한 연결 완료 | Calendar 담당 |
+| Calendar 미리보기 | POST | `/calendar/preview` | 선택한 시험일정의 등록 예정 이벤트 반환 | Calendar 담당 |
+| Calendar 등록 | POST | `/calendar/register` | 사용자 확인 후 실제 등록·중복 방지 | Calendar 담당 |
+| Calendar 등록 내역 | GET | `/calendar/events` | 서비스에서 등록한 이벤트와 처리 상태 조회 | Calendar 담당 |
+
+기존 조회 API의 향후 경로도 `GET /certificates`, `GET /certificates/{certificate_id}`, `GET /certificates/{certificate_id}/schedules`로 맞추는 안이다. **현재 서버는 아래 표의 `/api/v1/certificates...`를 사용한다.** 실제 경로 변경은 코드·테스트·프론트 호출을 함께 수정하는 별도 작업으로 진행한다. 접두어 없는 조회 경로는 아직 호출할 수 없다.
+
+### 담당 파일과 연결 규칙
+
+| 영역 | 제안 파일 | 작업 규칙 |
+| --- | --- | --- |
+| 로그인 | `backend/routers/auth.py` 및 인증 처리 파일 | 로그인 담당자가 `/auth/*`와 사용자 식별 공통 함수를 구현 |
+| Calendar | `backend/routers/calendar.py` 및 Calendar 처리 파일 | Calendar 담당자가 `/calendar/*`를 구현하고 공통 인증 함수를 재사용 |
+| 프로필 | `backend/routers/profile.py` | 기존 프로필 모델·저장 함수를 재사용, 담당자 확정 필요 |
+| Agent·RAG | `backend/routers/agent.py`, `backend/routers/rag.py` | 검색·설명은 별도 처리 파일에 두고 Router는 입출력 연결만 담당 |
+| 공용 연결 | `backend/main.py` | Router의 include_router 연결은 한 사람이 취합하고 PR에서 확인 |
+| 의존성·환경변수 | `backend/requirements.txt`, `backend/.env.example` | 필요한 패키지와 변수 이름을 공유. 실제 비밀값은 커밋하지 않음 |
+| DB 변경 | 기능별 SQL 파일 | 같은 Render DB는 브랜치와 무관하게 변경을 공유하므로 적용은 담당자가 취합 |
+
+위 Router 파일은 앞으로의 분리 제안이며 이번에 생성하지 않았다. 각 담당자는 최신 dev에서 기능 브랜치를 만들고 PR로 dev에 병합한다. 병합 전 최신 dev를 가져와 충돌과 테스트를 확인한다. 인증 방식을 Cookie 또는 Bearer 중 어느 것으로 사용할지 먼저 합의하며 두 담당자가 각각 사용자 식별 방식을 만들지 않는다. 서버에서 확인한 사용자 ID만 사용하고 요청의 user_id는 신뢰하지 않는다.
+
+### 요청·응답 연결 초안
+
+| API 묶음 | 요청 / 응답의 핵심 내용 | 구현 전에 합의할 것 |
+| --- | --- | --- |
+| 로그인 | `/auth/google`에 Google ID 토큰 전달 → 검증 후 서비스 로그인 생성. `/auth/me`는 사용자 정보, `/auth/logout`은 로그인 종료 결과 | ID 토큰 필드명, 서비스 세션 방식·만료·로그아웃 처리 |
+| 프로필 | GET은 저장된 프로필, PATCH는 전달한 필드만 수정 | 학력·전공·경력 입력 규칙, 희망 직무 선택 여부 |
+| 응시요건 | 선택 종목과 서버에서 조회한 프로필 → 판단 상태·부족한 정보·공식 근거 | 자동 비교 대상 3~5종목, 검토된 공식 규칙과 입력 조건 |
+| Agent | 최초 요청과 추가 답변에 작업 ID·선택 종목·요청 내용 전달 → 상태·질문·결과·출처 | task_id 발급, 작업 소유권·보관 기간, 재시도 제한 |
+| RAG | 선택 종목과 확인할 항목 → 설명·공식 출처·확인 상태 | 허용 항목, 대상 문서·기준일, 근거 부족 안내 |
+| Calendar 동의 | 로그인 사용자로 연결 시작 → 구글 동의 화면으로 이동 → callback의 code·state 검증 후 권한 저장 | 동의 scope, 콜백 주소, 암호화할 토큰 저장·갱신 방식 |
+| Calendar 미리보기·등록 | schedule_ids·event_types → 등록 예정 이벤트. 등록 요청은 확인한 미리보기와 동의 전달 → 항목별 처리 결과 | 미리보기 식별·만료·재검증, Calendar 대상, 중복 키·부분 실패 처리 |
+
+AI는 도구 선택·추가 질문·근거 설명·잘못된 도구 인자 수정 제안을 맡는다. 응시조건 비교·날짜 계산·권한 확인·Calendar 실제 등록은 Python이 수행한다. 일반 API 실패 후 재시도와 RAG 보완은 계획할 수 있지만, 결과가 불명확한 Calendar 생성 요청은 중복 위험 때문에 무조건 재실행하지 않는다. Calendar 미리보기는 외부 이벤트를 생성하지 않으며 실제 등록은 별도 명시적 사용자 확인을 거친다. 미리보기·등록·작업 조회·등록 내역은 모두 로그인 사용자 소유권을 확인한다.
+
+상태: Google 로그인·Calendar는 팀원의 향후 구현 범위로 배정했다. 기존 코드의 응시조건 비교·Calendar 보류 상태를 이번 문서 수정으로 해제하거나 구현한 것은 아니다. 구체적인 기능 범위·인증·DB 계약은 회의에서 확정한 뒤 담당자가 구현한다. 북마크 비활성·로드맵 제외는 유지한다.
 
 **2026-10-05 검토 반영:** DB는 Render PostgreSQL. 프로필 저장과 단계별 일정 저장을 위한 DB 기반 코드를 작성했다. A06 응시조건 비교와 A08 Calendar는 보류, 로드맵은 제외했다. 북마크는 향후 포함하지만 현재 SQL/처리 코드는 주석으로 비활성화한다. 아래의 전체 API 목록은 검토용 제안으로 유지한다.
 
@@ -24,7 +79,7 @@
 
 ## A01. 범위와 기본 방식
 
-업무 API는 FastAPI에서 `/api/v1`으로 제공하며 서버 상태 경로는 `/health` 아래에 둔다. 현재 구현 흐름은 직접 검색 → 상세정보 조회 → 단계별 일정 조회다. 이후 로그인·프로필·AI 연결을 진행한다. 응시조건 비교·Calendar는 보류, 북마크는 주석 상태, 로드맵은 범위 제외다.
+향후 업무 API 초안은 FastAPI에서 `/api`·`/v1` 없이 제공하며 서버 상태 경로는 `/health` 아래에 둔다. 현재 구현된 조회 API는 `/api/v1`을 유지한다. 현재 구현 흐름은 직접 검색 → 상세정보 조회 → 단계별 일정 조회다. 이후 로그인·프로필·AI 연결을 진행한다. 응시조건 비교·Calendar는 코드상 미구현이며 향후 범위는 위 협업 초안을 따른다. 북마크는 주석 상태, 로드맵은 범위 제외다.
 
 일반 화면은 구현한 개별 API를 호출한다. A09의 대화 Agent는 향후 같은 서비스를 재사용하는 제안이다. 현재 공식 데이터 호출과 날짜 검증은 Python 코드가 수행하며 LLM은 아직 연결하지 않았다.
 
@@ -35,20 +90,18 @@
 | 날짜 | 시험·접수는 `YYYY-MM-DD`, 조회 시각은 시간대 포함 ISO 8601 |
 | 기준 시간대 | Asia/Seoul |
 | 목록 | 현재 `limit` 기본 20, 최대 100 + `offset`; cursor는 향후 검토 |
-| 출처 | 현재 source_url/실제 조회 시각을 직접 보관. 상세정보별 JSON과 각 접수기간에도 포함. sources 연결은 미구현 제안 |
+| 출처 | source_url/실제 조회 시각을 직접 보관. 상세정보별 JSON과 각 접수기간에도 포함. sources 원문 보관은 구현됐으며 조회 API 연결은 별도 |
 | 비밀정보 | Google 토큰, 서비스 키, 내부 LLM 사고 과정은 응답/로그에 제외 |
 
 ## A02. 로그인 및 Calendar 권한
 
 | 메서드 | 경로 | 역할 |
 | --- | --- | --- |
-| GET | `/auth/google/login` | Google 로그인 화면으로 이동 |
-| GET | `/auth/google/callback` | 인증 결과 확인 후 세션 생성 |
-| GET | `/me` | 현재 로그인 사용자 |
+| POST | `/auth/google` | Google ID 토큰 검증 후 회원 생성·로그인 |
+| GET | `/auth/me` | 현재 로그인 사용자 |
 | POST | `/auth/logout` | 세션 종료 |
-| GET | `/integrations/google-calendar/authorize` | 사용자가 요청한 Calendar 권한 연결 시작 |
-| GET | `/integrations/google-calendar/callback` | Calendar 권한 결과 저장 |
-| GET | `/integrations/google-calendar/status` | 연결 여부 및 재동의 필요 여부 |
+| GET | `/calendar/connect` | 사용자가 요청한 Calendar 권한 연결 시작 |
+| GET | `/calendar/callback` | Calendar 권한 결과 저장 |
 
 로그인 동의와 Calendar 동의를 분리한다. 권한 연결만으로 일정은 생성하지 않는다. OAuth state 검증, 허용된 리다이렉트 주소, 세션 만료 및 변경 요청의 CSRF 방어를 적용한다. Google 실제 연동은 아직 테스트하지 않았으며 세부 scope는 연동 구현 전에 공식 문서로 확정한다.
 
@@ -58,7 +111,6 @@
 | --- | --- | --- |
 | GET | `/me/profile` | 저장된 프로필 조회 |
 | PATCH | `/me/profile` | 전달한 필드만 저장; 부분 입력 허용 |
-| GET | `/me/profile/completeness?purpose=recommendation` | 다음 단계에 부족한 정보 확인 |
 
 프로필 HTTP API는 미구현이며 DB·입력 검증·저장 함수는 준비했다. 필드는 DB 문서 D03과 동일하다. 필드 생략은 유지, 일반 필드 null은 삭제, 경력·보유 자격 배열 null은 []로 초기화한다. 학력이 고졸인 경우처럼 적용되지 않는 전공과 아직 모르는 전공을 구분한다. 보유 자격·경력 날짜는 필요한 경우 추가 입력받는다. 로드맵 관련 학습시간 필드는 제외한다.
 
@@ -68,8 +120,8 @@
 {
   "purpose": "recommendation",
   "ready": false,
-  "missing_fields": ["desired_job"],
-  "questions": [{"field": "desired_job", "message": "희망하는 직무를 알려주세요."}]
+    "missing_fields": ["education_level"],
+    "questions": [{"field": "education_level", "message": "학력을 알려주세요."}]
 }
 ```
 
@@ -157,9 +209,13 @@ UUID와 시각은 형식 설명용이다. 수수료만 검증 당시 실측값�
 
 ## A08. Google Calendar 등록
 
-현재 보류 상태다. 아래의 primary 제한·중복 방지·외부 생성 흐름은 이전 검토안이며 이번 구현에 포함하지 않는다.
+현재 코드에서는 미구현이다. Calendar 담당자가 아래 경로를 기준으로 구현하며 인증·미리보기·중복 방지의 구체적인 계약은 먼저 합의한다. 이번 문서 변경에서는 실제 연동을 구현하지 않았다.
 
-`POST /me/calendar-events`
+| 메서드 | 경로 | 역할 |
+| --- | --- | --- |
+| POST | `/calendar/preview` | 등록 전 일정과 예정 이벤트 확인 |
+| POST | `/calendar/register` | 사용자 확인 후 실제 이벤트 등록 |
+| GET | `/calendar/events` | 등록 결과와 항목별 상태 조회 |
 
 ```json
 {
@@ -169,25 +225,25 @@ UUID와 시각은 형식 설명용이다. 수수료만 검증 당시 실측값�
 }
 ```
 
-사용자가 화면에서 일정과 기간을 확인하고 등록 버튼을 누른 요청으로만 실행한다. 대화의 정보 조회만으로 실행하지 않는다. MVP는 primary 캘린더만 지원하는 안이다. 과거 일정은 제외하고 excluded_items로 이유를 반환한다.
+위 요청 본문은 미리보기 입력 예시다. 등록 API는 서버가 확인한 미리보기 식별자와 명시적 등록 동의를 받는 안이며 구체적인 필드는 팀과 확정한다. 사용자가 화면에서 일정과 기간을 확인하고 등록 버튼을 누른 요청으로만 실행한다. 대화의 정보 조회만으로 실행하지 않는다. primary 캘린더만 지원할지는 담당자와 확정한다. 과거 일정은 제외하고 excluded_items로 이유를 반환한다.
 
 등록 전 소유권·Calendar 권한·공식 출처·날짜 순서·기존 이벤트를 검증한다. 기간 일정은 종일 이벤트로 만들며 내부 종료일은 포함 날짜, Google 전달 종료일은 제공자 규칙에 맞춰 변환한다. 실제 변환은 연동 테스트에서 확인한다.
 
 DB 고유키로 중복을 막고, 외부 생성 후 DB 저장 실패에도 복구할 수 있는 제공자 이벤트 식별 방식은 Google 연동 시 검증한다. 결과가 불명확하면 즉시 재생성하지 않는다.
 
-응답 HTTP 200: items 각각 `created / already_exists / excluded / failed / unknown`, calendar_event_id, google_event_id, error_code를 제공한다. 일부 성공을 전체 실패로 숨기지 않는다. `GET /me/calendar-events`로 등록 결과를 확인한다. 일정 수정·삭제 및 자동 변경 동기화는 MVP 초안 범위에 넣지 않는다.
+응답 HTTP 200: items 각각 `created / already_exists / excluded / failed / unknown`, calendar_event_id, google_event_id, error_code를 제공한다. 일부 성공을 전체 실패로 숨기지 않는다. `GET /calendar/events`로 등록 결과를 확인한다. 일정 수정·삭제 및 자동 변경 동기화는 MVP 초안 범위에 넣지 않는다.
 
-## A09. 대화 Agent
+## A09. 백엔드 Agent와 RAG
 
 미구현 제안이다. 로그인·프로필 연결 이후 RAG·tool calling·LangChain·LangGraph 범위를 검토한다.
 
 | 메서드 | 경로 | 역할 |
 | --- | --- | --- |
-| POST | `/agent/sessions` | 대화 세션 생성 |
-| POST | `/agent/sessions/{session_id}/messages` | message와 선택 항목 전달 |
-| GET | `/agent/sessions/{session_id}` | 현재 선택 및 진행 상태 조회 |
+| POST | `/agent/run` | 요청 처리 또는 작업 ID를 사용한 추가 답변 전달 |
+| GET | `/agent/tasks/{task_id}` | 작업 상태·추가 질문·최종 결과 조회 |
+| POST | `/certificates/{certificate_id}/supplement` | 지정한 항목을 공식 문서에서 검색해 설명·출처 반환 |
 
-메시지 응답: session_id, status(`completed / needs_more_info / needs_confirmation / unavailable`), answer, structured_result, questions, sources, validation_errors. 세션은 로그인 사용자만 접근한다.
+Agent 응답 초안: task_id, status(`completed / needs_more_info / needs_confirmation / unavailable`), answer, structured_result, questions, sources, validation_errors. 작업은 소유자인 로그인 사용자만 접근한다. 선택형 화면과 챗봇 모두 이 API를 사용할 수 있으며 챗봇 포함 여부는 회의에서 결정한다. RAG API는 항목 선택 버튼에서 호출할 수 있고, Agent 내부 도구도 같은 검색 함수를 재사용한다. 근거가 부족하면 확인 필요를 반환하며 공식 조건·날짜를 만들어내지 않는다.
 
 State에는 선택한 자격/회차, 부족한 정보, 도구 결과 요약, 검증 오류, retry_count를 저장한다. 상세 비공개 추론은 저장하거나 반환하지 않는다. 일시 오류는 코드에서 최대 1회 재시도하고 이후 공식 페이지/확인 필요 안내로 전환한다. 빈 조회 결과를 통신 오류로 취급하지 않는다. Calendar 등록은 A08의 명시적 동의 경로를 사용한다.
 
@@ -222,7 +278,7 @@ State에는 선택한 자격/회차, 부족한 정보, 도구 결과 요약, 검
 2. 기본 프로필: 학력·졸업 상태·전공·경력 여부·희망 직무 중 화면에서 먼저 받을 항목.
 3. 일정: 회차 아래 단계별 UUID·기간 저장과 복수 접수기간 구조는 확정·구현 완료.
 4. 응시자격: 보류. 재개 시 상태·안내 문구를 검토.
-5. Calendar: 보류. 재개 시 primary·중복 방지·선택 등록 정책을 검토.
+5. Calendar: 담당자 1명 배정. 대상 캘린더·중복 방지·선택 등록·토큰 저장 정책을 구현 전에 합의.
 6. Agent: 기본 화면과 대화 화면 모두 MVP에 포함할지.
 7. 북마크는 향후 포함하되 현재 주석 상태. 로드맵은 범위 제외·향후 결정.
 
