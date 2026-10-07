@@ -84,7 +84,7 @@ class PostgreSQLTests(unittest.TestCase):
         import psycopg
         from psycopg import sql
         from psycopg.rows import dict_row
-        from backend.db.repository import get_profile, get_schedules, save_profile, save_schedule, save_certificate, search_certificates
+        from backend.db.repository import get_profile, list_schedules, save_profile, save_schedule, save_certificate, search_certificates
 
         user_id, certificate_id = uuid4(), uuid4()
         connection = psycopg.connect(os.environ["TEST_DATABASE_URL"], row_factory=dict_row, connect_timeout=10)
@@ -117,7 +117,7 @@ class PostgreSQLTests(unittest.TestCase):
             repeated = save_schedule(connection, practical)
             self.assertEqual(first["id"], repeated["id"])
             save_schedule(connection, sample_schedule(certificate_id=certificate_id, phase="written"))
-            self.assertEqual(len(get_schedules(connection, certificate_id, 2026)), 2)
+            self.assertEqual(len(list_schedules(connection, certificate_id, 2026)), 2)
             old = practical.model_copy(update={"last_synced_at": datetime(2020, 1, 1, tzinfo=timezone.utc), "exam_site": "stale"})
             self.assertIsNone(save_schedule(connection, old)["exam_site"])
             save_profile(connection, user_id, ProfilePatch(career_history=None, has_career=False))

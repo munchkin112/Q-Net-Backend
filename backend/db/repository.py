@@ -136,7 +136,7 @@ def enrich_registration_periods(connection: Connection, existing: dict, schedule
     return existing
 
 
-def get_schedules(connection: Connection, certificate_id: UUID, year: int) -> list[dict]:
+def list_schedules(connection: Connection, certificate_id: UUID, year: int) -> list[dict]:
     """필기·실기 등 각 시험 단계의 일정을 별도 행으로 조회한다."""
     return connection.execute(
         "SELECT * FROM schedules WHERE certificate_id = %s AND year = %s ORDER BY round_key, phase",

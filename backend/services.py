@@ -14,7 +14,7 @@ def list_certificates(query: str, category: str | None, limit: int, offset: int)
         return search_certificates(connection, query, category, limit, offset)
 
 
-def certificate_detail(certificate_id: UUID) -> dict | None:
+def get_certificate_detail(certificate_id: UUID) -> dict | None:
     """저장된 공식 자료를 반환하고 미수집 종목은 확인 필요 상태로 표시한다."""
     with database_connection() as connection:
         certificate = get_certificate(connection, certificate_id)

@@ -10,7 +10,7 @@ from backend.official_schedule_page import fetch_schedule_page
 from backend.sync_batch import PROJECT_ROOT, error_result, load_technical_catalog, write_report
 
 
-def collect(output: Path, interval: float) -> dict:
+def collect_schedule_pages(output: Path, interval: float) -> dict:
     """종목 하나가 실패해도 다음 종목으로 계속하며 DB를 변경하지 않는다."""
     catalog = load_technical_catalog()
     report = {'started_at': datetime.now(timezone.utc).isoformat(), 'completed': False,
@@ -47,7 +47,7 @@ def main() -> None:
     options = parser.parse_args()
     if not 0.1 <= options.interval <= 30:
         parser.error('요청 간격은 0.1~30초로 지정해주세요.')
-    collect(options.output, options.interval)
+    collect_schedule_pages(options.output, options.interval)
 
 
 if __name__ == '__main__':

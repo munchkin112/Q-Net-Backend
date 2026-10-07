@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-10-07T05:09:12.015553+00:00",
+  "database_mode": "Render read-only through FastAPI TestClient",
+  "renamed_functions": 12,
+  "http_routes": [
+    "/health",
+    "/health/database",
+    "/certificates",
+    "/certificates/{certificate_id}",
+    "/certificates/{certificate_id}/schedules"
+  ],
+  "checks": [
+    {
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "path": "/health/database",
+      "status": 200
+    },
+    {
+      "path": "/docs",
+      "status": 200
+    },
+    {
+      "path": "/openapi.json",
+      "status": 200
+    },
+    {
+      "path": "/certificates?q=1320",
+      "status": 200
+    },
+    {
+      "path": "/certificates/79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+      "status": 200
+    },
+    {
+      "path": "/certificates/79a6a7a3-5fbc-4b64-80dd-732206f3fb81/schedules?year=2026",
+      "status": 200
+    },
+    {
+      "path": "/certificates/3332d3e4-ec77-4fcf-9d68-bf2a80b26314",
+      "status": 404
+    },
+    {
+      "path": "/certificates/not-a-uuid",
+      "status": 422
+    },
+    {
+      "path": "/certificates?limit=101",
+      "status": 422
+    }
+  ],
+  "passed": true
+}

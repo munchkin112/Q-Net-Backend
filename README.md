@@ -42,6 +42,7 @@ if (-not (Test-Path backend/.env)) { Copy-Item backend/.env.example backend/.env
 
 - [전체 작업 현황과 다음 순서](docs/프로젝트_진행현황.md)
 - [API 설계와 실제 구현 범위](docs/API_설계_초안.md)
+- [팀 함수명 규칙과 변경 목록](docs/함수명_작성규칙.md)
 - [DB 설계와 적용된 테이블](docs/DB_설계_초안.md)
 - [시험 상세정보 코드 설명](docs/시험_상세정보_연동.md)
 - [공식 데이터 수집·갱신](docs/기술자격_일괄수집.md)

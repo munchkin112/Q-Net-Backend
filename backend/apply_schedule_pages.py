@@ -14,7 +14,7 @@ from backend.official_schedule_page import inspect_schedule_page, is_school_exam
 from backend.sync_batch import PROJECT_ROOT, error_result, load_technical_catalog, write_report
 
 
-def reprocess(source: Path, output: Path, apply: bool, notice_path: Path) -> dict:
+def reprocess_schedule_pages(source: Path, output: Path, apply: bool, notice_path: Path) -> dict:
     """외부 재호출 없이 원본 시각을 유지하고 실패·빈 일정은 기존 DB를 보존한다."""
     original = json.loads(source.read_text(encoding='utf-8'))
     catalog = load_technical_catalog()
@@ -87,7 +87,7 @@ def main() -> None:
     options = parser.parse_args()
     if options.from_report.resolve() == options.output.resolve():
         parser.error('원본 파일과 출력 파일은 다른 경로로 지정해주세요.')
-    report = reprocess(options.from_report, options.output, options.apply, options.notice)
+    report = reprocess_schedule_pages(options.from_report, options.output, options.apply, options.notice)
     print(json.dumps({key: report[key] for key in ('summary', 'normalized_rows', 'saved_rows', 'retained_rows')}, ensure_ascii=False))
     if report['summary'].get('failed'):
         raise SystemExit(1)

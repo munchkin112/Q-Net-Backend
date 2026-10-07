@@ -46,7 +46,7 @@ class APITests(unittest.TestCase):
                "career_tags": [], "description": None, "source_url": "https://www.q-net.or.kr/",
                "last_synced_at": now, "updated_at": now}
         with patch.dict(os.environ, {"DATABASE_URL": "test-not-a-real-connection"}):
-            with patch("backend.main.list_certificates", return_value=[row]) as search:
+            with patch("backend.main.services.list_certificates", return_value=[row]) as search:
                 response = self.client.get("/certificates?q=가스&category=T&limit=5&offset=1")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()[0]["qnet_code"], "0752")

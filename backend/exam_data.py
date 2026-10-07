@@ -39,7 +39,7 @@ class PlainTextParser(HTMLParser):
             self.parts.append(data)
 
 
-def plain_text(value: str) -> str:
+def extract_plain_text(value: str) -> str:
     """HTML과 불필요한 공백을 정리하되 의미가 있는 줄바꿈은 남긴다."""
     parser = PlainTextParser()
     parser.feed(unescape(value))
@@ -51,7 +51,7 @@ def plain_text(value: str) -> str:
     return "\n".join(lines)
 
 
-def find_section(text: str, label: str) -> str | None:
+def extract_section(text: str, label: str) -> str | None:
     """제목부터 다음 제목 전까지 가져온다. 제목이 없거나 중복되면 추정하지 않는다."""
     # 공식 원문의 '시 행 처'처럼 글자 사이에 공백이 있는 제목도 허용한다.
     patterns = []
@@ -104,7 +104,7 @@ def split_phases(text: str | None) -> dict[str, str | None]:
     return result
 
 
-def subject_list(text: str | None) -> list[str] | None:
+def parse_subjects(text: str | None) -> list[str] | None:
     """번호가 있으면 과목별로 나누고, 없으면 공식 문구 하나를 그대로 보관한다."""
     if not text:
         return None
@@ -135,7 +135,7 @@ def selected_content(items: list[dict], expected_name: str, label: str) -> str |
         if item.get("jmfldnm") != expected_name:
             raise ValueError("선택한 자격증과 공식 상세정보의 종목명이 다릅니다.")
         if item.get("infogb") == label:
-            contents.append(plain_text(item.get("contents", "")))
+            contents.append(extract_plain_text(item.get("contents", "")))
     if len(contents) > 1:
         raise ValueError("공식 상세정보의 같은 구분이 중복되었습니다.")
     return contents[0] if contents and contents[0] else None
@@ -182,11 +182,11 @@ def normalize_exam_information(
     """시험과목·합격기준·수수료를 변환하며 해석할 수 없는 값은 null로 남긴다."""
     acquisition = selected_content(detail_result["items"], expected_name, "취득방법")
     fee_text = selected_content(fee_result["items"], expected_name, "응시수수료")
-    subject_text = find_section(acquisition, "시험과목") if acquisition else None
-    criteria_text = find_section(acquisition, "합격기준") if acquisition else None
-    method_text = find_section(acquisition, "검정방법") if acquisition else None
+    subject_text = extract_section(acquisition, "시험과목") if acquisition else None
+    criteria_text = extract_section(acquisition, "합격기준") if acquisition else None
+    method_text = extract_section(acquisition, "검정방법") if acquisition else None
     if acquisition and method_text is None:
-        method_text = find_section(acquisition, "검정기준") or find_section(acquisition, "검벙방법")
+        method_text = extract_section(acquisition, "검정기준") or extract_section(acquisition, "검벙방법")
     methods = split_phases(method_text)
     subjects = split_phases(subject_text)
     criteria = split_phases(criteria_text)
@@ -211,10 +211,10 @@ def normalize_exam_information(
         subjects["interview"] = None
         criteria["interview"] = None
     for phase in subjects:
-        subjects[phase] = subject_list(subjects[phase])
+        subjects[phase] = parse_subjects(subjects[phase])
     # 단계 표시가 없는 공식 시험과목·기준은 common에 보관하며 특정 단계로 추정하지 않는다.
     unlabelled_subject = re.sub(r"\(?필기\s*시험\s*없음\)?", "", subject_text or "")
-    subjects["common"] = subject_list(subject_text.lstrip("- ")) if subject_text and not re.search(r"필기|실기|면접", unlabelled_subject) else None
+    subjects["common"] = parse_subjects(subject_text.lstrip("- ")) if subject_text and not re.search(r"필기|실기|면접", unlabelled_subject) else None
     criteria["common"] = criteria_text.lstrip("- ") if criteria_text and not re.search(r"필기|실기|면접", criteria_text) else None
     if criteria_text and criteria_text.startswith("필실기 ") and not any(criteria.values()):
         # 공식 원문의 축약 표기는 단계별 문장으로 바꾸지 않고 common에 그대로 남긴다.

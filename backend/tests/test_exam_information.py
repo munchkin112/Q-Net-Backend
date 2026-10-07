@@ -11,11 +11,11 @@ from uuid import uuid4
 from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
-from backend.exam_data import normalize_exam_information, plain_text, parse_fees, split_phases
+from backend.exam_data import normalize_exam_information, extract_plain_text, parse_fees, split_phases
 from backend.exam_schemas import ExamInformationInput, FeesInfo
 from backend.main import app
 from backend.official_api import parse_xml_items
-from backend.services import certificate_detail
+from backend.services import get_certificate_detail
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -153,7 +153,7 @@ class ExamInformationTests(unittest.TestCase):
         self.assertEqual(result.pass_criteria.status, "available")
 
     def test_html_becomes_text_and_scripts_are_discarded(self):
-        self.assertEqual(plain_text('<p>필기 : A&nbsp;B</p><script>위험</script><style>숨김</style><p>실기 : C</p>'), '필기 : A B\n실기 : C')
+        self.assertEqual(extract_plain_text('<p>필기 : A&nbsp;B</p><script>위험</script><style>숨김</style><p>실기 : C</p>'), '필기 : A B\n실기 : C')
 
     def test_last_numeric_value_is_not_removed(self):
         detail, fee = sample_results()
@@ -183,9 +183,9 @@ class ExamInformationTests(unittest.TestCase):
         with patch("backend.services.database_connection", return_value=nullcontext(Mock())):
             with patch("backend.services.get_certificate", return_value=certificate):
                 with patch("backend.services.get_exam_information", return_value=None):
-                    result = certificate_detail(identifier)
+                    result = get_certificate_detail(identifier)
         with patch.dict(os.environ, {"DATABASE_URL": "test-only"}):
-            with patch("backend.main.certificate_detail", return_value=result):
+            with patch("backend.main.services.get_certificate_detail", return_value=result):
                 with TestClient(app) as client:
                     response = client.get(f"/certificates/{identifier}")
         self.assertEqual(response.status_code, 200)
@@ -196,7 +196,7 @@ class ExamInformationTests(unittest.TestCase):
     def test_detail_404_and_503(self):
         with TestClient(app) as client:
             with patch.dict(os.environ, {"DATABASE_URL": "test-only"}):
-                with patch("backend.main.certificate_detail", return_value=None):
+                with patch("backend.main.services.get_certificate_detail", return_value=None):
                     self.assertEqual(client.get(f"/certificates/{uuid4()}").status_code, 404)
             with patch.dict(os.environ, {}, clear=True):
                 self.assertEqual(client.get(f"/certificates/{uuid4()}").status_code, 503)

@@ -11,10 +11,10 @@ from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel
 
 from backend.db.connection import database_connection
-from backend.db.repository import get_schedules
+from backend.db import repository
 from backend.schemas import ProfilePatch, ScheduleInput
 from backend.exam_schemas import SubjectsInfo, PassCriteriaInfo, FeesInfo
-from backend.services import list_certificates, certificate_detail
+from backend import services
 from backend.db.check import check_database
 
 
@@ -92,7 +92,7 @@ class CertificateDetailResponse(CertificateResponse):
 
 
 @app.get("/health", tags=["서버 상태"], summary="서버 실행 확인")
-def health() -> HealthResponse:
+def get_health() -> HealthResponse:
     """서버 실행과 연결정보 설정 여부를 확인한다. 실제 DB 접속 검사는 아니다."""
     return HealthResponse(status="ok", database_configured=bool(os.environ.get("DATABASE_URL")))
 
@@ -102,7 +102,7 @@ def health() -> HealthResponse:
     tags=["서버 상태"], summary="실제 DB 접속과 초기 테이블 유무 확인",
     responses={503: {"model": DatabaseHealthResponse, "description": "설정·접속·테이블 준비 필요"}},
 )
-def database_health(response: Response) -> dict:
+def get_database_health(response: Response) -> dict:
     """읽기 전용으로 접속을 검사하고 준비가 안 됐다면 503을 반환한다."""
     result = check_database()
     if not result["tables_ready"]:
@@ -115,7 +115,7 @@ def database_health(response: Response) -> dict:
     tags=["자격증 검색"], summary="공식 종목명·코드로 검색",
     responses={503: {"description": "Render DB 미설정 또는 조회 불가"}},
 )
-def certificates(
+def list_certificates(
     q: str = Query(default="", max_length=100, description="종목명 일부 또는 공식 코드"),
     category: str | None = Query(default=None, min_length=1, max_length=10, description="공식 분류: T 기술자격, S 전문자격"),
     limit: int = Query(default=20, ge=1, le=100),
@@ -125,7 +125,7 @@ def certificates(
     if not os.environ.get("DATABASE_URL"):
         raise HTTPException(status_code=503, detail="Render DATABASE_URL이 아직 설정되지 않았습니다.")
     try:
-        return list_certificates(q.strip(), category, limit, offset)
+        return services.list_certificates(q.strip(), category, limit, offset)
     except psycopg.Error:
         raise HTTPException(status_code=503, detail="DB에서 종목을 조회할 수 없습니다. 연결과 테이블 적용 상태를 확인해주세요.") from None
 
@@ -135,12 +135,12 @@ def certificates(
     tags=["자격증 상세정보"], summary="시험과목·합격기준·응시료 조회",
     responses={404: {"description": "해당 종목이 없음"}, 503: {"description": "DB 조회 불가"}},
 )
-def detail(certificate_id: UUID) -> dict:
+def get_certificate_detail(certificate_id: UUID) -> dict:
     """DB에 저장한 공식 자료를 조회하며 미수집 정보는 null과 확인 필요 상태로 반환한다."""
     if not os.environ.get("DATABASE_URL"):
         raise HTTPException(status_code=503, detail="Render DATABASE_URL이 아직 설정되지 않았습니다.")
     try:
-        result = certificate_detail(certificate_id)
+        result = services.get_certificate_detail(certificate_id)
     except psycopg.Error:
         raise HTTPException(status_code=503, detail="DB에서 상세정보를 조회할 수 없습니다. 연결과 테이블 적용 상태를 확인해주세요.") from None
     if result is None:
@@ -155,7 +155,7 @@ def detail(certificate_id: UUID) -> dict:
     summary="종목·연도별 필기·실기·면접 일정 조회",
     responses={503: {"description": "Render DB 미설정 또는 조회 불가"}},
 )
-def schedules(certificate_id: UUID, year: int = Query(ge=1900, le=9999)) -> list[dict]:
+def list_schedules(certificate_id: UUID, year: int = Query(ge=1900, le=9999)) -> list[dict]:
     """내부 자격증 UUID와 시행 연도로 조회하며 시험 단계마다 별도 행을 반환한다.
 
     실제 접수 가능 날짜는 registration_periods를 사용한다. 시작·종료 필드는 전체 범위다.
@@ -166,7 +166,7 @@ def schedules(certificate_id: UUID, year: int = Query(ge=1900, le=9999)) -> list
         raise HTTPException(status_code=503, detail="Render DATABASE_URL이 아직 설정되지 않았습니다.")
     try:
         with database_connection() as connection:
-            return get_schedules(connection, certificate_id, year)
+            return repository.list_schedules(connection, certificate_id, year)
     except psycopg.Error:
         raise HTTPException(status_code=503, detail="DB에서 일정을 조회할 수 없습니다. 연결과 테이블 적용 상태를 확인해주세요.") from None
 

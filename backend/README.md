@@ -48,7 +48,7 @@ Render PostgreSQL 연결과 테이블 적용을 완료했다. 공식 종목 613�
 - `sync_schedule_pages.py`: 기술자격 전체 일정 페이지의 원본·조회 시각 수집.
 - `apply_schedule_pages.py`: 보관한 원본 검증과 종목별 일괄 저장. 기본은 미리보기.
 - `db/schedule_periods.sql`, `db/add_schedule_periods.py`: 기존 일정의 접수기간 목록·면접 단계 추가.
-- `db/repository.py`: get_profile / save_profile / save_schedule / get_schedules.
+- `db/repository.py`: get_profile / save_profile / save_schedule / list_schedules.
 - `db/bookmarks.sql`: 나중에 주석을 해제하여 적용할 북마크 SQL.
 
 프로필 저장 흐름: 서버에서 확인한 사용자 ID → ProfilePatch → 기존 행 잠금 및 병합 → 상태 모순 검사 → 전달한 필드만 저장 → 저장된 행 반환. 값 생략은 유지, 일반 필드 null은 삭제, 배열 null은 []로 비운다. 경력·자격 취득 날짜가 없어도 저장 가능하며 필요할 때 추가한다. 사용자 추정 경력연수는 별도 저장/확정 계산하지 않는다.
