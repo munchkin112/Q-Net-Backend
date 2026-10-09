@@ -1,0 +1,2200 @@
+{
+  "checked_at": "2026-10-09T08:00:05.337015+00:00",
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "usage": {
+    "input_tokens": 70591,
+    "output_tokens": 1996,
+    "total_tokens": 72587,
+    "input_token_details": {
+      "audio": 0,
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "audio": 0,
+      "reasoning": 0
+    }
+  },
+  "coverage": [
+    {
+      "code": "01",
+      "candidate_codes": [
+        "0752",
+        "0080",
+        "0740",
+        "0490",
+        "0501",
+        "0510",
+        "0502",
+        "0511",
+        "0760",
+        "0071"
+      ],
+      "note": "프로젝트 관리 및 건설 관련 기술 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0752",
+          "name": "가스기술사",
+          "source_ids": [
+            "qnet:0752:duties"
+          ]
+        },
+        {
+          "qnet_code": "0080",
+          "name": "건설기계기술사",
+          "source_ids": [
+            "qnet:0080:duties"
+          ]
+        },
+        {
+          "qnet_code": "0740",
+          "name": "건설안전기술사",
+          "source_ids": [
+            "qnet:0740:duties"
+          ]
+        },
+        {
+          "qnet_code": "0490",
+          "name": "건축구조기술사",
+          "source_ids": [
+            "qnet:0490:duties"
+          ]
+        },
+        {
+          "qnet_code": "0501",
+          "name": "건축기계설비기술사",
+          "source_ids": [
+            "qnet:0501:duties"
+          ]
+        },
+        {
+          "qnet_code": "0510",
+          "name": "건축시공기술사",
+          "source_ids": [
+            "qnet:0510:duties"
+          ]
+        },
+        {
+          "qnet_code": "0502",
+          "name": "건축전기설비기술사",
+          "source_ids": [
+            "qnet:0502:duties"
+          ]
+        },
+        {
+          "qnet_code": "0511",
+          "name": "건축품질시험기술사",
+          "source_ids": [
+            "qnet:0511:duties"
+          ]
+        },
+        {
+          "qnet_code": "0760",
+          "name": "공장관리기술사",
+          "source_ids": [
+            "qnet:0760:duties"
+          ]
+        },
+        {
+          "qnet_code": "0071",
+          "name": "공조냉동기계기술사",
+          "source_ids": [
+            "qnet:0071:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "02",
+      "candidate_codes": [
+        "1630",
+        "2530",
+        "2531",
+        "2253",
+        "2251",
+        "2251",
+        "2251",
+        "2251",
+        "2251",
+        "2251"
+      ],
+      "note": "경영, 회계 및 사무 관련 업무 수행",
+      "validation_errors": [
+        "invalid_count_or_duplicate"
+      ],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        },
+        {
+          "qnet_code": "2530",
+          "name": "건축산업기사",
+          "source_ids": [
+            "qnet:2530:duties"
+          ]
+        },
+        {
+          "qnet_code": "2531",
+          "name": "건축설비산업기사",
+          "source_ids": [
+            "qnet:2531:duties"
+          ]
+        },
+        {
+          "qnet_code": "2253",
+          "name": "건축목공산업기사",
+          "source_ids": [
+            "qnet:2253:duties"
+          ]
+        },
+        {
+          "qnet_code": "2251",
+          "name": "건축일반시공산업기사",
+          "source_ids": [
+            "qnet:2251:duties"
+          ]
+        },
+        {
+          "qnet_code": "2251",
+          "name": "건축일반시공산업기사",
+          "source_ids": [
+            "qnet:2251:duties"
+          ]
+        },
+        {
+          "qnet_code": "2251",
+          "name": "건축일반시공산업기사",
+          "source_ids": [
+            "qnet:2251:duties"
+          ]
+        },
+        {
+          "qnet_code": "2251",
+          "name": "건축일반시공산업기사",
+          "source_ids": [
+            "qnet:2251:duties"
+          ]
+        },
+        {
+          "qnet_code": "2251",
+          "name": "건축일반시공산업기사",
+          "source_ids": [
+            "qnet:2251:duties"
+          ]
+        },
+        {
+          "qnet_code": "2251",
+          "name": "건축일반시공산업기사",
+          "source_ids": [
+            "qnet:2251:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "03",
+      "candidate_codes": [
+        "0130",
+        "0110",
+        "0094",
+        "0012",
+        "0872",
+        "0710",
+        "0891",
+        "0470",
+        "0950",
+        "0920"
+      ],
+      "note": "금융 및 보험 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0130",
+          "name": "금속가공기술사",
+          "source_ids": [
+            "qnet:0130:duties"
+          ]
+        },
+        {
+          "qnet_code": "0110",
+          "name": "금속재료기술사",
+          "source_ids": [
+            "qnet:0110:duties"
+          ]
+        },
+        {
+          "qnet_code": "0094",
+          "name": "금속제련기술사",
+          "source_ids": [
+            "qnet:0094:overview"
+          ]
+        },
+        {
+          "qnet_code": "0012",
+          "name": "금형기술사",
+          "source_ids": [
+            "qnet:0012:duties"
+          ]
+        },
+        {
+          "qnet_code": "0872",
+          "name": "기계기술사",
+          "source_ids": [
+            "qnet:0872:overview"
+          ]
+        },
+        {
+          "qnet_code": "0710",
+          "name": "기계안전기술사",
+          "source_ids": [
+            "qnet:0710:duties"
+          ]
+        },
+        {
+          "qnet_code": "0891",
+          "name": "기상예보기술사",
+          "source_ids": [
+            "qnet:0891:duties"
+          ]
+        },
+        {
+          "qnet_code": "0470",
+          "name": "농어업토목기술사",
+          "source_ids": [
+            "qnet:0470:duties"
+          ]
+        },
+        {
+          "qnet_code": "0950",
+          "name": "농화학기술사",
+          "source_ids": [
+            "qnet:0950:duties"
+          ]
+        },
+        {
+          "qnet_code": "0920",
+          "name": "대기관리기술사",
+          "source_ids": [
+            "qnet:0920:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "04",
+      "candidate_codes": [
+        "0891",
+        "1600",
+        "1601",
+        "1601",
+        "1601",
+        "1601",
+        "1601",
+        "1601",
+        "1601",
+        "1601"
+      ],
+      "note": "교육 및 자연과학 관련 업무 수행",
+      "validation_errors": [
+        "invalid_count_or_duplicate"
+      ],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0891",
+          "name": "기상예보기술사",
+          "source_ids": [
+            "qnet:0891:duties"
+          ]
+        },
+        {
+          "qnet_code": "1600",
+          "name": "기상기사",
+          "source_ids": [
+            "qnet:1600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        },
+        {
+          "qnet_code": "1601",
+          "name": "기상감정기사",
+          "source_ids": [
+            "qnet:1601:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "05",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "법률, 경찰 및 소방 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "06",
+      "candidate_codes": [
+        "0060",
+        "0751",
+        "0460",
+        "0930",
+        "0930",
+        "0930",
+        "0930",
+        "0930",
+        "0930",
+        "0930"
+      ],
+      "note": "보건 및 의료 관련 업무 수행",
+      "validation_errors": [
+        "invalid_count_or_duplicate"
+      ],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0060",
+          "name": "산업기계설비기술사",
+          "source_ids": [
+            "qnet:0060:duties"
+          ]
+        },
+        {
+          "qnet_code": "0751",
+          "name": "산업위생관리기술사",
+          "source_ids": [
+            "qnet:0751:duties"
+          ]
+        },
+        {
+          "qnet_code": "0460",
+          "name": "상하수도기술사",
+          "source_ids": [
+            "qnet:0460:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        },
+        {
+          "qnet_code": "0930",
+          "name": "수질관리기술사",
+          "source_ids": [
+            "qnet:0930:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "07",
+      "candidate_codes": [
+        "0701",
+        "0810",
+        "0851",
+        "0851",
+        "0851",
+        "0851",
+        "0851",
+        "0851",
+        "0851",
+        "0851"
+      ],
+      "note": "사회복지 및 종교 관련 업무 수행",
+      "validation_errors": [
+        "invalid_count_or_duplicate"
+      ],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0701",
+          "name": "수산양식기술사",
+          "source_ids": [
+            "qnet:0701:duties"
+          ]
+        },
+        {
+          "qnet_code": "0810",
+          "name": "수산제조기술사",
+          "source_ids": [
+            "qnet:0810:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        },
+        {
+          "qnet_code": "0851",
+          "name": "축산기술사",
+          "source_ids": [
+            "qnet:0851:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "08",
+      "candidate_codes": [
+        "0960",
+        "0800",
+        "0800",
+        "0800",
+        "0800",
+        "0800",
+        "0800",
+        "0800",
+        "0800",
+        "0800"
+      ],
+      "note": "문화, 예술 및 디자인 관련 업무 수행",
+      "validation_errors": [
+        "invalid_count_or_duplicate"
+      ],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0960",
+          "name": "제품디자인기술사",
+          "source_ids": [
+            "qnet:0960:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        },
+        {
+          "qnet_code": "0800",
+          "name": "식품기술사",
+          "source_ids": [
+            "qnet:0800:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "09",
+      "candidate_codes": [
+        "0094",
+        "0012",
+        "0872",
+        "0710",
+        "0891",
+        "0470",
+        "0950",
+        "0920",
+        "0920",
+        "0920"
+      ],
+      "note": "운전 및 운송 관련 업무 수행",
+      "validation_errors": [
+        "invalid_count_or_duplicate"
+      ],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0094",
+          "name": "금속제련기술사",
+          "source_ids": [
+            "qnet:0094:overview"
+          ]
+        },
+        {
+          "qnet_code": "0012",
+          "name": "금형기술사",
+          "source_ids": [
+            "qnet:0012:duties"
+          ]
+        },
+        {
+          "qnet_code": "0872",
+          "name": "기계기술사",
+          "source_ids": [
+            "qnet:0872:overview"
+          ]
+        },
+        {
+          "qnet_code": "0710",
+          "name": "기계안전기술사",
+          "source_ids": [
+            "qnet:0710:duties"
+          ]
+        },
+        {
+          "qnet_code": "0891",
+          "name": "기상예보기술사",
+          "source_ids": [
+            "qnet:0891:duties"
+          ]
+        },
+        {
+          "qnet_code": "0470",
+          "name": "농어업토목기술사",
+          "source_ids": [
+            "qnet:0470:duties"
+          ]
+        },
+        {
+          "qnet_code": "0950",
+          "name": "농화학기술사",
+          "source_ids": [
+            "qnet:0950:duties"
+          ]
+        },
+        {
+          "qnet_code": "0920",
+          "name": "대기관리기술사",
+          "source_ids": [
+            "qnet:0920:duties"
+          ]
+        },
+        {
+          "qnet_code": "0920",
+          "name": "대기관리기술사",
+          "source_ids": [
+            "qnet:0920:duties"
+          ]
+        },
+        {
+          "qnet_code": "0920",
+          "name": "대기관리기술사",
+          "source_ids": [
+            "qnet:0920:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "10",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "영업 및 판매 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "11",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "경비 및 청소 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "12",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "이용, 숙박 및 여행 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "13",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "음식 서비스 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "14",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "건설 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "15",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "기계 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "16",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "재료 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "17",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "화학 및 바이오 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "18",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "섬유 및 의복 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "19",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "전기 및 전자 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "20",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "정보통신 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "21",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "식품 가공 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "22",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "인쇄 및 목재 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "23",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "환경, 에너지 및 안전 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "24",
+      "candidate_codes": [
+        "0750",
+        "1900",
+        "1910",
+        "2900",
+        "2910",
+        "1440",
+        "2390",
+        "1750",
+        "2600",
+        "1630"
+      ],
+      "note": "농림어업 관련 업무 수행",
+      "validation_errors": [],
+      "review_status": "assistant_review_pending",
+      "candidates": [
+        {
+          "qnet_code": "0750",
+          "name": "소방기술사",
+          "source_ids": [
+            "qnet:0750:duties"
+          ]
+        },
+        {
+          "qnet_code": "1900",
+          "name": "소방설비기사(기계분야)",
+          "source_ids": [
+            "qnet:1900:duties"
+          ]
+        },
+        {
+          "qnet_code": "1910",
+          "name": "소방설비기사(전기분야)",
+          "source_ids": [
+            "qnet:1910:duties"
+          ]
+        },
+        {
+          "qnet_code": "2900",
+          "name": "소방설비산업기사(기계분야)",
+          "source_ids": [
+            "qnet:2900:duties"
+          ]
+        },
+        {
+          "qnet_code": "2910",
+          "name": "소방설비산업기사(전기분야)",
+          "source_ids": [
+            "qnet:2910:duties"
+          ]
+        },
+        {
+          "qnet_code": "1440",
+          "name": "건설안전기사",
+          "source_ids": [
+            "qnet:1440:duties"
+          ]
+        },
+        {
+          "qnet_code": "2390",
+          "name": "건설안전산업기사",
+          "source_ids": [
+            "qnet:2390:duties"
+          ]
+        },
+        {
+          "qnet_code": "1750",
+          "name": "건설재료시험기사",
+          "source_ids": [
+            "qnet:1750:duties"
+          ]
+        },
+        {
+          "qnet_code": "2600",
+          "name": "건설재료시험산업기사",
+          "source_ids": [
+            "qnet:2600:duties"
+          ]
+        },
+        {
+          "qnet_code": "1630",
+          "name": "건축기사",
+          "source_ids": [
+            "qnet:1630:duties"
+          ]
+        }
+      ]
+    }
+  ],
+  "classification_type": "project_interest_review_sample",
+  "is_official_ncs_mapping": false,
+  "is_exhaustive_candidate_count": false,
+  "note": "최대 10개 표본이다. 0개는 이번 점검에서 확인하지 못했다는 뜻이며 해당 분야 자격이 없다는 결론이 아니다.",
+  "database_changed": false,
+  "github_pushed": false,
+  "decision": "rejected",
+  "rejection_reason": "대량 입력에서 반복 코드·분야와 무관한 후보 발생. 전수 추천 입력으로 사용하지 않음"
+}

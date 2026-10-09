@@ -1,0 +1,70 @@
+{
+  "stage": 6,
+  "checked_at": "2026-10-09T08:17:17.433867+00:00",
+  "mode": "apply",
+  "approved_contexts": 592,
+  "interest_choices": 24,
+  "github_pushed": false,
+  "before_existing_data": {
+    "certificates": {
+      "count": 613,
+      "sha256": "ddca1514c98e628c8d54a51fb732f5a8958a1d25535bc8ca69c8baea2b3e28b6"
+    },
+    "exam_information": {
+      "count": 510,
+      "sha256": "1482f6581a5c32f4349881ac0a109b3894e5cfc60576d3902ac4b743a4df42eb"
+    },
+    "schedules": {
+      "count": 1922,
+      "sha256": "28091d1361f7ee0f04f0cf3701e12c872159ee5049d9984a4f529ec0d8503a9a"
+    },
+    "sources": {
+      "count": 158,
+      "sha256": "0afad844b90537909a37fe284763896c327093cbf890e9d0bc000c48943ab193"
+    }
+  },
+  "changes": {
+    "recommendation_interest_categories": {
+      "inserted": 24,
+      "updated": 0,
+      "unchanged": 0
+    },
+    "certificate_recommendation_contexts": {
+      "inserted": 592,
+      "updated": 0,
+      "unchanged": 0
+    }
+  },
+  "verification": {
+    "verified_contexts": 592,
+    "verified_choices": 24,
+    "reviewed_roles": 13,
+    "evidence_documents": 595
+  },
+  "committed_verification": {
+    "verified_contexts": 592,
+    "verified_choices": 24,
+    "reviewed_roles": 13,
+    "evidence_documents": 595
+  },
+  "after_existing_data": {
+    "certificates": {
+      "count": 613,
+      "sha256": "ddca1514c98e628c8d54a51fb732f5a8958a1d25535bc8ca69c8baea2b3e28b6"
+    },
+    "exam_information": {
+      "count": 510,
+      "sha256": "1482f6581a5c32f4349881ac0a109b3894e5cfc60576d3902ac4b743a4df42eb"
+    },
+    "schedules": {
+      "count": 1922,
+      "sha256": "28091d1361f7ee0f04f0cf3701e12c872159ee5049d9984a4f529ec0d8503a9a"
+    },
+    "sources": {
+      "count": 158,
+      "sha256": "0afad844b90537909a37fe284763896c327093cbf890e9d0bc000c48943ab193"
+    }
+  },
+  "existing_data_unchanged": true,
+  "database_changed": true
+}

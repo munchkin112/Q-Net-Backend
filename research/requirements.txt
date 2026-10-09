@@ -1,0 +1,3 @@
+# 연구용 LLM 의미 검토를 실행할 때 설치한다. 서버 실행에는 필수가 아니다.
+-r ../backend/requirements.txt
+langchain-openai>=1.7,<2

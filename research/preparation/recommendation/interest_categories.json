@@ -1,0 +1,306 @@
+[
+  {
+    "code": "01",
+    "name": "사업관리",
+    "examples": [
+      "프로젝트 관리",
+      "해외 관리"
+    ],
+    "description": "사업관리 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "02",
+    "name": "경영·회계·사무",
+    "examples": [
+      "기획사무",
+      "총무",
+      "인사",
+      "회계"
+    ],
+    "description": "경영·회계·사무 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "03",
+    "name": "금융·보험",
+    "examples": [
+      "금융상품 개발",
+      "자산운용",
+      "보험조사"
+    ],
+    "description": "금융·보험 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "04",
+    "name": "교육·자연·사회과학",
+    "examples": [
+      "평생교육",
+      "직업교육",
+      "과학연구"
+    ],
+    "description": "교육·자연·사회과학 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "05",
+    "name": "법률·경찰·소방·교도·국방",
+    "examples": [
+      "법률지원",
+      "보안",
+      "소방행정"
+    ],
+    "description": "법률·경찰·소방·교도·국방 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "06",
+    "name": "보건·의료",
+    "examples": [
+      "보건지원",
+      "의료기술",
+      "임상보건"
+    ],
+    "description": "보건·의료 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "07",
+    "name": "사회복지·종교",
+    "examples": [
+      "사회복지상담",
+      "보육",
+      "종교활동"
+    ],
+    "description": "사회복지·종교 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "08",
+    "name": "문화·예술·디자인·방송",
+    "examples": [
+      "문화예술기획",
+      "시각디자인",
+      "방송제작"
+    ],
+    "description": "문화·예술·디자인·방송 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "09",
+    "name": "운전·운송",
+    "examples": [
+      "항공운송",
+      "철도운송",
+      "육상운송"
+    ],
+    "description": "운전·운송 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "10",
+    "name": "영업판매",
+    "examples": [
+      "부동산서비스",
+      "일반영업",
+      "마케팅"
+    ],
+    "description": "영업판매 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "11",
+    "name": "경비·청소",
+    "examples": [
+      "시설경비",
+      "일반청소"
+    ],
+    "description": "경비·청소 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "12",
+    "name": "이용·숙박·여행·오락·스포츠",
+    "examples": [
+      "관광숙박",
+      "스포츠기획"
+    ],
+    "description": "이용·숙박·여행·오락·스포츠 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "13",
+    "name": "음식서비스",
+    "examples": [
+      "조리",
+      "식음료서비스"
+    ],
+    "description": "음식서비스 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "14",
+    "name": "건설",
+    "examples": [
+      "건축구조",
+      "토목",
+      "건설공사관리"
+    ],
+    "description": "건설 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "15",
+    "name": "기계",
+    "examples": [
+      "기계설계",
+      "자동차 제조",
+      "금형공정"
+    ],
+    "description": "기계 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "16",
+    "name": "재료",
+    "examples": [
+      "금속재료",
+      "세라믹재료"
+    ],
+    "description": "재료 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "17",
+    "name": "화학·바이오",
+    "examples": [
+      "화학물질제조",
+      "바이오의약품 개발"
+    ],
+    "description": "화학·바이오 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "18",
+    "name": "섬유·의복",
+    "examples": [
+      "섬유제조",
+      "의류설계"
+    ],
+    "description": "섬유·의복 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "19",
+    "name": "전기·전자",
+    "examples": [
+      "전자기기개발",
+      "전기공사",
+      "반도체 제조"
+    ],
+    "description": "전기·전자 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "20",
+    "name": "정보통신",
+    "examples": [
+      "SW엔지니어링",
+      "보안솔루션",
+      "IT컨설팅"
+    ],
+    "description": "정보통신 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "21",
+    "name": "식품가공",
+    "examples": [
+      "식품제조",
+      "음료제조"
+    ],
+    "description": "식품가공 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "22",
+    "name": "인쇄·목재·가구·공예",
+    "examples": [
+      "가구설계",
+      "제품공예"
+    ],
+    "description": "인쇄·목재·가구·공예 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "23",
+    "name": "환경·에너지·안전",
+    "examples": [
+      "환경관리",
+      "신재생에너지",
+      "산업안전"
+    ],
+    "description": "환경·에너지·안전 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  },
+  {
+    "code": "24",
+    "name": "농림어업",
+    "examples": [
+      "작물재배",
+      "축산",
+      "해양어업"
+    ],
+    "description": "농림어업 관련 활동에 대한 관심",
+    "classification_type": "project_interest",
+    "definition_source": "user_confirmed_service_choices",
+    "is_official_ncs_certificate_mapping": false
+  }
+]

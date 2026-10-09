@@ -2,3 +2,5 @@
 research/responses/** -text -whitespace
 research/*.json -text
 research/preparation/** -text
+# 추천 검증 자료도 원본 바이트를 보존하며 CRLF를 공백 오류로 취급하지 않는다.
+research/preparation/recommendation/** -text -whitespace

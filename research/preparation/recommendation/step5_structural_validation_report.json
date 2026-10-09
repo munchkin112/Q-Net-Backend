@@ -1,0 +1,71 @@
+{
+  "stage": 5,
+  "structural_validation_passed": true,
+  "semantic_validation_complete": false,
+  "certificates": 613,
+  "with_career_context": 603,
+  "without_career_context": [
+    {
+      "qnet_code": "9772",
+      "name": "스마트공장산업기사"
+    },
+    {
+      "qnet_code": "1790",
+      "name": "시각디자인기사"
+    },
+    {
+      "qnet_code": "2434",
+      "name": "시각디자인산업기사"
+    },
+    {
+      "qnet_code": "8070",
+      "name": "공구제작기능사보"
+    },
+    {
+      "qnet_code": "7890",
+      "name": "도자공예기능사"
+    },
+    {
+      "qnet_code": "9775",
+      "name": "바이오공정기능사"
+    },
+    {
+      "qnet_code": "8090",
+      "name": "사출금형기능사보"
+    },
+    {
+      "qnet_code": "9771",
+      "name": "스마트공장기능사"
+    },
+    {
+      "qnet_code": "7796",
+      "name": "컴퓨터그래픽기능사"
+    },
+    {
+      "qnet_code": "8080",
+      "name": "프레스금형기능사보"
+    }
+  ],
+  "documents": 1637,
+  "identity_rechecks": 89,
+  "recovered_from_identity_or_false_positive": 40,
+  "official_fallback_certificates": 39,
+  "family_scope_only_certificates": 7,
+  "document_review_states": {
+    "assistant_reviewed_against_official_source": 42,
+    "automatic_structure_checked_semantic_review_pending": 1588,
+    "shared_family_evidence_review_pending": 7
+  },
+  "all_original_sample_summaries_and_roles_preserved": true,
+  "tests_passed": 13,
+  "llm_config": {
+    "provider": "ChatOpenAI",
+    "model": "gpt-4o-mini",
+    "temperature": 0,
+    "called": false
+  },
+  "interest_coverage_status": "not_evaluated; no fixed official NCS mapping",
+  "database_changed": false,
+  "github_pushed": false,
+  "next_required": "자동 발췌 요약·직업별 근거·오래된 전망·공통 직무의 적용 범위 검토. 24개 관심 선택지와의 관련성은 이후 LLM 판단 대상으로 남김."
+}

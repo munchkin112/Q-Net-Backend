@@ -7,3 +7,9 @@ __pycache__/
 *.log
 *.tmp
 .pytest_cache/
+
+# 개인 작업 준비 계획은 팀 저장소에 공유하지 않는다.
+docs/추천용_데이터_준비계획.md
+# 수집 원본·LLM 체크포인트는 로컬에 보관하고 검토 결과 JSON만 공유한다.
+research/preparation/recommendation/full_collection/
+research/preparation/recommendation/semantic_llm_batches/

@@ -9,7 +9,7 @@
 | 구분 | 확정 내용 |
 |---|---|
 | 시작 | Google 로그인 필수, 로그인 과정에서 Calendar 권한도 요청 |
-| 프로필 | 관심 분야는 NCS 24개 대분류, 기본 정보 입력 필수, 경력 분야는 선택 |
+| 프로필 | 관심 분야는 NCS 명칭에서 가져온 서비스 대분류 24개, 기본 정보 입력 필수, 경력 분야는 선택 |
 | 추천 | LLM이 실제 DB 후보에서 선정, 순위 없는 목록, 대표 3개 우선 표시 |
 | 더보기 | 동일 결과에서 총 최대 10개까지 표시. 새 LLM 호출 없음 |
 | 후보 부족 | 1~2개도 그대로 표시, 0개이면 없다는 안내 |
@@ -72,7 +72,7 @@
 | 로그인 사용자 | `GET /auth/me` | Bearer | 신규 |
 | 토큰 갱신 | `POST /auth/refresh` | 리프레시 쿠키 | 신규 |
 | 로그아웃 | `POST /auth/logout` | 로그인 세션 | 신규 |
-| NCS 관심 분야 목록 | `GET /interest-categories` | Bearer | 신규 |
+| 서비스 관심 분야 목록 | `GET /interest-categories` | Bearer | 신규 |
 | 프로필 조회 | `GET /me/profile` | Bearer | 신규 HTTP 연결 |
 | 최초 프로필 저장·부분 수정 | `PATCH /me/profile` | Bearer | 신규 HTTP 연결 |
 | 추천 결과 생성 | `POST /recommendations` | Bearer | 신규 |
@@ -150,7 +150,7 @@ Google이 프론트의 정해진 콜백 페이지로 `code`, `state`를 보내�
 [{"code": "20", "name": "정보통신"}, {"code": "19", "name": "전기·전자"}]
 ```
 
-위 예시는 일부 항목이다. 실제 응답은 합의한 24개 대분류 전체를 코드 순으로 제공한다. 이름을 DB 식별 키로 사용하지 않는다.
+위 예시는 일부 항목이다. 실제 응답은 합의한 서비스 관심 분야 24개 전체를 코드 순으로 제공한다. 공식 NCS–자격증 분류 결과를 뜻하지 않는다. 이름을 DB 식별 키로 사용하지 않는다.
 
 `GET /me/profile` → 200:
 
@@ -167,7 +167,7 @@ Google이 프론트의 정해진 콜백 페이지로 `code`, `state`를 보내�
 
 | 필드 | 형식 | 규칙 |
 |---|---|---|
-| interest_category_codes | 문자열 배열 | NCS 코드, 최소 1개, 중복 불가. 단일/복수 선택 상한 미정 |
+| interest_category_codes | 문자열 배열 | 서비스 관심 분야 코드, 최소 1개, 중복 불가. 단일/복수 선택 상한 미정 |
 | education_level | 문자열 | 필수. 화면 학력 선택지와 enum 통일 필요 |
 | education_status | graduated/enrolled/expected/other | 졸업 상태. 최종 화면 노출 확인 필요 |
 | major_status | provided/not_applicable/unknown | 전공이 없는 사용자도 입력 완료 가능하게 구분 |
@@ -346,7 +346,7 @@ year는 필수, 1900~9999. 200은 단계별 행 배열이다. `id`, `certificate
 |---|---|
 | users | Google 사용자 식별. 기존 provider+subject 고유성 유지 |
 | user_profiles | 프로필 저장·수정. 현재 선택 필드 모델에 화면 필수 검증·버전 추가 필요 |
-| user_interest_profiles | NCS 선택 저장. 별도 테이블 여부와 복수 선택 제약 확정 필요 |
+| user_interest_profiles | 서비스 관심 분야 선택 저장. 별도 테이블 여부와 복수 선택 제약 확정 필요 |
 | certificates / exam_information / schedules | 기존 공식 데이터 재사용, 추천·상세·Calendar의 근거 |
 | sources | 공식 수집 원본·상태. 실제 복합 PK `(source_key, retrieved_at)` 유지 |
 | recommendation_sessions / results | 프로필 스냅샷·실행 상태·최대 10개 결과. rank/score 대신 필요 시 표시 순서만 저장 |
@@ -408,7 +408,7 @@ Calendar 등록은 사용자 명시적 확인을 거친 별도 쓰기 API다. �
 | 항목 | 현재 문서 처리 |
 |---|---|
 | 최종 Figma의 입력 항목·버튼 매핑 | 직접 열람 실패. 프로필 수정만 있는 마이페이지는 사용자 확인 반영 완료 |
-| NCS 단일/복수 선택과 상한 | 배열 계약 제안, 실제 허용 개수 미정 |
+| 관심 분야 단일/복수 선택과 상한 | 배열 계약 제안, 실제 허용 개수 미정 |
 | 학력 선택지·전공·경력·희망 직무의 필수 조건 | 기본 정보 필수 원칙만 확정. 최종 폼의 enum과 조건부 필수 규칙 대조 필요 |
 | 프로필 수정 뒤 새 탐색 진입 | 재추천 버튼은 없음. 새 로그인/새 탐색에서 새 결과 생성 허용 범위 확인 필요 |
 | 서비스 리프레시 만료기간 | 액세스 30분은 확정, 리프레시 만료기간은 미정 |

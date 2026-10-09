@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "exact_approved_set": true,
+  "counts": {
+    "contexts": 592,
+    "choices": 24,
+    "full_cards": 8
+  },
+  "samples": [
+    {
+      "qnet_code": "1021",
+      "name": "일반기계기사",
+      "summary": "기계·구조물의 설계·제작과 기술지도 등 기계공학 실무를 다루는 국가기술자격입니다.",
+      "roles": 2,
+      "source_count": 1
+    },
+    {
+      "qnet_code": "1320",
+      "name": "정보처리기사",
+      "summary": "소프트웨어 개발과 정보시스템 운영에 필요한 지식·기술을 다루는 국가기술자격입니다.",
+      "roles": 2,
+      "source_count": 2
+    },
+    {
+      "qnet_code": "9500",
+      "name": "공인노무사",
+      "summary": "공인노무사는 노동관계 법령에 따라 신고, 신청, 보고 및 상담 등의 업무를 수행합니다.",
+      "roles": 0,
+      "source_count": 1
+    },
+    {
+      "qnet_code": "9670",
+      "name": "국가유산수리기술자(보존과학)",
+      "summary": "공식 별표의 업무 소개를 기준으로 동산문화유산을 제외한 보존처리 시공·감리 업무를 다루는 국가전문자격입니다.",
+      "roles": 0,
+      "source_count": 1
+    },
+    {
+      "qnet_code": "9739",
+      "name": "정수시설운영관리사1급",
+      "summary": "정수시설운영관리사 공통 업무 소개를 기준으로 수돗물 공급·수도시설·수질관리 업무를 다룹니다. 등급별 업무 범위는 별도 확인이 필요합니다.",
+      "roles": 0,
+      "source_count": 1
+    }
+  ]
+}

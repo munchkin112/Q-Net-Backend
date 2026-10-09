@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "certificates": 613,
+  "source_documents_hash_checked": 1637,
+  "approved_summaries": 592,
+  "status_counts": {
+    "assistant_reviewed_summary_only": 584,
+    "held": 11,
+    "assistant_reviewed_summary_and_roles": 8,
+    "missing_evidence": 10
+  },
+  "reviewed_roles": 13,
+  "interest_choices_checked": 24,
+  "raw_sources_preserved": true,
+  "idempotent": true,
+  "database_changed": false,
+  "github_pushed": false
+}

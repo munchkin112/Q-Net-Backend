@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-09T07:39:01.288014+00:00",
+  "sample_certificate_code": "1320",
+  "sample_year": 2026,
+  "results": [
+    {
+      "api": "certificate_list",
+      "status": "success",
+      "item_count": 613,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryListNationalQualifcationSVC/getList",
+      "retrieved_at": "2026-10-09T07:38:57.649992+00:00",
+      "retry_count": 0,
+      "response_field_names": [
+        "jmcd",
+        "jmfldnm",
+        "mdobligfldcd",
+        "mdobligfldnm",
+        "obligfldcd",
+        "obligfldnm",
+        "qualgbcd",
+        "qualgbnm",
+        "seriescd",
+        "seriesnm"
+      ],
+      "unique_codes": 613,
+      "selected_certificate_found": true
+    },
+    {
+      "api": "certificate_information",
+      "status": "success",
+      "item_count": 3,
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+      "retrieved_at": "2026-10-09T07:39:00.928010+00:00",
+      "retry_count": 0,
+      "response_field_names": [
+        "contents",
+        "infogb",
+        "jmfldnm",
+        "mdobligfldcd",
+        "mdobligfldnm",
+        "obligfldcd",
+        "obligfldnm"
+      ]
+    },
+    {
+      "api": "unified_exam_schedule",
+      "status": "success",
+      "item_count": 6,
+      "source_url": "https://apis.data.go.kr/B490007/qualExamSchd/getQualExamSchdList?jmCd=1320&implYy=2026&qualgbCd=T&dataFormat=xml&pageNo=1&numOfRows=50",
+      "retrieved_at": "2026-10-09T07:39:01.287387+00:00",
+      "retry_count": 0,
+      "response_field_names": [
+        "description",
+        "docexamenddt",
+        "docexamstartdt",
+        "docpassdt",
+        "docregenddt",
+        "docregstartdt",
+        "implseq",
+        "implyy",
+        "pracexamenddt",
+        "pracexamstartdt",
+        "pracpassdt",
+        "pracregenddt",
+        "pracregstartdt",
+        "qualgbcd",
+        "qualgbnm"
+      ]
+    }
+  ],
+  "database_changed": false,
+  "github_pushed": false,
+  "note": "키를 전달한 실제 호출 확인. 기존 DB 전체 재동기화 및 통합 일정 DB 변환은 실행하지 않음."
+}
