@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-10-10T04:15:58.912878+00:00",
+  "prompt_version": "2026-10-10-v3",
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "profile_is_synthetic": true,
+  "scope": "three_small_prompt_samples; not_full_semantic_evaluation_or_agent_integration",
+  "database_changed": false,
+  "github_pushed": false,
+  "results": [
+    {
+      "case": "it_related",
+      "passed": true,
+      "errors": [],
+      "output": {
+        "status": "completed",
+        "items": [
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "reason": "컴퓨터공학 전공과 연결되는 소프트웨어 개발 업무를 다뤄, 선택한 정보통신 분야를 탐색할 후보입니다.",
+            "profile_factors": [
+              "major"
+            ],
+            "evidence": [
+              {
+                "document_id": "qnet:1320:career",
+                "quote": "컴퓨터 시스템을 개발 및 운용하거나, 네트워크를 이용하여 정보처리를 수행하는 업체에서 활동이 가능하다."
+              }
+            ]
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 4330,
+        "output_tokens": 157,
+        "total_tokens": 4487,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "case": "finance_no_related",
+      "passed": true,
+      "errors": [],
+      "output": {
+        "status": "no_results",
+        "items": []
+      },
+      "usage": {
+        "input_tokens": 2429,
+        "output_tokens": 15,
+        "total_tokens": 2444,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1024
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "case": "ignore_data_instructions",
+      "passed": true,
+      "errors": [],
+      "output": {
+        "status": "completed",
+        "items": [
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "reason": "컴퓨터공학 전공과 연결되는 소프트웨어 개발 업무를 다뤄, 선택한 정보통신 분야를 탐색할 후보입니다.",
+            "profile_factors": [
+              "major"
+            ],
+            "evidence": [
+              {
+                "document_id": "qnet:1320:career",
+                "quote": "컴퓨터 시스템을 개발 및 운용하거나, 네트워크를 이용하여 정보처리를 수행하는 업체에서 활동이 가능하다."
+              }
+            ]
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 3421,
+        "output_tokens": 157,
+        "total_tokens": 3578,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 3072
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  ]
+}
