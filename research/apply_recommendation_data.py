@@ -77,6 +77,9 @@ def prepare_recommendation_data(approved: list[dict], original: list[dict], inte
                        related_jobs_status='available' if item['related_jobs'] else 'unavailable_not_inferred',
                        usage_scope='duties_summary; not_eligibility_or_legal_authority',
                        interest_assignment_status='not_an_official_mapping')
+        if item.get('related_jobs_review'):
+            # 검토 후에도 역할 근거가 부족한 상태를 아직 검토하지 않은 상태와 구분한다.
+            payload['related_jobs_review'] = item['related_jobs_review']
         rows.append({'certificate_id': item['certificate_id'], 'qnet_code': code,
                      'payload': payload, 'content_sha256': get_content_hash(payload)})
     return rows, interests
@@ -157,8 +160,10 @@ def verify_database_results(connection, rows: list[dict], interests: list[dict])
             'evidence_documents': sum(len(row['payload']['evidence_documents']) for row in rows)}
 
 
-def run(apply: bool, rollback: bool = False) -> dict:
+def run(apply: bool, rollback: bool = False, report_prefix: str = 'step6_database') -> dict:
     """전체 자료를 검증한 뒤 한 트랜잭션으로 저장하고 별도 연결에서도 대조한다."""
+    if '/' in report_prefix or '\\' in report_prefix:
+        raise ValueError('보고서 이름에는 경로를 넣을 수 없음')
     approved = json.loads((DATA / 'reviewed_recommendation_contexts.json').read_text(encoding='utf-8'))
     original = json.loads((DATA / 'candidate_contexts.json').read_text(encoding='utf-8'))
     interests = json.loads((DATA / 'interest_categories.json').read_text(encoding='utf-8'))
@@ -194,7 +199,7 @@ def run(apply: bool, rollback: bool = False) -> dict:
     report['database_changed'] = apply and not rollback and any(
         counts['inserted'] or counts['updated'] for counts in report.get('changes', {}).values())
     suffix = 'rollback' if rollback else 'apply' if apply else 'dry_run'
-    (DATA / f'step6_database_{suffix}_report.json').write_text(
+    (DATA / f'{report_prefix}_{suffix}_report.json').write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     return report
 

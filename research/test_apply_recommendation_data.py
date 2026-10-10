@@ -19,7 +19,8 @@ class RecommendationDataTests(unittest.TestCase):
         rows, interests = prepare_recommendation_data(self.approved, self.original, self.interests)
         self.assertEqual(len(rows), 592)
         self.assertEqual(len(interests), 24)
-        self.assertEqual(sum(len(row['payload']['related_jobs']) for row in rows), 13)
+        self.assertEqual(sum(len(row['payload']['related_jobs']) for row in rows),
+                         sum(len(item['related_jobs']) for item in self.approved))
         row = next(row for row in rows if row['qnet_code'] == '1320')
         self.assertTrue(all(document['qnet_code'] == '1320' for document in row['payload']['evidence_documents']))
         self.assertEqual(rows, prepare_recommendation_data(self.approved, self.original, self.interests)[0])
@@ -52,6 +53,18 @@ class RecommendationDataTests(unittest.TestCase):
             prepare_recommendation_data(items, self.original, self.interests)
         with self.assertRaises(ValueError):
             prepare_recommendation_data(self.approved, self.original, self.interests[:-1])
+
+    def test_reviewed_empty_and_common_source_limits(self):
+        by_code = {item['qnet_code']: item for item in self.approved}
+        self.assertEqual(by_code['0622']['related_jobs'], [])
+        self.assertEqual(by_code['0622']['related_jobs_review']['status'], 'reviewed_no_supported_role')
+        self.assertFalse(by_code['0622']['full_card_ready'])
+        for code in ('9696', '1988', '9754'):
+            for role in by_code[code]['related_jobs']:
+                self.assertIn('공통 직무', role['name'])
+                self.assertIn('고유 업무를 입증하지 않음', role['note'])
+        self.assertNotIn('전동차', by_code['1027']['related_jobs'][0]['name'])
+        self.assertNotIn('상담', by_code['9754']['related_jobs'][0]['name'])
 
 
 if __name__ == '__main__':

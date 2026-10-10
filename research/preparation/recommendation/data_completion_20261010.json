@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-10T09:53:02.336279+00:00",
+  "scope": "approved_recommendation_data_roles_and_24_interest_samples",
+  "approved_summaries": 592,
+  "additional_certificates_reviewed": 584,
+  "with_reviewed_roles": 591,
+  "role_count": 598,
+  "summary_only_no_supported_role": [
+    {
+      "qnet_code": "0622",
+      "name": "컴퓨터시스템응용기술사"
+    }
+  ],
+  "held_count": 11,
+  "missing_evidence_count": 10,
+  "interest_fields_checked": 24,
+  "interest_positive_sample_pairs": 178,
+  "negative_controls_passed": 3,
+  "offline_field_audit_model_disagreements": 28,
+  "is_runtime_recommendation_quality_test": false,
+  "database_updated_rows": 584,
+  "database_full_readback_match": {
+    "verified_contexts": 592,
+    "verified_choices": 24,
+    "reviewed_roles": 598,
+    "evidence_documents": 595
+  },
+  "database_replay_changes": {
+    "recommendation_interest_categories": {
+      "inserted": 0,
+      "updated": 0,
+      "unchanged": 24
+    },
+    "certificate_recommendation_contexts": {
+      "inserted": 0,
+      "updated": 0,
+      "unchanged": 592
+    }
+  },
+  "existing_data_unchanged": true,
+  "tests": {
+    "research_passed": 35,
+    "backend_passed": 117,
+    "backend_skipped": 3
+  },
+  "api_work_paused": true,
+  "github_pushed": false,
+  "qnet_api_calls_this_work": 0,
+  "source_refresh_performed": false,
+  "note": "보관한 공식 원문과 승인 요약 범위의 역할 보완이다. 전체 613종목 직업 완성·공식 NCS 분류·개인별 추천 품질 보장을 뜻하지 않는다."
+}

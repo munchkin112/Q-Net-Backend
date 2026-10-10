@@ -1,0 +1,2077 @@
+{
+  "checked_at": "2026-10-10T09:05:32.756098+00:00",
+  "model": "gpt-4o-mini",
+  "scope": "24개 서비스 관심 분야의 기존 직접 검토 표본 재검증; 전체 추천 순위/성능 검사 아님",
+  "is_official_ncs_mapping": false,
+  "is_exhaustive_candidate_count": false,
+  "pair_count": 182,
+  "reviews": [
+    {
+      "pair_id": "01:9777",
+      "supported": true,
+      "document_id": "qnet:9777:duties",
+      "quote": "공공조달의 효율적·효과적 운영과 관리에 필요한 공공조달 환경 분석과 조달 및 계약법령, 구매정책 및 제도에 관한 전문지식과 분석 능력을 보유하고 전자조달시스템(나라장터)을 활용하여 공공조달 전과정에서 요구되는 입찰, 평가, 계약체결, 계약이행 및 사후관리 절차를 실행 및 관리하는 직무",
+      "reason": "공공조달관리사는 공공조달의 운영과 관리에 필요한 전문지식과 분석 능력을 요구하며, 이는 사업관리와 직접적으로 관련이 있다.",
+      "interest_code": "01",
+      "qnet_code": "9777",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "01:1630",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "건축기사는 건축물 공사의 관리와 시공에 중점을 두고 있으며, 사업관리와의 직접적인 관련성이 부족하다.",
+      "interest_code": "01",
+      "qnet_code": "1630",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "01:2290",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보처리산업기사는 정보시스템의 생명주기 전반에 걸친 프로젝트 업무를 수행하지만, 사업관리와의 직접적인 관련성이 부족하다.",
+      "interest_code": "01",
+      "qnet_code": "2290",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "01:9535",
+      "supported": true,
+      "document_id": "qnet:9535:duties",
+      "quote": "국제회의 유치ㆍ기획ㆍ준비ㆍ진행 등 제반업무를 조정ㆍ운영하면서 회의목표 설정, 예산 관리, 등록기획, 계약, 협상, 현장관리,회의 평가의 직무수행",
+      "reason": "컨벤션기획사는 회의 및 행사 관리와 관련된 업무를 수행하며, 이는 사업관리와 밀접한 관련이 있다.",
+      "interest_code": "01",
+      "qnet_code": "9535",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "02:9500",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "공인노무사는 노동관계 법령에 따른 업무를 수행하며, 경영·회계·사무와의 직접적인 관련성이 부족하다.",
+      "interest_code": "02",
+      "qnet_code": "9500",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "02:9701",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "경영지도사(인적자원관리)는 인사 및 조직 관리에 중점을 두고 있으며, 경영·회계·사무와의 직접적인 관련성이 부족하다.",
+      "interest_code": "02",
+      "qnet_code": "9701",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "02:9702",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "경영지도사(재무관리)는 재무 및 회계 관리에 중점을 두고 있으며, 경영·회계·사무와의 직접적인 관련성이 부족하다.",
+      "interest_code": "02",
+      "qnet_code": "9702",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "02:2193",
+      "supported": true,
+      "document_id": "qnet:2193:duties",
+      "quote": "컴퓨터와 각종 정보기기를 이용하여 자료를 수집, 분석하고, 사무자동화 프로그램 및 네트워크를 활용하여 업무를 효율적으로 처리하는 직무이다.",
+      "reason": "사무자동화산업기사는 사무업무의 효율적 처리를 위한 기술적 지원을 제공하며, 이는 경영·회계·사무와 관련이 있다.",
+      "interest_code": "02",
+      "qnet_code": "2193",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "02:9777",
+      "supported": true,
+      "document_id": "qnet:9777:duties",
+      "quote": "공공조달의 효율적·효과적 운영과 관리에 필요한 공공조달 환경 분석과 조달 및 계약법령, 구매정책 및 제도에 관한 전문지식과 분석 능력을 보유하고 전자조달시스템(나라장터)을 활용하여 공공조달 전과정에서 요구되는 입찰, 평가, 계약체결, 계약이행 및 사후관리 절차를 실행 및 관리하는 직무",
+      "reason": "공공조달관리사는 공공조달의 운영과 관리에 필요한 전문지식과 분석 능력을 요구하며, 이는 경영·회계·사무와 직접적으로 관련이 있다.",
+      "interest_code": "02",
+      "qnet_code": "9777",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "02:9503",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "가맹거래사는 가맹사업 관련 상담 및 검토를 수행하며, 경영·회계·사무와의 직접적인 관련성이 부족하다.",
+      "interest_code": "02",
+      "qnet_code": "9503",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "03:9763",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "손해평가사는 보험 관련 손해 평가 업무를 수행하며, 금융·보험과의 직접적인 관련성이 부족하다.",
+      "interest_code": "03",
+      "qnet_code": "9763",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "03:9745",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "감정평가사는 자산 평가 업무를 수행하며, 금융·보험과의 직접적인 관련성이 부족하다.",
+      "interest_code": "03",
+      "qnet_code": "9745",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "04:9547",
+      "supported": true,
+      "document_id": "qnet:9547:duties",
+      "quote": "이러닝 환경에서 효과적인 교수학습을 위하여 교육과정에 대한 운영계획을 수립하고, 학습자와 교·강사의 활동을 촉진하며, 학습콘텐츠 및 시스템의 운영을 지원하는 직무 수행",
+      "reason": "이러닝운영관리사는 교육과정 운영 및 학습 지원을 담당하며, 이는 교육·자연·사회과학과 관련이 있다.",
+      "interest_code": "04",
+      "qnet_code": "9547",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "04:9657",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "소방안전교육사는 소방안전교육 관련 업무를 수행하며, 교육·자연·사회과학과의 직접적인 관련성이 부족하다.",
+      "interest_code": "04",
+      "qnet_code": "9657",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "04:1600",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "기상기사는 기상 관측 및 예보 업무를 수행하며, 교육·자연·사회과학과의 직접적인 관련성이 부족하다.",
+      "interest_code": "04",
+      "qnet_code": "1600",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "04:1988",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "생물분류기사(식물)는 생물 분류 및 조사 업무를 수행하며, 교육·자연·사회과학과의 직접적인 관련성이 부족하다.",
+      "interest_code": "04",
+      "qnet_code": "1988",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "04:1989",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "생물분류기사(동물)는 생물 분류 및 조사 업무를 수행하며, 교육·자연·사회과학과의 직접적인 관련성이 부족하다.",
+      "interest_code": "04",
+      "qnet_code": "1989",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "04:0891",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "기상예보기술사는 기상 관측 및 예보 업무를 수행하며, 교육·자연·사회과학과의 직접적인 관련성이 부족하다.",
+      "interest_code": "04",
+      "qnet_code": "0891",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "05:9500",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "공인노무사는 노동관계 법령에 따른 업무를 수행하며, 법률·경찰·소방·교도·국방과의 직접적인 관련성이 부족하다.",
+      "interest_code": "05",
+      "qnet_code": "9500",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "05:9640",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "관세사는 수출입 물품에 대한 세무 및 신고 업무를 수행하며, 법률·경찰·소방·교도·국방과의 직접적인 관련성이 부족하다.",
+      "interest_code": "05",
+      "qnet_code": "9640",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "05:9721",
+      "supported": true,
+      "document_id": "qnet:9721:duties",
+      "quote": "행정기관에 제출하는 서류 또는 권리·의무나 사실증명에 관한 서류의 작성 및 제출 대행",
+      "reason": "일반행정사의 업무는 행정기관에 관련된 서류 작성 및 제출 대행으로 법률적 지원을 포함하고 있어 법률·경찰·소방·교도·국방 분야와 관련성이 높음.",
+      "interest_code": "05",
+      "qnet_code": "9721",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "05:9737",
+      "supported": true,
+      "document_id": "qnet:9737:duties",
+      "quote": "산업재산권에 관한 상담 및 권리 취득이나 분쟁해결에 관련된 제반업무를 수행하는 산업재산권에 관한 전문자격사로서, 산업재산권의 출원에서 등록까지의 모든 절차 대리",
+      "reason": "변리사의 업무는 법률적 자문 및 분쟁 해결을 포함하여 법률·경찰·소방·교도·국방 분야와 밀접한 관련이 있음.",
+      "interest_code": "05",
+      "qnet_code": "9737",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "05:9657",
+      "supported": true,
+      "document_id": "qnet:9657:duties",
+      "quote": "소방안전교육의 기획·진행·분석·평가 및 교수업무",
+      "reason": "소방안전교육사는 소방 관련 교육을 담당하여 법률·경찰·소방·교도·국방 분야와 직접적인 관련이 있음.",
+      "interest_code": "05",
+      "qnet_code": "9657",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "05:9658",
+      "supported": true,
+      "document_id": "qnet:9658:duties",
+      "quote": "소방시설의 점검 및 정비*, 건축물 소방시설 유지관리 및 화기취급 감독 등 방화관리에 관한 사항",
+      "reason": "소방시설관리사는 소방시설의 점검 및 유지관리를 통해 법률·경찰·소방·교도·국방 분야와 관련성이 있음.",
+      "interest_code": "05",
+      "qnet_code": "9658",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "06:1176",
+      "supported": true,
+      "document_id": "qnet:1176:duties",
+      "quote": "의료기기의 연구, 개발 단계에서부터 환자 및 사용자의 안전을 고려할 수 있어야 하고, 의료기기 관련 법령 및 인허가, 이미 개발된 의료기기에 대해서도 사용상의 주의점 및 안전관리 등에 대한 직무를 수행할 수 있어야 함",
+      "reason": "의공기사는 의료기기와 관련된 법령 및 안전 관리 업무를 수행하여 보건·의료 분야와 관련성이 높음.",
+      "interest_code": "06",
+      "qnet_code": "1176",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "06:2176",
+      "supported": true,
+      "document_id": "qnet:2176:duties",
+      "quote": "의료기기의 연구, 개발 단계에서부터 환자 및 사용자의 안전을 고려할 수 있어야 하고, 이미 개발된 의료기기에 대해서도 사용상의 주의점 및 안전관리 등에 대한 직무를 수행할 수 있어야 함.",
+      "reason": "의공산업기사는 의료기기와 관련된 법령 및 안전 관리 업무를 수행하여 보건·의료 분야와 관련성이 높음.",
+      "interest_code": "06",
+      "qnet_code": "2176",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "06:6176",
+      "supported": true,
+      "document_id": "qnet:6176:duties",
+      "quote": "각종 의료기기의 구조를 이해하고, 의료기기의 분해, 조립, 조정 수리 등을 하고, 생산 장비의 제어장치, 검사, 수리 및 각종 의료기기 설비물 검사 등의 직무를 수행",
+      "reason": "의료전자기능사는 의료기기의 수리 및 검사 업무를 수행하여 보건·의료 분야와 관련성이 높음.",
+      "interest_code": "06",
+      "qnet_code": "6176",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "06:9105",
+      "supported": true,
+      "document_id": "qnet:9105:duties",
+      "quote": "국제화되는 의료시장에서 외국인환자를 유치하고 관리하기 위한 구체적인 진료서비스지원, 관광지원, 국내외 의료기관의 국가 간 진출을 지원할 수 있는 의료관광 마케팅, 의료관광 상담, 리스크관리 및 행정업무 등을 담당함으로써 우리나라의 글로벌헬스케어산업의 발전 및 대외 경쟁력을 향상시키는 직무",
+      "reason": "국제의료관광코디네이터는 의료 서비스와 관련된 행정업무를 수행하여 보건·의료 분야와 관련성이 높음.",
+      "interest_code": "06",
+      "qnet_code": "9105",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "06:9539",
+      "supported": true,
+      "document_id": "qnet:9539:duties",
+      "quote": "국민의 심리적 건강과 적응을 위해 임상심리학적 지식을 활용하여 심리평가, 심리검사, 심리치료상담, 심리재활, 심리교육 및 심리자문 등의 업무를 수행",
+      "reason": "임상심리사는 심리적 건강과 관련된 업무를 수행하여 보건·의료 분야와 관련성이 높음.",
+      "interest_code": "06",
+      "qnet_code": "9539",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "06:9540",
+      "supported": true,
+      "document_id": "qnet:9540:duties",
+      "quote": "국민의 심리적 건강과 적응을 위해 기초적인 심리평가, 심리검사, 심리치료상담, 심리재활, 및 심리교육 등의 업무를 주로 수행하며, 임상심리사 1급의 업무를 보조하는 직무",
+      "reason": "임상심리사 2급은 심리적 건강과 관련된 업무를 수행하여 보건·의료 분야와 관련성이 높음.",
+      "interest_code": "06",
+      "qnet_code": "9540",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9738",
+      "supported": true,
+      "document_id": "qnet:9738:duties",
+      "quote": "- 사회복지 프로그램의 개발 및 운영\n- 시설 거주자의 생활지도 업무\n- 사회복지를 필요로 하는 자에 대한 상담업무 등",
+      "reason": "사회복지사는 사회복지 프로그램 개발 및 상담 업무를 수행하여 사회복지·종교 분야와 관련성이 높음.",
+      "interest_code": "07",
+      "qnet_code": "9738",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9750",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "1급 청소년지도사는 청소년 관련 활동을 지원하는 직무로, 사회복지·종교 분야와의 직접적인 관련성이 부족함.",
+      "interest_code": "07",
+      "qnet_code": "9750",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9751",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "2급 청소년지도사는 청소년 관련 활동을 지원하는 직무로, 사회복지·종교 분야와의 직접적인 관련성이 부족함.",
+      "interest_code": "07",
+      "qnet_code": "9751",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9752",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "3급 청소년지도사는 청소년 관련 활동을 지원하는 직무로, 사회복지·종교 분야와의 직접적인 관련성이 부족함.",
+      "interest_code": "07",
+      "qnet_code": "9752",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9753",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "1급 청소년상담사는 청소년 관련 상담 업무를 수행하나, 사회복지·종교 분야와의 직접적인 관련성이 부족함.",
+      "interest_code": "07",
+      "qnet_code": "9753",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9754",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "2급 청소년상담사는 청소년 관련 상담 업무를 수행하나, 사회복지·종교 분야와의 직접적인 관련성이 부족함.",
+      "interest_code": "07",
+      "qnet_code": "9754",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "07:9755",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "3급 청소년상담사는 청소년 관련 상담 업무를 수행하나, 사회복지·종교 분야와의 직접적인 관련성이 부족함.",
+      "interest_code": "07",
+      "qnet_code": "9755",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:0960",
+      "supported": true,
+      "document_id": "qnet:0960:duties",
+      "quote": "제품디자인에 관한 고도의 전문지식과 실무경험에 입각한 계획, 연구, 설계, 분석, 시험, 평가 또는 이에 관한 지도, 감리 등의 기술업무 수행.",
+      "reason": "제품디자인기술사는 디자인 관련 기술업무를 수행하여 문화·예술·디자인·방송 분야와 관련성이 높음.",
+      "interest_code": "08",
+      "qnet_code": "0960",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:2432",
+      "supported": true,
+      "document_id": "qnet:2432:duties",
+      "quote": "제품디자인에 필요한 이론을 갖추고 각종 제품 전반에 관한 디자인 개발 및 개선, 디자인 실무 등의 직무를 수행",
+      "reason": "제품디자인산업기사는 디자인 개발 및 실무를 수행하여 문화·예술·디자인·방송 분야와 관련성이 높음.",
+      "interest_code": "08",
+      "qnet_code": "2432",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:1982",
+      "supported": true,
+      "document_id": "qnet:1982:duties",
+      "quote": "색채관련 상품기획, 소비자조사, 색채표준, 색채디자인, 색채관리 등 종합적 업무를 전문적인 지식과 기술을 통해 상품의 부가가치를 높이는 직무를 수행",
+      "reason": "컬러리스트기사는 색채 관련 업무를 수행하여 문화·예술·디자인·방송 분야와 관련성이 높음.",
+      "interest_code": "08",
+      "qnet_code": "1982",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:2982",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "컬러리스트산업기사의 업무는 색채 관련 조사 및 디자인에 집중되어 있으며, 문화·예술·디자인·방송 분야와의 직접적인 관련성이 부족하다.",
+      "interest_code": "08",
+      "qnet_code": "2982",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:9545",
+      "supported": true,
+      "document_id": "qnet:9545:overview",
+      "quote": "개기 디지털화의 급속한 진전으로 기업, 기관 등에서 제공하는 콘텐츠들이 미디어를 통해 디지털콘텐츠로 제공됨에 따라 다양한 사용자의 요구에 맞도록 멀티미디어 콘텐츠를 제공할 수 있는 활용(기획, 디자인, 제작 등) 능력을 평가한다.",
+      "reason": "멀티미디어콘텐츠제작전문가의 업무는 콘텐츠 기획, 디자인, 제작 등으로 문화·예술·디자인·방송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "08",
+      "qnet_code": "9545",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:7795",
+      "supported": true,
+      "document_id": "qnet:7795:duties",
+      "quote": "사진업종은 크게 예술사진과 영업사진으로 구분하는데, 일반적으로는 예술사진은 사진작가들의 영역이고, 영업사진의 측면은 상업사진, 인상사진, 보도사진, 축소사진 등이 있음. 사진기능사는 이 중 자신이 종사하는 업종의 목적에 맞게 인물이나 사물을 카메라로촬영하고 현상, 인화, 수정 작업을 하여 사진을 완성하는 업무를 수행.",
+      "reason": "사진기능사의 업무는 예술사진 및 상업사진 촬영과 관련되어 있어 문화·예술·디자인·방송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "08",
+      "qnet_code": "7795",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "08:9659",
+      "supported": true,
+      "document_id": "qnet:9659:duties",
+      "quote": "박물관에서 문화·예술·학문의 발전과 일반 공중의 문화향유 증진에 이바지하기 위하여 역사·고고(考古)·인류·민속·예술·동물·식물·광물·과학·기술·산업 등에 관한 자료를 수집·관리·보존·조사·연구·전시·교육을 수행함.",
+      "reason": "박물관 및 미술관 준학예사의 업무는 문화·예술·학문 관련 자료의 수집 및 전시 등으로 문화·예술·디자인·방송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "08",
+      "qnet_code": "9659",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:2045",
+      "supported": true,
+      "document_id": "qnet:2045:duties",
+      "quote": "열차조작에 관한 기초적인 기술지식과 숙련기능을 바탕으로 철도 및 지하철을 이용하는 여객과 화물의 안전하고 정확한 시간 내 수송을 위한 제반업무를 수행.",
+      "reason": "철도운송산업기사의 업무는 여객 및 화물 수송과 관련되어 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "2045",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:7930",
+      "supported": true,
+      "document_id": "qnet:7930:duties",
+      "quote": "선박이나 부두에 설치된 양화장치를 조정하여 해상운송화물을 선적하거나 하역하는 직무 수행",
+      "reason": "양화장치운전기능사의 업무는 해상운송화물의 선적 및 하역과 관련되어 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "7930",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:7875",
+      "supported": true,
+      "document_id": "qnet:7875:duties",
+      "quote": "생산현장이나 창고, 부두 등에서 경화물을 적재, 하역 및 운반하기 위하여 지게차를 운전하며, 점검과 기초적인 정비업무 수행.",
+      "reason": "지게차운전기능사의 업무는 경화물의 적재 및 하역과 관련되어 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "7875",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:7835",
+      "supported": true,
+      "document_id": "qnet:7835:duties",
+      "quote": "본선계획, 야드계획에 따라 컨테이너크레인 운전자는 현장감독자, 신호수와 호흡을 맞추어 운전을 통하여 컨테이너, 일반화물을 본선, 야드 등의 장소로 운반한다.",
+      "reason": "컨테이너크레인운전기능사의 업무는 컨테이너 및 일반화물 운반과 관련되어 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "7835",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:9747",
+      "supported": true,
+      "document_id": "qnet:9747:duties",
+      "quote": "ㅇ 「검수」라 함은 선적화물을 적하 또는 양하하는 경우에 그 화물의 개수의 계산 또는 인도·인수의 증명을 행하는 일",
+      "reason": "검수사의 업무는 선적화물의 개수 계산 및 증명과 관련되어 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "9747",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:9748",
+      "supported": true,
+      "document_id": "qnet:9748:duties",
+      "quote": "「검량」이라 함은 선적화물을 적하 또는 양하하는 경우에 그 화물의 용적 또는 중량의 계산 또는 증명을 행하는 일",
+      "reason": "검량사의 업무는 선적화물의 용적 및 중량 계산과 관련되어 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "9748",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "09:9749",
+      "supported": true,
+      "document_id": "qnet:9749:duties",
+      "quote": "「감정」이라 함은 선적화물 및 선박(부선을 포함한다)에 관련된 증명.조사 및 감정을 행하는 일",
+      "reason": "감정사의 업무는 선적화물 및 선박에 대한 증명 및 조사를 포함하고 있어 운전·운송 분야와 직접적으로 관련이 있다.",
+      "interest_code": "09",
+      "qnet_code": "9749",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "10:9630",
+      "supported": true,
+      "document_id": "qnet:9630:duties",
+      "quote": "중개업의 공신력을 높이기 위해 도입된 자격증으로 부동산 중개업무, 관리대행, 컨설팅, 중개업 경영정보 제공, 상가분양 대행, 경매 매수신청 대리 업무 등을 수행",
+      "reason": "공인중개사의 업무는 부동산 중개 및 관리와 관련되어 있어 영업판매 분야와 직접적으로 관련이 있다.",
+      "interest_code": "10",
+      "qnet_code": "9630",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "10:9541",
+      "supported": true,
+      "document_id": "qnet:9541:duties",
+      "quote": "통신수단을 이용하여 이루어지는 상품 또는 서비스에 대한 판매 및 고객관리를 의미하며 시장환경분석, 상품개발기획, 전략수립, 조직운영관리, 성과관리, 고객관계관리, 판매관리, 인·아웃바운드마케팅, 텔레마케팅시스템 운용의 업무를 수행",
+      "reason": "텔레마케팅관리사의 업무는 상품 및 서비스 판매와 고객 관리와 관련되어 있어 영업판매 분야와 직접적으로 관련이 있다.",
+      "interest_code": "10",
+      "qnet_code": "9541",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "10:9704",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "경영지도사(마케팅)의 업무는 경영 전반에 대한 진단 및 지도와 관련되어 있으며, 영업판매 분야와의 직접적인 관련성이 부족하다.",
+      "interest_code": "10",
+      "qnet_code": "9704",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "10:2085",
+      "supported": true,
+      "document_id": "qnet:2085:duties",
+      "quote": "패션 기업과 패션 소비자 만족을 위하여 시장 및 정보분석을 통해 패션 트렌드와 수요를 예측하고 상품의 기획, 생산, 판매 및 세일즈 프로모션까지 광범위한 영역에서 활동하는 직무를 수행",
+      "reason": "패션머천다이징산업기사의 업무는 패션 트렌드 분석 및 상품 기획과 관련되어 있어 영업판매 분야와 직접적으로 관련이 있다.",
+      "interest_code": "10",
+      "qnet_code": "2085",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "11:9502",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "기계경비지도사의 업무는 경비원에 대한 지도 및 감독과 관련되어 있으며, 경비·청소 분야와의 직접적인 관련성이 부족하다.",
+      "interest_code": "11",
+      "qnet_code": "9502",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "12:9661",
+      "supported": true,
+      "document_id": "qnet:9661:duties",
+      "quote": "관광통역안내사는 국내를 여행하는 외국인에게 외국어를 사용하여 관광지 및 관광대상물을 설명하거나 여행을 안내하는 등 여행의 편의를 제공",
+      "reason": "관광통역안내사의 업무는 외국인 관광객에게 여행 안내 및 설명을 제공하는 것으로 이용·숙박·여행·오락·스포츠 분야와 직접적으로 관련이 있다.",
+      "interest_code": "12",
+      "qnet_code": "9661",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "12:9628",
+      "supported": true,
+      "document_id": "qnet:9628:duties",
+      "quote": "관광통역안내사는 국내를 여행하는 외국인에게 외국어를 사용하여 관광지 및 관광대상물을 설명하거나 여행을 안내하는 등 여행의 편의를 제공",
+      "reason": "관광통역안내사의 업무는 외국인 관광객에게 여행 안내 및 설명을 제공하는 것으로 이용·숙박·여행·오락·스포츠 분야와 직접적으로 관련이 있다.",
+      "interest_code": "12",
+      "qnet_code": "9628",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "12:9664",
+      "supported": true,
+      "document_id": "qnet:9664:duties",
+      "quote": "국내여행안내사는 국내를 여행하는 관광객을 대상으로 여행 일정 계획, 여행비용 산출, 숙박시설예약, 명승지나 고적지 안내 등 여행에 필요한 각종 서비스 제공",
+      "reason": "국내여행안내사의 업무는 관광객에게 여행 서비스 제공과 관련되어 있어 이용·숙박·여행·오락·스포츠 분야와 직접적으로 관련이 있다.",
+      "interest_code": "12",
+      "qnet_code": "9664",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "12:9665",
+      "supported": true,
+      "document_id": "qnet:9665:duties",
+      "quote": "호텔에서 고객에게 각종 서비스를 제공하기 위하여 영접, 객실안내, 짐 운반, 객실예약, 우편물의 접수와 배달, 객실열쇠관리, 객실정리, 세탁보급, 음식제공 등 각종 서비스를 제공하는 일",
+      "reason": "호텔서비스사의 업무는 고객에게 다양한 서비스 제공과 관련되어 있어 이용·숙박·여행·오락·스포츠 분야와 직접적으로 관련이 있다.",
+      "interest_code": "12",
+      "qnet_code": "9665",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "12:9662",
+      "supported": true,
+      "document_id": "qnet:9662:duties",
+      "quote": "관광사업소의 호텔에서 객실예약업무, 객실판매 및 정비업무, 접객업무, 회계업무, 식당업무 등 제반 호텔관리업무에 대한 계획을 수립, 조정하며 조사원 근무상태를 지휘 감독하는 직무",
+      "reason": "호텔경영사 직무는 호텔 관리와 관련된 다양한 업무를 포함하고 있으며, 이는 이용·숙박·여행·오락·스포츠 분야와 직접적으로 관련이 있다.",
+      "interest_code": "12",
+      "qnet_code": "9662",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "12:9546",
+      "supported": true,
+      "document_id": "qnet:9546:duties",
+      "quote": "스포츠이벤트의 기획 및 운영, 스포츠스폰서 및 광고주 유치, 프로 및 아마 스포츠 구 단 스포츠마케팅 기획 및 운영, 스포츠콘텐츠의 확보 및 상품화, 스포츠선수대리인 사업 의 시행, 스포츠시설 회원 모집, 관리 등 회원서비스, 스포츠시설 설치 및 경영 컨설 팅, 공공 및 민간체육시설 관리 운영",
+      "reason": "스포츠경영관리사 직무는 스포츠 관련 이벤트와 마케팅, 시설 관리 등을 포함하고 있어 이용·숙박·여행·오락·스포츠 분야와 밀접한 관련이 있다.",
+      "interest_code": "12",
+      "qnet_code": "9546",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:7910",
+      "supported": true,
+      "document_id": "qnet:7910:duties",
+      "quote": "한식메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리를 수행하는 직무",
+      "reason": "한식조리기능사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "7910",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:7911",
+      "supported": true,
+      "document_id": "qnet:7911:duties",
+      "quote": "양식메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리를 수행하는 직무",
+      "reason": "양식조리기능사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "7911",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:7912",
+      "supported": true,
+      "document_id": "qnet:7912:duties",
+      "quote": "일식메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리를 수행하는 직무",
+      "reason": "일식조리기능사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "7912",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:7913",
+      "supported": true,
+      "document_id": "qnet:7913:duties",
+      "quote": "중식메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리를 수행하는 직무",
+      "reason": "중식조리기능사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "7913",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:7914",
+      "supported": true,
+      "document_id": "qnet:7914:duties",
+      "quote": "복어메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리를 수행하는 직무",
+      "reason": "복어조리기능사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "7914",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:2971",
+      "supported": true,
+      "document_id": "qnet:2971:duties",
+      "quote": "메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며, 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리 및 급식·외식경영을 수행하는 직무",
+      "reason": "한식조리산업기사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "2971",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:2972",
+      "supported": true,
+      "document_id": "qnet:2972:duties",
+      "quote": "메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며, 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리 및 급식·외식경영을 수행하는 직무",
+      "reason": "양식조리산업기사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "2972",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:2973",
+      "supported": true,
+      "document_id": "qnet:2973:duties",
+      "quote": "메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며, 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리 및 급식·외식경영을 수행하는 직무",
+      "reason": "일식조리산업기사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "2973",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:2974",
+      "supported": true,
+      "document_id": "qnet:2974:duties",
+      "quote": "메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며, 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리 및 급식·외식경영을 수행하는 직무",
+      "reason": "중식조리산업기사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "2974",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "13:2975",
+      "supported": true,
+      "document_id": "qnet:2975:duties",
+      "quote": "메뉴 계획에 따라 식재료를 선정, 구매, 검수, 보관 및 저장하며, 맛과 영양을 고려하여 안전하고 위생적으로 음식을 조리하고 조리기구와 시설관리 및 급식·외식경영을 수행하는 직무",
+      "reason": "복어조리산업기사 직무는 음식 조리와 관련된 다양한 업무를 포함하고 있어 음식서비스 분야와 직접적으로 관련이 있다.",
+      "interest_code": "13",
+      "qnet_code": "2975",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:1630",
+      "supported": true,
+      "document_id": "qnet:1630:duties",
+      "quote": "건축시공에 관한 공학적 기술이론을 활용하여, 건축물 공사의 공정, 품질, 안전, 환경, 공무관리 등을 통해 건축 프로젝트를 전체적으로 관리하고 공종별 공사를 진행하며 시공에 필요한 기술적 지원을 하는 등의 업무 수행",
+      "reason": "건축기사 직무는 건축 프로젝트 관리와 관련된 다양한 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "1630",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:1250",
+      "supported": true,
+      "document_id": "qnet:1250:duties",
+      "quote": "- 토목시설을 포함하는 도로, 철도, 교량, 항만, 상하수도, 통신선로 등의 건설, 개량, 유지, 보수 등 토목사업에 대한 조사, 연구, 계획, 설계, 시공, 기술지도 또는 토목 관계법규의 정리 및 운용 등의 업무 수행.\n- 종합적인 국토계획, 지방계획, 도시계획 등을 세우고 토지, 항만, 천연자원의 이용, 공공시설의 규모와 배치의 조절 등을 위한 종합적인 개발계획을 연구, 수립하는 업무 수행.",
+      "reason": "토목기사 직무는 다양한 토목 사업의 계획 및 설계와 관련된 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "1250",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:2530",
+      "supported": true,
+      "document_id": "qnet:2530:duties",
+      "quote": "건축시공에 관한 공학적 기술이론을 활용하여, 건축물 공사의 공정, 품질, 안전, 환경, 공무관리 등을 통해 건축 프로젝트를 전체적으로 관리하고 공종별 공사를 진행하며 시공에 필요한 기술적 지원을 하는 등의 업무 수행",
+      "reason": "건축산업기사 직무는 건축 프로젝트 관리와 관련된 다양한 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "2530",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:2240",
+      "supported": true,
+      "document_id": "qnet:2240:duties",
+      "quote": "도로, 공항, 철도, 하천, 교량, 댐, 터널, 항만 및 해양시설물 등 다양한 건설사업을 계획, 설계, 시공, 관리 등의 직무를 수행",
+      "reason": "토목산업기사 직무는 다양한 건설 사업의 계획 및 설계와 관련된 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "2240",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:1440",
+      "supported": true,
+      "document_id": "qnet:1440:duties",
+      "quote": "건설재해예방계획 수립, 작업환경의 점검 및 개선, 유해 위험방지 등의 안전에 관한 기술적인 사항을 관리하며 건설물이나 설비작업의 위험에 따른 응급조치, 안전장치 및 보호구의 정기점검, 정비 등의 직무 수행.",
+      "reason": "건설안전기사 직무는 건설 현장의 안전 관리와 관련된 다양한 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "1440",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:2390",
+      "supported": true,
+      "document_id": "qnet:2390:duties",
+      "quote": "건설 재해 예방계획 수립, 작업환경의 점검 및 개선, 유해 위험방지 등의 안전에 관한 기술적인 사항을 관리하며 건설물이나 설비작업의 위험에 따른 응급조치, 안전장치 및 보호구의 정기점검, 정비 등의 직무 수행.",
+      "reason": "건설안전산업기사 직무는 건설 현장의 안전 관리와 관련된 다양한 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "2390",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:1282",
+      "supported": true,
+      "document_id": "qnet:1282:duties",
+      "quote": "건축공간을 기능적, 미적으로 계획하기 위하여 현장분석자료 및 기본개념을 가지고 공간의 기능에 맞게 면적을 배분하여 공간을 계획 및 구성하며, 이러한 구성개념의 표현을 위하여 개념도, 평면도, 천정도, 입면도, 상세도, 투시도 및 재료 마감표를 작성, 완료된 설계도서에 의거하여 현장의 공정 및 시공을 총괄관리 하는 등의 직무 수행",
+      "reason": "실내건축기사 직무는 건축 공간의 계획 및 관리와 관련된 다양한 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "1282",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:2282",
+      "supported": true,
+      "document_id": "qnet:2282:duties",
+      "quote": "건축공간을 기능적, 미적으로 계획하기 위하여 현장분석자료 및 기본개념을 가지고 공간의 기능에 맞게 면적을 배분하여 공간을 계획 및 구성하며, 이러한 구성개념의 표현을 위하여 개념도, 평면도, 천정도, 입면도, 상세도, 투시도 및 재료 마감표를 작성, 완료된 설계도서에 의거하여 현장의 공정 및 시공을 관리하는 등의 직무 수행",
+      "reason": "실내건축산업기사 직무는 건축 공간의 계획 및 관리와 관련된 다양한 업무를 포함하고 있어 건설 분야와 직접적으로 관련이 있다.",
+      "interest_code": "14",
+      "qnet_code": "2282",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:7130",
+      "supported": true,
+      "document_id": "qnet:7130:duties",
+      "quote": "각종 수공구와 목공기계를 사용하여 목구조의 골조 구성과 철근콘크리트조의 거푸집 제\n작, 설치 및 일반 건축물의 내외부를 목재로 마감하는 작업 수행.",
+      "reason": "건축목공기능사는 건축물의 목재 작업을 포함하여 거푸집 제작 및 설치와 관련된 업무를 수행하므로 직접 관련성이 인정됨.",
+      "interest_code": "14",
+      "qnet_code": "7130",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "14:7170",
+      "supported": true,
+      "document_id": "qnet:7170:duties",
+      "quote": "목공용 수공구를 사용하여 합판, 각재 및 판재 등으로 도면에 따라 거푸집 널을 제작·\n설치하거나 기성 철제거푸집을 조립·설치 후 콘크리트가 굳으면 거푸집을 해체·정리\n하는 작업 수행.",
+      "reason": "거푸집기능사는 거푸집 제작 및 설치와 해체 작업을 수행하므로 건설 관련 직무와 직접적으로 관련됨.",
+      "interest_code": "14",
+      "qnet_code": "7170",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:1021",
+      "supported": true,
+      "document_id": "qnet:1021:duties",
+      "quote": "재료역학, 기계열역학, 기계 유체역학, 기계재료 및 유압기기, 기계제작법 및 기계동력학 등 기계에 관한 지식을 활용하여 일반기계 및 구조물을 설계, 견적, 제작, 시공, 감리 등과 기능 인력에 대한 기술지도 감독 등 을 하여 주어진 조건보다 더 능률적으로 실무를 완수하도록 하는 직무 수행 능력을 평가",
+      "reason": "일반기계기사는 기계 설계 및 제작, 시공과 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "1021",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:2031",
+      "supported": true,
+      "document_id": "qnet:2031:duties",
+      "quote": "주로 CAD시스템을 이용하여 기계도면을 작성하거나 도면의 변경, 출도를 하며 부품도를 도면의 형식에 맞게 배열하고, 단면 형상의 표시 및 치수 노트를 작성한다. 또한 컴퓨터 그래픽을 이용하여 부품의 전개도, 조립도, 재단도, 유압회로, 전기회로, 배관회로 등을 설계하며, 생산관리, 품질관리, 설비관리 등의 관리업무를 수행한다.",
+      "reason": "기계설계산업기사는 CAD를 이용한 기계 도면 작성 및 설계 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "2031",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:1040",
+      "supported": true,
+      "document_id": "qnet:1040:duties",
+      "quote": "기계분야의 기술지식이나 기계재료의 특성, 설계, 가공방식에 관한 지식을 활용하여 건설플랜트의 기계설비를 설계, 견적, 제작, 시공, 감리 등과 기능인력에 대한 기술지도, 감독 등의 업무를 수행",
+      "reason": "건설기계설비기사는 건설플랜트의 기계설비와 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "1040",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:2040",
+      "supported": true,
+      "document_id": "qnet:2040:duties",
+      "quote": "기계재료의 특성하고, 설계, 가공방식에 관한 지식을 활용하여 건설플랜트의 기계설비 를 설계하고 견적, 제작, 시공, 감리 등과 관련된 업무 수행",
+      "reason": "건설기계설비산업기사는 건설플랜트의 기계설비와 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "2040",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:1050",
+      "supported": true,
+      "document_id": "qnet:1050:duties",
+      "quote": "기계분야의 지식과 기술을 바탕으로 건설기계장비의 원활한 작동을 위해 엔진, 유압장\n치, 동력전달장치, 전자제어장치 등 기계장비의 고장이나 기능장애를 분석하고 부품\n이나 장치의 마모상태, 균열, 유압 등을 점검하는 기술적인 업무를 수행.",
+      "reason": "건설기계정비기사는 건설기계장비의 정비 및 점검과 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "1050",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:2050",
+      "supported": true,
+      "document_id": "qnet:2050:duties",
+      "quote": "건설기계의 원활한 작동을 유지하기 위하여 건설기계의 공장부위에 따라 엔진과 관련 부\n품, 변속기 및 기어 등의 동력전달장치 계통, 램프 배선 밧데리 등의 정기장치, 유압\n장치의 정비와 판금, 도작작업 등으로 수행.",
+      "reason": "건설기계정비산업기사는 건설기계의 정비 및 유지보수와 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "2050",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:1025",
+      "supported": true,
+      "document_id": "qnet:1025:duties",
+      "quote": "생산제품의 특성, 프레스의 특성 및 공정에 따라 모양을 찍어내고, 형을 만들어 압축하는데 사용되는 단일공정 또는 여러 단계 공정의 금형을 설계, 또한 생산기계에 새로 개발한 금형세트를 설치하여 시험해보고 재설계할 것인지 또는 생산 작업에 이용될 수 있는지의 여부를 결정하는 일을 수행.",
+      "reason": "프레스금형기사는 금형 설계 및 제작과 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "1025",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:2029",
+      "supported": true,
+      "document_id": "qnet:2029:duties",
+      "quote": "생산제품의 특성, 프레스의 특성 및 공정에 따라 모양을 찍어내고, 형을 만들어 압축하는데 사용되는 단일공정 또는 여러 단계 공정의 금형을 설계하며 가공, 제작, 검사하는 업무 수행.",
+      "reason": "프레스금형산업기사는 금형 설계 및 제작과 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "2029",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:1024",
+      "supported": true,
+      "document_id": "qnet:1024:duties",
+      "quote": "단일공정 및 여러 단계의 공정에 맞게 형을 만드는 작업을 하기 위해 금형의 제작순서와 수량을 결정하고 성형작업방법과 기계에 관한 지식을 기초로 하여 필요한 금형의 형태를 결정하며, 금형제작에 필요한 금형의 크기와 치수를 표시한 각각의 금형세트를 설계하고, 또한 생산기계에 새로 개발한 금형세트를 설치하여 시험해 보고 재설계할 것인지 또는 생산작업에 이용될 수 있는지의 여부를 결정.",
+      "reason": "사출금형기사는 금형 설계 및 제작과 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "1024",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "15:2028",
+      "supported": true,
+      "document_id": "qnet:2028:duties",
+      "quote": "단일공정 및 여러 단계의 공정에 맞게 형을 만드는 작업을 하기 위해 금형의 제작순서와 수량을 결정하며 성형작업 방법과 기계에 관한 지식을 기초로 하여 필요한 금형의 형태를 결정하고, 금형제작에 필요한 금형의 크기와 치수를 표시한 각각의 금형세트를 설계하고, 가공, 제작, 검사하는 업무 수행.",
+      "reason": "사출금형산업기사는 금형 설계 및 제작과 관련된 업무를 수행하므로 기계 분야와 직접적으로 관련됨.",
+      "interest_code": "15",
+      "qnet_code": "2028",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:2101",
+      "supported": true,
+      "document_id": "qnet:2101:duties",
+      "quote": "금속재료에 관한 기술기초지식과 상급 숙련기능을 바탕으로 금속과 합금을 유용한 형 상을 만들기 위한 재료시험, 결함시험, 금속열처리 등의 업무수행 또는 이와 관련된 지도적 기능업무 담당.",
+      "reason": "금속재료산업기사는 금속재료의 시험 및 처리와 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "2101",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:6490",
+      "supported": true,
+      "document_id": "qnet:6490:duties",
+      "quote": "각종 시험기와 장비 등을 이용하여 금속재료의 용도, 사용조건의 적합성 여부 및 재료\n의 기계적 시험할 수 있는 능력을 검토·분석하는직무수행",
+      "reason": "금속재료시험기능사는 금속재료의 시험 및 분석과 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "6490",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:3221",
+      "supported": true,
+      "document_id": "qnet:3221:duties",
+      "quote": "금속재료에 관한 최상급 숙련기능을 가지고 금속열처리, 금속재료의 시험 및 안전관리\n등을 담당. 또한 산업현장에서 소속 기능자의 작업관리 및 지도·감독, 그리고 경영층\n과 생산계층을 유기적으로 결합시켜 주는 현장의 중간관리 등의 업무 수행.",
+      "reason": "금속재료기능장은 금속재료의 시험 및 관리와 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "3221",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:0110",
+      "supported": true,
+      "document_id": "qnet:0110:duties",
+      "quote": "철, 비철재료를 포함돼 기타 금속재료의 특성과 이용에 관한 고도의 전문지식과 실무\n경험을 바탕으로 금속재료 설계 및 제조·응용, 제품 및 소재개발, 시험분석을 담당하\n면서 전체 공정을 지도. 또한 이론과 경력을 근거로 기술자문 수행.",
+      "reason": "금속재료기술사는 금속재료의 설계 및 응용과 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "0110",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:0790",
+      "supported": true,
+      "document_id": "qnet:0790:duties",
+      "quote": "세라믹 전반에 대한 고도의 전문지식과 실무경험을 바탕으로 새로운 소재나 제품, 기술\n을 개발하고 세라믹의 원료에서 제작, 응용에 이르기까지 전공정을 지도·감독. 또는\n세라믹소재에 대한 기술자문 담당.",
+      "reason": "세라믹기술사는 세라믹 소재의 개발 및 응용과 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "0790",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:6543",
+      "supported": true,
+      "document_id": "qnet:6543:duties",
+      "quote": "금속재료를 회전하는 압연기 롤(Roll) 사이를 통과시켜 단면적 또는 두께를 감소시키는 가공법으로서 고객이 요구하는 치수, 형상, 표면 및 기계적 성질 등의 최상품질을 갖춘 제품을 생산하는 직무를 수행",
+      "reason": "압연기능사는 금속재료의 가공 및 생산과 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "6543",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:6515",
+      "supported": true,
+      "document_id": "qnet:6515:duties",
+      "quote": "고철 및 용선을 제강로(전로, 전기로)등에 장입한 후 성분조정 금속을 첨가하여 탈탄, 탈인, 탈산, 탈황반응에 의해 용해, 산화, 환원을 하고 조괴 및 연속주조 공정을 거쳐 양질의 강과 특수강 등을 제조하는 업무를 수행한다.",
+      "reason": "제강기능사는 금속재료의 제조 및 가공과 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "6515",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:6500",
+      "supported": true,
+      "document_id": "qnet:6500:duties",
+      "quote": "철강석 및 기타 원료를 예비 처리(파쇄, 체질, 선광, 가소, 배소, 소결, 펠리타이징, 균 광)한 후 용광로에 넣어 각종 부대시설(송풍기, 열풍로, 가스제진기, 청정기)로 용해 환원하여 융융 선철을 생산하는 작업을 수행한다.",
+      "reason": "제선기능사는 금속재료의 생산 및 가공과 관련된 업무를 수행하므로 재료 분야와 직접적으로 관련됨.",
+      "interest_code": "16",
+      "qnet_code": "6500",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:6420",
+      "supported": true,
+      "document_id": "qnet:6420:duties",
+      "quote": "전기로, 분위기로, 진공로, 고주파로 등의 열처리 장비를 이용하여 금속재료와 제품의 기계적, 물리적 성질을 개선하는 방법을 숙지하고 실제 노멀라이징, 풀림, 담금질, 뜨 임 등 작업을 통하여 물리적, 기계적 성질이 우수한 금속 재료를 만드는 작업 수행.",
+      "reason": "열처리기능사는 금속재료의 기계적, 물리적 성질을 개선하는 작업을 수행하므로 재료 분야와 직접 관련이 있다.",
+      "interest_code": "16",
+      "qnet_code": "6420",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "16:2106",
+      "supported": true,
+      "document_id": "qnet:2106:duties",
+      "quote": "금속재료, 금속조직, 각종 표면처리 등에 관한 기술기초이론 지식과 숙련기능을 바탕으로 전기도금, 특수도금 등 표면처리 관련 작업을 수행 또는 작업장 안전관리, 품질 분석 및 시험을 담당한다.",
+      "reason": "표면처리산업기사는 금속재료와 관련된 표면처리 작업을 수행하므로 재료 분야와 직접 관련이 있다.",
+      "interest_code": "16",
+      "qnet_code": "2106",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:1110",
+      "supported": true,
+      "document_id": "qnet:1110:duties",
+      "quote": "화학공정 전반에 걸친 계측, 제어, 관리, 감독업무와 화학장치의 분리기, 여과기 정제 반응기, 유화기, 분쇄 및 혼합기 등을 제어, 조작, 관리, 감독하는 업무를 수행",
+      "reason": "화공기사는 화학공정과 관련된 관리 및 감독 업무를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "1110",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:1800",
+      "supported": true,
+      "document_id": "qnet:1800:duties",
+      "quote": "생물체 또는 생물체의 기능을 이용하여 배양준비, 생산배양, 분리·정제, 전환·중합 등의 공정을 거쳐 범용바이오화학소재, 특수바이오화학제품 등을 제조 및 품질관리하는 직무",
+      "reason": "바이오화학제품제조기사는 생물체를 이용한 제품 제조 및 품질관리를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "1800",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:2570",
+      "supported": true,
+      "document_id": "qnet:2570:duties",
+      "quote": "생물체 또는 생물체의 기능을 이용하여 균주보관·관리, 배지조제, 멸균, 배양, 정제 등의 공정을 거쳐 범용바이오화학소재, 특수바이오화학제품 등을 제조하는 직무",
+      "reason": "바이오화학제품제조산업기사는 생물체를 이용한 제품 제조를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "2570",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:1563",
+      "supported": true,
+      "document_id": "qnet:1563:duties",
+      "quote": "화학관련 산업제품이나 의약품, 식품, 소재등의 개발, 제조, 검사를 함에 있어 제품의 품질을 유지하거나 향상시키기 위해 원재료나 제품등의 화학성분의 조성과 함량을 분석하기 위한 분석계획수립, 분석항목을 측정하고 자료를 분석, 종합 평가하여 결과의 보고 및 자료의 종합관리와 새로운 분석기법을 조사 개발하는 직무를 수행",
+      "reason": "화학분석기사는 화학성분 분석 및 품질 관리를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "1563",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:6560",
+      "supported": true,
+      "document_id": "qnet:6560:duties",
+      "quote": "실험 및 검사부문에 소속되어 물질을 구성하고 있는 성분의 종류나 그 조성비를 알기 위 하여 약품, 기기, 기구를 사용하여 물질을 분석하는 업무수행",
+      "reason": "화학분석기능사는 물질 분석 업무를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "6560",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:1125",
+      "supported": true,
+      "document_id": "qnet:1125:duties",
+      "quote": "정밀화학제품과 관련한 제품설계, 반응, 혼합, 분리정제, 제형화 등의 공정을 통하여 기능성 화학 제품을 개발 및 생산관리",
+      "reason": "정밀화학기사는 기능성 화학 제품 개발 및 생산 관리를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "1125",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "17:1029",
+      "supported": true,
+      "document_id": "qnet:1029:duties",
+      "quote": "화학물질로 인한 일반환경 및 산업환경 유해인자에 노출되어 나타날 수 있는 환경과 건강 위해성을 예측하고, 위해성관리의 우선순위를 결정한 후 의사소통 및 저감 대책을 수립·관리하는 직무",
+      "reason": "환경위해관리기사는 화학물질의 위해성 관리 업무를 수행하므로 화학·바이오 분야와 직접 관련이 있다.",
+      "interest_code": "17",
+      "qnet_code": "1029",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:1297",
+      "supported": true,
+      "document_id": "qnet:1297:duties",
+      "quote": "각종 섬유재료의 특성을 파악하고 방적, 제직, 정련표백, 염색 및 가공의 이해와 각종 섬유의 물리적, 화학적 성능의 시험 등에 관한 직무 수행",
+      "reason": "섬유기사는 섬유재료의 특성을 파악하고 시험하는 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "1297",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:2277",
+      "supported": true,
+      "document_id": "qnet:2277:duties",
+      "quote": "각종 섬유재료의 특성을 파악하고 방적, 제직, 정련표백, 염색 및 가공의 이해와 각종 섬유의 물리적, 화학적 성능의 시험 등에 관한 직무 수행",
+      "reason": "섬유산업기사는 섬유재료의 특성을 파악하고 시험하는 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "2277",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:2264",
+      "supported": true,
+      "document_id": "qnet:2264:duties",
+      "quote": "각종 섬유재료의 특성을 파악하고 디자인의 요소와 프로세스 및 색채 등을 이해하여 섬유디자인에 관한 직무 수행",
+      "reason": "섬유디자인산업기사는 섬유디자인 관련 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "2264",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:1301",
+      "supported": true,
+      "document_id": "qnet:1301:duties",
+      "quote": "불특정 다수 소비자들이 요구하는 상품성과 품질을 갖춘 의류제품을 대량 생산하기 위해 상품기획에서 결정된 디자인을 각종 원부자재를 이용하여 패턴제작, 재단, 봉제 등 전 공정의 직무 수행",
+      "reason": "의류기사는 의류제품의 대량 생산을 위한 전 공정을 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "1301",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:7931",
+      "supported": true,
+      "document_id": "qnet:7931:duties",
+      "quote": "양복기능사 수행직무\n각종 디자인에 따라 남성 고객의 체형에 맞게 주어진 치수대로 패턴을 제도하여 원단을 재단하고, 가봉 보정 후 손바느질과 재봉기를 이용하여 남성복을 제작하는 직무",
+      "reason": "남성복기능사는 남성복 제작을 위한 패턴 제도 및 재단 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "7931",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:7932",
+      "supported": true,
+      "document_id": "qnet:7932:duties",
+      "quote": "양장기능사 수행직무\n주어진 디자인과 제시한 치수에 맞게 패턴제작, 마킹 및 재단하고 손바느질 및 재봉기를 이용하여 여성복을 제작하는 직무",
+      "reason": "여성복기능사는 여성복 제작을 위한 패턴 제작 및 재단 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "7932",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:2301",
+      "supported": true,
+      "document_id": "qnet:2301:duties",
+      "quote": "패션상품 디자인 기획을 통해 컬러, 소재, 스타일 등 디자인 요소를 분석, 선별하고 패션디자인 및 시제품을 개발, 평가하여 기능성과 심미성 있는 패션 제품을 창작하는 직무",
+      "reason": "패션디자인산업기사는 패션상품 디자인 및 개발 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "2301",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:2085",
+      "supported": true,
+      "document_id": "qnet:2085:duties",
+      "quote": "패션 기업과 패션 소비자 만족을 위하여 시장 및 정보분석을 통해 패션 트렌드와 수요를 예측하고 상품의 기획, 생산, 판매 및 세일즈 프로모션까지 광범위한 영역에서 활동하는 직무를 수행",
+      "reason": "패션머천다이징산업기사는 패션 상품 기획 및 판매 관련 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "2085",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:7723",
+      "supported": true,
+      "document_id": "qnet:7723:duties",
+      "quote": "전통복식의 시대적 변화와 그 시대에 따른 복식의 종류 및 섬유의 특성을 이해하여 한복을 디자인하고 제작하는 직무",
+      "reason": "한복기능사는 한복 디자인 및 제작 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "7723",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "18:2268",
+      "supported": true,
+      "document_id": "qnet:2268:duties",
+      "quote": "각종 한복지를 재료로 하여 고객의 체형에 맞추어 치수재기, 본뜨기, 재단하기의 공정을\n거친 후 재봉틀로 박거나 손바느질을 하여 저고리, 치마, 바지, 두루마기, 마고자, 조\n끼, 버선 등을 만드는 작업 수행.",
+      "reason": "한복산업기사는 한복 제작을 위한 재단 및 봉제 업무를 수행하므로 섬유·의복 분야와 직접 관련이 있다.",
+      "interest_code": "18",
+      "qnet_code": "2268",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:1150",
+      "supported": true,
+      "document_id": "qnet:1150:duties",
+      "quote": "전기설비에 관한 이론을 기반으로 전기기계·기구의 선정, 전기설비의 계획, 에너지 절약기술 적용, 용량산정, 재료선정 등 설계도서 작성, 감리, 유지관리 및 운용 등 시설관리 등의 업무를 수행하는 직무이다.",
+      "reason": "전기기사는 전기설비의 설계 및 관리 업무를 수행하므로 전기·전자 분야와 직접 관련이 있다.",
+      "interest_code": "19",
+      "qnet_code": "1150",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:2140",
+      "supported": true,
+      "document_id": "qnet:2140:duties",
+      "quote": "전기기계기구의 설계, 제작, 관리 등과 전기설비를 구성하는 모든 기자재의 규격, 크기, 용량 등을 산정하기 위한 계산 및 자료의 활용과 전기설비의 설계, 도면 및 시방서 작성, 점검 및 유지, 시험작동, 운용관리 등에 전문적인 역할과 전기안전 관리 담당자로서의 업무수행.",
+      "reason": "전기산업기사의 업무는 전기설비의 설계 및 관리와 관련이 있으며, 이는 전기·전자 분야의 전문적인 역할을 포함하므로 직접 관련성이 인정됨.",
+      "interest_code": "19",
+      "qnet_code": "2140",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:7780",
+      "supported": true,
+      "document_id": "qnet:7780:duties",
+      "quote": "전기에 필요한 장비 및 공구를 사용하여 회전기, 정지기, 제어장치 또는 빌딩, 공장, 주택, 및 전력시설물의 전선, 케이블, 전기기계 및 기구를 설치, 보수, 검사, 시험 및 관리하는 일",
+      "reason": "전기기능사의 업무는 전기설비의 설치 및 관리와 관련이 있어 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "7780",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:1160",
+      "supported": true,
+      "document_id": "qnet:1160:duties",
+      "quote": "공사비의 적산, 공사공정계획의 수립, 시공과정에서 전기의 적정여부 관리 등 주로 기술적인 직무를 수행. 또한 공사현장 대리인으로서 시공자를 대리하여 현장관리를 하는 동시에 발주자에 대해서는 시공자를 대신하여 업무수행.",
+      "reason": "전기공사기사의 업무는 전기공사와 관련된 기술적 관리 및 감독을 포함하므로 전기·전자 분야와 직접적으로 관련됨.",
+      "interest_code": "19",
+      "qnet_code": "1160",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:2150",
+      "supported": true,
+      "document_id": "qnet:2150:duties",
+      "quote": "전기공사에 관한 기술기초지식과 중급 숙련기능을 소지하고 전기공사용 기자재와 측정기를 사용하여 전력소와 전력소, 또는 전력소와 수용가를 연결하는 고압선이나 저압선을 가설하고 그 지지물 및 기기를 설치, 유지·보수.",
+      "reason": "전기공사산업기사의 업무는 전기공사와 관련된 설치 및 유지보수 작업을 포함하므로 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "2150",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:1170",
+      "supported": true,
+      "document_id": "qnet:1170:duties",
+      "quote": "전자에 관한 공학기초지식을 바탕으로 기술기초이론을 소지하고 전자기기 및 전자회로 설계업무 담당. 또한 부품가공 및 조립, 검사 등의 작업전반을 관리하며 부분적으로 기계기구의 설치와 보수작업을 수행.",
+      "reason": "전자기사의 업무는 전자기기 및 회로 설계와 관련이 있어 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "1170",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:2170",
+      "supported": true,
+      "document_id": "qnet:2170:duties",
+      "quote": "전자에 관한 상급숙련기능을 소지하고 전자기기 및 기초적인 전자회로를 설계, 전자제품 생산 및 관리 보수·수리작업담당.",
+      "reason": "전자산업기사의 업무는 전자기기 및 회로 설계와 관련이 있어 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "2170",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:6790",
+      "supported": true,
+      "document_id": "qnet:6790:duties",
+      "quote": "가정용, 공업용, 각종 전자기기(텔레비전, 음향기기, 영상기기 등)를 분해, 조립, 조정, 수리하고 공장자동화 설비의 계측제어장치설비와 조작, 보수, 관리업무 수행.",
+      "reason": "전자기능사의 업무는 전자기기의 조립 및 수리와 관련이 있어 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "6790",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:2175",
+      "supported": true,
+      "document_id": "qnet:2175:duties",
+      "quote": "회로설계기술, 회로설계소프트웨어활용, 반도체제조를 위한 데이터 생성 등 반도체 설계업무에 대한 기술기초지식과 숙련기능을 바탕으로 디지털 및 아날로그 회로를 반도체 집적회로를 제작하기 전까지의 단계에 해당되는 전반부 및 후반부 설계 업무와 이와 관련된 제반 소프트웨어에 활용할 수 있는 직무 수행.",
+      "reason": "반도체커스텀레이아웃산업기사의 업무는 반도체 설계와 관련이 있어 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "2175",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "19:6033",
+      "supported": true,
+      "document_id": "qnet:6033:duties",
+      "quote": "반도체 생산시스템이나 장비의 유지보전에 관한 지식을 가지고, 반도체장비 등을 최적의 상태로 효율적으로 유지하기 위해 일상점검 및 정기점검을 통한 장비 보전을 하고, 고장 부위를 정비하거나 유지, 보수 등의 직무 수행.",
+      "reason": "반도체설비보전기능사의 업무는 반도체 장비의 유지보수와 관련이 있어 전기·전자 분야와 직접적으로 연결됨.",
+      "interest_code": "19",
+      "qnet_code": "6033",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:1320",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보처리기사의 업무는 컴퓨터 시스템 개발 및 운영과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "1320",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:2290",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보처리산업기사의 업무는 정보시스템의 생명주기 전반에 걸친 프로젝트 업무와 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "2290",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:6921",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "프로그래밍기능사의 업무는 정보시스템 구축과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "6921",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:1121",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "임베디드기사의 업무는 임베디드 시스템 설계 및 구현과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "1121",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:6801",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "임베디드기능사의 업무는 임베디드 시스템의 펌웨어 구현과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "6801",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:1998",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "컴퓨터시스템기사의 업무는 시스템 소프트웨어 설계 및 구현과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "1998",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:0622",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "컴퓨터시스템응용기술사의 업무는 컴퓨터 시스템에 관한 전문적인 지식과 기술을 요구하며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "0622",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:0601",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보관리기술사의 업무는 정보시스템 계획 및 기술자문과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "0601",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:2193",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "사무자동화산업기사의 업무는 사무자동화 프로그램 및 네트워크 활용과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "2193",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "20:6892",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보기기운용기능사의 업무는 네트워크 구성 및 정보기기 운영과 관련이 있으며, 전기·전자 분야와 직접적인 관련성이 없음.",
+      "interest_code": "20",
+      "qnet_code": "6892",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:1530",
+      "supported": true,
+      "document_id": "qnet:1530:duties",
+      "quote": "식품기술분야에 대한 기본적인 지식을 바탕으로 하여 식품재료의 선택에서부터 새로운 식품의 기획, 개발, 분석, 검사 등의 업무를 담당하며, 식품제조 및 가공공정, 식품의 보존과 저장공정에 대한 관리, 감독의 업무를 수행.",
+      "reason": "식품안전기사의 업무는 식품 제조 및 가공과 관련이 있어 식품가공 분야와 직접적으로 연결됨.",
+      "interest_code": "21",
+      "qnet_code": "1530",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:2450",
+      "supported": true,
+      "document_id": "qnet:2450:duties",
+      "quote": "식품재료를 선택하고 선별, 분류하며, 만들고자 하는 식품의 제조공정에 따라 기계적,\n물리화학적 처리를 하며, 작업공정에 따라 처리정도 및 숙성정도를 관찰하고 적정한 상\n태로 만들어 나가기 위한 지도적 기능업무 수행. 또한 작업을 원활히 수행하기 위하여\n작업공정을 조정하고 안전상태를 점검하는 업무 수행.",
+      "reason": "식품산업기사의 업무는 식품 제조와 관련된 다양한 공정 및 품질 관리와 직접적으로 관련이 있다.",
+      "interest_code": "21",
+      "qnet_code": "2450",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:1541",
+      "supported": true,
+      "document_id": "qnet:1541:duties",
+      "quote": "식육원료 및 식육가공 전반에 대한 지식과 법규에 대한 이해를 바탕으로 원료관리, 가공, 품질 및 유통관리, 안전 및 위생관리 등의 일련의 과정을 통하여 생산하고자 하는 육가공 제품 혹은 물질을 제조하는 직무",
+      "reason": "식육가공기사의 업무는 식품가공 분야에서 육류 가공과 관련된 모든 과정을 포함하고 있어 직접적인 관련성이 있다.",
+      "interest_code": "21",
+      "qnet_code": "1541",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:7482",
+      "supported": true,
+      "document_id": "qnet:7482:duties",
+      "quote": "식육처리에 관한 숙련기능을 가지고 식육의 분할, 골발, 정형작업과 관련된 업무를 신\n속, 정확, 안전하고 위생적으로 처리하는 직무수행.",
+      "reason": "식육처리기능사의 업무는 식품가공의 일환으로 육류를 처리하는 과정과 관련이 있어 직접적인 관련성이 있다.",
+      "interest_code": "21",
+      "qnet_code": "7482",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:7591",
+      "supported": true,
+      "document_id": "qnet:7591:duties",
+      "quote": "농, 축, 수산물을 원료로 가공처리하여 물리적, 화학적, 생물학적 변화를 일으키게 하여\n영양가 및 저장성을 높이거나 유용한 농, 축, 수산식품을 제조, 가공하는 등의 직무를 수행",
+      "reason": "식품가공기능사의 업무는 다양한 원료를 가공하여 식품을 제조하는 것으로, 식품가공 분야와 직접적으로 관련이 있다.",
+      "interest_code": "21",
+      "qnet_code": "7591",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:1540",
+      "supported": true,
+      "document_id": "qnet:1540:duties",
+      "quote": "수산물 원료의 생물화학적 기초지식을 바탕으로 원료처리공정, 가공공정, 유통공정, 품질관리, 안전성관리 등의 일련의 과정을 통하여 식품 혹은 물질을 제조하거나 공정과 위생을 총괄적으로 관리하는 직무",
+      "reason": "수산제조기사의 업무는 수산물 가공과 관련된 모든 과정을 포함하고 있어 식품가공 분야와 직접적인 관련성이 있다.",
+      "interest_code": "21",
+      "qnet_code": "1540",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:7892",
+      "supported": true,
+      "document_id": "qnet:7892:duties",
+      "quote": "각 제과제품 제조에 필요한 재료의 배합표 작성, 재료 평량을 하고 각종 제과용 기계\n및 기구를 사용하여 성형, 굽기, 장식, 포장 등의 공정을 거쳐 각종 제과제품을 만드\n는 업무 수행.",
+      "reason": "제과기능사의 업무는 제과 제품을 제조하는 과정으로, 식품가공 분야와 직접적으로 관련이 있다.",
+      "interest_code": "21",
+      "qnet_code": "7892",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:7893",
+      "supported": true,
+      "document_id": "qnet:7893:duties",
+      "quote": "제빵제품 제조에 필요한 재료의 배합표 작성, 재료 평량을 하고 각종 제빵용 기계 및 기구를 사용하여 반죽, 발효, 성형, 굽기 등의 공정을 거쳐 각종 빵류를 만드는 업무 수행",
+      "reason": "제빵기능사의 업무는 제빵 제품을 제조하는 과정으로, 식품가공 분야와 직접적으로 관련이 있다.",
+      "interest_code": "21",
+      "qnet_code": "7893",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:4223",
+      "supported": true,
+      "document_id": "qnet:4223:duties",
+      "quote": "과자류제품 제조에 필요한 이론지식과 숙련기능을 활용하여 생산계획을 수립하고 재료구매, 생산, 품질관리, 판매, 위생 업무를 실행하는 직무",
+      "reason": "제과산업기사의 업무는 과자류 제품을 제조하는 과정으로, 식품가공 분야와 직접적으로 관련이 있다.",
+      "interest_code": "21",
+      "qnet_code": "4223",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "21:4224",
+      "supported": true,
+      "document_id": "qnet:4224:duties",
+      "quote": "빵류제품 제조에 필요한 이론지식과 숙련기능을 활용하여 생산계획을 수립하고 재료구매, 생산, 품질관리, 판매, 위생 업무를\n실행하는 직무이다.",
+      "reason": "제빵산업기사의 업무는 빵류 제품을 제조하는 과정으로, 식품가공 분야와 직접적으로 관련이 있다.",
+      "interest_code": "21",
+      "qnet_code": "4224",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:7140",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "가구제작기능사의 업무는 가구 제작과 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "7140",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:2142",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "가구제작산업기사의 업무는 가구 설계 및 제작과 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "2142",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:7480",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "목공예기능사의 업무는 목공예와 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "7480",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:7645",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "목재가공기능사의 업무는 목재 가공과 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "7645",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:7643",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "목질재료기능사의 업무는 합판 제조와 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "7643",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:1391",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "인쇄설계기사의 업무는 인쇄와 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "1391",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:7524",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "인쇄기능사의 업무는 인쇄와 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "7524",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:1810",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "제판기사의 업무는 제판과 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "1810",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:6791",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "전자출판기능사의 업무는 출판과 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "6791",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "22:6792",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "석공예기능사의 업무는 석공예와 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "22",
+      "qnet_code": "6792",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:1431",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "산업안전기사의 업무는 산업 안전과 관련된 것으로, 식품가공 분야와는 관련이 없다.",
+      "interest_code": "23",
+      "qnet_code": "1431",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:2381",
+      "supported": true,
+      "document_id": "qnet:2381:duties",
+      "quote": "제조 및 서비스업 등 각 산업현장에 배속되어 산업재해 예방계획의 수립에 관한 사항을 수행 하며, 작업환경의 점검 및 개선에 관한 사항, 유해 및 위험방지에 관한 사항, 사고사례 분석 및 개선에 관한 사항, 근로자의 안전교육 및 훈련에 관한 업무 수행",
+      "reason": "산업안전산업기사는 산업재해 예방과 관련된 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 직접적으로 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "2381",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:1661",
+      "supported": true,
+      "document_id": "qnet:1661:duties",
+      "quote": "대기오염으로 인한 국민건강이나 환경에 관한 위해를 예방하기 위해 대기환경관리 계획수립, 시설인·허가 및 관리, 실내공기질 관리, 악취관리, 이동오염원 관리, 측정분석·평가를 통해 대기환경을 적정하고 지속가능하도록 관리·보전하는 직무이다.",
+      "reason": "대기환경기사는 대기환경을 관리하고 보전하는 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "1661",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:2571",
+      "supported": true,
+      "document_id": "qnet:2571:duties",
+      "quote": "대기오염으로 인한 국민건강이나 환경에 관한 위해를 예방하기 위해 대기환경관리 계획수립, 시설인·허가 및 관리, 실내공기질 관리, 악취관리, 이동오염원 관리, 측정분석·평가를 통해 대기환경을 적정하고 지속가능하도록 관리·보전하는 직무이다.",
+      "reason": "대기환경산업기사는 대기환경을 관리하고 보전하는 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "2571",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:1662",
+      "supported": true,
+      "document_id": "qnet:1662:duties",
+      "quote": "수질 분야에 측정망을 설치하고 그 지역의 수질오염상태를 측정하여 다각적인 연구와 실험분석을 통해 수질오염에 대한 대책을 강구함. 수질 오염물질을 제거 또는 감소시키기 위한 오염방지시설을 설계, 시공, 운영하는 업무 수행.",
+      "reason": "수질환경기사는 수질오염을 관리하고 방지하는 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "1662",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:2572",
+      "supported": true,
+      "document_id": "qnet:2572:duties",
+      "quote": "수질 분야에 측정망을 설치하고 그 지역의 수질오염상태를 측정하여 다각적인 연구와 실험분석을 통해 수질오염에 대한 대책을 강구하고 수질 오염물질을 제거 또는 감소시키기 위한 오염방지시설을 설계, 시공, 운영하는 업무 수행.",
+      "reason": "수질환경산업기사는 수질오염을 관리하고 방지하는 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "2572",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:1950",
+      "supported": true,
+      "document_id": "qnet:1950:duties",
+      "quote": "사람의 생활이나 사업활동과 관련하여 발생된 폐기물을 물리적, 생물학적, 화학적으로 처리하기 위한 계획을 수립하고, 처리시설을 설계, 시공, 운영하는 업무를 수행하는 직무이다.",
+      "reason": "폐기물처리기사는 폐기물 처리와 관련된 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "1950",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:2950",
+      "supported": true,
+      "document_id": "qnet:2950:duties",
+      "quote": "사람의 생활이나 사업활동과 관련하여 발생된 폐기물을 물리적, 생물학적, 화학적으로 처리하기 위한 관리 및 시공, 운영하는 업무를 수행하는 직무이다.",
+      "reason": "폐기물처리산업기사는 폐기물 처리와 관련된 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "2950",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:1114",
+      "supported": true,
+      "document_id": "qnet:1114:duties",
+      "quote": "신재생에너지 발전소나 모든 건물 및 시설의 신재생에너지발전시스템 인허가, 신재생에너지발전설비 시공 및 감독, 신재생에너지발전시스템의 시공, 신재생에너지발전설비의 효율적 운영을 위한 유지보수 업무 등을 수행",
+      "reason": "신재생에너지발전설비기사는 신재생에너지 관련 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "1114",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "23:2114",
+      "supported": true,
+      "document_id": "qnet:2114:duties",
+      "quote": "신재생에너지 발전소나 모든 건물 및 시설의 신재생에너지발전시스템 인허가, 신재생에너지발전설비 시공 및 감독, 신재생에너지발전시스템의 시공, 신재생에너지발전설비의 효율적 운영을 위한 유지보수 업무 등을 수행",
+      "reason": "신재생에너지발전설비산업기사는 신재생에너지 관련 업무를 수행하며, 이는 환경·에너지·안전 분야의 관심과 관련이 있다.",
+      "interest_code": "23",
+      "qnet_code": "2114",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:1564",
+      "supported": true,
+      "document_id": "qnet:1564:duties",
+      "quote": "산림과 관련한 기술이론 지식을 가지고 영림계획편성, 경영분석, 산림휴양시설의 설계 및 관리 등의 기술업무를 수행 및 산림실무의 사방설계 및 시공, 임도설계, 시공 임업기계 비용, 기술 등의 직무 수행",
+      "reason": "산림기사는 산림 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "1564",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:2481",
+      "supported": true,
+      "document_id": "qnet:2481:duties",
+      "quote": "산림과 관련한 기술이론 지식을 가지고 영림계획편성, 경영분석, 산림휴양시설의 설계 및 관리 등의 기술업무를 수행 및 산림실무의 사방설계 및 시공, 임도설계, 시공 임업기계 비용, 기술 등의 직무 수행",
+      "reason": "산림산업기사도 산림 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "2481",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:7632",
+      "supported": true,
+      "document_id": "qnet:7632:duties",
+      "quote": "산림에 관한 숙련기능을 가지고 조림, 육림, 임업기계사용, 목재수확, 임도설치 등의 산림 생산에 관한 작업관리 및 이에 관련되는 업무를 수행.",
+      "reason": "산림기능사는 산림 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "7632",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:1560",
+      "supported": true,
+      "document_id": "qnet:1560:duties",
+      "quote": "작물, 원예시험장의 연구소나 작물재배농장에서 새로운 품종의 육성을 위해 품종간 혹은 개체 간 교잡, 교배 등의 시험연구를 수행하여, 각종 작물의 모수로부터 종자, 접수 및 대 목 등을 채취하고, 토양, 기온 등의 적합한 재배조건을 시험·연구하여 품종개량을 검정 하고, 개량된 우수한 종자와 묘목을 생산·번식시커며, 종자검사, 종자보증 등의 직무 수행.",
+      "reason": "종자기사는 종자 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "1560",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:2470",
+      "supported": true,
+      "document_id": "qnet:2470:duties",
+      "quote": "작물, 원예시험장이나 작물재배농장에서 새로은 품종의 육성을 위해 품종간 혹은 개체 간 교잡, 교배 등의 시험연구를 수행하여, 각종 작물의 모수로부터 종자, 접수 및 대 목 등을 채취하고, 토양, 기온 등의 적합한 재배조건을 시험·연구하여 품종개량을 감정하고, 개량된 우수한 종자와 묘목을 생산·번식시키며, 종자검사, 종자보증 등의 직무 수행.",
+      "reason": "종자산업기사도 종자 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "2470",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:7620",
+      "supported": true,
+      "document_id": "fallback:7620:duties",
+      "quote": "종자에 관한 숙련기능을 가지고 작물 및 원예시험장 연구소, 작물재배농장에서 새로운 품종의 육성을 위해 품종간 또는 개체간 교잡, 교배 등의 시험연구를 수행하는 업무를 보조하고, 토양, 기온, 습도 등의 적합한 재배조건을 조사하고 개량된 우수한 종자와 묘목을 생산, 번식, 육종, 저장시키기 위하여 재배관리 및 생산관리, 농약 살포, 비료 사용 등의 직무수행.",
+      "reason": "종자기능사도 종자 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "7620",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:1625",
+      "supported": true,
+      "document_id": "qnet:1625:duties",
+      "quote": "양식조건에 적합한 수산생물을 선정하고 적절한 시설을 제작하여 수산생물을 양식하는 업무를 수행하고, 어미로부터 알을 받아 수정시킨 후 부화시키거나 해조류의 종묘를 배양하고 옮겨 심어서 성장할 수 있도록 하는 업무 수행.",
+      "reason": "수산양식기사는 수산 양식과 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "1625",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:2520",
+      "supported": true,
+      "document_id": "qnet:2520:duties",
+      "quote": "양식조건에 적합한 수산생물을 선정하고 적절한 시설을 제작하여 수산생물을 양식하는 업무를 수행하고, 어미로부터 알을 받아 수정시킨 후 부화시키거나 해조류의 종묘를 배양하고 옮겨 심어서 성장할 수 있도록 하는 업무 수행.",
+      "reason": "수산양식산업기사도 수산 양식과 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "2520",
+      "validation_errors": [
+        "nonliteral_or_foreign_evidence"
+      ],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:7700",
+      "supported": true,
+      "document_id": "fallback:7700:duties",
+      "quote": "수산양식에 관한 숙련기능을 가지고 종묘생산, 양성어 양식작업 및 일정한 수면에서 수질을 조사하여 양식하고자 하는 수산생물의 종류에 적합한 수질환경을 조성하고 인위적으로 사육, 관리하고 수확하는 직무수행.",
+      "reason": "수산양식기능사도 수산 양식과 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "7700",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "24:1633",
+      "supported": true,
+      "document_id": "qnet:1633:duties",
+      "quote": "인간의 생활에 필요한 어업생물을 생산하기 위하여 어장탐색, 어로행위 등 어업과 관련되는 각종 어구․어법과 대상생물의 효율적 이용을 위한 어업관리 및 관련 법규 등의 요소들을 복합적으로 계획 및 수립하는 업무를 수행",
+      "reason": "어업생산관리기사는 어업 관리와 관련된 업무를 수행하며, 이는 농림어업 분야의 관심과 관련이 있다.",
+      "interest_code": "24",
+      "qnet_code": "1633",
+      "validation_errors": [],
+      "negative_control": false
+    },
+    {
+      "pair_id": "negative:03:1320",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보처리기사는 금융·보험 분야와 관련된 업무를 수행하지만, 환경·에너지·안전 분야와는 직접적인 관련이 없다.",
+      "interest_code": "03",
+      "qnet_code": "1320",
+      "validation_errors": [],
+      "negative_control": true
+    },
+    {
+      "pair_id": "negative:06:1320",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보처리기사의 업무는 컴퓨터 시스템 개발 및 운용과 관련되어 있으며, 보건·의료 분야와 직접적인 관련성이 없다.",
+      "interest_code": "06",
+      "qnet_code": "1320",
+      "validation_errors": [],
+      "negative_control": true
+    },
+    {
+      "pair_id": "negative:13:1320",
+      "supported": false,
+      "document_id": "",
+      "quote": "",
+      "reason": "정보처리기사의 업무는 컴퓨터 시스템 개발 및 운용과 관련되어 있으며, 음식서비스 분야와 직접적인 관련성이 없다.",
+      "interest_code": "13",
+      "qnet_code": "1320",
+      "validation_errors": [],
+      "negative_control": true
+    }
+  ],
+  "database_changed": false
+}

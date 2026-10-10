@@ -1,19 +1,18 @@
 {
-  "checked_at": "2026-10-10T09:48:15.421300+00:00",
+  "checked_at": "2026-10-09T08:13:37.209652+00:00",
   "stage": 5,
   "scope": "직무 중심 요약·기존 직업 근거·공통 직무 적용. 최신 법적 권한·응시조건 검증 제외",
   "certificates": 613,
   "model_reviewed": 562,
   "review_status_counts": {
-    "assistant_reviewed_summary_and_roles": 591,
+    "assistant_reviewed_summary_only": 584,
     "held": 11,
-    "assistant_reviewed_summary_only": 1,
+    "assistant_reviewed_summary_and_roles": 8,
     "missing_evidence": 10
   },
   "approved_summaries": 592,
-  "with_reviewed_roles": 591,
-  "reviewed_role_count": 598,
-  "additional_role_reviews": 584,
+  "with_reviewed_roles": 8,
+  "reviewed_role_count": 13,
   "held": [
     {
       "qnet_code": "0670",
@@ -76,5 +75,5 @@
   "github_pushed": false,
   "whole_raw_corpus_semantic_review_complete": false,
   "semantic_decisions_complete_for_current_summary_scope": true,
-  "note": "직무 요약 승인과 직업 근거 승인은 구별한다. 빈 related_jobs를 확인된 직업으로 표시하지 않는다. 추가 역할은 모델 추출·독립 검토·원문 인용 검사 후 직접 대조했다."
+  "note": "직무 요약 승인과 직업 근거 승인은 구별한다. 빈 related_jobs를 확인된 직업으로 표시하지 않는다."
 }

@@ -42,6 +42,8 @@ def prepare_semantic_review_results() -> None:
     approvals = json.loads(approval_path.read_text(encoding='utf-8')) if approval_path.exists() else {}
     correction_path = OUTPUT / 'assistant_summary_corrections.json'
     corrections = json.loads(correction_path.read_text(encoding='utf-8')) if correction_path.exists() else {}
+    role_path = OUTPUT / 'assistant_related_role_decisions_20261010.json'
+    role_decisions = json.loads(role_path.read_text(encoding='utf-8')) if role_path.exists() else {}
     result = []
     ready = []
     for item in candidates:
@@ -78,6 +80,17 @@ def prepare_semantic_review_results() -> None:
             decision.update(review_status='review_pending', reason='모델 검토 또는 직접 요약 대조 미완료')
         if decision['summary']:
             by_id = {doc['document_id']: doc for doc in item['career_evidence']}
+            # 기존 8개 직접 검토 표본은 유지하고, 원문 해시를 대조한 추가 검토만 연결한다.
+            role_decision = role_decisions.get(code)
+            if role_decision and code not in samples:
+                hashes = {identifier: by_id[identifier]['content_sha256'] for identifier in decision['summary_source_ids']}
+                if role_decision['source_hashes'] != hashes:
+                    raise ValueError('관련 역할 검토 이후 원문 변경')
+                decision['related_jobs'] = role_decision['related_jobs']
+                decision['related_jobs_review'] = {key: role_decision[key] for key in
+                    ('status', 'method', 'reviewed_at', 'reason')}
+                if decision['related_jobs']:
+                    decision['review_status'] = 'assistant_reviewed_summary_and_roles'
             assert all(source_id in by_id for source_id in decision['summary_source_ids'])
             for role in decision['related_jobs']:
                 assert all(source_id in by_id for source_id in role['source_ids'])
@@ -95,11 +108,12 @@ def prepare_semantic_review_results() -> None:
               'certificates': len(result), 'model_reviewed': len(model_reviews), 'review_status_counts': dict(counts),
               'approved_summaries': len(ready), 'with_reviewed_roles': sum(item['full_card_ready'] for item in result),
               'reviewed_role_count': sum(len(item['related_jobs']) for item in result),
+              'additional_role_reviews': len(role_decisions),
               'held': [{'qnet_code': item['qnet_code'], 'name': item['name'], 'reason': item.get('reason')} for item in result if item['review_status']=='held'],
               'raw_documents_preserved': True, 'database_changed': False, 'github_pushed': False,
               'whole_raw_corpus_semantic_review_complete': False,
               'semantic_decisions_complete_for_current_summary_scope': not counts.get('review_pending', 0),
-              'note': '직무 요약 승인과 직업 근거 승인은 구별한다. 빈 related_jobs를 확인된 직업으로 표시하지 않는다.'}
+              'note': '직무 요약 승인과 직업 근거 승인은 구별한다. 빈 related_jobs를 확인된 직업으로 표시하지 않는다. 추가 역할은 모델 추출·독립 검토·원문 인용 검사 후 직접 대조했다.'}
     save_json(OUTPUT / 'step5_semantic_decisions.json', result)
     save_json(OUTPUT / 'reviewed_recommendation_contexts.json', ready)
     save_json(OUTPUT / 'step5_semantic_review_report.json', report)
