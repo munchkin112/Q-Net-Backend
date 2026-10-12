@@ -38,7 +38,6 @@ def create_calendar_authorization_url(state: str) -> str:
         "scope": GOOGLE_CALENDAR_SCOPE,
         "state": state,
         "access_type": "offline",
-        "include_granted_scopes": "true",
         "prompt": "consent",
     }
     return GOOGLE_AUTHORIZATION_URL + "?" + urlencode(parameters)
