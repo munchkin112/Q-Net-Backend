@@ -99,11 +99,11 @@
 | 자격증 상세 | `GET /certificates/{certificate_id}` | 공개 | 조회 구현됨 |
 | 종목별 공통 추천 대상·연관 직무 | `GET /certificates/{certificate_id}/career-info` | Bearer | 구현·등록됨. 추천 자료 DB 적용 대기 |
 | 시험 일정 | `GET /certificates/{certificate_id}/schedules` | 공개 | 조회 구현됨 |
-| Calendar 등록 | `POST /calendar/register` | Bearer + Google 권한 | 미구현, 별도 담당자 작업 |
+| Calendar 등록 | `POST /calendar/register` | Bearer + Google 권한 | 구현·Swagger 등록됨. Calendar SQL 적용과 Google 실계정 검증 대기 |
 
 `/health`, `/health/database`, `/docs`는 개발·운영용 기존 경로로 유지한다. 사용자 화면 기능 목록에는 포함하지 않는다.
 
-Google 인증은 dev에 병합되어 로그인 시작·완료, 갱신, 로그아웃과 공통 Bearer 검증이 등록되어 있다. 로그인 완료는 아직 Calendar 담당자의 `create_google_calendar_credential` 저장 함수에 의존하며, 그 함수가 없으면 503을 반환한다. `/auth/me`와 실제 Google·DB 연동 확인은 미완료다. DB 세션에는 고정 만료가 없고, 리프레시 쿠키는 30일 만료로 설정하며 갱신 때마다 새 만료를 적용한다. 새 프로필·추천 API도 `get_current_user()`에 연결했지만 관련 SQL은 아직 공용 DB에 적용하지 않았다.
+Google 인증은 dev에 병합되어 로그인 시작·완료, 갱신, 로그아웃과 공통 Bearer 검증이 등록되어 있다. 로그인 완료는 Calendar 갱신 토큰을 암호화 저장하는 함수에 연결되어 있다. `/auth/me`와 실제 Google·DB 연동 확인은 미완료다. DB 세션에는 고정 만료가 없고, 리프레시 쿠키는 30일 만료로 설정하며 갱신 때마다 새 만료를 적용한다. 새 프로필·추천 API도 `get_current_user()`에 연결했지만 관련 SQL은 아직 공용 DB에 적용하지 않았다. Calendar 등록 코드도 `get_current_user()`와 저장 토큰을 재사용하지만, `google_calendar_credentials.sql`과 `calendar_registration.sql`은 대상 DB에 별도 적용해야 한다.
 
 별도 `/agent/run`, 작업 폴링, 추가 답변, 추천 이력, Calendar 내역·수정·삭제 API는 만들지 않는다. RAG와 LangGraph는 추천·정보 보완의 백엔드 내부 처리이며, 화면 요구가 없는 독립 엔드포인트를 추가하지 않는다.
 
@@ -322,12 +322,12 @@ year는 필수, 1900~9999. 200은 단계별 행 배열이다. `id`, `certificate
 | 요청 필드 | 계약 |
 |---|---|
 | certificate_id | 선택한 자격증 UUID |
-| schedule_ids | 선택 회차의 단계별 일정 UUID 배열, 최소 1개, 중복 불가 |
+| schedule_ids | 선택 회차의 단계별 일정 UUID 배열, 1~6개, 중복 불가 |
 | schedule_versions | 각 일정 ID와 일정 조회 응답의 updated_at. 선택한 일정 ID와 키 집합이 같아야 함 |
-| event_types | 네 종류 중 등록할 항목, 최소 1개, 중복 불가 |
+| event_types | 사용자가 화면에서 선택한 네 종류 중 최소 1개. 선택하지 않은 종류는 자동 등록하지 않으며 중복 불가 |
 | Idempotency-Key | 하나의 등록 작업을 식별하는 UUID 헤더. 통신 재시도 시 동일 키 유지 |
 
-서버가 DB에서 날짜·제목·공식 출처를 가져온다. 사용자 세션, Google 권한, 같은 종목·연도·회차의 일정인지, 날짜 순서·경계·출처·중복을 검사한다. 다른 캘린더 ID나 임의 제목·날짜는 받지 않는다. 선택 화면에서 읽은 일정 버전이 달라졌으면 신규 등록을 409 `SCHEDULE_CHANGED`로 거절하고 일정을 다시 조회·선택하도록 안내한다.
+서버가 DB에서 날짜·제목·공식 출처를 가져온다. `event_types`에는 화면에서 사용자가 고른 종류만 보낸다. 사용자 세션, Google 권한, 같은 종목·연도·회차의 일정인지, 날짜 순서·경계·출처·중복을 검사한다. 다른 캘린더 ID나 임의 제목·날짜는 받지 않는다. 선택 화면에서 읽은 일정 버전이 달라졌으면 신규 등록을 409 `SCHEDULE_CHANGED`로 거절하고 일정을 다시 조회·선택하도록 안내한다.
 
 | 종류 | 변환 규칙 |
 |---|---|
@@ -336,7 +336,7 @@ year는 필수, 1900~9999. 200은 단계별 행 배열이다. `id`, `certificate
 | practical_exam | phase=practical인 공식 시험 기간 |
 | result | 각 선택 단계의 result_date 하루. result_display_end를 발표 기간으로 사용하지 않음 |
 
-네 종류는 이벤트 수 네 개 보장을 뜻하지 않는다. 접수 구간·발표 단계에 따라 여러 이벤트가 생길 수 있다. 면접·1차·2차를 임의로 필기·실기로 변환하지 않는다. 날짜가 누락되거나 모순된 항목은 생성하지 않고 사유를 반환한다. 등록 가능한 항목이 하나도 없으면 422 `NO_REGISTERABLE_EVENTS`다.
+네 종류는 이벤트 수 네 개 보장을 뜻하지 않는다. 접수 구간·발표 단계에 따라 여러 이벤트가 생길 수 있다. 면접·1차·2차를 임의로 필기·실기로 변환하지 않는다. 날짜나 공식 출처가 누락·모순된 접수 구간은 생성하지 않고 구간별 사유와 `schedule_id`, 1부터 시작하는 `period_index`를 반환한다. DB에 접수 구간 행 자체가 없으면 해당 `schedule_id`와 `period_index: null`을 반환한다. 다른 종류의 일정이 누락된 경우에는 해당 `event_type`과 사유를 반환한다. 등록 가능한 항목이 하나도 없으면 422 `NO_REGISTERABLE_EVENTS`다.
 
 날짜만 있는 일정은 종일 이벤트다. DB의 포함 종료일을 Google end.date에는 다음 날로 변환한다. 공식 시험 기간을 사용자의 개인 확정 시험일로 표현하지 않는다. 분리된 registration_periods 사이 날짜를 접수 기간에 포함하지 않는다.
 
@@ -347,9 +347,9 @@ year는 필수, 1900~9999. 200은 단계별 행 배열이다. `id`, `certificate
   "registration_id": "55555555-5555-4555-8555-555555555555",
   "status": "partial",
   "items": [
-    {"item_key": "written-registration-0", "event_type": "registration", "status": "created", "google_event_id": "provider-event-id", "html_link": "https://calendar.google.com/"}
+    {"item_key": "written-registration-2026-01-05-2026-01-08", "event_type": "registration", "status": "created", "google_event_id": "provider-event-id", "html_link": "https://calendar.google.com/"}
   ],
-  "excluded_items": [{"event_type": "practical_exam", "reason": "선택한 일정에서 실기 날짜를 확인할 수 없습니다."}],
+  "excluded_items": [{"event_type": "practical_exam", "reason": "선택한 일정에서 실기 날짜를 확인할 수 없습니다.", "schedule_id": null, "period_index": null}],
   "message": "확인 가능한 일정을 등록했습니다. 등록하지 못한 항목을 확인해주세요."
 }
 ```
@@ -375,11 +375,11 @@ year는 필수, 1900~9999. 200은 단계별 행 배열이다. `id`, `certificate
 | sources | 공식 수집 원본·상태. 실제 복합 PK `(source_key, retrieved_at)` 유지 |
 | recommendation_sessions / results | API 설계상 프로필 스냅샷·실행 상태·최대 10개 결과 저장 대상. 별도 라우터의 현재 구현은 영속 실행 기록·멱등 저장을 아직 연결하지 않음 |
 | ai_logs | 모델·도구·검증 결과·시간·토큰 수. 비밀 토큰과 모델의 내부 사고 과정은 저장하지 않음 |
-| user_exam_plans / calendar_events | Calendar 등록 시 생성, 항목별 Google ID·중복 키·처리 상태 저장 |
+| user_exam_plans / calendar_registrations / calendar_events | Calendar 등록 시 생성, 요청 멱등 키·사용자 선택·항목별 Google ID·처리 상태 저장. `backend/db/calendar_registration.sql` 적용 필요 |
 | 인증 세션·Google 권한 저장소 | 서비스 리프레시 토큰 해시·폐기 정보와 암호화된 Google 자격증명 분리 보관 필요 |
 | 멱등 처리 저장소 | 사용자·작업·키·요청 해시·진행 상태·결과 저장. 실행 세션 테이블 활용 가능 |
 
-사용자가 제공한 ERD의 모든 테이블이 현재 구현되어 있다는 뜻은 아니다. `recommendation_answers`는 추가 질문을 제거했으므로 구현하지 않는다. Calendar 이벤트의 종일 날짜와 중복 키를 기존 start_at/end_at만으로 충분히 표현할 수 있는지도 DB 담당자가 조정해야 한다.
+사용자가 제공한 ERD의 모든 테이블이 현재 구현되어 있다는 뜻은 아니다. `recommendation_answers`는 추가 질문을 제거했으므로 구현하지 않는다. Calendar 등록은 종일 일정의 날짜 범위와 중복 키를 별도 등록 테이블에 저장한다.
 
 추천 내부 흐름:
 
@@ -434,7 +434,7 @@ Calendar 등록은 사용자 명시적 확인을 거친 별도 쓰기 API다. �
 | 최종 Figma의 입력 항목·버튼 매핑 | 입력 필수 규칙은 이 문서에 반영. 최종 화면의 세부 버튼·응답 표시만 구현 전 대조 |
 | 추천 실행 제한 시간·멱등 결과 보존 기간 | 동기 응답은 확정. API 구현에 멱등 키 처리를 연결하고 실행 시간·결과 보존 값은 담당자 합의 필요 |
 | 과거 날짜와 면접·1차·2차 일정 | Calendar 등록 대상은 접수·필기·실기·합격발표 4종. 과거 항목 선택 허용 정책은 화면과 대조 필요 |
-| Calendar 권한 부분 거절 UX | 로그인과 함께 권한을 요청하는 것은 확정. 사용자가 Calendar 권한을 거절했을 때의 로그인 허용 여부·등록 안내는 담당자 확인 필요 |
+| Calendar 권한 오류 | 저장된 권한·갱신 토큰이 없거나 갱신 과정에서 권한 철회가 확인되면 403 `GOOGLE_CALENDAR_PERMISSION_REQUIRED`를 반환한다. 이벤트 요청 중 발생한 Google 오류는 항목별 실패로 응답한다. |
 
 ## 참고
 
@@ -444,4 +444,5 @@ Calendar 등록은 사용자 명시적 확인을 거친 별도 쓰기 API다. �
 - [Google Calendar 이벤트 리소스](https://developers.google.com/workspace/calendar/api/v3/reference/events) — 종일 날짜와 종료일·이벤트 ID.
 - 현행 구현: `backend/main.py`, `backend/schemas.py`, `backend/exam_schemas.py`, `backend/db/schema.sql`.
 
-이 문서는 현재 회의 결정에 따른 API 계약이다. 이전 PRD·팀 공유문서의 추가 질문, 순위 Top 3, 별도 Calendar 연결·내역, 비동기 Agent 상태 조회가 이 문서와 다르면 이 문서의 범위를 적용한다. 실제 코드 변경과 DB 마이그레이션은 별도 구현 작업에서 진행한다.
+이 문서는 현재 회의 결정과 구현된 API 계약을 반영한다. 이전 PRD·팀 공유문서의 추가 질문, 순위 Top 3, 별도 Calendar 연결·내역, 비동기 Agent 상태 조회가 이 문서와 다르면 이 문서의 범위를 적용한다. Calendar 등록에 필요한 SQL은 실제 DB에 적용한 상태가 아니다.
+

@@ -27,6 +27,7 @@ from backend.auth_dependencies import (
 from backend.auth_router import auth_router, get_auth_allowed_origins
 from backend.profile_router import create_profile_router
 from backend.recommendation_router import create_recommendation_router
+from backend.calendar_router import create_calendar_router
 
 
 app = FastAPI(
@@ -38,7 +39,9 @@ app = FastAPI(
         "공식 상세정보를 수집한 종목의 시험과목·합격기준·응시료를 제공합니다. "
         "Render DB 연결 전에는 검색·일정 조회가 503을 반환합니다. "
         "로그인 사용자는 관심 분야·프로필을 저장하고 추천 결과를 조회할 수 있습니다. "
-        "북마크·응시조건 확정 판정·Calendar·로드맵은 아직 연결하지 않았습니다."
+        "사용자가 선택한 시험 일정을 Google Calendar에 등록하는 API를 제공합니다. "
+        "Calendar 사용 전 인증·등록 SQL을 DB에 적용해야 합니다. "
+        "북마크·응시조건 확정 판정·로드맵은 연결하지 않았습니다."
     ),
     redoc_url=None,
 )
@@ -69,6 +72,7 @@ app.add_middleware(
 # 인증 함수에서 검증한 사용자만 프로필·추천 API를 사용할 수 있다.
 app.include_router(create_profile_router(get_current_user))
 app.include_router(create_recommendation_router(get_current_user))
+app.include_router(create_calendar_router(get_current_user))
 
 
 class HealthResponse(BaseModel):
@@ -223,3 +227,4 @@ def documented_openapi() -> dict:
 
 
 app.openapi = documented_openapi
+

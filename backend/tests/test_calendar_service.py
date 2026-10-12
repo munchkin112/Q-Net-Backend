@@ -7,7 +7,10 @@ from uuid import uuid4
 
 from cryptography.fernet import Fernet
 
-from backend.calendar_service import create_google_calendar_credential
+from backend.calendar_service import (
+    create_google_calendar_credential,
+    get_google_calendar_credential,
+)
 
 
 class GoogleCalendarCredentialTests(unittest.TestCase):
@@ -106,6 +109,38 @@ class GoogleCalendarCredentialTests(unittest.TestCase):
 
         self.connection.execute.assert_not_called()
 
+    def test_reads_and_decrypts_calendar_refresh_token_only_with_required_scope(self):
+        encrypted = Fernet(self.encryption_key.encode("ascii")).encrypt(
+            b"stored-calendar-refresh-token"
+        ).decode("ascii")
+        self.connection.execute.return_value.fetchone.return_value = {
+            "refresh_token_ciphertext": encrypted,
+            "scopes": "openid email https://www.googleapis.com/auth/calendar.events.owned",
+        }
+
+        with patch.dict(os.environ, {"GOOGLE_TOKEN_ENCRYPTION_KEY": self.encryption_key}):
+            result = get_google_calendar_credential(self.connection, self.user_id)
+
+        self.assertEqual(result[0], "stored-calendar-refresh-token")
+        self.assertIn("calendar.events.owned", result[1])
+        query, parameters = self.connection.execute.call_args.args
+        self.assertIn("SELECT refresh_token_ciphertext, scopes", query)
+        self.assertEqual(parameters, (self.user_id,))
+
+    def test_rejects_saved_credential_without_calendar_permission(self):
+        encrypted = Fernet(self.encryption_key.encode("ascii")).encrypt(
+            b"stored-calendar-refresh-token"
+        ).decode("ascii")
+        self.connection.execute.return_value.fetchone.return_value = {
+            "refresh_token_ciphertext": encrypted,
+            "scopes": "openid email",
+        }
+
+        with patch.dict(os.environ, {"GOOGLE_TOKEN_ENCRYPTION_KEY": self.encryption_key}):
+            with self.assertRaises(PermissionError):
+                get_google_calendar_credential(self.connection, self.user_id)
+
 
 if __name__ == "__main__":
     unittest.main()
+
