@@ -17,6 +17,14 @@ from backend.exam_schemas import SubjectsInfo, PassCriteriaInfo, FeesInfo
 from backend import services
 from backend.db.check import check_database
 
+from fastapi.middleware.cors import CORSMiddleware
+
+from backend.auth_dependencies import (
+    AuthRequestError,
+    handle_auth_request_error,
+)
+from backend.auth_router import auth_router, get_auth_allowed_origins
+
 
 app = FastAPI(
     title="Q-Net 백엔드 API",
@@ -30,6 +38,29 @@ app = FastAPI(
         "프로필 저장 HTTP API는 로그인 구현 후 연결하며, 북마크·응시조건 비교·Calendar·로드맵은 비활성 상태입니다."
     ),
     redoc_url=None,
+)
+
+# 인증 API와 공통 인증 오류 처리기를 실제 서버에 연결한다.
+app.include_router(auth_router)
+app.add_exception_handler(
+    AuthRequestError,
+    handle_auth_request_error,
+)
+
+# 설정값이 있으면 검사하고, 정확히 일치하는 주소만 허용한다.
+# 설정이 없으면 다른 출처의 브라우저 요청을 허용하지 않는다.
+auth_allowed_origins = (
+    sorted(get_auth_allowed_origins())
+    if os.environ.get("AUTH_ALLOWED_ORIGINS", "").strip()
+    else []
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=auth_allowed_origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PATCH"],
+    allow_headers=["Authorization", "Content-Type", "Idempotency-Key"],
 )
 
 
