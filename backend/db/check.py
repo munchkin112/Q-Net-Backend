@@ -14,6 +14,10 @@ REQUIRED_TABLES = (
     "exam_information",
     "recommendation_interest_categories",
     "certificate_recommendation_contexts",
+    "calendar_connections",
+    "calendar_exam_plans",
+    "calendar_registrations",
+    "calendar_events",
 )
 
 
