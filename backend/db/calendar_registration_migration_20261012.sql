@@ -13,6 +13,10 @@ DECLARE
     has_user_id boolean;
     has_connection_id boolean;
     row_count bigint;
+    column_count integer;
+    unexpected_column boolean;
+    expected_columns text[];
+    expected_types text[];
     old_index record;
     legacy_index text;
 BEGIN
@@ -49,6 +53,52 @@ BEGIN
         ) INTO has_connection_id;
 
         IF has_user_id AND NOT has_connection_id THEN
+            -- 잠금 후 알려진 구버전 구조인지 확인하고, 동시에 쓰기가 생기지 않게 한다.
+            EXECUTE format('LOCK TABLE public.%I IN ACCESS EXCLUSIVE MODE', current_table);
+
+            IF current_table = 'calendar_registrations' THEN
+                expected_columns := ARRAY[
+                    'id', 'user_id', 'idempotency_key', 'request_hash', 'exam_plan_id',
+                    'request_events', 'excluded_items', 'status', 'response', 'created_at', 'updated_at'
+                ];
+                expected_types := ARRAY[
+                    'uuid', 'uuid', 'uuid', 'text', 'uuid', 'jsonb', 'jsonb', 'text',
+                    'jsonb', 'timestamptz', 'timestamptz'
+                ];
+            ELSE
+                expected_columns := ARRAY[
+                    'id', 'exam_plan_id', 'registration_id', 'user_id', 'certificate_id',
+                    'schedule_id', 'item_key', 'event_type', 'phase', 'starts_on', 'ends_on',
+                    'title', 'description', 'source_url', 'schedule_version', 'google_event_id',
+                    'html_link', 'sync_status', 'error_code', 'error_message', 'retryable',
+                    'created_at', 'updated_at'
+                ];
+                expected_types := ARRAY[
+                    'uuid', 'uuid', 'uuid', 'uuid', 'uuid', 'uuid', 'text', 'text', 'text',
+                    'date', 'date', 'text', 'text', 'text', 'timestamptz', 'text', 'text',
+                    'text', 'text', 'text', 'bool', 'timestamptz', 'timestamptz'
+                ];
+            END IF;
+
+            SELECT count(*) INTO column_count
+            FROM information_schema.columns
+            WHERE table_schema = 'public' AND table_name = current_table;
+
+            SELECT EXISTS (
+                SELECT 1
+                FROM unnest(expected_columns, expected_types) AS expected(column_name, udt_name)
+                LEFT JOIN information_schema.columns AS actual
+                  ON actual.table_schema = 'public'
+                 AND actual.table_name = current_table
+                 AND actual.column_name = expected.column_name
+                 AND actual.udt_name = expected.udt_name
+                WHERE actual.column_name IS NULL
+            ) INTO unexpected_column;
+
+            IF column_count <> cardinality(expected_columns) OR unexpected_column THEN
+                RAISE EXCEPTION '%. 구버전으로 확인된 테이블 구조와 달라 자동 전환을 중단했습니다.', current_table;
+            END IF;
+
             IF to_regclass(format('public.%I', legacy_table)) IS NOT NULL THEN
                 RAISE EXCEPTION '보존용 테이블 %가 이미 있습니다. 중복 마이그레이션인지 확인해주세요.', legacy_table;
             END IF;
@@ -188,6 +238,12 @@ CREATE INDEX IF NOT EXISTS calendar_registrations_connection_created_idx
 DO $verification$
 DECLARE
     required_table text;
+    column_count integer;
+    expected_constraint_counts integer[];
+    actual_constraint_counts integer[];
+    unexpected_column boolean;
+    expected_columns text[];
+    expected_types text[];
 BEGIN
     FOREACH required_table IN ARRAY ARRAY[
         'calendar_connections',
@@ -200,19 +256,93 @@ BEGIN
         END IF;
     END LOOP;
 
-    IF NOT EXISTS (
-        SELECT 1 FROM information_schema.columns
-        WHERE table_schema = 'public'
-          AND table_name = 'calendar_registrations'
-          AND column_name = 'calendar_connection_id'
-    ) OR NOT EXISTS (
-        SELECT 1 FROM information_schema.columns
-        WHERE table_schema = 'public'
-          AND table_name = 'calendar_events'
-          AND column_name = 'calendar_connection_id'
-    ) THEN
-        RAISE EXCEPTION '새 캘린더 연결 컬럼을 확인하지 못했습니다.';
-    END IF;
+    -- IF NOT EXISTS가 기존의 불완전한 테이블을 조용히 통과시키지 않게
+    -- 네 테이블의 컬럼·자료형·제약조건 수를 확인한다.
+    FOREACH required_table IN ARRAY ARRAY[
+        'calendar_connections',
+        'calendar_exam_plans',
+        'calendar_registrations',
+        'calendar_events'
+    ] LOOP
+        IF required_table = 'calendar_connections' THEN
+            expected_columns := ARRAY[
+                'id', 'session_token_hash', 'refresh_token_ciphertext', 'scopes',
+                'expires_at', 'revoked_at', 'created_at', 'updated_at'
+            ];
+            expected_types := ARRAY[
+                'uuid', 'text', 'text', 'text', 'timestamptz', 'timestamptz',
+                'timestamptz', 'timestamptz'
+            ];
+            expected_constraint_counts := ARRAY[1, 1, 5, 0];
+        ELSIF required_table = 'calendar_exam_plans' THEN
+            expected_columns := ARRAY[
+                'id', 'calendar_connection_id', 'certificate_id', 'year', 'round_key',
+                'round_label', 'selected_event_types', 'status', 'created_at', 'updated_at'
+            ];
+            expected_types := ARRAY[
+                'uuid', 'uuid', 'uuid', 'int2', 'text', 'text', 'jsonb', 'text',
+                'timestamptz', 'timestamptz'
+            ];
+            expected_constraint_counts := ARRAY[1, 1, 5, 2];
+        ELSIF required_table = 'calendar_registrations' THEN
+            expected_columns := ARRAY[
+                'id', 'calendar_connection_id', 'idempotency_key', 'request_hash',
+                'exam_plan_id', 'request_events', 'excluded_items', 'status', 'response',
+                'created_at', 'updated_at'
+            ];
+            expected_types := ARRAY[
+                'uuid', 'uuid', 'uuid', 'text', 'uuid', 'jsonb', 'jsonb', 'text',
+                'jsonb', 'timestamptz', 'timestamptz'
+            ];
+            expected_constraint_counts := ARRAY[1, 1, 4, 2];
+        ELSE
+            expected_columns := ARRAY[
+                'id', 'exam_plan_id', 'registration_id', 'calendar_connection_id',
+                'certificate_id', 'schedule_id', 'item_key', 'event_type', 'phase',
+                'starts_on', 'ends_on', 'title', 'description', 'source_url',
+                'schedule_version', 'google_event_id', 'html_link', 'sync_status',
+                'error_code', 'error_message', 'retryable', 'created_at', 'updated_at'
+            ];
+            expected_types := ARRAY[
+                'uuid', 'uuid', 'uuid', 'uuid', 'uuid', 'uuid', 'text', 'text', 'text',
+                'date', 'date', 'text', 'text', 'text', 'timestamptz', 'text', 'text',
+                'text', 'text', 'text', 'bool', 'timestamptz', 'timestamptz'
+            ];
+            expected_constraint_counts := ARRAY[1, 2, 7, 5];
+        END IF;
+
+        SELECT count(*) INTO column_count
+        FROM information_schema.columns
+        WHERE table_schema = 'public' AND table_name = required_table;
+
+        SELECT EXISTS (
+            SELECT 1
+            FROM unnest(expected_columns, expected_types) AS expected(column_name, udt_name)
+            LEFT JOIN information_schema.columns AS actual
+              ON actual.table_schema = 'public'
+             AND actual.table_name = required_table
+             AND actual.column_name = expected.column_name
+             AND actual.udt_name = expected.udt_name
+            WHERE actual.column_name IS NULL
+        ) INTO unexpected_column;
+
+        IF column_count <> cardinality(expected_columns) OR unexpected_column THEN
+            RAISE EXCEPTION '필수 캘린더 테이블 %의 컬럼·자료형이 예상과 다릅니다.', required_table;
+        END IF;
+
+        SELECT ARRAY[
+            count(*) FILTER (WHERE contype = 'p')::integer,
+            count(*) FILTER (WHERE contype = 'u')::integer,
+            count(*) FILTER (WHERE contype = 'c')::integer,
+            count(*) FILTER (WHERE contype = 'f')::integer
+        ] INTO actual_constraint_counts
+        FROM pg_constraint
+        WHERE conrelid = format('public.%I', required_table)::regclass;
+
+        IF actual_constraint_counts <> expected_constraint_counts THEN
+            RAISE EXCEPTION '필수 캘린더 테이블 %의 기본키·고유키·검사·외래키 구성이 예상과 다릅니다.', required_table;
+        END IF;
+    END LOOP;
 END
 $verification$;
 
