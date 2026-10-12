@@ -38,6 +38,16 @@ class DatabaseCheckTests(unittest.TestCase):
         self.assertNotIn("users", REQUIRED_TABLES)
         self.assertNotIn("user_profiles", REQUIRED_TABLES)
 
+    def test_core_database_check_requires_calendar_tables(self):
+        self.assertTrue(
+            {
+                "calendar_connections",
+                "calendar_exam_plans",
+                "calendar_registrations",
+                "calendar_events",
+            }.issubset(REQUIRED_TABLES)
+        )
+
     def test_missing_config_does_not_connect(self):
         with patch.dict(os.environ, {}, clear=True):
             with patch("backend.db.check.database_connection") as connect:
