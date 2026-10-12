@@ -4,13 +4,9 @@ from collections.abc import Callable
 from uuid import UUID
 
 import psycopg
-from fastapi import APIRouter, Depends, HTTPException
-from pydantic import ValidationError
+from fastapi import APIRouter, HTTPException
 
 from backend.career_information import get_career_context, build_career_information
-from backend.profile_form import ProfileForm
-from backend.api_identity import require_configured_user, get_authenticated_user_id
-from backend.profile_service import load_saved_profile_form
 from backend.recommendation_api_models import (
     RecommendationRequest, RecommendationResponse, CareerInformationResponse,
 )
@@ -46,26 +42,16 @@ def build_recommendation_response(result: dict, profile: dict) -> dict:
 
 
 def create_recommendation_router(
-    current_user_dependency: Callable = require_configured_user,
-    load_profile: Callable = load_saved_profile_form,
     run_agent: Callable = run_recommendation,
     load_context: Callable = get_career_context,
 ) -> APIRouter:
-    """인증 함수는 검증·세션 확인 후 UUID를 반환하고 프로필 함수는 저장된 입력 계약을 반환한다."""
+    """요청에 포함된 프로필로 추천하고 종목별 공통 직무 정보도 제공한다."""
     router = APIRouter(tags=['추천·연관 직무'])
 
     @router.post('/recommendations', response_model=RecommendationResponse)
-    def create_recommendations(request: RecommendationRequest, user_id: UUID = Depends(current_user_dependency)):
-        """선택 관심 분야에 부합한 자격증을 LLM 판단 순서로 최대 10개 반환한다."""
-        user_id = get_authenticated_user_id(user_id)
-        try:
-            profile = ProfileForm.model_validate(load_profile(user_id)).model_dump()
-        except ValidationError as error:
-            raise HTTPException(422, detail={'code': 'PROFILE_INCOMPLETE',
-                                'message': '저장된 필수 프로필을 확인해주세요.',
-                                'fields': [str(item['loc'][0]) for item in error.errors() if item['loc']]}) from None
-        except (psycopg.Error, RuntimeError):
-            raise HTTPException(503, detail={'code': 'PROFILE_UNAVAILABLE', 'message': '프로필을 조회할 수 없습니다.'}) from None
+    def create_recommendations(request: RecommendationRequest):
+        """요청 프로필의 관심 분야를 기준으로 자격증을 최대 10개 반환한다."""
+        profile = request.model_dump()
         try:
             result = run_agent(profile, profile['interest_category_codes'])
             return build_recommendation_response(result, profile)
@@ -80,9 +66,8 @@ def create_recommendation_router(
             raise HTTPException(502, detail={'code': 'INVALID_RECOMMENDATION', 'message': '추천 결과의 근거를 확인할 수 없습니다.'}) from None
 
     @router.get('/certificates/{certificate_id}/career-info', response_model=CareerInformationResponse)
-    def get_certificate_career_information(certificate_id: UUID, user_id: UUID = Depends(current_user_dependency)):
+    def get_certificate_career_information(certificate_id: UUID):
         """한 종목의 공통 추천 대상·검토된 연관 직무·출처를 반환한다."""
-        get_authenticated_user_id(user_id)
         try:
             context = load_context(certificate_id)
             if context is None:
@@ -99,3 +84,4 @@ def create_recommendation_router(
 
 
 router = create_recommendation_router()
+

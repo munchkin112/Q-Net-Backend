@@ -12,7 +12,7 @@ from backend.calendar_google import CalendarGoogleError, GoogleCalendarClient
 from backend.calendar_schemas import CalendarRegisterRequest
 from backend.calendar_service import (
     build_selected_calendar_events,
-    get_google_calendar_credential,
+    get_calendar_connection_credential,
 )
 from backend.db import calendar_repository
 from backend.db.connection import database_connection
@@ -167,11 +167,11 @@ def _as_datetime(value: datetime | str) -> datetime:
     return parsed
 
 
-def _as_json_event(event: dict, user_id: UUID) -> dict:
+def _as_json_event(event: dict, connection_id: UUID) -> dict:
     """일정 이벤트를 DB에 저장 가능한 값으로 만들고 결정적 Google ID를 부여한다."""
     schedule_id = str(event["schedule_id"])
     item_key = event["item_key"]
-    google_identity = f"{user_id}:{schedule_id}:{item_key}"
+    google_identity = f"{connection_id}:{schedule_id}:{item_key}"
     google_event_id = hashlib.sha256(google_identity.encode("utf-8")).hexdigest()
     return {
         **event,
@@ -222,21 +222,21 @@ def _find_current_schedule_versions(connection, request_events: list[dict], cert
     return {schedule["id"]: _as_datetime(schedule["updated_at"]) for schedule in schedules}
 
 
-def _load_google_access_token(connection, user_id: UUID, google_client: GoogleCalendarClient) -> str:
-    """암호화된 갱신 토큰과 Calendar 권한을 확인해 액세스 토큰을 발급받는다."""
+def _load_google_access_token(connection, connection_id: UUID, google_client: GoogleCalendarClient) -> str:
+    """Calendar 연결의 암호화 토큰을 읽어 액세스 토큰을 발급받는다."""
     try:
-        credential = get_google_calendar_credential(connection, user_id)
+        credential = get_calendar_connection_credential(connection, connection_id)
     except PermissionError:
         raise CalendarRegistrationError(
             403,
             "GOOGLE_CALENDAR_PERMISSION_REQUIRED",
-            "Google Calendar 권한을 허용한 뒤 다시 로그인해주세요.",
+            "Google Calendar를 다시 연결해주세요.",
         ) from None
     if credential is None:
         raise CalendarRegistrationError(
             403,
             "GOOGLE_CALENDAR_PERMISSION_REQUIRED",
-            "Google Calendar 권한을 허용한 뒤 다시 로그인해주세요.",
+            "Google Calendar를 다시 연결해주세요.",
         )
 
     try:
@@ -248,7 +248,7 @@ def _load_google_access_token(connection, user_id: UUID, google_client: GoogleCa
 
 def _process_registration(
     connection: Connection,
-    user_id: UUID,
+    connection_id: UUID,
     registration: dict,
     request_events: list[dict],
     excluded_items: list[dict],
@@ -265,7 +265,7 @@ def _process_registration(
     for event in request_events:
         schedule_id = UUID(event["schedule_id"])
         saved = calendar_repository.get_calendar_event(
-            connection, user_id, schedule_id, event["item_key"]
+            connection, connection_id, schedule_id, event["item_key"]
         )
         if saved is None:
             items.append(_response_item(
@@ -374,7 +374,7 @@ def _process_registration(
 
 
 def register_calendar_events(
-    user_id: UUID,
+    connection_id: UUID,
     request: CalendarRegisterRequest,
     idempotency_key: UUID,
 ) -> dict:
@@ -383,7 +383,7 @@ def register_calendar_events(
 
     with database_connection() as connection:
         registration = calendar_repository.get_calendar_registration(
-            connection, user_id, idempotency_key
+            connection, connection_id, idempotency_key
         )
         is_existing_request = registration is not None
 
@@ -414,7 +414,7 @@ def register_calendar_events(
                     "NO_REGISTERABLE_EVENTS",
                     "선택한 항목에서 등록 가능한 공식 일정을 찾지 못했습니다.",
                 )
-            request_events = [_as_json_event(event, user_id) for event in events]
+            request_events = [_as_json_event(event, connection_id) for event in events]
             certificate_id = request.certificate_id
 
         connection.commit()
@@ -428,13 +428,13 @@ def register_calendar_events(
 
         with httpx.Client(timeout=15) as http_client:
             google_client = GoogleCalendarClient(http_client)
-            access_token = _load_google_access_token(connection, user_id, google_client)
+            access_token = _load_google_access_token(connection, connection_id, google_client)
             connection.commit()
 
             if not is_existing_request:
                 registration, created = calendar_repository.create_calendar_registration(
                     connection,
-                    user_id,
+                    connection_id,
                     idempotency_key,
                     request_hash,
                     certificate_id,
@@ -455,7 +455,7 @@ def register_calendar_events(
 
             return _process_registration(
                 connection,
-                user_id,
+                connection_id,
                 registration,
                 request_events,
                 excluded_items,

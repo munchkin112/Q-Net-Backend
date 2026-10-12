@@ -92,7 +92,7 @@ class CalendarScheduleValidationTests(unittest.TestCase):
         self.assertEqual(context.exception.code, "INVALID_SCHEDULE")
 
     def test_registration_calls_google_only_for_selected_event_types(self):
-        user_id = uuid4()
+        connection_id = uuid4()
         registration_id = uuid4()
         schedule = {
             **self.schedules[0],
@@ -139,14 +139,14 @@ class CalendarScheduleValidationTests(unittest.TestCase):
         with patch.object(calendar_registration_service, "database_connection", return_value=nullcontext(connection)), \
              patch.object(calendar_registration_service.calendar_repository, "get_calendar_registration", return_value=None), \
              patch.object(calendar_registration_service.calendar_repository, "list_schedules_for_calendar_registration", return_value=[schedule]), \
-             patch.object(calendar_registration_service, "get_google_calendar_credential", return_value=("refresh-token", "calendar-scope")), \
+             patch.object(calendar_registration_service, "get_calendar_connection_credential", return_value=("refresh-token", "calendar-scope")), \
              patch.object(calendar_registration_service, "GoogleCalendarClient", return_value=google_client), \
              patch.object(calendar_registration_service.calendar_repository, "create_calendar_registration", return_value=(registration, True)) as create_registration, \
              patch.object(calendar_registration_service.calendar_repository, "get_calendar_event", return_value=saved_event), \
              patch.object(calendar_registration_service.calendar_repository, "update_calendar_event_result", return_value=updated_event), \
              patch.object(calendar_registration_service.calendar_repository, "update_calendar_registration_result"):
             result = calendar_registration_service.register_calendar_events(
-                user_id, request, uuid4()
+                connection_id, request, uuid4()
             )
 
         self.assertEqual(result["status"], "completed")
@@ -156,14 +156,14 @@ class CalendarScheduleValidationTests(unittest.TestCase):
         google_client.ensure_event.assert_called_once()
 
     def test_same_idempotency_key_with_different_payload_is_rejected(self):
-        user_id = uuid4()
+        connection_id = uuid4()
         connection = Mock()
 
         with patch.object(calendar_registration_service, "database_connection", return_value=nullcontext(connection)), \
              patch.object(calendar_registration_service.calendar_repository, "get_calendar_registration", return_value={"request_hash": "0" * 64}):
             with self.assertRaises(CalendarRegistrationError) as context:
                 calendar_registration_service.register_calendar_events(
-                    user_id, self.request, uuid4()
+                    connection_id, self.request, uuid4()
                 )
 
         self.assertEqual(context.exception.status_code, 409)

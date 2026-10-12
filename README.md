@@ -4,7 +4,7 @@ Q-Net 국가자격 시험정보·일정 코디네이터의 Python/FastAPI 백엔
 
 **팀 공유는 [팀 공유 문서](docs/팀_공유문서.md) 하나를 기준으로 한다.**
 
-실행·테스트, 진행 현황, 구현된 API와 구현 예정 API, 로그인·Calendar 담당 범위, 함수명 규칙, DB 구조, 데이터 수집·예외처리 증빙을 통합했다. 세부 원본과 검증 로그는 문서 안의 링크에서 확인한다.
+실행·테스트, 진행 현황, 현재 API 계약, Calendar 연결 방식, 함수명 규칙, DB 구조, 데이터 수집·예외처리 증빙을 통합했다. 앱 로그인은 제외하고 추천은 요청에 포함된 프로필로 처리하며 Calendar만 별도 Google 인증을 사용한다. 세부 계약은 [API 설계서](docs/API_설계서.md)에서 확인한다.
 
 - [제품 요구사항](PRD.md)
 - [프로젝트 구현 규칙](AGENTS.md)
@@ -55,3 +55,4 @@ uv run python -m unittest discover -s backend/tests
 현재는 `requirements.txt` 방식이므로 패키지 목록이 바뀌면 `uv pip install -r backend/requirements.txt`를 다시 실행한다. 공용 DB 초기화는 개발환경 준비에 포함하지 않는다.
 
 참고: [uv 공식 환경설정 안내](https://docs.astral.sh/uv/pip/environments/), [uv 실행 명령 안내](https://docs.astral.sh/uv/reference/cli/#uv-run).
+

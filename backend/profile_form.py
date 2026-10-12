@@ -1,11 +1,11 @@
-"""프론트 입력 계약을 검증한다. 인증·DB 저장은 이후 연결한다."""
+"""로그인 없이 추천 요청으로 받은 프로필 입력을 검증한다."""
 from typing import Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class ProfileForm(BaseModel):
-    """관심 분야 한 개, 학력·졸업 상태·경력과 선택 전공을 받는다."""
+    """관심 분야 한 개, 학력·졸업 상태·경력과 선택 전공을 검증한다."""
     model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
     interest_category_codes: list[str] = Field(min_length=1, max_length=1)
     education_level: Literal['high_school_or_below', 'college', 'university', 'graduate_school', 'other']
@@ -47,7 +47,7 @@ class ProfileForm(BaseModel):
 
 
 class ProfileFormPatch(BaseModel):
-    """버전과 변경 항목만 받는다. 생략과 명시적인 null은 구분한다."""
+    """레거시 서버 프로필 수정 형식이다. 현재 API에는 연결하지 않는다."""
     model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
     profile_version: int = Field(ge=0, strict=True)
     interest_category_codes: list[str] | None = Field(default=None, min_length=1, max_length=1)
@@ -59,8 +59,9 @@ class ProfileFormPatch(BaseModel):
 
 
 def merge_profile_form(current: dict | None, changes: dict) -> dict:
-    """기존 값과 부분 입력을 병합하고 저장 전에 전체 필수 조건을 검사한다."""
+    """레거시 프로필 저장 코드에서 기존 값과 변경값을 병합한다."""
     values = {**(current or {}), **changes}
     if changes.get('has_career') is False and 'career_years' not in changes:
         values['career_years'] = None
     return ProfileForm.model_validate(values).model_dump()
+
