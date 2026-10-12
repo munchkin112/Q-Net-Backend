@@ -4,15 +4,16 @@
 
 
 -- 로그인 한 번마다 생성하는 세션이다.
+-- expires_at은 NULL이면 정해진 만료 없이 유지하며, 로그아웃·보안 폐기로 종료한다.
 -- 액세스 토큰의 sid에는 이 테이블의 id가 들어간다.
 CREATE TABLE auth_sessions (
     id uuid PRIMARY KEY,
     user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     created_at timestamptz NOT NULL DEFAULT now(),
-    expires_at timestamptz NOT NULL,
+    expires_at timestamptz,
     revoked_at timestamptz,
 
-    CHECK (expires_at > created_at),
+    CHECK (expires_at IS NULL OR expires_at > created_at),
     CHECK (revoked_at IS NULL OR revoked_at >= created_at)
 );
 

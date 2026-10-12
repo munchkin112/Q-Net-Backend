@@ -50,7 +50,7 @@ class AuthRefreshResult(BaseModel):
         repr=False,
         exclude=True,
     )
-    session_expires_at: datetime = Field(exclude=True)
+    session_expires_at: datetime | None = Field(exclude=True)
 
 
 def update_auth_tokens(
@@ -58,7 +58,7 @@ def update_auth_tokens(
     *,
     secret_key: str,
 ) -> AuthRefreshResult:
-    """세션 만료시각을 유지하면서 새 액세스·리프레시 토큰을 발급한다."""
+    """기존 만료 정책을 유지하면서 새 액세스·리프레시 토큰을 발급한다."""
     try:
         validate_refresh_token(refresh_token)
     except ValueError:

@@ -1,4 +1,4 @@
-"""Google 로그인 시작 API와 브라우저 확인 쿠키를 제공한다."""
+"""Google 로그인과 서비스 세션의 인증 API를 제공한다."""
 
 import os
 from datetime import datetime, timezone
@@ -9,18 +9,28 @@ import psycopg
 from fastapi import APIRouter, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
 
+from backend.auth_google import fetch_google_tokens
+from backend.auth_identity import validate_google_id_token
+from backend.auth_login_service import (
+    CalendarCredentialCreator,
+    create_google_login_session,
+)
 from backend.auth_refresh_service import (
     RefreshTokenInvalidError,
     update_auth_tokens,
 )
 from backend.auth_schemas import (
     GoogleAuthorizeResponse,
+    GoogleLoginRequest,
+    GoogleLoginResponse,
     TokenRefreshResponse,
 )
 from backend.auth_service import create_google_authorization_url
+from backend.auth_settings import get_google_auth_settings
 from backend.auth_state import (
     OAUTH_STATE_TTL_SECONDS,
     create_google_oauth_transaction,
+    validate_google_oauth_state,
 )
 from backend.auth_token_settings import get_auth_token_settings
 from backend.auth_logout_service import handle_auth_logout
@@ -75,6 +85,48 @@ def get_google_authorization(response: Response) -> GoogleAuthorizeResponse:
 
 AUTH_REFRESH_COOKIE_NAME = "qnet_refresh_token"
 AUTH_REFRESH_COOKIE_PATH = "/auth"
+
+
+def get_calendar_credential_creator() -> CalendarCredentialCreator:
+    """Calendar 담당자가 구현한 저장 함수를 로그인 시점에 불러온다."""
+    try:
+        from backend.calendar_service import create_google_calendar_credential
+    except ImportError:
+        raise RuntimeError("Google Calendar 자격 증명 저장 함수가 필요합니다.") from None
+
+    if not callable(create_google_calendar_credential):
+        raise RuntimeError("Google Calendar 자격 증명 저장 함수가 필요합니다.")
+
+    return create_google_calendar_credential
+
+
+def set_auth_refresh_cookie(
+    response: Response,
+    refresh_token: str,
+    session_expires_at: datetime | None,
+    *,
+    cookie_secure: bool,
+) -> None:
+    """로그인과 갱신에 동일한 리프레시 쿠키 설정을 사용한다."""
+    cookie_options: dict[str, object] = {
+        "key": AUTH_REFRESH_COOKIE_NAME,
+        "value": refresh_token,
+        "path": AUTH_REFRESH_COOKIE_PATH,
+        "secure": cookie_secure,
+        "httponly": True,
+        "samesite": "lax",
+    }
+    if session_expires_at is not None:
+        expires_at = session_expires_at.astimezone(timezone.utc)
+        cookie_options["max_age"] = max(
+            0,
+            int((expires_at - datetime.now(timezone.utc)).total_seconds()),
+        )
+        cookie_options["expires"] = expires_at
+
+    response.set_cookie(
+        **cookie_options,
+    )
 
 
 def get_auth_allowed_origins() -> set[str]:
@@ -149,6 +201,126 @@ def create_auth_error_response(
 
 
 @auth_router.post(
+    "/google",
+    response_model=GoogleLoginResponse,
+    summary="Google 로그인 완료",
+    responses={
+        400: {"description": "Google 인증 코드 교환 실패"},
+        401: {"description": "로그인 요청 또는 Google 사용자 검증 실패"},
+        403: {"description": "허용되지 않은 요청 출처"},
+        503: {"description": "인증 설정·Calendar 저장 함수·DB 확인 필요"},
+    },
+)
+def create_google_login(
+    login_request: GoogleLoginRequest,
+    request: Request,
+    response: Response,
+) -> GoogleLoginResponse | JSONResponse:
+    """Google 응답을 검증하고 사용자·Calendar 권한·세션을 저장한다."""
+    try:
+        cookie_secure = get_auth_cookie_secure()
+        allowed_origins = get_auth_allowed_origins()
+        get_google_auth_settings()
+        token_settings = get_auth_token_settings()
+    except RuntimeError:
+        return create_auth_error_response(
+            503,
+            "AUTH_SERVICE_UNAVAILABLE",
+            "인증 서버 설정을 확인해주세요.",
+        )
+
+    if request.headers.get("origin") not in allowed_origins:
+        return create_auth_error_response(
+            403,
+            "AUTH_ORIGIN_FORBIDDEN",
+            "허용되지 않은 주소에서 보낸 요청입니다.",
+        )
+
+    try:
+        calendar_credential_creator = get_calendar_credential_creator()
+    except RuntimeError:
+        return create_auth_error_response(
+            503,
+            "AUTH_SERVICE_UNAVAILABLE",
+            "Google Calendar 저장 기능을 사용할 수 없습니다.",
+        )
+
+    try:
+        validate_google_oauth_state(
+            login_request.state,
+            request.cookies.get(GOOGLE_OAUTH_COOKIE_NAME),
+        )
+    except ValueError:
+        return create_auth_error_response(
+            401,
+            "GOOGLE_STATE_INVALID",
+            "로그인 요청이 유효하지 않습니다. 다시 로그인해주세요.",
+        )
+
+    try:
+        google_tokens = fetch_google_tokens(login_request.code)
+    except (ValueError, RuntimeError):
+        return create_auth_error_response(
+            400,
+            "GOOGLE_AUTHORIZATION_FAILED",
+            "Google 로그인을 완료할 수 없습니다. 다시 로그인해주세요.",
+        )
+
+    try:
+        identity = validate_google_id_token(google_tokens.id_token)
+    except ValueError:
+        return create_auth_error_response(
+            401,
+            "GOOGLE_ID_TOKEN_INVALID",
+            "Google 사용자 정보를 확인할 수 없습니다. 다시 로그인해주세요.",
+        )
+    except RuntimeError:
+        return create_auth_error_response(
+            503,
+            "AUTH_SERVICE_UNAVAILABLE",
+            "Google 사용자 정보를 확인할 수 없습니다. 잠시 후 다시 시도해주세요.",
+        )
+
+    try:
+        result = create_google_login_session(
+            identity,
+            secret_key=token_settings.access_token_secret,
+            google_refresh_token=google_tokens.refresh_token,
+            google_scopes=google_tokens.scope,
+            calendar_credential_creator=calendar_credential_creator,
+        )
+    except (RuntimeError, ValueError, psycopg.Error):
+        return create_auth_error_response(
+            503,
+            "AUTH_SERVICE_UNAVAILABLE",
+            "로그인 정보를 저장할 수 없습니다. 잠시 후 다시 시도해주세요.",
+        )
+
+    set_auth_refresh_cookie(
+        response,
+        result.refresh_token,
+        result.session_expires_at,
+        cookie_secure=cookie_secure,
+    )
+    response.delete_cookie(
+        key=GOOGLE_OAUTH_COOKIE_NAME,
+        path=GOOGLE_OAUTH_COOKIE_PATH,
+        secure=cookie_secure,
+        httponly=True,
+        samesite="lax",
+    )
+    response.headers["Cache-Control"] = "no-store"
+
+    return GoogleLoginResponse(
+        user=result.user,
+        profile_completed=False,
+        calendar_connected=result.calendar_connected,
+        access_token=result.access_token,
+        expires_in=result.expires_in,
+    )
+
+
+@auth_router.post(
     "/refresh",
     response_model=TokenRefreshResponse,
     summary="서비스 액세스 토큰 갱신",
@@ -212,21 +384,11 @@ def update_auth_refresh(
             "로그인을 갱신할 수 없습니다. 잠시 후 다시 시도해주세요.",
         )
 
-    expires_at = result.session_expires_at.astimezone(timezone.utc)
-    max_age = max(
-        0,
-        int((expires_at - datetime.now(timezone.utc)).total_seconds()),
-    )
-
-    response.set_cookie(
-        key=AUTH_REFRESH_COOKIE_NAME,
-        value=result.refresh_token,
-        max_age=max_age,
-        expires=expires_at,
-        path=AUTH_REFRESH_COOKIE_PATH,
-        secure=cookie_secure,
-        httponly=True,
-        samesite="lax",
+    set_auth_refresh_cookie(
+        response,
+        result.refresh_token,
+        result.session_expires_at,
+        cookie_secure=cookie_secure,
     )
     response.headers["Cache-Control"] = "no-store"
 

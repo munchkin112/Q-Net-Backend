@@ -1,8 +1,10 @@
 """검증된 Google 사용자에게 우리 서비스 로그인 세션을 생성한다."""
 
-from datetime import datetime, timedelta, timezone
+from collections.abc import Callable
+from datetime import datetime
 from uuid import UUID
 
+from psycopg import Connection
 from pydantic import BaseModel, Field
 
 from backend.auth_identity import GoogleIdentity
@@ -19,7 +21,10 @@ from backend.db.auth_session_repository import create_auth_session
 from backend.db.connection import database_connection
 
 
-AUTH_SESSION_MAX_DAYS = 7
+CalendarCredentialCreator = Callable[
+    [Connection, UUID, str | None, str],
+    bool,
+]
 
 
 class GoogleLoginSessionResult(BaseModel):
@@ -34,23 +39,34 @@ class GoogleLoginSessionResult(BaseModel):
         exclude=True,
     )
     expires_in: int = Field(gt=0)
-    session_expires_at: datetime = Field(exclude=True)
+    session_expires_at: datetime | None = Field(exclude=True)
+    calendar_connected: bool
 
 
 def create_google_login_session(
     identity: GoogleIdentity,
     *,
     secret_key: str,
+    google_refresh_token: str | None,
+    google_scopes: str,
+    calendar_credential_creator: CalendarCredentialCreator,
 ) -> GoogleLoginSessionResult:
-    """검증된 Google 신원으로 사용자·세션·토큰을 한 트랜잭션에서 저장한다."""
+    """사용자·캘린더 자격 증명·로그인 세션을 한 DB 트랜잭션에서 저장한다."""
     if not isinstance(identity, GoogleIdentity):
         raise ValueError("검증된 Google 사용자 정보가 필요합니다.")
+    if google_refresh_token is not None and (
+        not isinstance(google_refresh_token, str)
+        or not google_refresh_token.strip()
+    ):
+        raise ValueError("Google Calendar 토큰 형식이 올바르지 않습니다.")
+    if not isinstance(google_scopes, str):
+        raise ValueError("Google 권한 정보 형식이 올바르지 않습니다.")
+    if not callable(calendar_credential_creator):
+        raise ValueError("Google Calendar 저장 함수가 필요합니다.")
 
     validate_access_token_secret(secret_key)
 
-    session_expires_at = datetime.now(timezone.utc) + timedelta(
-        days=AUTH_SESSION_MAX_DAYS
-    )
+    session_expires_at = None
 
     with database_connection() as connection:
         user = create_user(connection, identity)
@@ -59,6 +75,17 @@ def create_google_login_session(
             raise RuntimeError("사용자 정보를 저장할 수 없습니다.")
 
         user_id = user["id"]
+
+        # 저장 함수는 커밋하지 않는다. 이 서비스의 DB 연결이 최종 커밋을 맡는다.
+        calendar_connected = calendar_credential_creator(
+            connection,
+            user_id,
+            google_refresh_token,
+            google_scopes,
+        )
+        if not isinstance(calendar_connected, bool):
+            raise RuntimeError("Google Calendar 연결 상태를 확인할 수 없습니다.")
+
         session = create_auth_session(
             connection,
             user_id,
@@ -69,8 +96,13 @@ def create_google_login_session(
             not isinstance(session, dict)
             or not isinstance(session.get("id"), UUID)
             or session.get("user_id") != user_id
-            or not isinstance(session.get("expires_at"), datetime)
-            or session["expires_at"].utcoffset() is None
+            or (
+                session.get("expires_at") is not None
+                and (
+                    not isinstance(session["expires_at"], datetime)
+                    or session["expires_at"].utcoffset() is None
+                )
+            )
         ):
             raise RuntimeError("로그인 세션을 저장할 수 없습니다.")
 
@@ -96,7 +128,8 @@ def create_google_login_session(
             access_token=access_token,
             refresh_token=refresh_token,
             expires_in=ACCESS_TOKEN_TTL_SECONDS,
-            session_expires_at=session["expires_at"],
+            session_expires_at=session.get("expires_at"),
+            calendar_connected=calendar_connected,
         )
 
     return result
