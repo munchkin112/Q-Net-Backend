@@ -31,6 +31,31 @@ class CalendarGoogleError(Exception):
         self.permission_required = permission_required
 
 
+def _calendar_access_error(response: httpx.Response) -> CalendarGoogleError:
+    """API 미활성화와 사용자 권한 실패를 구분한다. Google 응답 원문은 노출하지 않는다."""
+    try:
+        body = response.json()
+        error = body.get("error", {}) if isinstance(body, dict) else {}
+        if not isinstance(error, dict):
+            error = {}
+        reasons = {item.get("reason") for item in error.get("errors", []) if isinstance(item, dict)}
+        reasons.update(item.get("reason") for item in error.get("details", []) if isinstance(item, dict))
+    except (ValueError, TypeError):
+        reasons = set()
+    if response.status_code == 403 and reasons & {"accessNotConfigured", "SERVICE_DISABLED"}:
+        return CalendarGoogleError(
+            "GOOGLE_CALENDAR_API_DISABLED",
+            "백엔드 OAuth 클라이언트의 Google Cloud 프로젝트에서 Google Calendar API를 사용 설정해주세요.",
+            retryable=True,
+        )
+    return CalendarGoogleError(
+        "GOOGLE_CALENDAR_PERMISSION_DENIED",
+        "Google Calendar 권한이 만료되었거나 부족합니다. Calendar를 다시 연결해주세요.",
+        retryable=False,
+        permission_required=True,
+    )
+
+
 class GoogleCalendarClient:
     """기본 캘린더에 이벤트를 만드는 Google API 호출을 제공한다."""
 
@@ -105,12 +130,7 @@ class GoogleCalendarClient:
         if response.status_code == 404:
             return None
         if response.status_code in {401, 403}:
-            raise CalendarGoogleError(
-                "GOOGLE_CALENDAR_PERMISSION_DENIED",
-                "Google Calendar 권한을 확인할 수 없습니다. 다시 로그인해주세요.",
-                retryable=False,
-                permission_required=True,
-            )
+            raise _calendar_access_error(response)
         if response.status_code == 429:
             raise CalendarGoogleError(
                 "GOOGLE_CALENDAR_RATE_LIMITED",
@@ -205,12 +225,7 @@ class GoogleCalendarClient:
                 unknown=True,
             )
         if response.status_code in {401, 403}:
-            raise CalendarGoogleError(
-                "GOOGLE_CALENDAR_PERMISSION_DENIED",
-                "Google Calendar에 일정을 추가할 권한이 없습니다.",
-                retryable=False,
-                permission_required=True,
-            )
+            raise _calendar_access_error(response)
         if response.status_code == 429:
             raise CalendarGoogleError(
                 "GOOGLE_CALENDAR_RATE_LIMITED",

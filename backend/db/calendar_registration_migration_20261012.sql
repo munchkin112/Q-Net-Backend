@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS calendar_events (
     description text NOT NULL,
     source_url text NOT NULL CHECK (source_url ~ '^https?://'),
     schedule_version timestamptz NOT NULL,
-    google_event_id text NOT NULL UNIQUE CHECK (google_event_id ~ '^[a-v0-9]{5,1024}$'),
+    google_event_id text NOT NULL UNIQUE CHECK (length(google_event_id) BETWEEN 5 AND 1024 AND google_event_id ~ '^[a-v0-9]+$'),
     html_link text,
     sync_status text NOT NULL DEFAULT 'pending'
         CHECK (sync_status IN ('pending', 'created', 'failed', 'unknown')),
