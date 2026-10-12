@@ -1,5 +1,6 @@
 """사용자가 선택한 일정만 기본 Google Calendar에 등록하는 API다."""
 
+import logging
 from collections.abc import Callable
 from uuid import UUID
 
@@ -12,6 +13,9 @@ from backend.calendar_registration_service import (
     CalendarRegistrationError,
     register_calendar_events,
 )
+
+
+logger = logging.getLogger(__name__)
 
 
 def create_calendar_router(
@@ -46,7 +50,13 @@ def create_calendar_router(
                 error.status_code,
                 detail={"code": error.code, "message": error.message},
             ) from None
-        except psycopg.Error:
+        except psycopg.Error as error:
+            # 원문 SQL·토큰·접속정보 없이 실패 위치만 서버 로그에 남긴다.
+            logger.error(
+                "Calendar DB failure: type=%s sqlstate=%s table=%s column=%s constraint=%s",
+                type(error).__name__, error.sqlstate,
+                error.diag.table_name, error.diag.column_name, error.diag.constraint_name,
+            )
             raise HTTPException(
                 503,
                 detail={"code": "CALENDAR_DATABASE_UNAVAILABLE", "message": "Calendar 정보를 저장할 수 없습니다."},

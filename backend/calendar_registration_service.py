@@ -283,7 +283,9 @@ def _process_registration(
             ))
             continue
 
-        if saved["sync_status"] == "failed" and not saved.get("retryable", False):
+        # 이전 코드가 API 미활성화를 권한 오류로 저장한 경우에도 설정 보정 후 다시 확인한다.
+        if (saved["sync_status"] == "failed" and not saved.get("retryable", False)
+                and saved.get("error_code") not in {"GOOGLE_CALENDAR_PERMISSION_DENIED", "GOOGLE_CALENDAR_REAUTH_REQUIRED"}):
             items.append(_response_item(
                 event, "failed", code=saved.get("error_code"),
                 message=saved.get("error_message"), retryable=False,
@@ -399,7 +401,9 @@ def register_calendar_events(
                 return stored_response
             request_events = registration["request_events"]
             excluded_items = registration["excluded_items"] or []
-            certificate_id = registration["certificate_id"]
+            # 같은 멱등 키의 요청 해시를 확인했으므로 요청의 종목 ID를 재사용한다.
+            # calendar_registrations 테이블에는 certificate_id 컬럼이 없다.
+            certificate_id = request.certificate_id
         else:
             schedules = calendar_repository.list_schedules_for_calendar_registration(
                 connection, request.certificate_id, request.schedule_ids
@@ -469,7 +473,10 @@ def _has_retryable_items(response: dict) -> bool:
     """결과 불명 또는 재시도 가능한 실패가 있는지 확인한다."""
     return any(
         item.get("status") == "unknown"
-        or (item.get("status") == "failed" and item.get("retryable", False))
+        or (item.get("status") == "failed" and (
+            item.get("retryable", False)
+            or item.get("code") in {"GOOGLE_CALENDAR_PERMISSION_DENIED", "GOOGLE_CALENDAR_REAUTH_REQUIRED"}
+        ))
         for item in response.get("items", [])
     )
 

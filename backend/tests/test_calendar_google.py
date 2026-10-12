@@ -13,6 +13,23 @@ from backend.calendar_google import CalendarGoogleError, GoogleCalendarClient
 
 
 class GoogleCalendarClientTests(unittest.TestCase):
+    def test_disabled_api_is_not_reported_as_missing_user_permission(self):
+        body = {"error": {"errors": [{"reason": "accessNotConfigured"}], "details": [{"reason": "SERVICE_DISABLED"}]}}
+        with httpx.Client(transport=httpx.MockTransport(lambda request: httpx.Response(403, json=body))) as client:
+            with self.assertRaises(CalendarGoogleError) as caught:
+                GoogleCalendarClient(client).get_event("test-access-token", "a" * 64)
+        self.assertEqual(caught.exception.code, "GOOGLE_CALENDAR_API_DISABLED")
+        self.assertFalse(caught.exception.permission_required)
+        self.assertTrue(caught.exception.retryable)
+
+    def test_expired_access_token_requires_calendar_reconnection(self):
+        with httpx.Client(transport=httpx.MockTransport(lambda request: httpx.Response(401))) as client:
+            with self.assertRaises(CalendarGoogleError) as caught:
+                GoogleCalendarClient(client).get_event("test-access-token", "a" * 64)
+        self.assertEqual(caught.exception.code, "GOOGLE_CALENDAR_PERMISSION_DENIED")
+        self.assertTrue(caught.exception.permission_required)
+
+
     def test_create_event_uses_selected_event_and_exclusive_google_end_date(self):
         requests = []
 

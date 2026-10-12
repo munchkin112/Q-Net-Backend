@@ -155,6 +155,27 @@ class CalendarScheduleValidationTests(unittest.TestCase):
         self.assertEqual([event["event_type"] for event in persisted_events], ["written_exam"])
         google_client.ensure_event.assert_called_once()
 
+    def test_retry_uses_request_certificate_without_missing_registration_column(self):
+        connection_id = uuid4()
+        connection = Mock()
+        registration = {
+            "id": uuid4(),
+            "request_hash": calendar_registration_service.create_calendar_request_hash(self.request),
+            "request_events": [{"schedule_id": str(self.written_id)}],
+            "excluded_items": [],
+            "response": {"items": [{"status": "unknown", "retryable": True}]},
+        }
+        expected = {"status": "completed", "items": []}
+        with patch.object(calendar_registration_service, "database_connection", return_value=nullcontext(connection)), \
+             patch.object(calendar_registration_service.calendar_repository, "get_calendar_registration", return_value=registration), \
+             patch.object(calendar_registration_service.calendar_repository, "create_calendar_registration") as create, \
+             patch.object(calendar_registration_service, "_load_google_access_token", return_value="access-token"), \
+             patch.object(calendar_registration_service, "_process_registration", return_value=expected) as process:
+            result = calendar_registration_service.register_calendar_events(connection_id, self.request, uuid4())
+        self.assertEqual(result, expected)
+        self.assertEqual(process.call_args.args[-1], self.certificate_id)
+        create.assert_not_called()
+
     def test_same_idempotency_key_with_different_payload_is_rejected(self):
         connection_id = uuid4()
         connection = Mock()
