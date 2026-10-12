@@ -1,4 +1,4 @@
-# Google 로그인 연동 메모
+# Google 로그인 연결 현황
 
 이 문서는 `feature/google-auth`의 인증 코드와 다른 담당자의 작업을 연결할 때 확인할 사항이다. 실제 비밀키·토큰 값은 이 파일이나 Git에 넣지 않는다.
 
@@ -13,10 +13,11 @@
 ## 담당자 사이의 연결 계약
 
 - Calendar 파일은 이 브랜치에서 만들지 않는다. 로그인 코드가 `backend.calendar_service.create_google_calendar_credential(connection, user_id, refresh_token: str | None, scopes: str) -> bool`을 호출한다. 함수 내부에서 Google refresh token을 암호화하고, `None`이면 기존 토큰을 보존한다. 커밋은 로그인 코드가 담당한다. 함수가 없으면 Google code를 교환하기 전에 503을 반환한다.
-- `backend/main.py` 통합은 백엔드 담당자가 맡는다. 이 브랜치의 인증 라우터와 `AuthRequestError` 처리기, `AUTH_ALLOWED_ORIGINS` 기반 CORS가 유지되는지 병합 후 확인한다.
+- `backend/main.py`에는 인증 라우터와 `AuthRequestError` 처리기, `AUTH_ALLOWED_ORIGINS` 기반 CORS, 프로필·추천 라우터가 등록되어 있다. 프로필·추천 보호 요청은 같은 `get_current_user()`를 사용한다.
 - `GET /auth/me` 응답의 `profile_completed`는 필수 관심 분야 저장 방식이 정해져야 계산할 수 있다. 현재 DB의 `user_profiles`에는 `interest_category_codes`가 없으므로 로그인 응답은 보수적으로 `false`를 반환한다. `calendar_connected`의 재조회는 Calendar 저장소의 조회 함수가 필요하다. 두 값을 임의로 추정하지 않기 위해 `/auth/me`는 아직 추가하지 않았다.
 - 프론트와 백엔드가 다른 사이트에 배포되면 OAuth 확인 쿠키와 리프레시 쿠키의 `SameSite`/`Secure`, 브라우저의 `credentials` 전달을 실제 배포 주소에서 검증해야 한다. 현재 코드는 `SameSite=Lax`이며 단일 서버 모의 테스트만 통과했다. 여러 서버 프로세스를 쓰면 메모리에 보관하는 OAuth state가 공유되지 않으므로 별도 저장소가 필요하다.
-- 서비스 세션은 정해진 서버 만료시각 없이 유지하고, 로그아웃 또는 보안상 폐기 때 종료한다. 리프레시 쿠키는 만료일을 지정하지 않는 브라우저 세션 쿠키다. 브라우저가 세션 쿠키를 종료 시 삭제하는 방식이면 다시 로그인해야 할 수 있다.
+- 서비스 세션은 정해진 서버 만료시각 없이 유지하고, 로그아웃 또는 보안상 폐기 때 종료한다. 리프레시 쿠키는 30일 만료로 전달하고, 로그인 또는 토큰 갱신 때마다 새 쿠키를 설정해 사용 중인 세션을 연장한다.
+- Google 로그인 완료는 `backend.calendar_service.create_google_calendar_credential`에 의존한다. Calendar 담당자의 구현이 합쳐지기 전에는 `/auth/google`이 503을 반환한다. `/auth/me`는 아직 구현하지 않았다.
 
 ## 설정과 DB 점검
 

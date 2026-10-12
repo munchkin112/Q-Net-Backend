@@ -85,6 +85,7 @@ def get_google_authorization(response: Response) -> GoogleAuthorizeResponse:
 
 AUTH_REFRESH_COOKIE_NAME = "qnet_refresh_token"
 AUTH_REFRESH_COOKIE_PATH = "/auth"
+AUTH_REFRESH_COOKIE_TTL_SECONDS = 30 * 24 * 60 * 60
 
 
 def get_calendar_credential_creator() -> CalendarCredentialCreator:
@@ -107,7 +108,7 @@ def set_auth_refresh_cookie(
     *,
     cookie_secure: bool,
 ) -> None:
-    """로그인과 갱신에 동일한 리프레시 쿠키 설정을 사용한다."""
+    """고정 세션 만료가 없으면 30일 만료 쿠키를 갱신 때마다 다시 설정한다."""
     cookie_options: dict[str, object] = {
         "key": AUTH_REFRESH_COOKIE_NAME,
         "value": refresh_token,
@@ -123,6 +124,8 @@ def set_auth_refresh_cookie(
             int((expires_at - datetime.now(timezone.utc)).total_seconds()),
         )
         cookie_options["expires"] = expires_at
+    else:
+        cookie_options["max_age"] = AUTH_REFRESH_COOKIE_TTL_SECONDS
 
     response.set_cookie(
         **cookie_options,

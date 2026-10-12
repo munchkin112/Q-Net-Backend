@@ -21,9 +21,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.auth_dependencies import (
     AuthRequestError,
+    get_current_user,
     handle_auth_request_error,
 )
 from backend.auth_router import auth_router, get_auth_allowed_origins
+from backend.profile_router import create_profile_router
+from backend.recommendation_router import create_recommendation_router
 
 
 app = FastAPI(
@@ -34,8 +37,8 @@ app = FastAPI(
         "서버 상태, 공식 종목 검색, 시험 상세정보와 단계별 일정 조회를 제공합니다. "
         "공식 상세정보를 수집한 종목의 시험과목·합격기준·응시료를 제공합니다. "
         "Render DB 연결 전에는 검색·일정 조회가 503을 반환합니다. "
-        "아래 Schemas에서 프로필 부분 입력과 일정 구조도 확인할 수 있습니다. "
-        "프로필 저장 HTTP API는 로그인 구현 후 연결하며, 북마크·응시조건 비교·Calendar·로드맵은 비활성 상태입니다."
+        "로그인 사용자는 관심 분야·프로필을 저장하고 추천 결과를 조회할 수 있습니다. "
+        "북마크·응시조건 확정 판정·Calendar·로드맵은 아직 연결하지 않았습니다."
     ),
     redoc_url=None,
 )
@@ -62,6 +65,10 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PATCH"],
     allow_headers=["Authorization", "Content-Type", "Idempotency-Key"],
 )
+
+# 인증 함수에서 검증한 사용자만 프로필·추천 API를 사용할 수 있다.
+app.include_router(create_profile_router(get_current_user))
+app.include_router(create_recommendation_router(get_current_user))
 
 
 class HealthResponse(BaseModel):

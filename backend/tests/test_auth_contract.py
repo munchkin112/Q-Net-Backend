@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch
 from uuid import uuid4
 
-from fastapi import Depends, FastAPI
+from fastapi import Depends, FastAPI, Response
 from fastapi.testclient import TestClient
 
 from backend.auth_dependencies import (
@@ -18,7 +18,7 @@ from backend.auth_dependencies import (
 from backend.auth_logout_service import handle_auth_logout
 from backend.auth_refresh import create_refresh_token
 from backend.auth_refresh_service import AuthRefreshResult, RefreshTokenReuseError
-from backend.auth_router import AUTH_REFRESH_COOKIE_NAME, auth_router
+from backend.auth_router import AUTH_REFRESH_COOKIE_NAME, auth_router, set_auth_refresh_cookie
 from backend.auth_schemas import AuthUserResponse, TokenRefreshResponse
 from backend.auth_tokens import create_access_token
 
@@ -28,6 +28,12 @@ TEST_ORIGIN = "https://frontend.example"
 
 
 class AuthContractTests(unittest.TestCase):
+    def test_refresh_cookie_for_unbounded_session_expires_after_30_days(self):
+        response = Response()
+        set_auth_refresh_cookie(response, 'opaque-refresh-token', None, cookie_secure=True)
+        self.assertIn('Max-Age=2592000', response.headers['set-cookie'])
+        self.assertIn('HttpOnly', response.headers['set-cookie'])
+
     def test_bearer_checks_database_session_and_rejects_revoked_session(self):
         """같은 유효한 액세스 토큰도 DB 세션을 폐기하면 즉시 차단된다."""
         app = FastAPI()

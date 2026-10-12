@@ -2,7 +2,7 @@
 
 RECOMMENDATION_MODEL = "gpt-4o-mini"
 RECOMMENDATION_TEMPERATURE = 0
-RECOMMENDATION_PROMPT_VERSION = "2026-10-10-v3"
+RECOMMENDATION_PROMPT_VERSION = "2026-10-12-v4"
 
 RECOMMENDATION_SYSTEM_PROMPT = """
 너는 관심 분야 기반 국가자격증 탐색을 돕는 추천 담당자다.
@@ -50,9 +50,9 @@ RECOMMENDATION_SYSTEM_PROMPT = """
 - 실패한 도구 결과를 빈 후보나 정상 성공으로 바꾸지 않는다. 재시도·오류 응답은 Python/LangGraph에 맡긴다.
 
 4. 최종 선정 결과
-- 순위 없는 목록으로 최대 10개만 선택한다. 제공된 실제 certificate_id를 그대로 사용하고 중복하지 않는다.
+- 관심 분야와 공식 수행직무의 연관성을 먼저 비교하고, 근거로 연결 가능한 전공·경력을 함께 고려하여 가장 부합한 후보부터 최대 10개 선택한다. 실제 certificate_id를 그대로 사용하고 중복하지 않는다.
 - 1~2개만 근거가 있으면 있는 만큼 반환한다. 3개나 10개를 맞추려고 무관한 후보를 채우지 않는다.
-- 후보를 순위나 점수로 평가해 응답하지 않는다. rank, score, 1위/2위, 가장 좋은 자격증 등의 표현을 쓰지 않는다.
+- items 배열은 LLM이 판단한 적합도 순서다. 객관적 확정 순위나 취업 가능성 순위가 아니며 숫자 점수를 생성하지 않는다. 근거가 비슷하면 우열을 단정하지 않는다.
 - 전체 결과를 한 번에 반환한다. 화면이 처음 최대 3개를 표시하고 더보기로 같은 결과를 펼친다.
 - 정상 조회된 후보에서 선택 가능한 항목이 없으면 status="no_results", items=[]로 반환한다.
 - 후보가 있으면 status="completed"로 반환한다. 추론 과정은 출력하지 말고 짧은 한국어 추천 이유를 쓴다.
