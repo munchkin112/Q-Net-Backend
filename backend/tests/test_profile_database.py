@@ -1,20 +1,12 @@
 """공용 테이블 대신 연결별 임시 테이블과 롤백으로 실제 SQL 저장을 시험한다."""
 import os
 import unittest
-from contextlib import nullcontext
 from pathlib import Path
-from types import SimpleNamespace
-from unittest.mock import Mock, patch
 from uuid import uuid4
-
-from fastapi import FastAPI
-from fastapi.testclient import TestClient
 
 from backend.db.connection import database_connection
 from backend.db.profile_repository import get_profile_form, update_profile_form, ProfileVersionConflict
 from backend.profile_service import build_profile_response
-from backend.profile_router import create_profile_router
-from backend.recommendation_router import create_recommendation_router
 
 
 @unittest.skipUnless(os.environ.get('QNET_PROFILE_DB_TEST') == '1', '명시적인 임시 DB 시험 옵션이 필요합니다.')
@@ -56,23 +48,10 @@ class ProfileDatabaseTests(unittest.TestCase):
                     update_profile_form(connection, first, 2, {'has_career': True})
                 unchanged = build_profile_response(update_profile_form(connection, first, 2, {}))
                 self.assertEqual(unchanged, modified)
-                app = FastAPI()
-                verified_user = lambda: SimpleNamespace(id=first, email=None)
-                agent = Mock(return_value={'selection': {'status': 'no_results', 'items': []}, 'candidates': []})
-                app.include_router(create_profile_router(verified_user))
-                app.include_router(create_recommendation_router(verified_user, run_agent=agent))
-                with patch('backend.profile_service.database_connection', side_effect=lambda: nullcontext(connection)):
-                    client = TestClient(app)
-                    response = client.patch('/me/profile', json={'profile_version': 2, 'major': '수정 전공'})
-                    self.assertEqual(response.status_code, 200)
-                    self.assertEqual(response.json()['profile_version'], 3)
-                    self.assertEqual(client.get('/me/profile').json()['profile']['major'], '수정 전공')
-                    self.assertEqual(client.post('/recommendations', json={}).status_code, 200)
-                    self.assertEqual(agent.call_args.args[0]['major'], '수정 전공')
-                    self.assertEqual(agent.call_args.args[1], ['20'])
             after = connection.execute("SELECT count(*) AS count FROM public.user_profiles").fetchone()['count']
             self.assertEqual(before, after)
 
 
 if __name__ == '__main__':
     unittest.main()
+

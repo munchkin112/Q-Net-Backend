@@ -8,14 +8,14 @@ from psycopg.types.json import Jsonb
 
 def get_calendar_registration(
     connection: Connection,
-    user_id: UUID,
+    connection_id: UUID,
     idempotency_key: UUID,
 ) -> dict | None:
-    """사용자 멱등 키에 해당하는 등록 작업을 조회한다."""
+    """Calendar 연결의 멱등 키에 해당하는 등록 작업을 조회한다."""
     return connection.execute(
         """SELECT * FROM calendar_registrations
-        WHERE user_id = %s AND idempotency_key = %s""",
-        (user_id, idempotency_key),
+        WHERE calendar_connection_id = %s AND idempotency_key = %s""",
+        (connection_id, idempotency_key),
     ).fetchone()
 
 
@@ -37,7 +37,7 @@ def list_schedules_for_calendar_registration(
 
 def create_calendar_registration(
     connection: Connection,
-    user_id: UUID,
+    connection_id: UUID,
     idempotency_key: UUID,
     request_hash: str,
     certificate_id: UUID,
@@ -50,36 +50,36 @@ def create_calendar_registration(
 ) -> tuple[dict, bool]:
     """회차 계획·멱등 요청·대기 이벤트를 저장한다. 외부 Google 호출은 하지 않는다."""
     plan = connection.execute(
-        """INSERT INTO user_exam_plans (
-            id, user_id, certificate_id, year, round_key, round_label,
+        """INSERT INTO calendar_exam_plans (
+            id, calendar_connection_id, certificate_id, year, round_key, round_label,
             selected_event_types, status
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, 'pending')
-        ON CONFLICT (user_id, certificate_id, year, round_key)
+        ON CONFLICT (calendar_connection_id, certificate_id, year, round_key)
         DO UPDATE SET round_label = EXCLUDED.round_label,
                       selected_event_types = EXCLUDED.selected_event_types,
                       updated_at = now()
         RETURNING id""",
         (
-            uuid4(), user_id, certificate_id, year, round_key, round_label,
+            uuid4(), connection_id, certificate_id, year, round_key, round_label,
             Jsonb(event_types),
         ),
     ).fetchone()
 
     registration = connection.execute(
         """INSERT INTO calendar_registrations (
-            id, user_id, idempotency_key, request_hash, exam_plan_id,
+            id, calendar_connection_id, idempotency_key, request_hash, exam_plan_id,
             request_events, excluded_items, status
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, 'pending')
-        ON CONFLICT (user_id, idempotency_key) DO NOTHING
+        ON CONFLICT (calendar_connection_id, idempotency_key) DO NOTHING
         RETURNING *""",
         (
-            uuid4(), user_id, idempotency_key, request_hash, plan["id"],
+            uuid4(), connection_id, idempotency_key, request_hash, plan["id"],
             Jsonb(request_events), Jsonb(excluded_items),
         ),
     ).fetchone()
 
     if registration is None:
-        registration = get_calendar_registration(connection, user_id, idempotency_key)
+        registration = get_calendar_registration(connection, connection_id, idempotency_key)
         if registration is None:
             raise RuntimeError("Calendar 등록 요청을 다시 조회할 수 없습니다.")
         return registration, False
@@ -87,16 +87,16 @@ def create_calendar_registration(
     for event in request_events:
         connection.execute(
             """INSERT INTO calendar_events (
-                id, exam_plan_id, registration_id, user_id, certificate_id,
+                id, exam_plan_id, registration_id, calendar_connection_id, certificate_id,
                 schedule_id, item_key, event_type, phase, starts_on, ends_on,
                 title, description, source_url, schedule_version,
                 google_event_id, sync_status
             ) VALUES (
                 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 'pending'
             )
-            ON CONFLICT (user_id, schedule_id, item_key) DO NOTHING""",
+            ON CONFLICT (calendar_connection_id, schedule_id, item_key) DO NOTHING""",
             (
-                uuid4(), plan["id"], registration["id"], user_id, certificate_id,
+                uuid4(), plan["id"], registration["id"], connection_id, certificate_id,
                 UUID(event["schedule_id"]), event["item_key"], event["event_type"],
                 event["phase"], event["starts_on"], event["ends_on"],
                 event["title"], event["description"], event["source_url"],
@@ -109,15 +109,15 @@ def create_calendar_registration(
 
 def get_calendar_event(
     connection: Connection,
-    user_id: UUID,
+    connection_id: UUID,
     schedule_id: UUID,
     item_key: str,
 ) -> dict | None:
-    """사용자·일정·이벤트 식별자로 저장된 이벤트를 조회한다."""
+    """Calendar 연결·일정·이벤트 식별자로 저장된 이벤트를 조회한다."""
     return connection.execute(
         """SELECT * FROM calendar_events
-        WHERE user_id = %s AND schedule_id = %s AND item_key = %s""",
-        (user_id, schedule_id, item_key),
+        WHERE calendar_connection_id = %s AND schedule_id = %s AND item_key = %s""",
+        (connection_id, schedule_id, item_key),
     ).fetchone()
 
 
@@ -161,7 +161,7 @@ def update_calendar_registration_result(
         (status, Jsonb(response), registration_id),
     )
     connection.execute(
-        """UPDATE user_exam_plans
+        """UPDATE calendar_exam_plans
         SET status = %s, updated_at = now()
         WHERE id = (SELECT exam_plan_id FROM calendar_registrations WHERE id = %s)""",
         (status, registration_id),

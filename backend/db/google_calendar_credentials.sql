@@ -1,6 +1,5 @@
--- Google OAuth 갱신 토큰을 암호문으로 저장한다.
--- 먼저 users 테이블이 생성되어 있어야 한다.
--- 실제 DB에는 대상 환경을 확인한 뒤 별도로 적용한다.
+-- 이전 앱 로그인 방식에서 사용하던 보관 테이블이다. 현재 API에서는 사용하지 않으며 새로 적용하지 않는다.
+-- Calendar 전용 연결은 calendar_registration.sql의 calendar_connections를 사용한다.
 CREATE TABLE IF NOT EXISTS google_calendar_credentials (
     user_id uuid PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
     refresh_token_ciphertext text NOT NULL
@@ -9,3 +8,4 @@ CREATE TABLE IF NOT EXISTS google_calendar_credentials (
     created_at timestamptz NOT NULL DEFAULT now(),
     updated_at timestamptz NOT NULL DEFAULT now()
 );
+

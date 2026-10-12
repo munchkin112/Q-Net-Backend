@@ -8,7 +8,7 @@ import psycopg
 from backend.db.connection import database_connection
 
 
-REQUIRED_TABLES = ("users", "user_profiles", "certificates", "schedules", "exam_information")
+REQUIRED_TABLES = ("certificates", "schedules", "exam_information")
 
 
 def check_database() -> dict:
@@ -49,3 +49,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

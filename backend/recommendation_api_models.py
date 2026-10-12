@@ -2,12 +2,12 @@
 from typing import Literal
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
+from backend.profile_form import ProfileForm
 
 
-class RecommendationRequest(BaseModel):
-    """프로필·사용자 ID는 요청에서 받지 않고 인증된 사용자의 DB에서 읽는다."""
-    model_config = ConfigDict(extra='forbid')
+class RecommendationRequest(ProfileForm):
+    """로그인 없이 프론트가 보낸 프로필 입력으로 추천을 실행한다."""
 
 
 class CareerInformationResponse(BaseModel):
@@ -45,3 +45,4 @@ class RecommendationResponse(BaseModel):
     total_count: int = Field(ge=0, le=10)
     initial_display_count: int = Field(ge=0, le=3)
     items: list[RecommendationCard] = Field(max_length=10)
+

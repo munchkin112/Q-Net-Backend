@@ -7,72 +7,61 @@ from uuid import UUID
 
 import psycopg
 from fastapi import FastAPI, HTTPException, Query, Response
-from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel
 
 from backend.db.connection import database_connection
 from backend.db import repository
-from backend.schemas import ProfilePatch, ScheduleInput
+from backend.schemas import ScheduleInput
 from backend.exam_schemas import SubjectsInfo, PassCriteriaInfo, FeesInfo
 from backend import services
 from backend.db.check import check_database
 
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.auth_dependencies import (
-    AuthRequestError,
-    get_current_user,
-    handle_auth_request_error,
-)
-from backend.auth_router import auth_router, get_auth_allowed_origins
+from backend.browser_settings import get_allowed_origins
 from backend.profile_router import create_profile_router
 from backend.recommendation_router import create_recommendation_router
 from backend.calendar_router import create_calendar_router
+from backend.calendar_oauth_router import create_calendar_oauth_router
 
 
 app = FastAPI(
     title="Q-Net 백엔드 API",
     version="0.1.0",
     description=(
-        "확정된 DB 구조를 확인하는 초기 API입니다. "
+        "Q-Net 공식 자격증·시험정보를 조회하고 요청에 포함된 프로필로 추천합니다. "
         "서버 상태, 공식 종목 검색, 시험 상세정보와 단계별 일정 조회를 제공합니다. "
         "공식 상세정보를 수집한 종목의 시험과목·합격기준·응시료를 제공합니다. "
         "Render DB 연결 전에는 검색·일정 조회가 503을 반환합니다. "
-        "로그인 사용자는 관심 분야·프로필을 저장하고 추천 결과를 조회할 수 있습니다. "
-        "사용자가 선택한 시험 일정을 Google Calendar에 등록하는 API를 제공합니다. "
-        "Calendar 사용 전 인증·등록 SQL을 DB에 적용해야 합니다. "
+        "로그인 없이 요청에 포함된 프로필로 자격증 추천을 조회할 수 있습니다. "
+        "Google Calendar는 별도로 연결한 뒤 사용자가 선택한 시험 일정을 등록합니다. "
+        "Calendar 사용 전 연결·등록 SQL을 DB에 적용해야 합니다. "
         "북마크·응시조건 확정 판정·로드맵은 연결하지 않았습니다."
     ),
     redoc_url=None,
 )
 
-# 인증 API와 공통 인증 오류 처리기를 실제 서버에 연결한다.
-app.include_router(auth_router)
-app.add_exception_handler(
-    AuthRequestError,
-    handle_auth_request_error,
-)
-
 # 설정값이 있으면 검사하고, 정확히 일치하는 주소만 허용한다.
 # 설정이 없으면 다른 출처의 브라우저 요청을 허용하지 않는다.
-auth_allowed_origins = (
-    sorted(get_auth_allowed_origins())
+allowed_origins = (
+    sorted(get_allowed_origins())
     if os.environ.get("AUTH_ALLOWED_ORIGINS", "").strip()
     else []
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=auth_allowed_origins,
+    allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PATCH"],
-    allow_headers=["Authorization", "Content-Type", "Idempotency-Key"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Idempotency-Key"],
 )
 
-# 인증 함수에서 검증한 사용자만 프로필·추천 API를 사용할 수 있다.
-app.include_router(create_profile_router(get_current_user))
-app.include_router(create_recommendation_router(get_current_user))
-app.include_router(create_calendar_router(get_current_user))
+# 프로필은 브라우저가 보관하고 추천 요청에 포함한다.
+app.include_router(create_profile_router())
+app.include_router(create_recommendation_router())
+app.include_router(create_calendar_oauth_router())
+app.include_router(create_calendar_router())
 
 
 class HealthResponse(BaseModel):
@@ -211,20 +200,4 @@ def list_schedules(certificate_id: UUID, year: int = Query(ge=1900, le=9999)) ->
             return repository.list_schedules(connection, certificate_id, year)
     except psycopg.Error:
         raise HTTPException(status_code=503, detail="DB에서 일정을 조회할 수 없습니다. 연결과 테이블 적용 상태를 확인해주세요.") from None
-
-
-def documented_openapi() -> dict:
-    """미연결 프로필 입력 모델도 문서에서 검토할 수 있도록 추가한다."""
-    if app.openapi_schema:
-        return app.openapi_schema
-    schema = get_openapi(title=app.title, version=app.version, description=app.description, routes=app.routes)
-    profile_schema = ProfilePatch.model_json_schema(ref_template="#/components/schemas/{model}")
-    components = schema.setdefault("components", {}).setdefault("schemas", {})
-    components.update(profile_schema.pop("$defs", {}))
-    components["ProfilePatch"] = profile_schema
-    app.openapi_schema = schema
-    return schema
-
-
-app.openapi = documented_openapi
 

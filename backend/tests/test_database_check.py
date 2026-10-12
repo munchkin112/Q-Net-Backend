@@ -34,6 +34,10 @@ class SettingsTests(unittest.TestCase):
 
 
 class DatabaseCheckTests(unittest.TestCase):
+    def test_core_database_check_does_not_require_app_login_tables(self):
+        self.assertNotIn("users", REQUIRED_TABLES)
+        self.assertNotIn("user_profiles", REQUIRED_TABLES)
+
     def test_missing_config_does_not_connect(self):
         with patch.dict(os.environ, {}, clear=True):
             with patch("backend.db.check.database_connection") as connect:
@@ -78,3 +82,4 @@ class DatabaseCheckTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

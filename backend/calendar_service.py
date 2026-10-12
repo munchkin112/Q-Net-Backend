@@ -1,9 +1,11 @@
 """Google Calendar 이벤트를 구성하고 권한 갱신 자격 증명을 다룬다."""
 
 import binascii
+import hashlib
 import os
-from datetime import date, datetime
-from uuid import UUID
+import secrets
+from datetime import date, datetime, timedelta, timezone
+from uuid import UUID, uuid4
 
 from cryptography.fernet import Fernet, InvalidToken
 from psycopg import Connection
@@ -18,6 +20,7 @@ CALENDAR_EVENT_TYPES = {
     "result",
 }
 GOOGLE_CALENDAR_SCOPE = "https://www.googleapis.com/auth/calendar.events.owned"
+CALENDAR_SESSION_TTL_SECONDS = 30 * 24 * 60 * 60
 
 PHASE_LABELS = {
     "written": "필기",
@@ -295,5 +298,89 @@ def get_google_calendar_credential(
     if GOOGLE_CALENDAR_SCOPE not in scopes.split():
         raise PermissionError("Google Calendar 권한 동의가 필요합니다.")
 
+    return refresh_token, scopes
+
+
+def create_calendar_connection(
+    connection: Connection,
+    refresh_token: str,
+    scopes: str,
+) -> str:
+    """Calendar 전용 연결을 저장하고 브라우저에 전달할 비밀 세션값을 반환한다."""
+    if not isinstance(refresh_token, str) or not refresh_token.strip():
+        raise ValueError("Google Calendar 갱신 토큰이 필요합니다.")
+    if not isinstance(scopes, str) or GOOGLE_CALENDAR_SCOPE not in scopes.split():
+        raise PermissionError("Google Calendar 권한 동의가 필요합니다.")
+
+    session_token = secrets.token_urlsafe(32)
+    session_token_hash = hashlib.sha256(session_token.encode("utf-8")).hexdigest()
+    encrypted_refresh_token = get_google_token_fernet().encrypt(
+        refresh_token.encode("utf-8")
+    ).decode("ascii")
+    expires_at = datetime.now(timezone.utc) + timedelta(
+        seconds=CALENDAR_SESSION_TTL_SECONDS
+    )
+
+    connection.execute(
+        """INSERT INTO calendar_connections (
+            id, session_token_hash, refresh_token_ciphertext, scopes, expires_at
+        ) VALUES (%s, %s, %s, %s, %s)""",
+        (uuid4(), session_token_hash, encrypted_refresh_token, scopes, expires_at),
+    )
+    return session_token
+
+
+def get_calendar_connection_id(
+    connection: Connection,
+    session_token: str,
+) -> UUID | None:
+    """쿠키 토큰의 해시·유효기간·폐기 여부를 확인해 연결 ID를 반환한다."""
+    if not isinstance(session_token, str) or not session_token:
+        return None
+    if len(session_token) > 256 or not session_token.isascii():
+        return None
+
+    session_token_hash = hashlib.sha256(session_token.encode("utf-8")).hexdigest()
+    row = connection.execute(
+        """SELECT id FROM calendar_connections
+        WHERE session_token_hash = %s
+          AND expires_at > now()
+          AND revoked_at IS NULL""",
+        (session_token_hash,),
+    ).fetchone()
+    if row is None:
+        return None
+    return row["id"]
+
+
+def get_calendar_connection_credential(
+    connection: Connection,
+    connection_id: UUID,
+) -> tuple[str, str] | None:
+    """유효한 Calendar 전용 연결에서 복호화한 갱신 토큰을 읽는다."""
+    if not isinstance(connection_id, UUID):
+        raise ValueError("Google Calendar 연결 ID가 올바르지 않습니다.")
+
+    row = connection.execute(
+        """SELECT refresh_token_ciphertext, scopes FROM calendar_connections
+        WHERE id = %s AND expires_at > now() AND revoked_at IS NULL""",
+        (connection_id,),
+    ).fetchone()
+    if row is None:
+        return None
+
+    token_cipher = get_google_token_fernet()
+    try:
+        refresh_token = token_cipher.decrypt(
+            row["refresh_token_ciphertext"].encode("ascii")
+        ).decode("utf-8")
+    except (InvalidToken, UnicodeError, AttributeError, KeyError):
+        raise RuntimeError("Google Calendar 자격 증명을 복호화할 수 없습니다.") from None
+
+    scopes = row.get("scopes") or ""
+    if not refresh_token.strip():
+        raise RuntimeError("Google Calendar 갱신 토큰을 읽을 수 없습니다.")
+    if GOOGLE_CALENDAR_SCOPE not in scopes.split():
+        raise PermissionError("Google Calendar 권한 동의가 필요합니다.")
     return refresh_token, scopes
 

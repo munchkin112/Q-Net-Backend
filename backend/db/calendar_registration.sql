@@ -1,10 +1,29 @@
--- Calendar 선택 일정과 항목별 Google 등록 결과를 저장한다.
--- users, certificates, schedules 테이블과 google_calendar_credentials 저장소가 먼저 필요하다.
--- 대상 DB를 확인한 뒤 개발 환경에만 적용한다. 이 파일을 코드에서 자동 실행하지 않는다.
+-- 앱 로그인 없이 Calendar 전용 Google 권한과 선택 일정을 저장한다.
+-- certificates, schedules 테이블이 먼저 필요하다.
+-- 대상 DB를 확인한 뒤 개발 환경에 적용한다. 이 파일은 코드에서 자동 실행하지 않는다.
 
-CREATE TABLE IF NOT EXISTS user_exam_plans (
+CREATE TABLE IF NOT EXISTS calendar_connections (
     id uuid PRIMARY KEY,
-    user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    session_token_hash text NOT NULL UNIQUE
+        CHECK (session_token_hash ~ '^[0-9a-f]{64}$'),
+    refresh_token_ciphertext text NOT NULL
+        CHECK (btrim(refresh_token_ciphertext) <> ''),
+    scopes text NOT NULL CHECK (btrim(scopes) <> ''),
+    expires_at timestamptz NOT NULL,
+    revoked_at timestamptz,
+    created_at timestamptz NOT NULL DEFAULT now(),
+    updated_at timestamptz NOT NULL DEFAULT now(),
+    CHECK (expires_at > created_at),
+    CHECK (revoked_at IS NULL OR revoked_at >= created_at)
+);
+
+CREATE INDEX IF NOT EXISTS calendar_connections_expires_idx
+    ON calendar_connections(expires_at);
+
+CREATE TABLE IF NOT EXISTS calendar_exam_plans (
+    id uuid PRIMARY KEY,
+    calendar_connection_id uuid NOT NULL
+        REFERENCES calendar_connections(id) ON DELETE CASCADE,
     certificate_id uuid NOT NULL REFERENCES certificates(id) ON DELETE RESTRICT,
     year smallint NOT NULL CHECK (year BETWEEN 1900 AND 9999),
     round_key text NOT NULL CHECK (btrim(round_key) <> ''),
@@ -15,15 +34,16 @@ CREATE TABLE IF NOT EXISTS user_exam_plans (
         CHECK (status IN ('pending', 'completed', 'partial', 'failed', 'pending_confirmation')),
     created_at timestamptz NOT NULL DEFAULT now(),
     updated_at timestamptz NOT NULL DEFAULT now(),
-    UNIQUE (user_id, certificate_id, year, round_key)
+    UNIQUE (calendar_connection_id, certificate_id, year, round_key)
 );
 
 CREATE TABLE IF NOT EXISTS calendar_registrations (
     id uuid PRIMARY KEY,
-    user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    calendar_connection_id uuid NOT NULL
+        REFERENCES calendar_connections(id) ON DELETE CASCADE,
     idempotency_key uuid NOT NULL,
     request_hash text NOT NULL CHECK (request_hash ~ '^[0-9a-f]{64}$'),
-    exam_plan_id uuid NOT NULL REFERENCES user_exam_plans(id) ON DELETE CASCADE,
+    exam_plan_id uuid NOT NULL REFERENCES calendar_exam_plans(id) ON DELETE CASCADE,
     request_events jsonb NOT NULL CHECK (jsonb_typeof(request_events) = 'array'),
     excluded_items jsonb NOT NULL DEFAULT '[]'::jsonb
         CHECK (jsonb_typeof(excluded_items) = 'array'),
@@ -32,14 +52,15 @@ CREATE TABLE IF NOT EXISTS calendar_registrations (
     response jsonb,
     created_at timestamptz NOT NULL DEFAULT now(),
     updated_at timestamptz NOT NULL DEFAULT now(),
-    UNIQUE (user_id, idempotency_key)
+    UNIQUE (calendar_connection_id, idempotency_key)
 );
 
 CREATE TABLE IF NOT EXISTS calendar_events (
     id uuid PRIMARY KEY,
-    exam_plan_id uuid NOT NULL REFERENCES user_exam_plans(id) ON DELETE CASCADE,
+    exam_plan_id uuid NOT NULL REFERENCES calendar_exam_plans(id) ON DELETE CASCADE,
     registration_id uuid NOT NULL REFERENCES calendar_registrations(id) ON DELETE CASCADE,
-    user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    calendar_connection_id uuid NOT NULL
+        REFERENCES calendar_connections(id) ON DELETE CASCADE,
     certificate_id uuid NOT NULL REFERENCES certificates(id) ON DELETE RESTRICT,
     schedule_id uuid NOT NULL REFERENCES schedules(id) ON DELETE RESTRICT,
     item_key text NOT NULL CHECK (btrim(item_key) <> ''),
@@ -61,10 +82,10 @@ CREATE TABLE IF NOT EXISTS calendar_events (
     retryable boolean NOT NULL DEFAULT false,
     created_at timestamptz NOT NULL DEFAULT now(),
     updated_at timestamptz NOT NULL DEFAULT now(),
-    UNIQUE (user_id, schedule_id, item_key)
+    UNIQUE (calendar_connection_id, schedule_id, item_key)
 );
 
 CREATE INDEX IF NOT EXISTS calendar_events_plan_idx ON calendar_events(exam_plan_id);
-CREATE INDEX IF NOT EXISTS calendar_registrations_user_created_idx
-    ON calendar_registrations(user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS calendar_registrations_connection_created_idx
+    ON calendar_registrations(calendar_connection_id, created_at DESC);
 

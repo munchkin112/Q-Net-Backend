@@ -1,6 +1,5 @@
--- 우리 서비스의 로그인 세션과 리프레시 토큰 사용 기록을 저장한다.
--- 기존 users 테이블이 필요하다.
--- 실제 적용 시에는 두 테이블과 인덱스를 하나의 트랜잭션에서 생성한다.
+-- 이전 앱 로그인 구현의 세션 테이블이다. 현재 API에서 로그인은 사용하지 않으므로 새로 적용하지 않는다.
+-- Calendar 전용 브라우저 연결은 calendar_registration.sql의 calendar_connections를 사용한다.
 
 
 -- 로그인 한 번마다 생성하는 세션이다.
@@ -44,3 +43,4 @@ CREATE INDEX auth_refresh_tokens_session_id_idx
 CREATE UNIQUE INDEX auth_refresh_tokens_one_unused_per_session_idx
     ON auth_refresh_tokens (session_id)
     WHERE used_at IS NULL;
+

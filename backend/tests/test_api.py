@@ -25,7 +25,10 @@ class APITests(unittest.TestCase):
         self.assertIn("/certificates/{certificate_id}", schema["paths"])
         self.assertIn("/certificates/{certificate_id}/schedules", schema["paths"])
         self.assertFalse(any(path.startswith("/api/") for path in schema["paths"]))
-        self.assertIn("ProfilePatch", schema["components"]["schemas"])
+        self.assertIn("RecommendationRequest", schema["components"]["schemas"])
+        self.assertNotIn("/auth/google/authorize", schema["paths"])
+        self.assertNotIn("/me/profile", schema["paths"])
+        self.assertIn("/calendar/google/authorize", schema["paths"])
         self.assertNotIn("/me/bookmarks", schema["paths"])
 
     def test_database_not_configured_is_explicit(self):
@@ -56,3 +59,4 @@ class APITests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
