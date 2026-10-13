@@ -1,0 +1,2010 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					<b class="headLine3">
+						검정형 자격 시험일정
+					</b>
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기능사 2회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.03.16<br/> ~ <br/>2026.03.20
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.03.29<br/> ~ <br/>2026.03.30]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.04.04<br/>~<br/>2026.04.09
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.04.22</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.04.27<br/>~<br/>2026.04.30<br/>빈자리접수 :<br/>2026.05.24<br/> ~ <br/>2026.05.25</td><td>2026.05.30<br/> ~ <br/>2026.06.14</td><td>2026.06.26</td>
+								</tr>
+	
+								<tr>
+								
+									<td>2026년 정기 기능사</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+									<td colspan="3" class="txt_center">산업수요 맞춤형 고등학교 및 특성화 고등학교<br/>필기시험 면제자 검정<br/>※ 일반인 필기시험 면제자 응시 불가</td>
+	
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.05.11<br/>~<br/>2026.05.14<td>2026.06.13<br/> ~ <br/>2026.06.24</td><td>2026.07.10</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능사 4회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.08.24<br/> ~ <br/>2026.08.27
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.09.10<br/> ~ <br/>2026.09.11]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.09.16<br/>~<br/>2026.09.21
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.10.07</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.10.12<br/>~<br/>2026.10.15<br/>빈자리접수 :<br/>2026.11.08<br/> ~ <br/>2026.11.09</td><td>2026.11.14<br/> ~ <br/>2026.12.02</td><td>2026.12.11</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3">검정형 자격 시험정보 </b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">14,500원</td><td scope="col">53,500원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>항공전기·전자정비기능사 출제경향</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment-->
+<p class="0" style="MARGIN-LEFT: 37px; LINE-HEIGHT: 180%; TEXT-AUTOSPACE: ; TEXT-INDENT: -28.2pt"><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">-필기시험의 내용은 고객만족</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">&gt;</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">자료실의 출제기준을 참고바랍니다</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">.</span></p>
+<p class="0" style="LINE-HEIGHT: 180%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">-실기시험은 멀티미디어</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">(</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">동영상</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">)</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">시험이 포함된 작업형으로 시행되며 항공기 기본작업</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">, </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">항공기&nbsp;전기&middot;전자 기본&nbsp;작업</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">, </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">항공기 전기계통 정비, 항공기 통신계통 정비, 항공기 계기계통 정비&nbsp;등의 항공기 정비 관련 전문지식 및 응용</span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">, </span><span style="FONT-FAMILY: 굴림; LETTER-SPACING: -0.2pt">실무 능력을 평가</span></p>
+<div id="hwpEditorBoardContent" class="hwp_editor_board_content" data-jsonlen="8152" data-hjsonver="1.0"><!--[data-hwpjson]{
+"documentPr": {
+"di": "",
+"dp": {
+"dn": "test.hwp",
+"ta": 1,
+"d1": 5,
+"d2": 1,
+"dv": 0,
+"dr": 1,
+"do": 1,
+"vj": "1.1",
+"an": "Hancom Office Hangul",
+"av": "11, 0, 0, 4585",
+"ao": "WIN",
+"ab": "32",
+"ar": "LE",
+"as": "Windows_8"
+},
+"dis": false,
+"ds": {
+"ti": "",
+"la": "ko",
+"cr": "",
+"su": "",
+"de": "",
+"cd": "2024-01-10T10:11:17.857Z",
+"md": "1601-01-01T09:00:00.000Z",
+"pd": "1601-01-01T09:00:00.000Z",
+"ke": ""
+}
+},
+"dh": {
+"do": {
+"pa": 1,
+"fo": 1,
+"en": 1,
+"pi": 1,
+"tb": 1,
+"eq": 1
+},
+"fo": [ ],
+"cd": {
+"tp": 0,
+"lc": {
+"af": false,
+"ui": false,
+"fu": false,
+"dn": false,
+"ul": false,
+"el": false,
+"at": false,
+"tq": false,
+"da": false,
+"dw": false,
+"dj": false,
+"bc": false,
+"bu": false,
+"al": false,
+"ab": false,
+"ap": false,
+"an": false,
+"aa": false,
+"ds": false,
+"de": false,
+"as": false,
+"cp": false,
+"ao": false,
+"et": false,
+"ay": false,
+"am": false,
+"a1": false,
+"bt": false,
+"av": false,
+"dh": false,
+"dp": false,
+"d1": false,
+"mf": false,
+"bl": false,
+"ag": false,
+"dg": false,
+"ae": false,
+"df": false,
+"do": false,
+"dl": false,
+"di": false,
+"d2": false,
+"d3": false,
+"ob": false,
+"d4": false,
+"ev": false,
+"d5": false,
+"d6": false,
+"a2": false,
+"dc": false
+}
+},
+"ld": {
+"pa": "",
+"pi": true,
+"fo": false
+}
+},
+"bf": {
+"01DA4361EB4C362000000051": {
+"id": 1,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DA4361EB4C362000000052": {
+"id": 2,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 4278190080,
+"al": 0,
+"hs": -1
+}
+}
+},
+"01DA4361EB4C362000000053": {
+"id": 3,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 0,
+"al": 0,
+"hs": -1
+}
+}
+}
+},
+"cp": {
+"01DA4361EB4C362000000054": {
+"id": 0,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DA4361EB4C362000000052",
+"f1": "굴림",
+"t1": 1,
+"f2": "굴림",
+"t2": 1,
+"f3": "굴림",
+"t3": 1,
+"f4": "굴림",
+"t4": 1,
+"f5": "굴림",
+"t5": 1,
+"f6": "굴림",
+"t6": 1,
+"f7": "굴림",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": -2,
+"s2": -2,
+"s3": -2,
+"s4": -2,
+"s5": -2,
+"s6": -2,
+"s7": -2,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DA4361EB4C362000000055": {
+"id": 1,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DA4361EB4C362000000053",
+"f1": "바탕",
+"t1": 1,
+"f2": "바탕",
+"t2": 1,
+"f3": "바탕",
+"t3": 1,
+"f4": "바탕",
+"t4": 1,
+"f5": "바탕",
+"t5": 1,
+"f6": "바탕",
+"t6": 1,
+"f7": "바탕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+}
+},
+"tp": {
+"01DA4361EB4C362000000056": {
+"id": 0,
+"al": false,
+"ar": false,
+"tp": [ ]
+}
+},
+"nu": { },
+"bu": {
+"01DA4361EB4C362000000057": {
+"id": 1,
+"ch": "-",
+"ui": false,
+"im": { },
+"ph": {
+"le": 0,
+"al": 0,
+"ui": false,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": ""
+}
+}
+},
+"pp": {
+"01DA4361EB4C362000000058": {
+"id": 0,
+"ah": 0,
+"av": 0,
+"ht": 3,
+"hi": "01DA4361EB4C362000000057",
+"hl": 0,
+"tp": "01DA4361EB4C362000000056",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": false,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": -5648,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 180,
+"bf": "01DA4361EB4C362000000052",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DA4361EB4C362000000059": {
+"id": 1,
+"ah": 0,
+"av": 0,
+"ht": 3,
+"hi": "01DA4361EB4C362000000057",
+"hl": 0,
+"tp": "01DA4361EB4C362000000056",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": false,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 180,
+"bf": "01DA4361EB4C362000000052",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DA4361EB4C36200000005A": {
+"id": 2,
+"ah": 0,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DA4361EB4C362000000056",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": false,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DA4361EB4C362000000052",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+}
+},
+"st": {
+"01DA4361EB4C36200000005B": {
+"id": 0,
+"ty": 0,
+"na": "바탕글",
+"en": "Normal",
+"pp": "01DA4361EB4C36200000005A",
+"cp": "01DA4361EB4C362000000055",
+"ns": "01DA4361EB4C36200000005B",
+"li": 1042,
+"lf": false
+}
+},
+"mp": { },
+"ro": {
+"hp": "01DA4361EB4C36200000004F",
+"01DA4361EB4C36200000004F": {
+"np": "01DA4361EB4C362000000050",
+"id": 0,
+"pp": "01DA4361EB4C362000000058",
+"si": "01DA4361EB4C36200000005B",
+"bf": 3,
+"ru": [
+{
+"cp": "01DA4361EB4C362000000054",
+"ch": [
+{
+"cc": 2,
+"ci": 1936024420,
+"co": "01DA4361EB4C36200000004D"
+}
+,
+{
+"cc": 2,
+"ci": 1668246628,
+"co": "01DA4361EB4C36200000004E"
+}
+,
+{
+"t": "필기시험의 내용은 고객만족\u003E자료실의 출제기준을 참고바랍니다."
+}
+]
+}
+]
+},
+"01DA4361EB4C362000000050": {
+"np": "",
+"id": -2147483648,
+"pp": "01DA4361EB4C362000000059",
+"si": "01DA4361EB4C36200000005B",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA4361EB4C362000000054",
+"ch": [
+{
+"t": "실기시험은 멀티미디어(동영상)시험이 포함된 작업형으로 시행되며 항공기 기본작업, 항공기 기체정비 작업, 항공기 엔진 정비 작업 등의 항공기 정비 관련 전문지식 및 응용, 실무 능력을 평가"
+}
+]
+}
+]
+}
+},
+"sl": { },
+"cs": {
+"01DA4361EB4C36200000004D": {
+"cc": 2,
+"ci": 1936024420,
+"td": 0,
+"tv": false,
+"sc": 1134,
+"ts": 8000,
+"ms": "",
+"os": "",
+"gl": 0,
+"gc": 0,
+"gw": false,
+"ns": 0,
+"np": 0,
+"ni": 0,
+"nt": 0,
+"ne": 0,
+"hh": false,
+"hf": false,
+"hm": false,
+"fb": false,
+"hb": false,
+"fi": false,
+"hi": false,
+"hp": false,
+"he": false,
+"sl": false,
+"lr": 0,
+"lc": 0,
+"ld": 0,
+"ls": 0,
+"pp": {
+"ls": false,
+"wi": 59528,
+"he": 84188,
+"gt": 0,
+"ml": 8504,
+"mr": 8504,
+"mt": 5668,
+"mb": 4252,
+"mh": 4252,
+"mf": 4252,
+"mg": 0
+},
+"fn": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -1,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 283
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"en": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -4,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 0
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"pb": [
+{
+"ty": 0,
+"bf": "01DA4361EB4C362000000051",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 1,
+"bf": "01DA4361EB4C362000000051",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 2,
+"bf": "01DA4361EB4C362000000051",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+}
+],
+"mp": [ ]
+}
+,
+"01DA4361EB4C36200000004E": {
+"cc": 2,
+"ci": 1668246628,
+"ty": 0,
+"la": 0,
+"co": 1,
+"ss": true,
+"sg": 0,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"cs": [ ]
+}
+},
+"bi": [ ],
+"bidt": { }
+}--></div>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>항공전기·전자정비기능사 취득방법</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p><!--StartFragment--><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&#9312;&nbsp;</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">시 행 처</span><span style="FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 맑은 고딕">한국산업인력공단</span> </p>
+<p>&nbsp;</p>
+<p><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&#9313;&nbsp;<span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">시험과목</span><span style="FONT-FAMILY: 맑은 고딕"> </span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕">&nbsp;&nbsp;</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">필기 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 항공기 일반, 항공전기&middot;전자 계통 정비, 통신항법 계기 정비</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp; </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">실기 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 항공전기&middot;전자 정비 실무</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span>&nbsp;</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&#9314;&nbsp;<span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">검정방법</span><span style="FONT-FAMILY: 맑은 고딕"> </span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">필기 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 맑은 고딕">객관식 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-FAMILY: 맑은 고딕">지 택일형&nbsp;6</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">0</span><span style="FONT-FAMILY: 맑은 고딕">문항</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(6</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">0</span><span style="FONT-FAMILY: 맑은 고딕">분</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp; </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">실기 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 작업</span><span style="FONT-FAMILY: 맑은 고딕">형</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">((동영상</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">30</span><span style="FONT-FAMILY: 맑은 고딕">분</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, 30</span><span style="FONT-FAMILY: 맑은 고딕">점</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)+</span><span style="FONT-FAMILY: 맑은 고딕">작업</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(2</span><span style="FONT-FAMILY: 맑은 고딕">시간 정도</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, 70</span><span style="FONT-FAMILY: 맑은 고딕">점</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">))</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span>&nbsp;</p>
+<p></span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&#9315;</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"> </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">합격기준</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">&nbsp; </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">필기 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 100</span><span style="FONT-FAMILY: 맑은 고딕">점을 만점으로 하여&nbsp;</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">60</span><span style="FONT-FAMILY: 맑은 고딕">점 이상</span></p>
+<p><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">실기 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 100</span><span style="FONT-FAMILY: 맑은 고딕">점을 만점으로 하여 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">60</span><span style="FONT-FAMILY: 맑은 고딕">점 이상</span></p>
+<div id="hwpEditorBoardContent" class="hwp_editor_board_content" data-hjsonver="1.0" data-jsonlen="11456"><!--[data-hwpjson]{
+"documentPr": {
+"di": "",
+"dp": {
+"dn": "test.hwp",
+"ta": 1,
+"d1": 5,
+"d2": 1,
+"dv": 0,
+"dr": 1,
+"do": 1,
+"vj": "1.1",
+"an": "Hancom Office Hangul",
+"av": "11, 0, 0, 4585",
+"ao": "WIN",
+"ab": "32",
+"ar": "LE",
+"as": "Windows_8"
+},
+"dis": false,
+"ds": {
+"ti": "",
+"la": "ko",
+"cr": "",
+"su": "",
+"de": "",
+"cd": "2024-01-10T10:13:56.985Z",
+"md": "1601-01-01T09:00:00.000Z",
+"pd": "1601-01-01T09:00:00.000Z",
+"ke": ""
+}
+},
+"dh": {
+"do": {
+"pa": 1,
+"fo": 1,
+"en": 1,
+"pi": 1,
+"tb": 1,
+"eq": 1
+},
+"fo": [ ],
+"cd": {
+"tp": 0,
+"lc": {
+"af": false,
+"ui": false,
+"fu": false,
+"dn": false,
+"ul": false,
+"el": false,
+"at": false,
+"tq": false,
+"da": false,
+"dw": false,
+"dj": false,
+"bc": false,
+"bu": false,
+"al": false,
+"ab": false,
+"ap": false,
+"an": false,
+"aa": false,
+"ds": false,
+"de": false,
+"as": false,
+"cp": false,
+"ao": false,
+"et": false,
+"ay": false,
+"am": false,
+"a1": false,
+"bt": false,
+"av": false,
+"dh": false,
+"dp": false,
+"d1": false,
+"mf": false,
+"bl": false,
+"ag": false,
+"dg": false,
+"ae": false,
+"df": false,
+"do": false,
+"dl": false,
+"di": false,
+"d2": false,
+"d3": false,
+"ob": false,
+"d4": false,
+"ev": false,
+"d5": false,
+"d6": false,
+"a2": false,
+"dc": false
+}
+},
+"ld": {
+"pa": "",
+"pi": true,
+"fo": false
+}
+},
+"bf": {
+"01DA43624B8DA14000000069": {
+"id": 1,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DA43624B8DA1400000006A": {
+"id": 2,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 0,
+"al": 0,
+"hs": -1
+}
+}
+},
+"01DA43624B8DA1400000006B": {
+"id": 3,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 4278190080,
+"al": 0,
+"hs": -1
+}
+}
+}
+},
+"cp": {
+"01DA43624B8DA1400000006C": {
+"id": 0,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DA43624B8DA1400000006A",
+"f1": "맑은 고딕",
+"t1": 1,
+"f2": "맑은 고딕",
+"t2": 1,
+"f3": "맑은 고딕",
+"t3": 1,
+"f4": "맑은 고딕",
+"t4": 1,
+"f5": "맑은 고딕",
+"t5": 1,
+"f6": "맑은 고딕",
+"t6": 1,
+"f7": "맑은 고딕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": true,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DA43624B8DA1400000006D": {
+"id": 1,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DA43624B8DA1400000006A",
+"f1": "맑은 고딕",
+"t1": 1,
+"f2": "맑은 고딕",
+"t2": 1,
+"f3": "맑은 고딕",
+"t3": 1,
+"f4": "맑은 고딕",
+"t4": 1,
+"f5": "맑은 고딕",
+"t5": 1,
+"f6": "맑은 고딕",
+"t6": 1,
+"f7": "맑은 고딕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DA43624B8DA1400000006E": {
+"id": 2,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DA43624B8DA1400000006A",
+"f1": "바탕",
+"t1": 1,
+"f2": "바탕",
+"t2": 1,
+"f3": "바탕",
+"t3": 1,
+"f4": "바탕",
+"t4": 1,
+"f5": "바탕",
+"t5": 1,
+"f6": "바탕",
+"t6": 1,
+"f7": "바탕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+}
+},
+"tp": {
+"01DA43624B8DA1400000006F": {
+"id": 0,
+"al": false,
+"ar": false,
+"tp": [ ]
+}
+},
+"nu": { },
+"bu": { },
+"pp": {
+"01DA43624B8DA14000000070": {
+"id": 0,
+"ah": 1,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DA43624B8DA1400000006F",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": -2248,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 190,
+"bf": "01DA43624B8DA1400000006B",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DA43624B8DA14000000071": {
+"id": 1,
+"ah": 1,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DA43624B8DA1400000006F",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": -16536,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 190,
+"bf": "01DA43624B8DA1400000006B",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DA43624B8DA14000000072": {
+"id": 2,
+"ah": 0,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DA43624B8DA1400000006F",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": false,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DA43624B8DA1400000006B",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+}
+},
+"st": {
+"01DA43624B8DA14000000073": {
+"id": 0,
+"ty": 0,
+"na": "바탕글",
+"en": "Normal",
+"pp": "01DA43624B8DA14000000072",
+"cp": "01DA43624B8DA1400000006E",
+"ns": "01DA43624B8DA14000000073",
+"li": 1042,
+"lf": false
+}
+},
+"mp": { },
+"ro": {
+"hp": "01DA43624B8DA1400000005E",
+"01DA43624B8DA1400000005E": {
+"np": "01DA43624B8DA1400000005F",
+"id": 0,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 3,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006C",
+"ch": [
+{
+"cc": 2,
+"ci": 1668246628,
+"co": "01DA43624B8DA1400000005C"
+}
+,
+{
+"cc": 2,
+"ci": 1936024420,
+"co": "01DA43624B8DA1400000005D"
+}
+,
+{
+"t": "? 시 행 처"
+}
+]
+}
+,
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " : 한국산업인력공단"
+}
+]
+}
+]
+},
+"01DA43624B8DA1400000005F": {
+"np": "01DA43624B8DA14000000060",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006C",
+"ch": [
+{
+"t": "? 관련학과"
+}
+]
+}
+,
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " : 대학 및 전문대학의 금속재료공학, 신소재공학, 첨단소재공학 관련학과"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000060": {
+"np": "01DA43624B8DA14000000061",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006C",
+"ch": [
+{
+"t": "? 시험과목"
+}
+]
+}
+,
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " "
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000061": {
+"np": "01DA43624B8DA14000000062",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " - 필기 : 1.금속조직학 2.금속재료학 3.야금공학 4.금속가공학 5.표면공학"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000062": {
+"np": "01DA43624B8DA14000000063",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " - 실기 : 금속재료 실무"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000063": {
+"np": "01DA43624B8DA14000000064",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006C",
+"ch": [
+{
+"t": "? 검정방법"
+}
+]
+}
+,
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " "
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000064": {
+"np": "01DA43624B8DA14000000065",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " - 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000065": {
+"np": "01DA43624B8DA14000000066",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " - 실기 : 복합형((필답형(1시간 30분, 60점)+작업형(2시간 정도, 40점))"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000066": {
+"np": "01DA43624B8DA14000000067",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006C",
+"ch": [
+{
+"t": "? 합격기준"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000067": {
+"np": "01DA43624B8DA14000000068",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000070",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상"
+}
+]
+}
+]
+},
+"01DA43624B8DA14000000068": {
+"np": "",
+"id": -2147483648,
+"pp": "01DA43624B8DA14000000071",
+"si": "01DA43624B8DA14000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DA43624B8DA1400000006D",
+"ch": [
+{
+"t": " - 실기 : 100점을 만점으로 하여 60점 이상"
+}
+]
+}
+]
+}
+},
+"sl": { },
+"cs": {
+"01DA43624B8DA1400000005C": {
+"cc": 2,
+"ci": 1668246628,
+"ty": 0,
+"la": 0,
+"co": 1,
+"ss": true,
+"sg": 0,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"cs": [ ]
+}
+,
+"01DA43624B8DA1400000005D": {
+"cc": 2,
+"ci": 1936024420,
+"td": 0,
+"tv": false,
+"sc": 1134,
+"ts": 8000,
+"ms": "",
+"os": "",
+"gl": 0,
+"gc": 0,
+"gw": false,
+"ns": 0,
+"np": 0,
+"ni": 0,
+"nt": 0,
+"ne": 0,
+"hh": false,
+"hf": false,
+"hm": false,
+"fb": false,
+"hb": false,
+"fi": false,
+"hi": false,
+"hp": false,
+"he": false,
+"sl": false,
+"lr": 0,
+"lc": 0,
+"ld": 0,
+"ls": 0,
+"pp": {
+"ls": false,
+"wi": 59528,
+"he": 84188,
+"gt": 0,
+"ml": 8504,
+"mr": 8504,
+"mt": 5668,
+"mb": 4252,
+"mh": 4252,
+"mf": 4252,
+"mg": 0
+},
+"fn": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -1,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 283
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"en": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -4,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 0
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"pb": [
+{
+"ty": 0,
+"bf": "01DA43624B8DA14000000069",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 1,
+"bf": "01DA43624B8DA14000000069",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 2,
+"bf": "01DA43624B8DA14000000069",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+}
+],
+"mp": [ ]
+}
+},
+"bi": [ ],
+"bidt": { }
+}--></div>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('6289', '35');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 항공전기·전자정비기능사 (2024.1.1 ~ 2026.12.31)</span>
+			</a>
+			<br/>
+							
+			<a href="#" onclick="cst006Report('6289', '1404');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>2. 항공전기·전자정비기능사 (2027.1.1 ~ 2031.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

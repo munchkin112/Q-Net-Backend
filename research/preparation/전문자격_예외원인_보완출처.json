@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "label": "cause_probe_basic_9666",
+      "source_url": "https://www.q-net.or.kr/crf005.do",
+      "params": {
+        "id": "crf00503s01",
+        "jmCd": "9666",
+        "jmInfoDivCcd": "A0",
+        "gSite": "L",
+        "gId": "42"
+      },
+      "auth": "missing",
+      "retrieved_at": "2026-10-06T10:55:14.836197+09:00",
+      "http_method": "GET",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 2339,
+      "sha256": "916f10a2b3ab354aa39d7d0856229bbb00ab8707ae1139aa0d8f0becbb1f6a28",
+      "response_file": "responses/cause_probe_basic_9666.html",
+      "elapsed_seconds": 0.147,
+      "qnet_code": "9666",
+      "kind": "official_basic_page",
+      "visible_text": "\r\n기본정보\n통계자료\n국가유산수리기술자(보수) 통계자료\n자료실-시험통계자료실 참조\n",
+      "tables": [],
+      "links": []
+    },
+    {
+      "label": "cause_probe_basic_9696",
+      "source_url": "https://www.q-net.or.kr/crf005.do",
+      "params": {
+        "id": "crf00503s01",
+        "jmCd": "9696",
+        "jmInfoDivCcd": "A0",
+        "gSite": "L",
+        "gId": "46"
+      },
+      "auth": "missing",
+      "retrieved_at": "2026-10-06T10:55:14.983657+09:00",
+      "http_method": "GET",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 104814,
+      "sha256": "e72cfb3ee29c0f0a508c5e4a1d11ca6695c2d6a7d049c5646581a9b16f9667e9",
+      "response_file": "responses/cause_probe_basic_9696.html",
+      "elapsed_seconds": 0.23,
+      "qnet_code": "9696",
+      "kind": "official_basic_page",
+      "visible_text": "\r\n기본정보\n통계자료\n경매사(청과) 통계자료\n<\n최근 \n5\n년 간 경매사 전\n(\n全\n)\n부류 수험현황\n>  \n                                                                                                        (단위 : 명, %)\n구분\n2021\n2022\n2023\n2024\n2025\n1\n차\n대상\n517\n567\n539\n896\n788\n응시\n441\n459\n444\n744\n682\n응시율\n85.3\n81.0\n82.4\n83.0\n86.5\n합격\n200\n244\n237\n429\n437\n합격률\n45.4\n53.2\n53.4\n57.7\n64.1\n2\n차\n대상\n200\n251\n253\n454\n466\n응시\n198\n246\n248\n448\n456\n응시율\n99.0\n98.0\n98.0\n98.0\n97.9\n합격\n169\n204\n212\n366\n384\n합격률\n85.4\n83.0\n85.5\n81.7\n84.2\n* 2018\n년까지 전 부류 격년 시행\n** 2019\n년부터 청과\n·\n수산 부류만 매년 시행\n",
+      "tables": [],
+      "links": []
+    },
+    {
+      "label": "cause_probe_auction_faq",
+      "source_url": "https://www.q-net.or.kr/cst002.do",
+      "params": {
+        "id": "cst00202",
+        "gSite": "L",
+        "gId": "46",
+        "artlSeq": "5069645"
+      },
+      "auth": "missing",
+      "retrieved_at": "2026-10-06T10:55:15.217774+09:00",
+      "http_method": "GET",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_count": 104705,
+      "sha256": "5e26a5c0c26f12e05dcbc55e7c12eaadaddbde42a9cf1f3000ab4f7cdabdd3c6",
+      "response_file": "responses/cause_probe_auction_faq.html",
+      "elapsed_seconds": 0.195,
+      "qnet_code": "9696",
+      "kind": "official_faq",
+      "visible_text": "\r\n자주묻는질문 & 답변 상세 | Q-net\n컨텐츠 바로가기\n메뉴 바로가기\n푸터 바로가기\nMENU\n원서접수\n합격자발표\n확인서발급\n자격정보\n마이페이지\n고객지원\n원서접수\n원서접수신청 \n원서접수현황 \n응시자격서류안내 \n환불안내\n합격자발표\n합격자발표조회\n가답안/최종정답공개\n가답안의견제시\n전문자격 답안지 열람신청\n확인서발급\n확인서 발급안내\n확인서 발급신청\n확인서 발급내역\n확인서 진위여부확인\n자격정보\n자격상세정보\n시험정보\n기본정보\n우대현황\n일자리정보\n시행공고\n자료실\n서식자료\n시험통계자료\n기타자료\n기출문제 내려받기\n최종정답\n마이페이지\n원서접수관리\n원서접수내역\n원서접수신청\n시험결과확인\n사진변경신청/결과\n응시자격서류제출확인\n확인서발급내역\n면제정보보기\n시험면제\n과목면제\n개인정보관리\n개인정보수정\n학력/경력수정\n회원탈퇴\n공동인증서등록\n고객지원\n공지사항\n자주묻는 질문&답변\n민원신청\n원격지원\n개인메뉴\n로그인\n아이디찾기 / 비밀번호 재설정\n회원가입\n실명인증\n통합검색\n온라인 도움말\nCBT 체험하기\n공동인증서등록\n비밀번호 변경 안내\n이용약관\n개인정보처리방침\n로그인\n회원가입\n고객센터 1644-8000\nQ-Net\n고객지원\n공지사항\n자주묻는질문\n민원신청\n원격지원\n통합검색\n검색\nSITE MAP\n메뉴 닫기\n원서접수\n원서접수신청\n원서접수현황\n응시자격서류안내\n환불안내\n합격자발표\n합격자발표조회\n가답안/최종정답공개\n가답안의견제시\n전문자격 답안지 열람신청\n확인서발급\n확인서 발급안내\n확인서 발급신청\n확인서 발급내역\n확인서 진위여부확인\n자격정보\n자격상세정보\n시험정보\n기본정보\n우대현황\n일자리정보\n시행공고\n자료실\n서식자료\n시험통계자료\n기타자료\n기출문제내려받기 \n최종정답 \n마이페이지\n원서접수관리\n원서접수내역\n원서접수신청\n시험결과확인\n사진변경신청/결과\n확인서발급내역\n면제정보보기\n시험면제\n과목면제\n개인정보관리\n개인정보수정\n학력/경력수정\n회원탈퇴\n공동인증서등록\n고객지원\n공지사항\n자주묻는 질문&답변\n민원신청\n원격지원\n개인메뉴\n로그인\n아이디찾기 / 비밀번호 재설정\n회원가입\n실명인증\n통합검색\n온라인 도움말\nCBT 체험하기\n공동인증서등록\n비밀번호 변경 안내\n이용약관\n개인정보처리방침\n원서접수\n원서접수신청\n원서접수현황\n응시자격서류안내\n환불안내\n합격자발표\n합격자발표조회\n가답안/최종정답공개\n가답안의견제시\n확인서발급\n확인서 발급안내\n확인서 발급신청\n확인서 발급내역\n확인서 진위여부확인\n자격정보\n자격상세정보\n시험정보\n기본정보\n우대현황\n일자리정보\n시행공고\n자료실\n서식자료\n시험통계자료\n기타자료\n기출문제내려받기 \n최종정답 \n마이페이지\n원서접수관리\n원서접수내역\n원서접수신청\n시험결과확인\n사진변경신청/결과\n확인서발급내역\n면제정보보기\n시험면제\n과목면제\n개인정보관리\n개인정보수정\n학력/경력수정\n회원탈퇴\n공동인증서등록\n고객지원\n공지사항\n자주묻는 질문&답변\n민원신청\n개인메뉴\n로그인\n아이디찾기 / 비밀번호 재설정\n회원가입\n실명인증\n통합검색\n온라인 도움말\nCBT 체험하기\n공동인증서등록\n비밀번호 변경 안내\n이용약관\n개인정보처리방침\n홈\n고객지원\n자주묻는 질문&답변\n자주묻는질문 & 답변\n경매사 자격시험의 합격자 결정 방법을 알고 싶습니다.\n담당부서\n전문자격국 전문자격운영부\n등록일\n2022.01.20\n조회\n2041\n경매사 자격시험의 합격자 결정 방법을 알고 싶습니다.\n• \n제1\n차 시험은\n 매과목 100점을 만점으로 하여 매과목 40점 이\n상 전\n과목 평균 60점 이상 득점한 자를 합격자로 결정합니다.\n• \n제2차 시험은\n 100점\n 만점으로 하여 \n평균 7\n0점 이상 득점\n한 자를\n 합격자로 결정\n합니다.\n목록\n이전글\n경매사 - 경매사 자격증 발급은 어디서 하며, 소양교육을 받아야만 자격증을 부여하나요?\n2013.06.12\n다음글\n경매사 - 경매사 자격시험 시험방법을 알고 싶습니다.\n2013.06.12\n이전\n다음\n44538 울산광역시 중구 종가로 345 한국산업인력공단\n고객지원\n1644-8000\n (운영시간 09:00 ~ 18:00, 유료)\n개인정보처리방침\n이용약관\n관련사이트\n공단홈페이지\nJobplusTV\nWORLD JOB 해외취업 및 연수\n마이스터넷\n과정평가형.일학습병행자격 외부평가시스템\n외국인고용허가제\nNCS 국가직무능력표준\nHRD콘텐츠네트워크\nHRD_Net 직업능력지식포털\n출제위원 인력풀 사이트\n이동\n국가전문자격 홈페이지\n이동\n찾아오시는 길\nⓒ 2024 Human Resources Development Service of Korea. All Rights Reserved. \n",
+      "tables": []
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "checked_at": "2026-10-06T02:04:18.485387+00:00",
+  "database_applied": false,
+  "existing_data": {
+    "certificates": 613,
+    "schedules": 1922,
+    "exam_information": 510,
+    "preparation_mismatches": [
+      {
+        "kind": "schedule",
+        "qnet_code": "1630",
+        "round_key": "qnet-technical:2026년 정기 기사 1회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1630",
+        "round_key": "qnet-technical:2026년 정기 기사 2회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1630",
+        "round_key": "qnet-technical:2026년 정기 기사 3회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1150",
+        "round_key": "qnet-technical:2026년 정기 기사 1회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1150",
+        "round_key": "qnet-technical:2026년 정기 기사 2회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1150",
+        "round_key": "qnet-technical:2026년 정기 기사 3회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "2140",
+        "round_key": "qnet-technical:2026년 정기 기사 1회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "2140",
+        "round_key": "qnet-technical:2026년 정기 기사 2회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "2140",
+        "round_key": "qnet-technical:2026년 정기 기사 3회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1320",
+        "round_key": "qnet-technical:2026년 정기 기사 1회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1320",
+        "round_key": "qnet-technical:2026년 정기 기사 2회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "1320",
+        "round_key": "qnet-technical:2026년 정기 기사 3회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "2290",
+        "round_key": "qnet-technical:2026년 정기 기사 1회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "2290",
+        "round_key": "qnet-technical:2026년 정기 기사 2회",
+        "phase": "practical"
+      },
+      {
+        "kind": "schedule",
+        "qnet_code": "2290",
+        "round_key": "qnet-technical:2026년 정기 기사 3회",
+        "phase": "practical"
+      }
+    ]
+  },
+  "prepared_sources": 152,
+  "inserted_sources": 0
+}

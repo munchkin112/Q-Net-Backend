@@ -1,0 +1,6 @@
+# 수집 원문과 검증 자료는 Windows에서도 바이트·SHA-256을 유지한다.
+research/responses/** -text -whitespace
+research/*.json -text
+research/preparation/** -text
+# 추천 검증 자료도 원본 바이트를 보존하며 CRLF를 공백 오류로 취급하지 않는다.
+research/preparation/recommendation/** -text -whitespace

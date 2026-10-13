@@ -1,0 +1,376 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					
+					<b class="headLine3">시험일정</b>
+					
+
+
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 10:00부터 <span class="c_Red">마지막 날 18:00까지 </span>임)</p>
+					
+
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기능장 79회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.01.06<br/> ~ <br/>2026.01.09
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.01.18<br/> ~ <br/>2026.01.19]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.01.24
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.01.30</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.02.02<br/>~<br/>2026.02.05<br/>빈자리접수 :<br/>2026.03.08<br/> ~ <br/>2026.03.09</td><td>2026.03.14<br/> ~ <br/>2026.04.01</td><td>2026.04.17</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기능장 80회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.06.08<br/> ~ <br/>2026.06.11
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.06.21<br/> ~ <br/>2026.06.22]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.06.27
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.07.15</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.07.27<br/>~<br/>2026.07.30<td>2026.08.29<br/> ~ <br/>2026.09.16</td><td>2026.10.08</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">34,400원</td><td scope="col">24,800원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>제강기능장 출제경향</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment-->
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필기시험의 내용은 고객만족</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&gt;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자료실의 출제기준을 참고바랍니다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">실기시험은 필답형으로 시행되며 고객만족</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&gt;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자료실의 출제기준을 참고바랍니다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>제강기능장 취득방법</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><strong>&#9312; 시 행 처</strong> : 한국산업인력공단 </span></p>
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><strong>&#9313; 관련학과 </strong>: 교육 및 훈련기관의 금속과, 재료과, 금속재료과, 재료정보과, 재료응용과, 신소재과 등&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span></p>
+<p style="LINE-HEIGHT: 160%"><strong><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9314;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">시험과목 </span></strong></p>
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 필기 : 1. 제강이론, 2. 제강조업, 3. 금속재료 및 안전관리, 4. 자동생산시스템, 5. 공업경영</span></p>
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 실기 : 제강 실무 </span></p>
+<p style="LINE-HEIGHT: 160%"><strong><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9315;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">검정방법</span></strong></p>
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 필기 : 객관식 4지 택일형 과목당 60문항(60분)</span></p>
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 실기 : 필답형(2시간, 100점)</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span></p>
+<p style="LINE-HEIGHT: 160%"><strong><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&#9316;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> 합격기준</span></strong></p>
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 필기 : 100점을 만점으로 하여 60점 이상</span></p><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">
+<p style="LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;- 실기 : 100점을 만점으로 하여 60점 이상 </span></p></span>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('3240', '222');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 제강기능장 (2025.1.1 ~ 2028.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

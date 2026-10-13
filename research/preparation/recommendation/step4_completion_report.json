@@ -1,0 +1,34 @@
+{
+  "completed_at": "2026-10-09T07:12:48.368231+00:00",
+  "task": 4,
+  "target_count": 613,
+  "processed_count": 613,
+  "collection_status_counts": {
+    "fetched": 564,
+    "empty": 47,
+    "needs_content_review": 2
+  },
+  "by_category": {
+    "T": {
+      "fetched": 501,
+      "empty": 10,
+      "needs_content_review": 2
+    },
+    "S": {
+      "fetched": 63,
+      "empty": 37
+    }
+  },
+  "overview_present": 552,
+  "duties_present": 553,
+  "career_present": 506,
+  "official_documents": 1596,
+  "reviewed_sample_count": 8,
+  "reviewed_related_roles_preserved": 13,
+  "unreviewed_duties_excerpts": 543,
+  "fixed_interest_assignments": 0,
+  "database_changed": false,
+  "github_pushed": false,
+  "llm_called": false,
+  "note": "전체 원문 수집·상태 기록 단계. 자동 수집 자료는 5번 의미 검증 전까지 검토 완료 아님."
+}

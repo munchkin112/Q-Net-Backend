@@ -1,0 +1,128 @@
+{
+  "audited_at": "2026-10-10T04:05:11.198461+00:00",
+  "scope": "local_inventory_and_read_only_database_comparison",
+  "writes": "local_audit_files_only; no database writes or external API calls",
+  "catalog": {
+    "local_count": 613,
+    "database_count": 613,
+    "local_categories": {
+      "T": 513,
+      "S": 100
+    },
+    "database_categories": {
+      "T": 513,
+      "S": 100
+    },
+    "duplicate_local_codes": [],
+    "missing_in_database": [],
+    "database_only": [],
+    "name_category_mismatches": [],
+    "qnet_major_job_codes_present": 513,
+    "qnet_job_codes_present": 513
+  },
+  "existing_database": {
+    "description_present": 0,
+    "career_tags_present": 0,
+    "exam_information_count": 510,
+    "raw_acquisition_present": 485,
+    "certificates_with_schedules": 475,
+    "schedule_rows": 1922,
+    "sources_history_count": 158,
+    "latest_sources_count": 152,
+    "latest_source_states": {
+      "details:fetched": 59,
+      "details:failed": 4,
+      "details:empty": 37,
+      "schedules:fetched": 52
+    }
+  },
+  "existing_documents": {
+    "count": 1574,
+    "certificate_count": 544,
+    "sections": {
+      "출제기준": 481,
+      "취득방법": 507,
+      "출제경향": 474,
+      "응시자격": 56,
+      "시험과목 및 배점": 56
+    },
+    "review_states": {
+      "unreviewed": 1574
+    },
+    "unknown_certificate_codes": [],
+    "replacement_character_documents": 0
+  },
+  "technical_file": {
+    "count": 510,
+    "content_differences": [
+      {
+        "qnet_code": "1025",
+        "name": "프레스금형기사",
+        "changed_fields": [
+          "fees",
+          "raw_fee_text"
+        ]
+      }
+    ],
+    "missing_technical_codes": [
+      "8070",
+      "8090",
+      "8080"
+    ],
+    "database_id_mismatches": []
+  },
+  "manifest": {
+    "count": 719,
+    "unchanged": 719,
+    "issues": [],
+    "note": "Changed hashes indicate difference from the historical manifest, not proof of corruption."
+  },
+  "professional_snapshot": {
+    "local_status_counts": {
+      "schedules:fetched": 35,
+      "schedules:failed": 2,
+      "details:fetched": 56,
+      "details:failed": 8,
+      "details:empty": 36
+    },
+    "detail_status_changes_in_database": [
+      {
+        "qnet_code": "9502",
+        "name": "기계경비지도사",
+        "local_status": "failed",
+        "database_status": "fetched"
+      },
+      {
+        "qnet_code": "9662",
+        "name": "호텔경영사",
+        "local_status": "failed",
+        "database_status": "fetched"
+      },
+      {
+        "qnet_code": "9669",
+        "name": "국가유산수리기술자(조경)",
+        "local_status": "failed",
+        "database_status": "empty"
+      },
+      {
+        "qnet_code": "9740",
+        "name": "정수시설운영관리사2급",
+        "local_status": "failed",
+        "database_status": "fetched"
+      }
+    ]
+  },
+  "recommendation_gaps": {
+    "ncs_mapping_not_prepared": 613,
+    "related_jobs_with_evidence_not_prepared": 613,
+    "summary_missing": 613,
+    "career_tags_empty": 613
+  },
+  "keyword_candidates": [],
+  "interpretation": [
+    "Q-Net job codes are not confirmed NCS mappings.",
+    "Existing documents remain unreviewed and are mainly examination/eligibility material.",
+    "Keyword presence alone does not validate career evidence.",
+    "Current official naming, abolition and latest publication status were not checked against live sources in this inventory step."
+  ]
+}

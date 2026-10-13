@@ -1,0 +1,960 @@
+{
+  "started_at": "2026-10-05T08:27:12.759115+00:00",
+  "mode": "live",
+  "apply_requested": false,
+  "requested_codes": [
+    "1320",
+    "1431",
+    "1150",
+    "1630",
+    "1250",
+    "2290",
+    "2140",
+    "7910",
+    "7780",
+    "6892"
+  ],
+  "only": "details",
+  "interval_seconds": 1.0,
+  "completed": true,
+  "results": [
+    {
+      "qnet_code": "1320",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+            "retrieved_at": "2026-10-05T08:27:17.266836Z",
+            "written": [
+              "소프트웨어설계",
+              "소프트웨어개발",
+              "데이터베이스구축",
+              "프로그래밍언어활용",
+              "정보시스템구축관리"
+            ],
+            "practical": [
+              "정보처리 실무"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+            "retrieved_at": "2026-10-05T08:27:17.266836Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.",
+            "practical": "100점을 만점으로 하여 60점 이상."
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1320",
+            "retrieved_at": "2026-10-05T08:27:18.649195Z",
+            "written": 19400,
+            "practical": 22600,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "정보처리기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 :모든 학과 응시가능\n시험과목\n- 필기 1. 소프트웨어설계 2. 소프트웨어개발 3. 데이터베이스구축 4. 프로그래밍언어활용 5. 정보시스템구축관리\n- 실기 : 정보처리 실무\n검정방법\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분)\n- 실기 : 필답형(2시간30분)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.\n- 실기 : 100점을 만점으로 하여 60점 이상.",
+          "raw_fee_text": "1차 : 19400, 2차 : 22600"
+        },
+        "detail_items": [
+          {
+            "contents": "정보처리기사 출제경향\r\n\r\n\r\n\r\n\r\n&lt;실기시험 출제 경향> \r\n\r\n정보시스템 등의 개발 요구 사항을 이해하여 각 업무에 맞는 소프트웨어의 기능에 관한 설계, 구현 및 테스트를 수행에 필요한 \r\n1. 현행 시스템 분석 및 요구사항 확인(소프트웨어 공학 기술의 요구사항 분석 기법 활용)\r\n2. 데이터 입출력 구현(논리, 물리데이터베이스 설계, 조작 프로시저 등)\r\n3. 통합 구현(소프트웨어와 연계 대상 모듈간의 특성 및 연계 모듈 구현 등)\r\n4. 서버프로그램 구현(소프트웨어 개발 환경 구축, 형상 관리, 공통 모듈, 테스트 수행 등)\r\n5. 인터페이스 구현(소프트웨어 공학 지식, 소프트웨어 인터페이스 설계, 기능 구현, 구현검증 등)\r\n6. 화면설계(UI 요구사항 및 설계, 표준 프로토 타입 제작 등)\r\n7. 애플리케이션 테스트 (테스트 케이스 설계, 통합 테스트, 성능 개선 등)\r\n8. SQL 응용(SQL 작성 등)\r\n9. 소프트웨어 개발 보안 구축(SW 개발 보안 설계, SW개발 보안 구현 등)\r\n10. 프로그래밍 언어활용(기본 문법 등)\r\n11. 응용 SW기초 기술 활용(운영체제, 데이터베이스 활용, 네트워크 활용, 개발환경 구축 등)\r\n12. 제품 소프트웨어 패키징(제품 소프트웨어 패키징, 제품소프트웨어 매뉴얼 작성 , 버전 관리등 )\r\n&lt;세부 평가 내역>\r\n- 필기시험의 내용은 고객지원 > 자료실의 출제기준을 참고 바랍니다. \r\n- 실기시험은 필답형을 시행되며 고객지원> 자료실의 출제기준을 참고 바랍니다. \r\n 출제기준 참조(www.q-net.or.kr)",
+            "infogb": "출제경향",
+            "jmfldnm": "정보처리기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          },
+          {
+            "contents": "정보처리기사 출제기준\r\n\r\n\r\n\r\n\r\n정보처리기사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "정보처리기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          },
+          {
+            "contents": "정보처리기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단 \r\n\r\n 관련학과 :모든 학과 응시가능\r\n\r\n 시험과목 \r\n- 필기 1. 소프트웨어설계 2. 소프트웨어개발 3. 데이터베이스구축 4. 프로그래밍언어활용 5. 정보시스템구축관리 \r\n- 실기 : 정보처리 실무 \r\n\r\n 검정방법 \r\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분)\r\n- 실기 : 필답형(2시간30분)\r\n\r\n 합격기준 \r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.\r\n- 실기 : 100점을 만점으로 하여 60점 이상.",
+            "infogb": "취득방법",
+            "jmfldnm": "정보처리기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 22600",
+            "infogb": "응시수수료",
+            "jmfldnm": "정보처리기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "정보처리기사",
+      "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1320"
+    },
+    {
+      "qnet_code": "1431",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1431",
+            "retrieved_at": "2026-10-05T08:27:21.881648Z",
+            "written": [
+              "산업재해 예방 및 안전보건교육",
+              "인간공학 및 위험성 평가·관리",
+              "기계·기구 및 설비 안전 관리",
+              "전기설비 안전 관리",
+              "화학설비 안전 관리",
+              "건설공사 안전 관리"
+            ],
+            "practical": [
+              "산업안전관리실무"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1431",
+            "retrieved_at": "2026-10-05T08:27:21.881648Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상",
+            "practical": "100점을 만점으로 하여 60점 이상"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1431",
+            "retrieved_at": "2026-10-05T08:27:23.232447Z",
+            "written": 19400,
+            "practical": 34600,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "산업안전기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 대학 및 전문대학의 안전공학, 산업안전공학, 보건안전학 관련학과\n시험과목\n- 필기 : 1. 산업재해 예방 및 안전보건교육 2. 인간공학 및 위험성 평가·관리 3. 기계·기구 및 설비 안전 관리 4. 전기설비 안전 관리 5. 화학설비 안전 관리 6. 건설공사 안전 관리\n- 실기 :산업안전관리실무\n검정방법\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)\n- 실기 : 복합형[필답형(1시간 30분, 55점) + 작업형(1시간 정도, 45점)]\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상\n- 실기 : 100점을 만점으로 하여 60점 이상",
+          "raw_fee_text": "1차 : 19400, 2차 : 34600"
+        },
+        "detail_items": [
+          {
+            "contents": "산업안전기사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n\r\n- 실기시험은 복합형(필답형+작업형)으로 시행되며 고객만족>자료실의 출제기준을 참고바랍니다.\r\n\r\n산업안전기사 -영상자료을 이용하여 시행되며, 제조(기계, 전기, 화공, 건설 등) 및 서비스 등 각 사업현장에서의 안전관리에 관한 이론적 지식과 관련 법령을 바탕으로 일반지식, 전문지식과 응용 및 실무 능력을 평가",
+            "infogb": "출제경향",
+            "jmfldnm": "산업안전기사",
+            "mdobligfldcd": "251",
+            "mdobligfldnm": "안전관리",
+            "obligfldcd": "25",
+            "obligfldnm": "안전관리"
+          },
+          {
+            "contents": "산업안전기사 출제기준\r\n\r\n\r\n\r\n\r\n산업안전기사 출제기준 입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "산업안전기사",
+            "mdobligfldcd": "251",
+            "mdobligfldnm": "안전관리",
+            "obligfldcd": "25",
+            "obligfldnm": "안전관리"
+          },
+          {
+            "contents": "산업안전기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단\r\n\r\n 관련학과 : 대학 및 전문대학의 안전공학, 산업안전공학, 보건안전학 관련학과\r\n\r\n 시험과목 \r\n\r\n- 필기 : 1. 산업재해 예방 및 안전보건교육 2. 인간공학 및 위험성 평가&middot;관리 3. 기계&middot;기구 및 설비 안전 관리 4. 전기설비 안전 관리 5. 화학설비 안전 관리 6. 건설공사 안전 관리\r\n\r\n- 실기 :산업안전관리실무 \r\n\r\n 검정방법\r\n\r\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)\r\n- 실기 : 복합형[필답형(1시간 30분, 55점) + 작업형(1시간 정도, 45점)] \r\n\r\n 합격기준\r\n\r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상\r\n- 실기 : 100점을 만점으로 하여 60점 이상",
+            "infogb": "취득방법",
+            "jmfldnm": "산업안전기사",
+            "mdobligfldcd": "251",
+            "mdobligfldnm": "안전관리",
+            "obligfldcd": "25",
+            "obligfldnm": "안전관리"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 34600",
+            "infogb": "응시수수료",
+            "jmfldnm": "산업안전기사",
+            "mdobligfldcd": "251",
+            "mdobligfldnm": "안전관리",
+            "obligfldcd": "25",
+            "obligfldnm": "안전관리"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "산업안전기사",
+      "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1431"
+    },
+    {
+      "qnet_code": "1150",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "1b76163a-8229-4cd8-b7d0-f277195a2b74",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1150",
+            "retrieved_at": "2026-10-05T08:27:25.799457Z",
+            "written": [
+              "전기자기학",
+              "전력공학",
+              "전기기기",
+              "회로이론 및 제어공학",
+              "전기설비기술기준"
+            ],
+            "practical": [
+              "전기설비설계 및 관리"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1150",
+            "retrieved_at": "2026-10-05T08:27:25.799457Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상",
+            "practical": "100점을 만점으로 하여 60점 이상"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1150",
+            "retrieved_at": "2026-10-05T08:27:27.161341Z",
+            "written": 19400,
+            "practical": 22600,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "전기기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과\n시험과목\n- 필기 : 1. 전기자기학 2. 전력공학 3. 전기기기 4. 회로이론 및 제어공학 5. 전기설비기술기준\n- 실기 : 전기설비설계 및 관리\n검정방법\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분)\n- 실기 : 필답형(2시간 30분)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상\n- 실기 : 100점을 만점으로 하여 60점 이상",
+          "raw_fee_text": "1차 : 19400, 2차 : 22600"
+        },
+        "detail_items": [
+          {
+            "contents": "전기기사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 실기시험은 필답형으로 시행되며 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 전기설비기술기준, 한국전기설비규정 등은 시험일자 기준으로 시험 시행 전 최근 고시된 기준 및 규정으로\r\n 수험준비에 임하여야 합니다.",
+            "infogb": "출제경향",
+            "jmfldnm": "전기기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          },
+          {
+            "contents": "전기기사 출제기준\r\n\r\n\r\n\r\n\r\n전기기사 출제기준 입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "전기기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          },
+          {
+            "contents": "전기기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단 \r\n 관련학과 : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 \r\n 시험과목\r\n- 필기 : 1. 전기자기학 2. 전력공학 3. 전기기기 4. 회로이론 및 제어공학 5. 전기설비기술기준\r\n- 실기 : 전기설비설계 및 관리 \r\n 검정방법 \r\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) \r\n- 실기 : 필답형(2시간 30분) \r\n 합격기준 \r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 \r\n- 실기 : 100점을 만점으로 하여 60점 이상",
+            "infogb": "취득방법",
+            "jmfldnm": "전기기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 22600",
+            "infogb": "응시수수료",
+            "jmfldnm": "전기기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "전기기사",
+      "certificate_id": "1b76163a-8229-4cd8-b7d0-f277195a2b74",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1150"
+    },
+    {
+      "qnet_code": "1630",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 1,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "d8edfdba-b9ca-43dc-9aa6-4ea6d0515765",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1630",
+            "retrieved_at": "2026-10-05T08:27:30.450315Z",
+            "written": [
+              "건축계획",
+              "건축시공",
+              "건축구조",
+              "건축설비",
+              "건축관계법규"
+            ],
+            "practical": [
+              "건축시공 실무"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1630",
+            "retrieved_at": "2026-10-05T08:27:30.450315Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상",
+            "practical": "100점을 만점으로 하여 60점 이상"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1630",
+            "retrieved_at": "2026-10-05T08:27:31.551378Z",
+            "written": 19400,
+            "practical": 22600,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "건축기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 대학이나 전문대학의 건축, 건축공학, 건축설비, 실내건축 관련학과\n시험과목\n- 필기 1. 건축계획 2. 건축시공 3. 건축구조 4. 건축설비 5. 건축관계법규\n- 실기 : 건축시공 실무\n검정방법\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)\n- 실기 : 필답형(3시간, 100점)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상\n- 실기 : 100점을 만점으로 하여 60점 이상",
+          "raw_fee_text": "1차 : 19400, 2차 : 22600"
+        },
+        "detail_items": [
+          {
+            "contents": "- 필답형 실기시험이므로 출제기준을 참조하시기 바랍니다.",
+            "infogb": "출제경향",
+            "jmfldnm": "건축기사",
+            "mdobligfldcd": "141",
+            "mdobligfldnm": "건축",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "건축기사 출제기준\r\n\r\n\r\n\r\n\r\n\r\n건축기사 출제기준입니다.\r\n \r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "건축기사",
+            "mdobligfldcd": "141",
+            "mdobligfldnm": "건축",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "건축기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단\r\n\r\n 관련학과 : 대학이나 전문대학의 건축, 건축공학, 건축설비, 실내건축 관련학과 \r\n\r\n 시험과목 \r\n- 필기 1. 건축계획 2. 건축시공 3. 건축구조 4. 건축설비 5. 건축관계법규 \r\n- 실기 : 건축시공 실무 \r\n\r\n 검정방법 \r\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분) \r\n- 실기 : 필답형(3시간, 100점) \r\n\r\n 합격기준 \r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상 \r\n- 실기 : 100점을 만점으로 하여 60점 이상",
+            "infogb": "취득방법",
+            "jmfldnm": "건축기사",
+            "mdobligfldcd": "141",
+            "mdobligfldnm": "건축",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 22600",
+            "infogb": "응시수수료",
+            "jmfldnm": "건축기사",
+            "mdobligfldcd": "141",
+            "mdobligfldnm": "건축",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "건축기사",
+      "certificate_id": "d8edfdba-b9ca-43dc-9aa6-4ea6d0515765",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1630"
+    },
+    {
+      "qnet_code": "1250",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 1,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "aca18d37-a53a-452b-87c0-8165a4fb78ba",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1250",
+            "retrieved_at": "2026-10-05T08:27:33.832736Z",
+            "written": [
+              "응용역학",
+              "측량학",
+              "수리학 및 수문학4. 철근콘크리트 및 강구조",
+              "토질 및 기초",
+              "상하수도공학"
+            ],
+            "practical": [
+              "토목설계 및 시공 실무"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1250",
+            "retrieved_at": "2026-10-05T08:27:33.832736Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상",
+            "practical": "100점을 만점으로 하여 60점 이상"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1250",
+            "retrieved_at": "2026-10-05T08:27:34.957113Z",
+            "written": 19400,
+            "practical": 22600,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "토목기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 대학 및 전문대학에 개설되어 있는 토목공학, 농업토목, 해양토목 관련학과\n시험과목\n- 필기 :1. 응용역학 2. 측량학 3. 수리학 및 수문학4. 철근콘크리트 및 강구조 5. 토질 및 기초 6. 상하수도공학\n- 실기 : 토목설계 및 시공 실무\n검정방법\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)\n- 실기 : 필답형(3시간, 100점)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상\n- 실기 : 100점을 만점으로 하여 60점 이상",
+          "raw_fee_text": "1차 : 19400, 2차 : 22600"
+        },
+        "detail_items": [
+          {
+            "contents": "토목기사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 실기시험은 필답형으로 시행되며 고객만족>자료실의 출제기준을 참고바랍니다.",
+            "infogb": "출제경향",
+            "jmfldnm": "토목기사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "토목기사 출제기준\r\n\r\n\r\n\r\n\r\n토목기사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "토목기사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "토목기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단\r\n\r\n 관련학과 : 대학 및 전문대학에 개설되어 있는 토목공학, 농업토목, 해양토목 관련학과 \r\n\r\n 시험과목\r\n- 필기 :1. 응용역학 2. 측량학 3. 수리학 및 수문학4. 철근콘크리트 및 강구조 5. 토질 및 기초 6. 상하수도공학\r\n- 실기 : 토목설계 및 시공 실무 \r\n\r\n 검정방법\r\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분) \r\n- 실기 : 필답형(3시간, 100점) \r\n\r\n 합격기준\r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상 \r\n- 실기 : 100점을 만점으로 하여 60점 이상",
+            "infogb": "취득방법",
+            "jmfldnm": "토목기사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 22600",
+            "infogb": "응시수수료",
+            "jmfldnm": "토목기사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "토목기사",
+      "certificate_id": "aca18d37-a53a-452b-87c0-8165a4fb78ba",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1250"
+    },
+    {
+      "qnet_code": "2290",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 1,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "2b635f4b-55ff-4107-8d8a-96f8b2ef01e7",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=2290",
+            "retrieved_at": "2026-10-05T08:27:39.066119Z",
+            "written": [
+              "정보시스템 기반 기술2.프로그래밍언어 활용3. 데이터베이스 활용"
+            ],
+            "practical": [
+              "정보처리 실무"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=2290",
+            "retrieved_at": "2026-10-05T08:27:39.066119Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.",
+            "practical": "100점을 만점으로 하여 60점 이상."
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=2290",
+            "retrieved_at": "2026-10-05T08:27:40.449335Z",
+            "written": 19400,
+            "practical": 20800,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "정보처리산업기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 모든학과 응시가능\n시험과목\n- 필기 1.정보시스템 기반 기술2.프로그래밍언어 활용3. 데이터베이스 활용\n- 실기 : 정보처리 실무\n검정방법\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분)\n- 실기 : 필답형(2시간 30분)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.\n- 실기 : 100점을 만점으로 하여 60점 이상.",
+          "raw_fee_text": "1차 : 19400, 2차 : 20800"
+        },
+        "detail_items": [
+          {
+            "contents": "정보처리산업기사 출제경향\r\n\r\n\r\n\r\n\r\n&lt;실기시험 출제 경향> \r\n\r\n정보시스템 기반 기술을 활용하여 소프트웨어의 기능에 관한 구현 및 테스트를 수행하고 사용자에게 배포하기 위해\r\n응용 SW 기초 기술 활용, UI, 애플리케이션 테스트 등의 관련 능력과 실무에서 교육, 활용되는 C, JAVA, Python 등의프로그래밍 언어 활용 능력을 평가\r\n- 필기 및 실기시험내용은 출제기준을 참고 바랍니다. \r\n- 출제기준은 고객지원> 자료실에서도 확인할 수 있습니다. \r\n 출제기준 참조(www.q-net.or.kr)",
+            "infogb": "출제경향",
+            "jmfldnm": "정보처리산업기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          },
+          {
+            "contents": "정보처리산업기사 출제기준\r\n\r\n\r\n\r\n\r\n정보처리산업기사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "정보처리산업기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          },
+          {
+            "contents": "정보처리산업기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단 \r\n\r\n 관련학과 : 모든학과 응시가능 \r\n\r\n 시험과목\r\n\r\n- 필기 1.정보시스템 기반 기술2.프로그래밍언어 활용3. 데이터베이스 활용\r\n- 실기 : 정보처리 실무 \r\n\r\n 검정방법 \r\n\r\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) \r\n- 실기 : 필답형(2시간 30분) \r\n\r\n합격기준 \r\n\r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.\r\n\r\n- 실기 : 100점을 만점으로 하여 60점 이상.",
+            "infogb": "취득방법",
+            "jmfldnm": "정보처리산업기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 20800",
+            "infogb": "응시수수료",
+            "jmfldnm": "정보처리산업기사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "정보처리산업기사",
+      "certificate_id": "2b635f4b-55ff-4107-8d8a-96f8b2ef01e7",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2290"
+    },
+    {
+      "qnet_code": "2140",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 1,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "15c4e260-6e04-4126-ba82-53b4cd6daa0b",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=2140",
+            "retrieved_at": "2026-10-05T08:27:44.279294Z",
+            "written": [
+              "전기자기학",
+              "전력공학",
+              "전기기기",
+              "회로이론",
+              "전기설비기술기준"
+            ],
+            "practical": [
+              "전기설비설계 및 관리"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=2140",
+            "retrieved_at": "2026-10-05T08:27:44.279294Z",
+            "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상",
+            "practical": "100점을 만점으로 하여 60점이상"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=2140",
+            "retrieved_at": "2026-10-05T08:27:45.365708Z",
+            "written": 19400,
+            "practical": 20800,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "전기산업기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과\n시험과목\n- 필기 1. 전기자기학 2. 전력공학 3. 전기기기 4. 회로이론 5. 전기설비기술기준\n- 실기 : 전기설비설계 및 관리\n검정방법\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분)\n- 실기 : 필답형(2시간)\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상\n- 실기 : 100점을 만점으로 하여 60점이상",
+          "raw_fee_text": "1차 : 19400, 2차 : 20800"
+        },
+        "detail_items": [
+          {
+            "contents": "전기산업기사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 실기시험은 필답형으로 시행되며 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 전기설비기술기준, 한국전기설비규정 등은 시험일자 기준으로 시험 시행 전 최근 고시된 기준 및 규정으로\r\n 수험준비에 임하여야 합니다.",
+            "infogb": "출제경향",
+            "jmfldnm": "전기산업기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          },
+          {
+            "contents": "전기산업기사 출제기준\r\n\r\n\r\n\r\n\r\n전기산업기사 출제기준 입니다. \r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "전기산업기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          },
+          {
+            "contents": "전기산업기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단 \r\n 관련학과 : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과\r\n시험과목 \r\n- 필기 1. 전기자기학 2. 전력공학 3. 전기기기 4. 회로이론 5. 전기설비기술기준\r\n- 실기 : 전기설비설계 및 관리\r\n검정방법 \r\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) \r\n- 실기 : 필답형(2시간)\r\n합격기준 \r\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 \r\n- 실기 : 100점을 만점으로 하여 60점이상",
+            "infogb": "취득방법",
+            "jmfldnm": "전기산업기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 19400, 2차 : 20800",
+            "infogb": "응시수수료",
+            "jmfldnm": "전기산업기사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "전기산업기사",
+      "certificate_id": "15c4e260-6e04-4126-ba82-53b4cd6daa0b",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2140"
+    },
+    {
+      "qnet_code": "7910",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 1,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "76f9e2b0-e3d5-47c9-916a-5cf5623f2105",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7910",
+            "retrieved_at": "2026-10-05T08:27:52.632900Z",
+            "written": [
+              "한식 재료관리, 음식조리 및 위생관리"
+            ],
+            "practical": [
+              "조리작업"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7910",
+            "retrieved_at": "2026-10-05T08:27:52.632900Z",
+            "written": "100점을 만점으로 하여 60점 이상",
+            "practical": "100점을 만점으로 하여 60점 이상\n작업형 실기시험 기본정보\n안전등급(safety Level) : 4 등급\n▼\n위험\n경고\n주의\n관심\n· 시험장소 구분\n실내\n· 주요시설 및 장비\n가스레인지, 칼, 도마 등 조리기구\n· 보호구\n긴소매 위생복, 앞치마, 안전화(운동화) 등\n보호구(긴소매 위생복, 안전화(운동화) 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.\n○ 실기시험 안전작업 교육영상 url: https://youtu.be/LvNOizxImyc"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=7910",
+            "retrieved_at": "2026-10-05T08:27:53.989818Z",
+            "written": 14500,
+            "practical": 26900,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "한식조리기능사 취득방법\n1. 시 행 처 : 한국산업인력공단\n2. 시험과목\n- 필기 : 한식 재료관리, 음식조리 및 위생관리\n- 실기 : 조리작업\n3. 검정방법\n- 필기 : 객관식 4지 택일형, 60문항(60분)\n- 실기 : 작업형(70분 정도)\n4. 합격기준\n- 필기 : 100점을 만점으로 하여 60점 이상\n- 실기 : 100점을 만점으로 하여 60점 이상\n작업형 실기시험 기본정보\n안전등급(safety Level) : 4 등급\n▼\n위험\n경고\n주의\n관심\n· 시험장소 구분\n실내\n· 주요시설 및 장비\n가스레인지, 칼, 도마 등 조리기구\n· 보호구\n긴소매 위생복, 앞치마, 안전화(운동화) 등\n보호구(긴소매 위생복, 안전화(운동화) 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.\n○ 실기시험 안전작업 교육영상 url: https://youtu.be/LvNOizxImyc",
+          "raw_fee_text": "1차 : 14500, 2차 : 26900"
+        },
+        "detail_items": [
+          {
+            "contents": "한식조리기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.\r\n- 실기시험은 작업형으로 시행되며 고객만족>자료실의 공개문제를 참고바랍니다.\r\n (※ 요구사항의 내용과 지급된 재료로 과제를 제한시간 내에 만들어 내는 작업으로 \r\n 주요평가내용은 위생상태 및 안전관리, 조리기술, 작품완성도 등을 평가합니다.)",
+            "infogb": "출제경향",
+            "jmfldnm": "한식조리기능사",
+            "mdobligfldcd": "131",
+            "mdobligfldnm": "조리",
+            "obligfldcd": "13",
+            "obligfldnm": "음식서비스"
+          },
+          {
+            "contents": "한식조리기능사 출제기준\r\n\r\n\r\n\r\n\r\n한식조리기능사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "한식조리기능사",
+            "mdobligfldcd": "131",
+            "mdobligfldnm": "조리",
+            "obligfldcd": "13",
+            "obligfldnm": "음식서비스"
+          },
+          {
+            "contents": "한식조리기능사 취득방법\r\n\r\n\r\n\r\n\r\n1. 시 행 처 : 한국산업인력공단\r\n2. 시험과목 \r\n - 필기 : 한식 재료관리, 음식조리 및 위생관리\r\n - 실기 : 조리작업\r\n3. 검정방법 \r\n - 필기 : 객관식 4지 택일형, 60문항(60분)\r\n - 실기 : 작업형(70분 정도)\r\n4. 합격기준 \r\n - 필기 : 100점을 만점으로 하여 60점 이상\r\n - 실기 : 100점을 만점으로 하여 60점 이상\r\n\r\n\r\n\r\n작업형 실기시험 기본정보\r\n\r\n\r\n \r\n안전등급(safety Level) : 4 등급\r\n\r\n\r\n\r\n\r\n▼\r\n\r\n\r\n\r\n\r\n\r\n위험\r\n경고\r\n주의\r\n관심\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&middot; 시험장소 구분\r\n실내\r\n\r\n\r\n&middot; 주요시설 및 장비\r\n가스레인지, 칼, 도마 등 조리기구\r\n\r\n\r\n&middot; 보호구\r\n긴소매 위생복, 앞치마, 안전화(운동화) 등\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n보호구(긴소매 위생복, 안전화(운동화) 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다. \r\n\r\n\r\n\r\n\r\n○ 실기시험 안전작업 교육영상 url: https://youtu.be/LvNOizxImyc",
+            "infogb": "취득방법",
+            "jmfldnm": "한식조리기능사",
+            "mdobligfldcd": "131",
+            "mdobligfldnm": "조리",
+            "obligfldcd": "13",
+            "obligfldnm": "음식서비스"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 14500, 2차 : 26900",
+            "infogb": "응시수수료",
+            "jmfldnm": "한식조리기능사",
+            "mdobligfldcd": "131",
+            "mdobligfldnm": "조리",
+            "obligfldcd": "13",
+            "obligfldnm": "음식서비스"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "한식조리기능사",
+      "certificate_id": "76f9e2b0-e3d5-47c9-916a-5cf5623f2105",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7910"
+    },
+    {
+      "qnet_code": "7780",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "51fd9532-b931-4603-8732-439c3ef3d095",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7780",
+            "retrieved_at": "2026-10-05T08:27:59.033305Z",
+            "written": [
+              "전기이론",
+              "전기기기",
+              "전기설비"
+            ],
+            "practical": [
+              "전기설비작업"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7780",
+            "retrieved_at": "2026-10-05T08:27:59.033305Z",
+            "written": "100점 만점에 60점 이상",
+            "practical": "100점 만점에 60점 이상\n작업형 실기시험 기본정보\n안전등급(safety Level) : 4 등급\n▼\n위험\n경고\n주의\n관심\n· 시험장소 구분\n실내\n· 주요시설 및 장비\n니퍼, 드라이버, 쇠톱 등\n· 보호구\n면장갑, 운동화\n보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다."
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=7780",
+            "retrieved_at": "2026-10-05T08:28:00.299541Z",
+            "written": 14500,
+            "practical": 106200,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "전기기능사 취득방법\n시 행 처 : 한국산업인력공단\n시험과목 - 필기 : 1. 전기이론 2. 전기기기 3. 전기설비\n- 실기 : 전기설비작업\n검정방법 - 필기 : 객관식 4지택일형(60문항)\n- 실기 : 작업형(4시간 30분정도, 전기설비작업)\n합격기준 - 필기 : 100점 만점에 60점 이상\n- 실기 : 100점 만점에 60점 이상\n작업형 실기시험 기본정보\n안전등급(safety Level) : 4 등급\n▼\n위험\n경고\n주의\n관심\n· 시험장소 구분\n실내\n· 주요시설 및 장비\n니퍼, 드라이버, 쇠톱 등\n· 보호구\n면장갑, 운동화\n보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+          "raw_fee_text": "1차 : 14500, 2차 : 106200"
+        },
+        "detail_items": [
+          {
+            "contents": "전기기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족>자료실의 출제기준을 참고바랍니다.- 작업형 실기시험은 전기설비의 배관 및 배선공사, 시퀀스 제어회로를 완성합니다.",
+            "infogb": "출제경향",
+            "jmfldnm": "전기기능사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          },
+          {
+            "contents": "전기기능사 출제기준\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n전기기능사 출제기준 입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "전기기능사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          },
+          {
+            "contents": "전기기능사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단 \r\n 시험과목 - 필기 : 1. 전기이론 2. 전기기기 3. 전기설비 \r\n- 실기 : 전기설비작업 \r\n 검정방법 - 필기 : 객관식 4지택일형(60문항) \r\n- 실기 : 작업형(4시간 30분정도, 전기설비작업)\r\n 합격기준 - 필기 : 100점 만점에 60점 이상 \r\n - 실기 : 100점 만점에 60점 이상 \r\n\r\n\r\n\r\n\r\n\r\n\r\n작업형 실기시험 기본정보\r\n\r\n\r\n \r\n안전등급(safety Level) : 4 등급\r\n\r\n\r\n\r\n\r\n▼\r\n\r\n\r\n\r\n\r\n\r\n위험\r\n경고\r\n주의\r\n관심\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&middot; 시험장소 구분\r\n실내\r\n\r\n\r\n&middot; 주요시설 및 장비\r\n니퍼, 드라이버, 쇠톱 등\r\n\r\n\r\n&middot; 보호구\r\n면장갑, 운동화\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+            "infogb": "취득방법",
+            "jmfldnm": "전기기능사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 14500, 2차 : 106200",
+            "infogb": "응시수수료",
+            "jmfldnm": "전기기능사",
+            "mdobligfldcd": "201",
+            "mdobligfldnm": "전기",
+            "obligfldcd": "20",
+            "obligfldnm": "전기.전자"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "전기기능사",
+      "certificate_id": "51fd9532-b931-4603-8732-439c3ef3d095",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7780"
+    },
+    {
+      "qnet_code": "6892",
+      "details": {
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "bc4c547f-af0c-4694-ad29-16159ec94e77",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=6892",
+            "retrieved_at": "2026-10-05T08:28:04.760263Z",
+            "written": [
+              "네트워크 구성",
+              "정보기기 유지보수",
+              "정보기기 설치운영"
+            ],
+            "practical": [
+              "네트워크 운용실무"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=6892",
+            "retrieved_at": "2026-10-05T08:28:04.760263Z",
+            "written": "100점을 만점으로 하여 60점 이상",
+            "practical": "100점을 만점으로 하여 60점 이상\n안전등급(Safety Level) : 1등급\n▼\n위험\n경고\n주의\n관심\n• 시험장소 구분\n실내\n• 주요시설 및 장비\n컴퓨터, USB\n• 보호구\n해당사항없음\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다."
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=6892",
+            "retrieved_at": "2026-10-05T08:28:06.115612Z",
+            "written": 14500,
+            "practical": 21800,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "정보기기운용기능사 취득방법\n시 행 처 : 한국산업인력공단\n시험과목\n- 필기 : 1. 네트워크 구성 2. 정보기기 유지보수 3. 정보기기 설치운영\n- 실기 : 네트워크 운용실무\n검정방법\n- 필기 : 전과목 혼합, 객관식 60문항(60분)\n- 실기 : 작업형(1시간30분정도)\n합격기준\n- 필기 : 100점을 만점으로 하여 60점 이상\n- 실기 : 100점을 만점으로 하여 60점 이상\n안전등급(Safety Level) : 1등급\n▼\n위험\n경고\n주의\n관심\n• 시험장소 구분\n실내\n• 주요시설 및 장비\n컴퓨터, USB\n• 보호구\n해당사항없음\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+          "raw_fee_text": "1차 : 14500, 2차 : 21800"
+        },
+        "detail_items": [
+          {
+            "contents": "정보기기운용기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 정보통신 광대역 네트워크를 구성하기 위한스위칭 및 라우터 설정, Ping 테스트 등 네트워크 구축을 위한작업 수행\r\n\r\n- 공개 문제 참조",
+            "infogb": "출제경향",
+            "jmfldnm": "정보기기운용기능사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          },
+          {
+            "contents": "정보기기운용기능사 출제기준\r\n\r\n\r\n\r\n\r\n정보기기운용기능사 출제기준 입니다.\r\n \r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "정보기기운용기능사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          },
+          {
+            "contents": "정보기기운용기능사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단  \r\n\r\n 시험과목 \r\n- 필기 : 1. 네트워크 구성 2. 정보기기 유지보수 3. 정보기기 설치운영\r\n- 실기 : 네트워크 운용실무\r\n\r\n검정방법\r\n- 필기 : 전과목 혼합, 객관식 60문항(60분) \r\n- 실기 : 작업형(1시간30분정도) \r\n\r\n 합격기준 \r\n- 필기 : 100점을 만점으로 하여 60점 이상\r\n- 실기 : 100점을 만점으로 하여 60점 이상 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n안전등급(Safety Level) : 1등급\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n▼\r\n\r\n\r\n\r\n위험\r\n\r\n경고\r\n\r\n주의\r\n\r\n관심\r\n\r\n\r\n\r\n\r\n\r\n\r\n&bull; 시험장소 구분 \r\n\r\n실내 \r\n\r\n\r\n\r\n&bull; 주요시설 및 장비\r\n\r\n컴퓨터, USB\r\n\r\n\r\n\r\n&bull; 보호구 \r\n\r\n해당사항없음\r\n\r\n\r\n\r\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\r\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+            "infogb": "취득방법",
+            "jmfldnm": "정보기기운용기능사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 14500, 2차 : 21800",
+            "infogb": "응시수수료",
+            "jmfldnm": "정보기기운용기능사",
+            "mdobligfldcd": "211",
+            "mdobligfldnm": "정보기술",
+            "obligfldcd": "21",
+            "obligfldnm": "정보통신"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "정보기기운용기능사",
+      "certificate_id": "bc4c547f-af0c-4694-ad29-16159ec94e77",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=6892"
+    }
+  ],
+  "summary": {
+    "details": {
+      "validated": 10
+    },
+    "schedules": {
+      "not_requested": 10
+    }
+  },
+  "finished_at": "2026-10-05T08:28:06.118917+00:00"
+}

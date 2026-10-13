@@ -1,0 +1,44 @@
+{
+  "mode": "live",
+  "qnet_code": "1431",
+  "name": "산업안전기사",
+  "information": {
+    "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11",
+    "subjects": {
+      "status": "available",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1431",
+      "retrieved_at": "2026-10-05T08:11:05.784442Z",
+      "written": [
+        "산업재해 예방 및 안전보건교육",
+        "인간공학 및 위험성 평가·관리",
+        "기계·기구 및 설비 안전 관리",
+        "전기설비 안전 관리",
+        "화학설비 안전 관리",
+        "건설공사 안전 관리"
+      ],
+      "practical": [
+        "산업안전관리실무"
+      ]
+    },
+    "pass_criteria": {
+      "status": "available",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1431",
+      "retrieved_at": "2026-10-05T08:11:05.784442Z",
+      "written": "100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상",
+      "practical": "100점을 만점으로 하여 60점 이상"
+    },
+    "fees": {
+      "status": "available",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=1431",
+      "retrieved_at": "2026-10-05T08:11:05.911013Z",
+      "written": 19400,
+      "practical": 34600,
+      "currency": "KRW"
+    },
+    "raw_acquisition_text": "산업안전기사 취득방법\n시 행 처 : 한국산업인력공단\n관련학과 : 대학 및 전문대학의 안전공학, 산업안전공학, 보건안전학 관련학과\n시험과목\n- 필기 : 1. 산업재해 예방 및 안전보건교육 2. 인간공학 및 위험성 평가·관리 3. 기계·기구 및 설비 안전 관리 4. 전기설비 안전 관리 5. 화학설비 안전 관리 6. 건설공사 안전 관리\n- 실기 :산업안전관리실무\n검정방법\n- 필기 : 객관식 4지 택일형 과목당 20문항(과목당 30분)\n- 실기 : 복합형[필답형(1시간 30분, 55점) + 작업형(1시간 정도, 45점)]\n합격기준\n- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상\n- 실기 : 100점을 만점으로 하여 60점 이상",
+    "raw_fee_text": "1차 : 19400, 2차 : 34600"
+  },
+  "detail_retry_count": 0,
+  "fee_retry_count": 0,
+  "database_applied": false
+}

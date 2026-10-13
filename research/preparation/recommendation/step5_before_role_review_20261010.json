@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-09T08:13:37.209652+00:00",
+  "stage": 5,
+  "scope": "직무 중심 요약·기존 직업 근거·공통 직무 적용. 최신 법적 권한·응시조건 검증 제외",
+  "certificates": 613,
+  "model_reviewed": 562,
+  "review_status_counts": {
+    "assistant_reviewed_summary_only": 584,
+    "held": 11,
+    "assistant_reviewed_summary_and_roles": 8,
+    "missing_evidence": 10
+  },
+  "approved_summaries": 592,
+  "with_reviewed_roles": 8,
+  "reviewed_role_count": 13,
+  "held": [
+    {
+      "qnet_code": "0670",
+      "name": "조경기술사",
+      "reason": "도시계획 설명이 지적기술사와 거의 동일함. 조경 고유 업무 근거 재확인 필요"
+    },
+    {
+      "qnet_code": "0690",
+      "name": "지적기술사",
+      "reason": "도시계획 설명이 조경기술사와 거의 동일함. 지적 고유 업무 근거 재확인 필요"
+    },
+    {
+      "qnet_code": "0210",
+      "name": "화공기술사",
+      "reason": "개요는 2005~2006년 종목 통합 이력이며 현재 직무 설명을 뒷받침하지 않음"
+    },
+    {
+      "qnet_code": "1104",
+      "name": "금속재료기사",
+      "reason": "금속재료 종목에 선광·제련·정련 설명이 있어 종목별 업무 범위 재확인 필요"
+    },
+    {
+      "qnet_code": "1512",
+      "name": "제품디자인기사",
+      "reason": "개요는 제도 도입·인력 부족 배경 중심이며 구체적인 수행직무가 부족함"
+    },
+    {
+      "qnet_code": "7873",
+      "name": "아스팔트피니셔운전기능사",
+      "reason": "확보 자료가 진출기관·1990년대 수요 전망 중심이며 직무 설명 근거 부족"
+    },
+    {
+      "qnet_code": "9501",
+      "name": "일반경비지도사",
+      "reason": "경비업 전체 종류의 설명을 일반경비지도사의 고유 수행직무로 사용할 수 없음"
+    },
+    {
+      "qnet_code": "9660",
+      "name": "한국어교육능력검정시험",
+      "reason": "양성과정·시험 합격에 따른 자격 부여 조건을 직무 설명으로 사용할 수 없음"
+    },
+    {
+      "qnet_code": "9663",
+      "name": "호텔관리사",
+      "reason": "호텔 등급에 따른 직무 범위가 포함돼 현재 등급·법적 업무 범위 재확인 필요"
+    },
+    {
+      "qnet_code": "9705",
+      "name": "경영지도사(1차공통)",
+      "reason": "1차공통은 경영지도사 시험 구분이며 독립된 추천 자격으로 표시하지 않음"
+    },
+    {
+      "qnet_code": "9729",
+      "name": "기술지도사(1차공통)",
+      "reason": "1차공통은 기술지도사 시험 구분이며 독립된 추천 자격으로 표시하지 않음"
+    }
+  ],
+  "raw_documents_preserved": true,
+  "database_changed": false,
+  "github_pushed": false,
+  "whole_raw_corpus_semantic_review_complete": false,
+  "semantic_decisions_complete_for_current_summary_scope": true,
+  "note": "직무 요약 승인과 직업 근거 승인은 구별한다. 빈 related_jobs를 확인된 직업으로 표시하지 않는다."
+}

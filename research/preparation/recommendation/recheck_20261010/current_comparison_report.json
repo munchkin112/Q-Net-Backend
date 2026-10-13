@@ -1,0 +1,108 @@
+{
+  "checked_at": "2026-10-10T04:06:40.407019+00:00",
+  "scope": "existing_local_catalog_read_only_database_and_saved_official_sources; no_live_source_refresh",
+  "catalog": {
+    "local_count": 613,
+    "database_count": 613,
+    "local_categories": {
+      "T": 513,
+      "S": 100
+    },
+    "database_categories": {
+      "T": 513,
+      "S": 100
+    },
+    "duplicate_local_codes": [],
+    "missing_in_database": [],
+    "database_only": [],
+    "name_category_mismatches": [],
+    "qnet_major_job_codes_present": 513,
+    "qnet_job_codes_present": 513
+  },
+  "database": {
+    "description_present": 0,
+    "career_tags_present": 0,
+    "exam_information_count": 510,
+    "raw_acquisition_present": 485,
+    "certificates_with_schedules": 475,
+    "schedule_rows": 1922,
+    "sources_history_count": 158,
+    "latest_sources_count": 152,
+    "latest_source_states": {
+      "details:fetched": 59,
+      "details:failed": 4,
+      "details:empty": 37,
+      "schedules:fetched": 52
+    }
+  },
+  "old_manifest": {
+    "count": 719,
+    "unchanged": 719,
+    "issues": [],
+    "note": "Changed hashes indicate difference from the historical manifest, not proof of corruption."
+  },
+  "old_technical_snapshot_differences": [
+    {
+      "qnet_code": "1025",
+      "name": "프레스금형기사",
+      "changed_fields": [
+        "fees",
+        "raw_fee_text"
+      ]
+    }
+  ],
+  "professional_status_changes": [
+    {
+      "qnet_code": "9502",
+      "name": "기계경비지도사",
+      "local_status": "failed",
+      "database_status": "fetched"
+    },
+    {
+      "qnet_code": "9662",
+      "name": "호텔경영사",
+      "local_status": "failed",
+      "database_status": "fetched"
+    },
+    {
+      "qnet_code": "9669",
+      "name": "국가유산수리기술자(조경)",
+      "local_status": "failed",
+      "database_status": "empty"
+    },
+    {
+      "qnet_code": "9740",
+      "name": "정수시설운영관리사2급",
+      "local_status": "failed",
+      "database_status": "fetched"
+    }
+  ],
+  "current_recommendation_verification": {
+    "verified_contexts": 592,
+    "verified_choices": 24,
+    "reviewed_roles": 13,
+    "evidence_documents": 595
+  },
+  "current_recommendation_total": 592,
+  "approved_set_exact": true,
+  "unexpected_recommendation_codes": [],
+  "candidate_uuid_mismatches": [],
+  "official_career_documents": {
+    "total": 1637,
+    "unique_ids": 1637,
+    "paragraph_hash_mismatches": [],
+    "raw_files_read": 1394,
+    "raw_source_hash_matched_documents": 1637,
+    "raw_source_not_matched_document_ids": []
+  },
+  "saved_roles": {
+    "certificates": 8,
+    "roles": 13
+  },
+  "protected_tables_unchanged_during_audit": true,
+  "protected_tables_equal_to_stage6_snapshot": true,
+  "database_writes": false,
+  "external_api_calls": 0,
+  "github_pushed": false,
+  "note": "이전 감사 스크립트의 description/career_tags 및 ncs_mapping_not_prepared는 기존 테이블만 본 값이다. 현재 추천 자료는 별도 테이블 검증 결과를 사용하며 공식 NCS 매핑은 요구하지 않는다."
+}

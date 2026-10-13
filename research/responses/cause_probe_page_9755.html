@@ -1,0 +1,728 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+			contResizeH("contents_frame_2");
+
+			contResizeH("contents_frame_3");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_2", "contents_text_2", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_3", "contents_text_3", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		
+				<div class="division">
+					<b class="headLine3">시험일정</b>
+					
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 09:00부터 <span class="c_Red">마지막 날 18:00까지</span> 임)</p>
+					
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;">
+							<caption class="scHdn"> 구분,접수기간,서류제출기간,시험일정,의견제시기간,최종정답 합격자발표, 합격자발표기간 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">접수기간</th>
+									<th scope="col">서류제출기간</th>
+									<th scope="col">시험일정</th>
+									<th scope="col">의견제시기간</th>
+									<th scope="col">최종정답<br/>발표기간</th>
+									<th scope="col">합격자<br/>발표기간</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>2026년 25회<br/>필기</td>
+									<!--  접수기간    -->
+									<td>
+
+						2026.07.20~2026.07.24
+<br/><span class='fc_b_nb'>빈자리 추가접수 기간<br/>
+2026.09.03~2026.09.04
+</span>
+
+									</td>
+									<!--  서류제출기간    -->
+									<td>
+
+									</td>
+									<!--  시험일정    -->
+									<td>
+
+						2026.09.12
+
+									</td>
+									<!--  의견제시기간 -->
+									<td>
+
+						2026.09.12<br/> ~ <br/>2026.09.18
+
+									</td>
+									<!--  최종정답발표기간 -->
+									<td>
+
+									</td>
+									<!--  합격자발표기간 -->
+									<td>
+
+						2026.10.21<br/> ~ <br/>2026.12.20
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>2026년 25회<br/>면접</td>
+									<!--  접수기간    -->
+									<td>
+
+						2026.11.02~2026.11.06
+
+									</td>
+									<!--  서류제출기간    -->
+									<td>
+
+									</td>
+									<!--  시험일정    -->
+									<td>
+
+						2026.11.30<br/> ~ <br/>2026.12.05
+
+									</td>
+									<!--  의견제시기간 -->
+									<td>
+
+									</td>
+									<!--  최종정답발표기간 -->
+									<td>
+
+									</td>
+									<!--  합격자발표기간 -->
+									<td>
+
+						2026.12.23<br/> ~ <br/>2027.02.22
+
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div><!-- 검정기관-타기관 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+	
+
+					<b class="contTit1 mT30">응시자격</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="응시자격 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3급 청소년상담사 응시자격</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: 굴림; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p><!--StartFragment--><strong><span style="FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-SIZE: 14pt; FONT-FAMILY: 맑은 고딕">가. 응시자격</span></strong></p>
+<p>
+<table style="BORDER-TOP: medium none; HEIGHT: 457px; BORDER-RIGHT: medium none; WIDTH: 678px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 56px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">구 분</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 479px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">자 격 요 건</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 2px solid; WIDTH: 141px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">비 고</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 114px; BORDER-RIGHT: #000000 1px solid; WIDTH: 56px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">급 </span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">청소년</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">상담사</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 114px; BORDER-RIGHT: #000000 1px solid; WIDTH: 479px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학원에서 청소년</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">지도</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">교육학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사회사업</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">정신의학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">아동 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&middot;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담학 분야 또는 그 밖에 여성가족부령으로 정하는 상담 관련 분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">이하 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">라 한다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">의 박사학위를 취득한 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학원에서 상담관련분야의 석사학위를 취득한 후 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3. 2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급 청소년상담사로서 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호 및 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호에 규정된 사람과 같은 수준 이상의 자격이 있다고 여성가족부령으로 정하는 사람</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 114px; BORDER-RIGHT: #000000 2px solid; WIDTH: 141px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담분야 박사</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담분야 석사 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3. 2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급 자격증 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 123px; BORDER-RIGHT: #000000 1px solid; WIDTH: 56px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">급</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">청소년</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">상담사</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 123px; BORDER-RIGHT: #000000 1px solid; WIDTH: 479px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학원에서 청소년</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">지도</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">교육학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사회사업</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">정신의학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">아동</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&middot; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담학 분야 또는 그 밖에 여성가족부령으로 정하는 상담 관련 분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">이하 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">라 한다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">의 석사학위를 취득한 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학 또는 다른 법령에 따라 이와 동등한 학력을 인정받는 기관에서 상담관련분야 학사학위를 취득한 후 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3. 3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급 청소년상담사로서 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호부터 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호까지에 규정된 사람과 같은 수준 이상의 자격이 있다고 여성가족부령으로 정하는 사람</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 123px; BORDER-RIGHT: #000000 2px solid; WIDTH: 141px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담분야 석사</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담분야 학사 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3. 3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급 자격증 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 192px; BORDER-RIGHT: #000000 1px solid; WIDTH: 56px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">급</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">청소년</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">상담사</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 192px; BORDER-RIGHT: #000000 1px solid; WIDTH: 479px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학 및 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">평생교육법</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">」</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">에 따른 학력이 인정되는 평생교육시설의 청소년</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">지도</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">교육학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사회사업</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">정신의학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">아동</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&middot;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담학 분야 또는 그 밖에 여성가족부령으로 정하는 상담 관련 분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">이하 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">라 한다</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">의 학사학위를 취득한 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">전문대학 또는 다른 법령에 따라 이와 동등한 학력을 인정받는 기관에서 상담관련 분야 전문학사를 취득한 사람으로서 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학 또는 다른 법령에 따라 이와 동등한 학력을 인정받는 기관에서 학사학위를 취득한 후 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">전문대학 또는 다른 법령에 따라 이와 동등한 학력을 인정받는 기관에서 전문 학사학위를 취득한 후 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">5. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">고등학교를 졸업하고 상담 실무경력이 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">5</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년 이상인 사람</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">6. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호부터 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호까지에 규정된 사람과 같은 수준 이상의 자격이 있다고 여성가족부령으로 정하는 사람</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 192px; BORDER-RIGHT: #000000 2px solid; WIDTH: 141px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담분야 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년제 학사</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담분야 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년제 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">타분야 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년제 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">타분야 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년제 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">5. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">고졸 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+ 5</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">년</span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p>&nbsp;</p><!--StartFragment-->
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련 학과 인정 시 법령에 나열되어 있는 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">10</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">개 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&lsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rsquo;(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년지도학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">교육학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사회사업학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사회복지학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">정신의학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">아동학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">아동복지학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">과 이에 포함된 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">10</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">개 학과명의 조합일 경우 인정하고 조합된 학과명에 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">10</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">개 학과명 이외의 추가적인 문구 있을 때에는 인정 불가</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">인정 예시 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">교육</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">+</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리학 등</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련분야 학과명 중에 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&lsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">자는 빠져있더라도 인정됨</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담관련 학과 인정 시 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&lsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학위</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">명이 아닌 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&lsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학과</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">명 또는 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&lsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">전공</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rsquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">명으로 판단</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학의 경우 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학부명</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학과명</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">전공명 중 어느 한 곳에 상담관련분야가 명시되어 있으면 인정 </span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학원의 경우 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학과명</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">전공명 중 어느 한 곳에 상담관련분야가 명시되어 있으면 인정</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">&nbsp;&nbsp;&nbsp; (단, 교육학과의 경우에는 학과명만으로는 인정 불가하며 여성가족부령이 정하는 상담관련분야에 해당할 경우 인정)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">국외에서 취득한 학위증명서</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">졸업증명서 등은 원본서류에 대해 대사관 확인</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">아포스티유 협약 가입 국가는 아포스티유 증명서로 대체 가능</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">후 한국어로 번역</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">?</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">공증하여 서류심사 기간 내에 공단 서류심사 기관에 제출하여야 함</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 14pt; FONT-FAMILY: 맑은 고딕"><strong>나. 여성가족부령으로 정하는 그 밖의 '상담관련분야'</strong></span></p>
+<p><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"><!--StartFragment--></span>
+<table style="BORDER-TOP: medium none; HEIGHT: 77px; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 73px; BORDER-RIGHT: #000000 2px solid; WIDTH: 636px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9312;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담의 이론과 실제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담원리, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담기법</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">), </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9313;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">면접원리</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9314;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">발달이론</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9315;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">집단상담</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9316;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심리측정 및 평가</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9317;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">이상심리</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9318;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">성격심리</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9319;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사회복지실천</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">기술</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">론</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9320;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상담교육</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9321;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">진로상담</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9322;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">가족상담</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9323;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학업상담</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9324;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">비행상담</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9325;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">성상담</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&#9326;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년상담 또는 이와 내용이 동일하거나 유사한 과목 중 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">과목 이상을 교과과목으로 채택하고 있는 학문분야</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년기본법 시행규칙 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">7</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">큐넷 청소년상담사 홈페이지 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">공지사항</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">동일</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&middot;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">유사교과목</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">참조</span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt"></span>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">응시자격 참고사항</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 한양중고딕">복수전공으로 상담관련분야를 선택한 경우 인정</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">학위 취득자</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 한양중고딕">연계전공 혹은 부전공으로 상담관련분야를 선택했을 경우에는 상담관련과목을 전공으로 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-FAMILY: 한양중고딕">과목 이상을 이수한 경우에만 인정</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp; ☞ </span><span style="FONT-FAMILY: 한양중고딕">일반선택과목</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">교양과목</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">교직과목</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">계절학기과목을 이수한 경우 인정되지 않음</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">동일</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">유사</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">교과목 인정여부 판단할 때 기존에 인정된 동일</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">유사</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">과목명</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">현재까지 인정된 과목은 공단 청소년상담사 홈페이지 공지사항 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-FAMILY: 한양중고딕">동일유사교과목</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-FAMILY: 한양중고딕">에 첨부되어 있음</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">과 핵심키워드가 일치하면 과목명에 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;~</span><span style="FONT-FAMILY: 한양중고딕">론</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;~</span><span style="FONT-FAMILY: 한양중고딕">학</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;~</span><span style="FONT-FAMILY: 한양중고딕">연구</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;,&ldquo;~</span><span style="FONT-FAMILY: 한양중고딕">과정</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;~</span><span style="FONT-FAMILY: 한양중고딕">세미나</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;~</span><span style="FONT-FAMILY: 한양중고딕">이론</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo; </span><span style="FONT-FAMILY: 한양중고딕">등이 포함된 경우나 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-FAMILY: 한양중고딕">의</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo; </span><span style="FONT-FAMILY: 한양중고딕">및</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;</span><span style="FONT-FAMILY: 한양중고딕">과</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">Ⅰ Ⅱ</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;, &ldquo;1 2&rdquo; </span><span style="FONT-FAMILY: 한양중고딕">등과 같이 조사나 숫자가 다른 경우에 동일</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">유사</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">과목으로 인정가능</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">위의 문구 이외의 추가적인 문구가 있을 경우 동일</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">유사</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">교과목 심사 필요</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">동일</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">유사</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">교과목으로 등록 신청 시 해당 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-FAMILY: 한양중고딕">학과장 직인</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-FAMILY: 한양중고딕">의 확인서류를 공문으로 제출</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: ">&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-SIZE: 14pt">다. 응시등급별 상담 실무경력 인정기준(1년간 기준)</span></strong></p>
+<p><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"><!--StartFragment--></span>
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 161px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">응 시 등 급</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">상 담 유 형</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">실 시 경 력</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 2px solid; WIDTH: 120px; VERTICAL-ALIGN: middle; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">비 고</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 69px; BORDER-RIGHT: #000000 1px solid; WIDTH: 161px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="3">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급 및 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년상담사</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">개 인 상 담</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대면상담 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">50</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">회 이상 실시</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 139px; BORDER-RIGHT: #000000 2px solid; WIDTH: 120px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="6">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">관련서류가 증빙될 경우에만 인정</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">집 단 상 담</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">24</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">시간 이상 실시</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심 리 검 사</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">10</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사례 이상 실시 및 해석</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 69px; BORDER-RIGHT: #000000 1px solid; WIDTH: 161px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="3">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">급</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년상담사</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">개 인 상 담</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대면상담 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">회 이상 실시</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">집 단 상 담</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">6</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">시간 이상 실시 또는 참가</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 138px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">심 리 검 사</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 1px solid; WIDTH: 226px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">사례 이상 실시 및 해석</span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt"></span></strong>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">내담자는 청소년</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">학부모</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">지도자</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">일반인 등을 비롯한 모든 사람이 대상임</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">개인상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">심리검사 경력을 모두 만족할 경우 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-FAMILY: 한양중고딕">년 경력으로 인정</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 한양중고딕">개인상담 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">대면 개인상담 경력 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">전화 상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">인터넷 상담 해당 없음</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 한양중고딕">집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">집단원 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">5</span><span style="FONT-FAMILY: 한양중고딕">명 이상</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;&nbsp; </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1, 2</span><span style="FONT-FAMILY: 한양중고딕">급 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">비구조화집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">구조화집단상담을 지도자</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">리더</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">코리더</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">로서 실시한 경력</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;&nbsp; </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-FAMILY: 한양중고딕">급 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">비구조화집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">구조화집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">집단상담 관련 워크숍에 실시</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">리더</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">코리더</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span><span style="FONT-FAMILY: 한양중고딕">및 참가</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">실시도 포함</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">한 경력</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 한양중고딕">심리검사</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;&nbsp; </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">1, 2, 3</span><span style="FONT-FAMILY: 한양중고딕">급 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">전국 표준화검사와 투사검사</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕"></span>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 14pt; FONT-FAMILY: 맑은 고딕"><strong>라. 상담 실무경력 인정기관</strong></span></p><span style="FONT-FAMILY: 한양중고딕"><!--StartFragment--></span>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;- </span><span style="FONT-FAMILY: 한양중고딕">다음 표에 제시된 기관에서</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">정규직</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">임시직</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">파트타임 등으로</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span><span style="FONT-FAMILY: 한양중고딕">개인상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">심리검사를 실시한 경력임</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">단</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, 3</span><span style="FONT-FAMILY: 한양중고딕">급의 경우 집단상담 참가 경력도 인정</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬바탕"></span>
+<table style="BORDER-TOP: medium none; HEIGHT: 105px; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 101px; BORDER-RIGHT: #000000 2px solid; WIDTH: 591px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년단체</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년 기본법 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">8</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">호</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년상담복지센터</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년복지 지원법 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">29</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년복지시설</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">:</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년쉼터</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">,</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년자립지원관</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">,</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년치료재활센터</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">청소년복지</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">지원법</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">31</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">- 학교 밖 청소년 지원센터</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학교 밖 청소년 지원에 관한 법률 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">12</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">- 각급 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">학교</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">초</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">중등교육법 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) / </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">각종 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">대학</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rdquo;(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">고등교육법 제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">조</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">- 청소년상담사 자격검정위원회에서 인정하는 기관</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕"></span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">정부기관&nbsp;/</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt"> </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">공공상담기관&nbsp;/</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt"> </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">법인체상담기관 및 민간상담기관</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) : </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 한양중고딕">예시내용 참조</span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt"></span></strong>&nbsp;</p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">정부기관</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&sdot;</span><span style="FONT-FAMILY: 한양중고딕">공공상담기관</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&sdot;</span><span style="FONT-FAMILY: 한양중고딕">법인체상담기관 </span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕">예시</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">법무부</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">보호관찰소</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">,</span><span style="FONT-FAMILY: 한양중고딕">소년원</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">),</span><span style="FONT-FAMILY: 한양중고딕">고용노동부</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">진로상담센터</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">),</span><span style="FONT-FAMILY: 한양중고딕">보건복지부</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">[(</span><span style="FONT-FAMILY: 한양중고딕">아동학대예방센터</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">종합사회복지관</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">상담업무</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)], </span><span style="FONT-FAMILY: 한양중고딕">국방부</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">군상담 부대 및 기관</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">), </span><span style="FONT-FAMILY: 한양중고딕">여성가족부</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">성폭력상담 센터</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">), Wee</span><span style="FONT-FAMILY: 한양중고딕">프로젝트</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(Wee </span><span style="FONT-FAMILY: 한양중고딕">스쿨</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">클래스</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">센터</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">) </span><span style="FONT-FAMILY: 한양중고딕">등 </span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><strong><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 한양중고딕">민간상담기관 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">상담기관으로서 관할관청에 신고 또는 등록을 필한 후 상담활동</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 한양중고딕">개인상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">집단상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">심리검사</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">상담교육 등</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 한양중고딕">의 실적을 제시할 수 있는 상담기관으로 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">【</span><span style="FONT-FAMILY: 한양중고딕">비영리 법인 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">고유번호증</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">민간상담기관 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 한양중고딕">사업자등록증명원</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">】 </span><span style="FONT-FAMILY: 한양중고딕">사업자등록증명원의 단체명</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">업태</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">종목에 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&lsquo;</span><span style="FONT-FAMILY: 한양중고딕">상담</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">심리</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">치료</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 한양중고딕">정신의학</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&rsquo;</span><span style="FONT-FAMILY: 한양중고딕">이 명시된 기관은 인정</span></strong></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt">&nbsp;&rarr; </span><span style="FONT-FAMILY: 한양중고딕">인정여부 결정을 위해 기관실사 및 자격검정위원회에 회부를 할 수 있음</span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">시험과목 및 배점</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="시험과목 및 배점 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3급 청소년상담사 시험과목 및 배점</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: 굴림; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p class="0"><span style="FONT-FAMILY: 한컴바탕"><!--StartFragment--></span>
+<table style="BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 36px; BORDER-RIGHT: #000000 1px solid; WIDTH: 85px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">구 분</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 18px; BORDER-RIGHT: #000000 1px solid; WIDTH: 381px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" colspan="2">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">시 험 과 목</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 18px; BORDER-RIGHT: #000000 2px solid; WIDTH: 174px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" colspan="2">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">시 험 방 법</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 18px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">구 분</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 18px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">과 목</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 18px; BORDER-RIGHT: #000000 1px solid; WIDTH: 107px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">필 기 </span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 18px; BORDER-RIGHT: #000000 2px solid; WIDTH: 64px; BACKGROUND: #ffe1e1; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 170%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">면 접</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 115px; BORDER-RIGHT: #000000 1px solid; WIDTH: 85px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">급</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">청소년</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">상담사</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">(5</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 74px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필 수</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(3</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 74px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">상담사 교육 및 사례지도</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">청소년 관련법과 행정</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">상담연구방법론의 실제</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 115px; BORDER-RIGHT: #000000 1px solid; WIDTH: 107px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필 기 시 험</span></p>
+<p class="0" style="MARGIN-LEFT: 118px; LINE-HEIGHT: 130%; TEXT-INDENT: -88.6pt"><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">과목당 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">25</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">문항</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 115px; BORDER-RIGHT: #000000 2px solid; WIDTH: 64px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">면 접</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 40px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">선 택</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 40px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="MARGIN-LEFT: 37px; LINE-HEIGHT: 130%; TEXT-INDENT: -28pt"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">비행상담,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">성상담,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">약물상담,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">위기상담 중 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 123px; BORDER-RIGHT: #000000 1px solid; WIDTH: 85px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">급</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">청소년</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">상담사</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">(6</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 78px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필 수</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(4</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 78px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">청소년 상담의 이론과 실제</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">상담연구방법론의 기초</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">심리측정 평가의 활용</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">이상심리 </span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 123px; BORDER-RIGHT: #000000 1px solid; WIDTH: 107px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필 기 시 험</span></p>
+<p class="0" style="MARGIN-LEFT: 118px; LINE-HEIGHT: 130%; TEXT-INDENT: -88.6pt"><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">과목당 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">25</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">문항</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 123px; BORDER-RIGHT: #000000 2px solid; WIDTH: 64px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">면 접</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 44px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">선 택</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 44px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="MARGIN-LEFT: 32px; LINE-HEIGHT: 130%; TEXT-INDENT: -24.3pt"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">진로상담,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">집단상담,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">가족상담,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">학업상담 중</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 136px; BORDER-RIGHT: #000000 1px solid; WIDTH: 85px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">급</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">청소년</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">상담사</span></p>
+<p class="0" style="FONT-SIZE: 11pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">(6</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 99px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필 수</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(5</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 99px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">발달심리</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">집단상담의 기초</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">심리측정 및 평가</span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">상담이론 </span></p>
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">학습이론</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 136px; BORDER-RIGHT: #000000 1px solid; WIDTH: 107px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">필 기 시 험</span></p>
+<p class="0" style="MARGIN-LEFT: 118px; LINE-HEIGHT: 130%; TEXT-INDENT: -88.6pt"><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">과목당 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">25</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">문항</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 136px; BORDER-RIGHT: #000000 2px solid; WIDTH: 64px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px" rowspan="2">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">면 접</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 37px; BORDER-RIGHT: #000000 1px solid; WIDTH: 63px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">선 택</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: 0pt; LINE-HEIGHT: 130%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 37px; BORDER-RIGHT: #000000 1px solid; WIDTH: 315px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 1px">
+<p class="0" style="LINE-HEIGHT: 130%"><span style="FONT-FAMILY: 굴림"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">청소년이해론,</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">청소년수련활동론 중 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">과목</span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p class="0">&nbsp;</p><!--StartFragment-->
+<p class="0" style="FONT-SIZE: 12pt; FONT-WEIGHT: bold; MARGIN-LEFT: 30px; LETTER-SPACING: -1.1pt; LINE-HEIGHT: 140%; TEXT-INDENT: -22.5pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">※</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; COLOR: #699b37"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">비고</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">: </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">&ldquo;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.9pt">청소년 관련법</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">&rdquo; </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">이란 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">청소년기본법</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">청소년복지지원법</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">청소년보호법</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.9pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.2pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">아동</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">ㆍ</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">청소년의 성보호에 관한 법률</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">청소년활동진흥법</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.6pt">학교폭력예방 및 대책에</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.2pt"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">관한 법률</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">소년법</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">」</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">을 말하며</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">그 밖의 법령을 포함하는 경우 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1.1pt">여성가족부장관이 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.1pt">고시</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.1pt">한다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.1pt">.</span></p>
+<p class="0" style="FONT-SIZE: 12pt; FONT-WEIGHT: bold; MARGIN-LEFT: 43px; LINE-HEIGHT: 140%; TEXT-INDENT: -32.3pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">※ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">시험과목 중 법령관련 출제 기준일은 시험 시행일 기준임</span></p>
+<p class="0" style="LAYOUT-GRID-MODE: both"><span style="FONT-FAMILY: 한컴바탕">&nbsp; </span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">합격기준</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_2" title="합격기준 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_2" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3급 청소년상담사 합격기준</title>
+<style type="text/css">
+BODY {
+	MARGIN: 0px; FONT-FAMILY: 굴림; COLOR: #000000; FONT-SIZE: 10pt
+}
+P {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+LI {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-FAMILY: Malgun Gothic; FONT-SIZE: 10pt"><!--StartFragment-->
+<p style="TEXT-INDENT: -29.8pt; MARGIN-LEFT: 39px; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">합격기준</span></p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 678px; BORDER-COLLAPSE: collapse; BORDER-RIGHT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; WIDTH: 86px; PADDING-RIGHT: 6px; BACKGROUND: #eff6e7; HEIGHT: 21px; BORDER-TOP: #000000 2px solid; BORDER-RIGHT: #000000 1px solid; PADDING-TOP: 1px">
+<p style="TEXT-ALIGN: center; LETTER-SPACING: -1pt; FONT-SIZE: 13pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">구 분</span></p></td>
+<td style="BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; WIDTH: 587px; PADDING-RIGHT: 6px; BACKGROUND: #eff6e7; HEIGHT: 21px; BORDER-TOP: #000000 2px solid; BORDER-RIGHT: #000000 2px solid; PADDING-TOP: 1px">
+<p style="TEXT-ALIGN: center; LETTER-SPACING: -1pt; FONT-SIZE: 13pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">합 격 결 정 기 준</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; WIDTH: 86px; PADDING-RIGHT: 6px; HEIGHT: 28px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; PADDING-TOP: 1px">
+<p style="TEXT-ALIGN: center; LINE-HEIGHT: 140%; LETTER-SPACING: -0.4pt" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt; FONT-SIZE: 10pt">필기시험</span></p></td>
+<td style="BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; WIDTH: 587px; PADDING-RIGHT: 6px; HEIGHT: 28px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 2px solid; PADDING-TOP: 1px">
+<p style="LINE-HEIGHT: 140%; LETTER-SPACING: -1.1pt" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">매 과목 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">100</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">점을 만점으로 하여 매 과목 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">40</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">점 이상</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">, </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">전 과목 평균 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">60</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt; FONT-SIZE: 10pt">점 이상 득점한자</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-BOTTOM: #000000 2px solid; BORDER-LEFT: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; WIDTH: 86px; PADDING-RIGHT: 6px; HEIGHT: 61px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; PADDING-TOP: 1px">
+<p style="TEXT-ALIGN: center; LINE-HEIGHT: 140%; LETTER-SPACING: -0.4pt" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt; FONT-SIZE: 10pt">면접시험</span></p></td>
+<td style="BORDER-BOTTOM: #000000 2px solid; BORDER-LEFT: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; WIDTH: 587px; PADDING-RIGHT: 6px; HEIGHT: 61px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 2px solid; PADDING-TOP: 1px">
+<p style="LINE-HEIGHT: 140%" class="0"><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 10pt">면접위원</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt">(3</span><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 10pt">인</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt">)</span><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 10pt">의 평정점수 합계가 모두 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt">15</span><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 10pt">점</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt">(25</span><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 10pt">점 만점</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt">) </span><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 10pt">이상인 사람</span></p>
+<p style="LINE-HEIGHT: 140%; TEXT-INDENT: -14pt; LETTER-SPACING: 0pt; MARGIN-LEFT: 18px; FONT-SIZE: 9pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">※ </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.4pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">다만 면접위원의 과반수가 어느 하나의 평가사항에 대하여 </span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.4pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">1</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -0.4pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">점으로 평정한 때에는 </span><span style="FONT-FAMILY: 한양중고딕; FONT-SIZE: 10pt; FONT-WEIGHT: bold">평정점수 합계와 관계없이 불합격으로 한다</span><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: 0pt; FONT-SIZE: 10pt; FONT-WEIGHT: bold">.</span></p></td>
+</tr>
+</tbody>
+</table>
+<p style="MARGIN-TOP: 6px; TEXT-INDENT: -17pt; MARGIN-LEFT: 22px; FONT-SIZE: 9pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp; </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-SIZE: 9pt; FONT-WEIGHT: bold">※</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt; FONT-SIZE: 9pt; FONT-WEIGHT: bold"> </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt; FONT-SIZE: 9pt; FONT-WEIGHT: bold">필기시험 합격예정자는 응시자격 서류를 제출하여야 하며</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt; FONT-SIZE: 9pt; FONT-WEIGHT: bold">, </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt; FONT-SIZE: 9pt; FONT-WEIGHT: bold">정해진 기간 내 응시서류를 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 9pt; FONT-WEIGHT: bold">제출하지 않거나 심사결과 부적격자</span></p>
+<p style="MARGIN-TOP: 6px; TEXT-INDENT: -17pt; MARGIN-LEFT: 22px; FONT-SIZE: 9pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; FONT-SIZE: 9pt; FONT-WEIGHT: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 일 경우 필기시험을 불합격 처리함</span></p>
+<p style="MARGIN-TOP: 6px; TEXT-INDENT: -17pt; MARGIN-LEFT: 22px" class="0"><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span></p>
+<p style="LINE-HEIGHT: 140%; MARGIN-TOP: 6px; TEXT-INDENT: -17pt; MARGIN-LEFT: 22px" class="0"><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span></p>
+<p style="LINE-HEIGHT: 140%; MARGIN-TOP: 6px; TEXT-INDENT: -17pt; MARGIN-LEFT: 22px" class="0"><span style="FONT-FAMILY: 맑은 고딕"></span></p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 140%; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">응시자격서류 심사 및 면접시행</span></p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 140%; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">&nbsp;</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2014</span><span style="FONT-FAMILY: 맑은 고딕">년도부터 서류심사 및 면접시험 시행을 공단에서 시행</span></p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 140%; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕">&nbsp;</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㅇ </span><span style="FONT-FAMILY: 맑은 고딕">응시자격 심사 기준일</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: </span><span style="FONT-FAMILY: 맑은 고딕">응시자격 서류심사 마감일</span></p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">응시수수료</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_3" title="응시수수료 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_3" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3급 청소년상담사 응시수수료</title>
+<style type="text/css">
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Malgun Gothic; COLOR: #000000; FONT-SIZE: 10pt
+}
+P {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+LI {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-FAMILY: Malgun Gothic; FONT-SIZE: 10pt"><!--StartFragment-->
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 140%; MARGIN-TOP: 6px; LETTER-SPACING: 0pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">응시수수료</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">(</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">청소년기본법 제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">62</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">조제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">1</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">항</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">)</span></p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 140%; MARGIN-LEFT: 6px" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-FAMILY: 맑은 고딕">차</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 26,000</span><span style="FONT-FAMILY: 맑은 고딕">원</span></p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 140%; MARGIN-LEFT: 6px" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-FAMILY: 맑은 고딕">차</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 16,000</span><span style="FONT-FAMILY: 맑은 고딕">원</span></p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

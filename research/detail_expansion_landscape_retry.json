@@ -1,0 +1,181 @@
+{
+  "started_at": "2026-10-05T09:57:21.566799+00:00",
+  "mode": "live",
+  "apply_requested": false,
+  "requested_codes": [
+    "7900"
+  ],
+  "only": "details",
+  "interval_seconds": 0.5,
+  "completed": true,
+  "results": [
+    {
+      "qnet_code": "7900",
+      "details": {
+        "detail_response": {
+          "items": [
+            {
+              "contents": "조경기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족 -> 자료실의 출제기준을 참고바랍니다.\r\n- 작업형 시험은 조경에 필요한 기초 도면의 시설물, 식재 설계 및 도면(단면)을 판독하며, 재료를 식별하고 그 재료를 이용하여 조경시공 작업 능력을 평가(공개문제를 참조)",
+              "infogb": "출제경향",
+              "jmfldnm": "조경기능사",
+              "mdobligfldcd": "143",
+              "mdobligfldnm": "조경",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            },
+            {
+              "contents": "조경기능사 출제기준\r\n\r\n\r\n\r\n\r\n조경기능사 출제기준 입니다. \r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+              "infogb": "출제기준",
+              "jmfldnm": "조경기능사",
+              "mdobligfldcd": "143",
+              "mdobligfldnm": "조경",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            },
+            {
+              "contents": "조경기능사 취득방법\r\n\r\n\r\n\r\n\r\n 시행처 : 한국산업인력공단\r\n 시험과목\r\n- 필기 : 1.조경일반 2.조경재료 3.조경시공및관리\r\n- 실기 : 1일차: 1차 실기시험(1과제: 도면설계작업, 2과제: 수목영상감별)\r\n2일차: 2차 실기시험(3과제: 조경시공 실무작업 2개 과정)\r\n 검정방법\r\n- 필기 : 객관식 4지 택일형 60문항(60분)\r\n- 실기 : 작업형(3시간 30분 내외): 도면작업+수목감별+조경시공작업\r\n 합격기준 : 100점 만점 60점 이상\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n안전등급(Safety Level) : 2등급\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n \r\n\r\n▼\r\n\r\n \r\n\r\n\r\n\r\n위험\r\n\r\n경고\r\n\r\n주의\r\n\r\n관심\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 시험장소 구분 \r\n\r\n실내&middot;외\r\n\r\n \r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 주요시설 및 장비\r\n\r\n삽, 전지가위, 망치, 톱\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 보호구 \r\n\r\n안전복, 안전화 등\r\n\r\n\r\n\r\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\r\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+              "infogb": "취득방법",
+              "jmfldnm": "조경기능사",
+              "mdobligfldcd": "143",
+              "mdobligfldnm": "조경",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7900",
+          "retrieved_at": "2026-10-05T09:57:26.233197+00:00",
+          "retry_count": 0
+        },
+        "fee_response": {
+          "items": [
+            {
+              "contents": "1차 : 14500, 2차 : 30400",
+              "infogb": "응시수수료",
+              "jmfldnm": "조경기능사",
+              "mdobligfldcd": "143",
+              "mdobligfldnm": "조경",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=7900",
+          "retrieved_at": "2026-10-05T09:57:27.107775+00:00",
+          "retry_count": 1
+        },
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 1,
+        "information": {
+          "certificate_id": "d26c0a45-0cac-429e-ab48-9d66a0508574",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7900",
+            "retrieved_at": "2026-10-05T09:57:26.233197Z",
+            "phases": [
+              "written",
+              "practical"
+            ],
+            "written": [
+              "조경일반",
+              "조경재료",
+              "조경시공및관리"
+            ],
+            "practical": [
+              "1일차: 1차 실기시험(1과제: 도면설계작업, 2과제: 수목영상감별)\n2일차: 2차 실기시험(3과제: 조경시공 실무작업 2개 과정)"
+            ],
+            "interview": null,
+            "common": null
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=7900",
+            "retrieved_at": "2026-10-05T09:57:26.233197Z",
+            "phases": [
+              "written",
+              "practical"
+            ],
+            "written": null,
+            "practical": null,
+            "interview": null,
+            "common": "100점 만점 60점 이상"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=7900",
+            "retrieved_at": "2026-10-05T09:57:27.107775Z",
+            "phases": [
+              "written",
+              "practical"
+            ],
+            "written": 14500,
+            "practical": 30400,
+            "interview": null,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "조경기능사 취득방법\n시행처 : 한국산업인력공단\n시험과목\n- 필기 : 1.조경일반 2.조경재료 3.조경시공및관리\n- 실기 : 1일차: 1차 실기시험(1과제: 도면설계작업, 2과제: 수목영상감별)\n2일차: 2차 실기시험(3과제: 조경시공 실무작업 2개 과정)\n검정방법\n- 필기 : 객관식 4지 택일형 60문항(60분)\n- 실기 : 작업형(3시간 30분 내외): 도면작업+수목감별+조경시공작업\n합격기준 : 100점 만점 60점 이상\n안전등급(Safety Level) : 2등급\n▼\n위험\n경고\n주의\n관심\n• 시험장소 구분\n실내·외\n• 주요시설 및 장비\n삽, 전지가위, 망치, 톱\n• 보호구\n안전복, 안전화 등\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+          "raw_fee_text": "1차 : 14500, 2차 : 30400"
+        },
+        "detail_items": [
+          {
+            "contents": "조경기능사 출제경향\r\n\r\n\r\n\r\n\r\n- 필기시험의 내용은 고객만족 -> 자료실의 출제기준을 참고바랍니다.\r\n- 작업형 시험은 조경에 필요한 기초 도면의 시설물, 식재 설계 및 도면(단면)을 판독하며, 재료를 식별하고 그 재료를 이용하여 조경시공 작업 능력을 평가(공개문제를 참조)",
+            "infogb": "출제경향",
+            "jmfldnm": "조경기능사",
+            "mdobligfldcd": "143",
+            "mdobligfldnm": "조경",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "조경기능사 출제기준\r\n\r\n\r\n\r\n\r\n조경기능사 출제기준 입니다. \r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "조경기능사",
+            "mdobligfldcd": "143",
+            "mdobligfldnm": "조경",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "조경기능사 취득방법\r\n\r\n\r\n\r\n\r\n 시행처 : 한국산업인력공단\r\n 시험과목\r\n- 필기 : 1.조경일반 2.조경재료 3.조경시공및관리\r\n- 실기 : 1일차: 1차 실기시험(1과제: 도면설계작업, 2과제: 수목영상감별)\r\n2일차: 2차 실기시험(3과제: 조경시공 실무작업 2개 과정)\r\n 검정방법\r\n- 필기 : 객관식 4지 택일형 60문항(60분)\r\n- 실기 : 작업형(3시간 30분 내외): 도면작업+수목감별+조경시공작업\r\n 합격기준 : 100점 만점 60점 이상\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n안전등급(Safety Level) : 2등급\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n \r\n\r\n▼\r\n\r\n \r\n\r\n\r\n\r\n위험\r\n\r\n경고\r\n\r\n주의\r\n\r\n관심\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 시험장소 구분 \r\n\r\n실내&middot;외\r\n\r\n \r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 주요시설 및 장비\r\n\r\n삽, 전지가위, 망치, 톱\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 보호구 \r\n\r\n안전복, 안전화 등\r\n\r\n\r\n\r\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\r\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+            "infogb": "취득방법",
+            "jmfldnm": "조경기능사",
+            "mdobligfldcd": "143",
+            "mdobligfldnm": "조경",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 14500, 2차 : 30400",
+            "infogb": "응시수수료",
+            "jmfldnm": "조경기능사",
+            "mdobligfldcd": "143",
+            "mdobligfldnm": "조경",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "조경기능사",
+      "certificate_id": "d26c0a45-0cac-429e-ab48-9d66a0508574",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7900"
+    }
+  ],
+  "summary": {
+    "details": {
+      "validated": 1
+    },
+    "schedules": {
+      "not_requested": 1
+    }
+  },
+  "finished_at": "2026-10-05T09:57:27.114173+00:00"
+}

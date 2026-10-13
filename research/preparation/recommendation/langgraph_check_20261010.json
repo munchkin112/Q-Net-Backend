@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-10T04:41:20.812980+00:00",
+  "model": "gpt-4o-mini",
+  "profile_is_synthetic": true,
+  "database_changed": false,
+  "scope": "one_real_graph_sample_not_all_interests",
+  "passed": true,
+  "selection": {
+    "status": "completed",
+    "items": [
+      {
+        "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+        "reason": "컴퓨터공학 전공과 소프트웨어 개발 및 정보시스템 운영 업무가 연결되어, 선택한 정보통신 분야를 탐색할 후보입니다.",
+        "profile_factors": [
+          "major"
+        ],
+        "evidence": [
+          {
+            "document_id": "qnet:1320:overview",
+            "quote": "컴퓨터를 효과적으로 활용하기 위해서 하드웨어뿐만 아니라 정교한 소프트웨어가 필요하다."
+          }
+        ]
+      },
+      {
+        "certificate_id": "2ce28d86-df04-4190-9521-6421e73fc31b",
+        "reason": "임베디드 시스템에 대한 이해와 응용 프로그램 설계가 정보통신 분야의 핵심으로, 컴퓨터공학 전공과 잘 맞아 연결됩니다.",
+        "profile_factors": [
+          "major"
+        ],
+        "evidence": [
+          {
+            "document_id": "qnet:1121:duties",
+            "quote": "임베디드 시스템에 펌웨어, 운영체제를 이식하고, 응용 프로그램을 설계, 구현 및 테스트를 수행하는 업무"
+          }
+        ]
+      },
+      {
+        "certificate_id": "8a7fc83c-1e58-481c-9134-01c7106b3477",
+        "reason": "로봇 소프트웨어 개발은 정보통신 기술을 활용한 소프트웨어 설계 및 구현을 포함하여, 컴퓨터공학 전공과의 연관성이 높습니다.",
+        "profile_factors": [
+          "major"
+        ],
+        "evidence": [
+          {
+            "document_id": "qnet:1178:duties",
+            "quote": "로봇 소프트웨어의 구조를 설계하고, 필요한 기능을 구현하여 동작을 시험 평가할 수 있다."
+          }
+        ]
+      }
+    ]
+  },
+  "names": [
+    "정보처리기사",
+    "임베디드기사",
+    "로봇소프트웨어개발기사"
+  ],
+  "diagnostics": {
+    "node_history": [
+      "prepare",
+      "context",
+      "decision",
+      "tools",
+      "context",
+      "decision",
+      "tools",
+      "context",
+      "decision",
+      "tools",
+      "context",
+      "decision",
+      "tools",
+      "tools",
+      "context",
+      "decision",
+      "validate",
+      "finish"
+    ],
+    "tools_called": [
+      "list_interest_categories",
+      "search_certificates",
+      "search_certificates",
+      "search_certificates",
+      "search_certificates"
+    ],
+    "model_call_count": 5,
+    "tool_call_count": 5,
+    "repair_count": 0,
+    "retry_count": 0,
+    "error_count": 0,
+    "errors": [],
+    "context_char_count": 22872,
+    "elapsed_ms": 15099
+  }
+}

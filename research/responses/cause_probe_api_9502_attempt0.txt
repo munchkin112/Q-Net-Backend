@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>&#xD;
+&#xD;
+&#xD;
+기계경비지도사 취득방법&#xD;
+&#xD;
+&#xD;
+&#xD;
+&#xD;
+일반경비지도사 내용 참조&#xD;
+&#xD;
+</contents><infogb>취득방법</infogb><jmfldnm>기계경비지도사</jmfldnm><mdobligfldcd> </mdobligfldcd><mdobligfldnm> </mdobligfldnm><obligfldcd> </obligfldcd><obligfldnm> </obligfldnm></item></items></body></response>

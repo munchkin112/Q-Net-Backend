@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header><body><items><item><contents>
+
+
+
+
+
+
+제한없음
+
+</contents><infogb>응시자격</infogb><jmfldnm>경영지도사(인적자원관리)</jmfldnm><mdobligfldcd> </mdobligfldcd><mdobligfldnm> </mdobligfldnm><obligfldcd> </obligfldcd><obligfldnm> </obligfldnm></item><item><contents>&#xD;
+&#xD;
+&#xD;
+경영지도사(인적자원관리) 시험과목 및 배점&#xD;
+&#xD;
+&#xD;
+&#xD;
+&#xD;
+&#xD;
+ㅇ 제1차 시험 : 중소기업관계법령, 경영학, 회계학개론, 기업진단론, 조사방법론,영어(공인어학성적 제출로 대체)&#xD;
+ㅇ 제2차 시험 (지도분야별로 구분 실시) &#xD;
+- 인적자원관리분야(인사관리, 조직행동론, 노사관계론(노동법 포함)), &#xD;
+- 재무관리분야(재무관리, 회계학(재무회계.관리회계 포함), 세법(세무회계 포함)) &#xD;
+-생산관리분야(생산관리, 품질경영, 경영과학) &#xD;
+-마케팅분야(마케팅관리론, 시장조사론, 소비자행동론)&#xD;
+ㅇ 1,2차시험 각과목별 100점 만점&#xD;
+&#xD;
+</contents><infogb>시험과목 및 배점</infogb><jmfldnm>경영지도사(인적자원관리)</jmfldnm><mdobligfldcd> </mdobligfldcd><mdobligfldnm> </mdobligfldnm><obligfldcd> </obligfldcd><obligfldnm> </obligfldnm></item></items></body></response>

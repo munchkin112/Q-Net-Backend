@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-05T08:17:03.095575+00:00",
+  "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11",
+  "name": "산업안전기사",
+  "qnet_code": "1431",
+  "detail_api_status": 200,
+  "schedule_api_status": 200,
+  "written_subject_count": 6,
+  "fees": {
+    "written": 19400,
+    "practical": 34600
+  },
+  "schedule_phase_count": 6,
+  "schedule_source_type": "official_page",
+  "schedule_api_error": "timeout",
+  "schedule_api_retry_count": 1,
+  "automatic_fallback": false,
+  "repeated_save_preserves_ids": true,
+  "invalid_date_rejected": true,
+  "existing_information_engineer_still_available": true,
+  "counts": {
+    "certificates": 613,
+    "details": 2,
+    "schedules": 12
+  },
+  "production_parser_modified": false
+}

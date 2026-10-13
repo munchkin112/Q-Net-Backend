@@ -1,0 +1,14 @@
+{
+  "completed_at": "2026-10-09T06:42:12.221206+00:00",
+  "task": 2,
+  "scope": "project_interest_choices_and_recommendation_input_preparation",
+  "categories": 24,
+  "candidate_metadata": 613,
+  "official_ncs_mapping": false,
+  "fixed_category_assignments": 0,
+  "career_page_access_samples": 2,
+  "next_task": "6~10 certificate career evidence samples",
+  "llm_agent_implemented": false,
+  "database_changed": false,
+  "github_pushed": false
+}

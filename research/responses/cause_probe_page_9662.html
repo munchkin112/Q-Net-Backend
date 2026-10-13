@@ -1,0 +1,587 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+			contResizeH("contents_frame_2");
+
+			contResizeH("contents_frame_3");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_2", "contents_text_2", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_3", "contents_text_3", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		
+				<div class="division">
+					<b class="headLine3">시험일정</b>
+					
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 09:00부터 <span class="c_Red">마지막 날 18:00까지</span> 임)</p>
+					
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;">
+							<caption class="scHdn"> 구분,접수기간,서류제출기간,시험일정,의견제시기간,최종정답 합격자발표, 합격자발표기간 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">접수기간</th>
+									<th scope="col">서류제출기간</th>
+									<th scope="col">시험일정</th>
+									<th scope="col">의견제시기간</th>
+									<th scope="col">최종정답<br/>발표기간</th>
+									<th scope="col">합격자<br/>발표기간</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>2026년 26회<br/>필기</td>
+									<!--  접수기간    -->
+									<td>
+
+						2026.09.14~2026.09.18
+<br/><span class='fc_b_nb'>빈자리 추가접수 기간<br/>
+2026.10.29~2026.10.30
+</span>
+
+									</td>
+									<!--  서류제출기간    -->
+									<td>
+
+									</td>
+									<!--  시험일정    -->
+									<td>
+
+						2026.11.07
+
+									</td>
+									<!--  의견제시기간 -->
+									<td>
+
+						2026.11.07<br/> ~ <br/>2026.11.13
+
+									</td>
+									<!--  최종정답발표기간 -->
+									<td>
+
+									</td>
+									<!--  합격자발표기간 -->
+									<td>
+
+						2026.12.02<br/> ~ <br/>2027.01.30
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>2026년 26회<br/>면접</td>
+									<!--  접수기간    -->
+									<td>
+
+						2026.09.14~2026.09.18
+<br/><span class='fc_b_nb'>빈자리 추가접수 기간<br/>
+2026.10.29~2026.10.30
+</span>
+
+									</td>
+									<!--  서류제출기간    -->
+									<td>
+
+									</td>
+									<!--  시험일정    -->
+									<td>
+
+						2026.12.12
+
+									</td>
+									<!--  의견제시기간 -->
+									<td>
+
+									</td>
+									<!--  최종정답발표기간 -->
+									<td>
+
+									</td>
+									<!--  합격자발표기간 -->
+									<td>
+
+						2026.12.30<br/> ~ <br/>2027.02.27
+
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div><!-- 검정기관-타기관 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+	
+
+					<b class="contTit1 mT30">응시자격</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="응시자격 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>호텔경영사 응시자격</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" /><link rel="stylesheet" href="http://www.q-net.or.kr/editor_css/editor_default.css" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: 굴림; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment-->
+<p class="0" style="FONT-WEIGHT: bold; MARGIN-LEFT: 39px; LINE-HEIGHT: 150%; TEXT-INDENT: -29.8pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">응시자격</span></p>
+<p class="0" style="TEXT-ALIGN: left; LINE-HEIGHT: 150%"><span style="FONT-FAMILY: 맑은 고딕"></span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">o </span><span style="FONT-FAMILY: 맑은 고딕">관광종사원 중 호텔경영사 시험에 응시할 수 있는 자격은 다음과 같음</span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 17px; LINE-HEIGHT: 150%; TEXT-INDENT: -13pt"><span style="FONT-FAMILY: 맑은 고딕"></span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1) </span><span style="FONT-FAMILY: 맑은 고딕">호텔관리사 자격을 취득한 후 관광호텔에서 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-FAMILY: 맑은 고딕">년 이상 종사한 경력이 있는 자</span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 17px; LINE-HEIGHT: 150%; TEXT-INDENT: -13pt"><span style="FONT-FAMILY: 맑은 고딕"></span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2) </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">4성급</span><span style="FONT-FAMILY: 맑은 고딕"> 이상 호텔의 임원으로 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-FAMILY: 맑은 고딕">년 이상 종사한 경력이 있는 자</span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 17px; LINE-HEIGHT: 150%; TEXT-INDENT: -13pt"><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span></p>
+<p class="0" style="TEXT-ALIGN: left; LINE-HEIGHT: 150%"><span style="FONT-FAMILY: 맑은 고딕"></span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">o </span><span style="FONT-FAMILY: 맑은 고딕">결격사유</span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 13px; LINE-HEIGHT: 150%"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">-&gt; 다음 각 호의 어느 하나에 해당하는 자는 관광사업의 등록 등을 받거나 신고를 할 수 없고</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">, </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">15</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">조제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">1</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">항 및 </span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 13px; LINE-HEIGHT: 150%"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">&nbsp;&nbsp;&nbsp; 제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">2</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">항에 다른 사업계획의 승인을 받을 수 없음</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">. </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">법인의 경우 그 임원 중</span><span style="FONT-FAMILY: 맑은 고딕">에 다음 각 어느 하나에 해당하는 </span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 13px; LINE-HEIGHT: 150%"><span style="FONT-FAMILY: 맑은 고딕">&nbsp;&nbsp;&nbsp; 자가 </span><span style="FONT-FAMILY: 맑은 고딕">있는 경우에도 또한 같음</span></p>
+<table style="BORDER-RIGHT: medium none; WIDTH: 678px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 23px; BORDER-RIGHT: #000000 2px solid; WIDTH: 674px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">호텔경영사 결격사유자</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 118px; BORDER-RIGHT: #000000 2px solid; WIDTH: 674px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="MARGIN-LEFT: 6px; LINE-HEIGHT: 150%; MARGIN-RIGHT: 6px"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1. 피성년후견인</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&middot; 피한정후견인</span></p>
+<p class="0" style="MARGIN-TOP: 2px; MARGIN-LEFT: 6px; LINE-HEIGHT: 150%; MARGIN-RIGHT: 6px"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">파산선고를 받고 복권되지 아니한 자</span></p>
+<p class="0" style="MARGIN-TOP: 2px; MARGIN-LEFT: 6px; LINE-HEIGHT: 150%; MARGIN-RIGHT: 6px"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">3. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.2pt">이 법에 따라 등록 등 또는 사업계획의 승인이 취소되거나 제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.2pt">36</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.2pt">조제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.2pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.2pt">항에 따라 영업소가</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">폐쇄된 후 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">년이 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">지나지 아니한 자</span></p>
+<p class="0" style="MARGIN-TOP: 2px; MARGIN-LEFT: 6px; LINE-HEIGHT: 150%; MARGIN-RIGHT: 6px"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">4. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">이 법을 위반하여 징역 이상의 실형을 선고받고 그 집행이 끝나거나 집행을 받지 아</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt">니하기로 확정된 후 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt">년이 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt">지나지 아니한 자 또는 형의 집행유예 기간 중에 있는 자</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="0"><span style="FONT-FAMILY: 한컴바탕">&nbsp; </span></p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">시험과목 및 배점</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="시험과목 및 배점 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>호텔경영사 시험과목 및 배점</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment-->
+<p class="0" style="MARGIN-TOP: 6px; FONT-WEIGHT: bold; MARGIN-LEFT: 39px; TEXT-INDENT: -29.8pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">시험과목 및 방법</span></p>
+<table style="BORDER-RIGHT: medium none; WIDTH: 681px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 73px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="FONT-SIZE: 13pt; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -2.1pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">구분</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 163px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -0.2pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.2pt">시험과목</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 92px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -0.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">배점</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 85px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -0.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">문항수</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 100px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1.6pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.6pt">시험시간</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 111px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 13pt; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.6pt">시험방법</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 88px; BORDER-RIGHT: #000000 1px solid; WIDTH: 73px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -2.1pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">차</span></p>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -2.1pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">&nbsp;시험</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 88px; BORDER-RIGHT: #000000 1px solid; WIDTH: 163px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 12pt; FONT-WEIGHT: bold; MARGIN-LEFT: 21px; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%; TEXT-INDENT: -16pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">1.&nbsp; 관광법규 </span></p>
+<p class="0" style="MARGIN-LEFT: 21px; LETTER-SPACING: -0.2pt; LINE-HEIGHT: 150%; TEXT-INDENT: -16pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">2. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">호텔회계론</span></p>
+<p class="0" style="MARGIN-LEFT: 21px; LETTER-SPACING: -0.2pt; LINE-HEIGHT: 150%; TEXT-INDENT: -16pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">3. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">호텔인사 및 조직관리론</span></p>
+<p class="0" style="FONT-SIZE: 12pt; FONT-WEIGHT: bold; MARGIN-LEFT: 21px; LETTER-SPACING: -2pt; LINE-HEIGHT: 150%; TEXT-INDENT: -16pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">4. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">호텔마케팅론</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 88px; BORDER-RIGHT: #000000 1px solid; WIDTH: 92px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -2.5pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -2.5pt">10%</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -2.5pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -2.5pt">30%</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -2.5pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -2.5pt">30%</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -2.5pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -2.5pt">30%</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 88px; BORDER-RIGHT: #000000 1px solid; WIDTH: 85px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">과목 당</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">25</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">문항</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">(</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">총 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">100</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">문항</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 88px; BORDER-RIGHT: #000000 1px solid; WIDTH: 100px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">100</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">분</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.8pt">(09:30 ~ 11:10)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 88px; BORDER-RIGHT: #000000 2px solid; WIDTH: 111px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.8pt">객 관 식</span></p>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.8pt">4</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.8pt">지택일형</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 78px; BORDER-RIGHT: #000000 1px solid; WIDTH: 73px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -2.1pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">차 </span></p>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -2.1pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -2.1pt">시험</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 78px; BORDER-RIGHT: #000000 1px solid; WIDTH: 479px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px" colspan="4">
+<p class="0" style="TEXT-ALIGN: left; LETTER-SPACING: -1.1pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">o </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">면접</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">(외국어</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">면접</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.9pt">): </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt">발음</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt">역양</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.1pt">표현의 정확성 등 해당 외국어 구사능력</span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 176px; LETTER-SPACING: -4.1pt; LINE-HEIGHT: 150%; TEXT-INDENT: -132pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">o </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">면접</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">(</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">호텔실무상식면접</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">):</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">호텔관련 전문 지식</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.8pt">관광자원 해설 및 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.2pt">관</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.6pt">광안내 시 필요한 </span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 176px; LETTER-SPACING: -4.1pt; LINE-HEIGHT: 150%; TEXT-INDENT: -132pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1.6pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 각종 상황 대처 능력 등</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 78px; BORDER-RIGHT: #000000 2px solid; WIDTH: 111px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1.8pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.8pt">면 접</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: left; MARGIN-LEFT: 80px; TEXT-INDENT: -30.4pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">&nbsp; </span></p>
+<p class="0"><span style="FONT-FAMILY: 한컴바탕">&nbsp; </span></p>
+<p>&nbsp;※ 외국어시험은 공인외국어성적으로 대체</p><!--StartFragment-->
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 39px; BORDER-RIGHT: #000000 2px solid; WIDTH: 78px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 0px" rowspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">자 격 명</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 39px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 0px" rowspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">TOEIC</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 19px; BORDER-RIGHT: #000000 1px solid; WIDTH: 102px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 1px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px" colspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">TOEFL</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 39px; BORDER-RIGHT: #000000 1px solid; WIDTH: 58px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px" rowspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">TEPS</span></p>
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.6pt">(</span><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.6pt">개편점수</span><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.6pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 39px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px" rowspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1.3pt">G-TELP</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 39px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px" rowspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">FLEX</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 39px; BORDER-RIGHT: #000000 1px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px" rowspan="2">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">IELTS</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 19px; BORDER-RIGHT: #000000 2px solid; WIDTH: 164px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px" colspan="3">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold">기타 외국어</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px double; HEIGHT: 19px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">PBT</span></p></td>
+<td style="BORDER-TOP: #000000 1px double; HEIGHT: 19px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">IBT</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 19px; BORDER-RIGHT: #000000 1px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">JPT</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 19px; BORDER-RIGHT: #000000 1px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">NIKKEN</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 19px; BORDER-RIGHT: #000000 2px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BACKGROUND: #f3f3f3; BORDER-BOTTOM: #000000 2px double; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">HSK</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 2px solid; WIDTH: 78px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕">호텔경영사</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">800</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">619</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">88</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 58px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">728</span></p>
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">(404)</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">79</span></p>
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">(Level 2)</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 51px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">728</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">5</span><span style="FONT-FAMILY: 한양중고딕">점</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">784</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 1px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">795</span></p></td>
+<td style="BORDER-TOP: #000000 2px double; HEIGHT: 35px; BORDER-RIGHT: #000000 2px solid; WIDTH: 54px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 0px">
+<p class="1" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 한양중고딕; LETTER-SPACING: -1pt">5</span><span style="FONT-FAMILY: 한양중고딕">급</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">합격기준</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_2" title="합격기준 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_2" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>호텔경영사 합격기준</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment-->
+<p class="0" style="FONT-WEIGHT: bold; MARGIN-LEFT: 39px; TEXT-INDENT: -29.8pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">합격기준</span></p>
+<table style="BORDER-RIGHT: medium none; WIDTH: 685px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 65px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 13pt; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">구 분</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 603px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 13pt; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">합 격 결 정 기 준</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 65px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 13pt; TEXT-ALIGN: center; LETTER-SPACING: -1px; LINE-HEIGHT: 120%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">차시험</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 603px; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="LETTER-SPACING: -1pt; LINE-HEIGHT: 120%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">매 과목 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">40</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">할 이상이고</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">전 과목 점수가 배점비율로 환산하여 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">6</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1pt">할 이상 득점한 자</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 24px; BORDER-RIGHT: #000000 1px solid; WIDTH: 65px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="TEXT-ALIGN: center; LETTER-SPACING: -1px; LINE-HEIGHT: 120%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">차시험</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 24px; BORDER-RIGHT: #000000 2px solid; WIDTH: 603px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="LETTER-SPACING: -0.6pt; LINE-HEIGHT: 120%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">총점의 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">6</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">할 이상을 득점한 자</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="0" style="MARGIN-TOP: 6px"><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span></p>
+<p class="0" style="MARGIN-TOP: 6px"><span style="FONT-FAMILY: 맑은 고딕">&nbsp; </span></p>
+<p class="0" style="FONT-WEIGHT: bold; MARGIN-LEFT: 39px; LINE-HEIGHT: 150%; TEXT-INDENT: -29.8pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">□ </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">면제 대상자</span></p>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-ALIGN: left; MARGIN-LEFT: 176px; LETTER-SPACING: -0.8pt; LINE-HEIGHT: 150%; TEXT-INDENT: -132pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">o </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">경력에 의한 제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">차 시험 면제자</span></p>
+<p class="0" style="MARGIN-LEFT: 31px; LINE-HEIGHT: 150%; TEXT-INDENT: -23.6pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1) 호텔관리사 자격을 취득한 후 4성급 이상의 관광호텔에서 부장급 이상으로 3년 이상 종사한 경력이 있는 자</span></p>
+<p class="0" style="MARGIN-LEFT: 31px; LINE-HEIGHT: 150%; TEXT-INDENT: -23.6pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span><span style="FONT-FAMILY: 맑은 고딕"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2) 호텔관리사 자격을 취득한 후 3성급 관광호텔의 총괄 관리 및 경영업무에 3년 이상 종사한 경력이 있는 자</span></p>
+<p class="0" style="MARGIN-LEFT: 31px; LINE-HEIGHT: 150%; TEXT-INDENT: -23.6pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span>&nbsp;</p>
+<p class="0" style="MARGIN-LEFT: 31px; LINE-HEIGHT: 150%; TEXT-INDENT: -23.6pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">o </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">경력에 의한 제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">차 시험 및 외국어시험 면제자</span></span></p>
+<p class="0" style="MARGIN-LEFT: 32px; LINE-HEIGHT: 150%; TEXT-INDENT: -24pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt"></span></span><span style="FONT-FAMILY: 맑은 고딕"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1)&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">국내 호텔과 체인호텔 관계에 있는 해외호텔에서 호텔경영업무에 종사한 경력이 있는 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">자로서 해당 국내 </span></p>
+<p class="0" style="MARGIN-LEFT: 32px; LINE-HEIGHT: 150%; TEXT-INDENT: -24.2pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0.1pt">&nbsp;&nbsp;&nbsp;체인호텔에 파견근무를 하고자 하는&nbsp;자</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp; </span></p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 176px; LINE-HEIGHT: 150%; TEXT-INDENT: -132pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt"></span>&nbsp;</p>
+<p class="0" style="TEXT-ALIGN: left; MARGIN-LEFT: 176px; LINE-HEIGHT: 150%; TEXT-INDENT: -132pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">o </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">전년도 제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -0.8pt">차 시험 합격에 의한 면제자</span></p>
+<p class="0" style="MARGIN-LEFT: 12px; LETTER-SPACING: -0.3pt; LINE-HEIGHT: 150%; TEXT-INDENT: -9.7pt"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">차 시험 및 외국어 시험에 합격하고 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -1px">차 시험에 불합격한 자에 대하여는 다음 회의 시험에만</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">차 시험 및 외국어 시험을 </span></p>
+<p class="0" style="MARGIN-LEFT: 12px; LETTER-SPACING: -0.3pt; LINE-HEIGHT: 150%; TEXT-INDENT: -9.7pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.3pt">면제함</span></p>
+<p class="0" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 한컴바탕">&nbsp; </span></p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">응시수수료</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_3" title="응시수수료 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_3" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>호텔경영사 응시수수료</title>
+<style type="text/css">
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Malgun Gothic; COLOR: #000000; FONT-SIZE: 10pt
+}
+P {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+LI {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-FAMILY: Malgun Gothic; FONT-SIZE: 10pt"><!--StartFragment-->
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; LETTER-SPACING: 0pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">응시수수료</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">(</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">관광진흥법 제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">79</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">조</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">)</span></p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: 150%" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">- </span><span style="FONT-FAMILY: 맑은 고딕">통합</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">: 20,000</span><span style="FONT-FAMILY: 맑은 고딕">원</span></p>
+<p style="LINE-HEIGHT: 150%">&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

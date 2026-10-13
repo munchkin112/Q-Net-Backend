@@ -1,0 +1,44 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	prepare(prepare)
+	context(context)
+	decision(decision)
+	tools(tools)
+	validate(validate)
+	repair(repair)
+	retry(retry)
+	finish(finish)
+	fallback(fallback)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> prepare;
+	context -.-> decision;
+	context -.-> fallback;
+	decision -.-> fallback;
+	decision -.-> repair;
+	decision -.-> retry;
+	decision -.-> tools;
+	decision -.-> validate;
+	prepare -.-> context;
+	prepare -.-> fallback;
+	repair -.-> context;
+	repair -.-> tools;
+	retry -.-> context;
+	retry -.-> tools;
+	tools -.-> context;
+	tools -.-> fallback;
+	tools -.-> repair;
+	tools -.-> retry;
+	validate -.-> fallback;
+	validate -.-> finish;
+	validate -.-> repair;
+	fallback --> __end__;
+	finish --> __end__;
+	tools -.-> tools;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

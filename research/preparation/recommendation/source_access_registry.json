@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-09T06:42:12.210072+00:00",
+  "service_interest_source": "user_confirmed_24_choices; official NCS mapping not used",
+  "credential_required_for_confirmed_reads": false,
+  "sources": [
+    {
+      "id": "qnet_1320_basic_section",
+      "qnet_code": "1320",
+      "source_url": "https://www.q-net.or.kr/crf005.do?id=crf00503s01&gSite=Q&jmCd=1320&jmInfoDivCcd=A0",
+      "checked_at": "2026-10-09T06:39:30.251073+00:00",
+      "access_method": "official_html_page",
+      "credential_used": false,
+      "route_evidence": "qnet_1320_basic_tab.html goContents subtab2",
+      "http_status": 200,
+      "has_duties_heading": false,
+      "has_career_heading": true,
+      "has_certificate_name": true,
+      "status": "accessible_career_body_confirmed",
+      "has_overview": true,
+      "text_sha256": "c3578bc573a125837974d18aa8ff779409bd9db443f5d029a6f474fc74607c7f",
+      "review_note": "정보처리기사는 이번 기본정보 응답에 수행직무 구간 없음. 개요·진로 구간은 확인."
+    },
+    {
+      "id": "qnet_1390_basic_section",
+      "qnet_code": "1390",
+      "source_url": "https://www.q-net.or.kr/crf005.do?id=crf00503s01&gSite=Q&jmCd=1390&jmInfoDivCcd=A0",
+      "checked_at": "2026-10-09T06:39:30.434170+00:00",
+      "access_method": "official_html_page",
+      "credential_used": false,
+      "route_evidence": "qnet_1320_basic_tab.html goContents subtab2",
+      "http_status": 200,
+      "has_duties_heading": true,
+      "has_career_heading": true,
+      "has_certificate_name": true,
+      "status": "accessible_career_body_confirmed",
+      "has_overview": true,
+      "text_sha256": "dd562af14628c591e78df8571bf8528d1315271a2a0f6c1406618670ed1e13bb",
+      "review_note": "수행직무·진로 구간 확인. 개별 직업 추출 검토는 다음 표본 단계."
+    },
+    {
+      "id": "qnet_exam_api",
+      "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1320",
+      "access_method": "official_xml_api",
+      "status": "accessible_exam_material_only",
+      "confirmed_sections": [
+        "출제경향",
+        "출제기준",
+        "취득방법"
+      ],
+      "career_source_sufficient": false,
+      "credential_used": false
+    }
+  ],
+  "limitations": [
+    "두 기술자격 표본만 접근 확인함. 613종목 직무 자료 확보 완료 아님.",
+    "전문자격의 직무·진로 안내는 종목별 시행기관 확인이 필요함.",
+    "공식 페이지 본문 일부는 중첩 HTML이므로 정제·구간 검증이 필요함.",
+    "인증 없는 현재 응답이 향후에도 보장되는 것은 아님."
+  ]
+}

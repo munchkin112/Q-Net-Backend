@@ -1,0 +1,544 @@
+{
+  "started_at": "2026-10-05T09:53:39.494178+00:00",
+  "mode": "live",
+  "apply_requested": false,
+  "requested_codes": [
+    "0410",
+    "0780",
+    "0801",
+    "1025"
+  ],
+  "only": "details",
+  "interval_seconds": 0.5,
+  "completed": true,
+  "results": [
+    {
+      "qnet_code": "0410",
+      "details": {
+        "detail_response": {
+          "items": [
+            {
+              "contents": "- 항만 및 해안과 관련된 전문지식 및 응용능력\r\n - 기술사로서의 지도감리·경영관리능력, 자질 및 품위",
+              "infogb": "출제경향",
+              "jmfldnm": "항만및해안기술사",
+              "mdobligfldcd": "142",
+              "mdobligfldnm": "토목",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            },
+            {
+              "contents": "항만및해안기술사 출제기준\r\n\r\n\r\n\r\n\r\n항만및해안기술사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+              "infogb": "출제기준",
+              "jmfldnm": "항만및해안기술사",
+              "mdobligfldcd": "142",
+              "mdobligfldnm": "토목",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            },
+            {
+              "contents": "① 시 행 처 : 한국산업인력공단\r\n② 관련학과 : 대학 및 전문대학에 개설되어 있는 토목공학, 건축공학, 해양토목 및\r\n               항만공학 관련학과\r\n③ 시험과목\r\n   - 항만계획, 외곽시설, 접안시설, 입항 교통시설, 보안신호, 하역시설 및 해안의 \r\n     보전 기타 항만과 해안에 관한 사항\r\n④ 검정방법\r\n   - 필기 : 단답형 및 주관식 논술형(매교시당 100분, 총400분)\r\n   - 면접 : 구술형 면접시험(30분 정도)\r\n⑤ 합격기준\r\n   - 전과목 평균 60점이상 득점자",
+              "infogb": "취득방법",
+              "jmfldnm": "항만및해안기술사",
+              "mdobligfldcd": "142",
+              "mdobligfldnm": "토목",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0410",
+          "retrieved_at": "2026-10-05T09:53:40.844588+00:00",
+          "retry_count": 0
+        },
+        "fee_response": {
+          "items": [
+            {
+              "contents": "1차 : 67800, 2차 : 87100",
+              "infogb": "응시수수료",
+              "jmfldnm": "항만및해안기술사",
+              "mdobligfldcd": "142",
+              "mdobligfldnm": "토목",
+              "obligfldcd": "14",
+              "obligfldnm": "건설"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=0410",
+          "retrieved_at": "2026-10-05T09:53:41.441271+00:00",
+          "retry_count": 0
+        },
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "e883ae04-bc94-4997-b324-581abb510c48",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0410",
+            "retrieved_at": "2026-10-05T09:53:40.844588Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": null,
+            "practical": null,
+            "interview": null,
+            "common": [
+              "항만계획, 외곽시설, 접안시설, 입항 교통시설, 보안신호, 하역시설 및 해안의\n보전 기타 항만과 해안에 관한 사항"
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0410",
+            "retrieved_at": "2026-10-05T09:53:40.844588Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": null,
+            "practical": null,
+            "interview": null,
+            "common": "전과목 평균 60점이상 득점자"
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=0410",
+            "retrieved_at": "2026-10-05T09:53:41.441271Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": 67800,
+            "practical": null,
+            "interview": 87100,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "① 시 행 처 : 한국산업인력공단\n② 관련학과 : 대학 및 전문대학에 개설되어 있는 토목공학, 건축공학, 해양토목 및\n항만공학 관련학과\n③ 시험과목\n- 항만계획, 외곽시설, 접안시설, 입항 교통시설, 보안신호, 하역시설 및 해안의\n보전 기타 항만과 해안에 관한 사항\n④ 검정방법\n- 필기 : 단답형 및 주관식 논술형(매교시당 100분, 총400분)\n- 면접 : 구술형 면접시험(30분 정도)\n⑤ 합격기준\n- 전과목 평균 60점이상 득점자",
+          "raw_fee_text": "1차 : 67800, 2차 : 87100"
+        },
+        "detail_items": [
+          {
+            "contents": "- 항만 및 해안과 관련된 전문지식 및 응용능력\r\n - 기술사로서의 지도감리·경영관리능력, 자질 및 품위",
+            "infogb": "출제경향",
+            "jmfldnm": "항만및해안기술사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "항만및해안기술사 출제기준\r\n\r\n\r\n\r\n\r\n항만및해안기술사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "항만및해안기술사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          },
+          {
+            "contents": "① 시 행 처 : 한국산업인력공단\r\n② 관련학과 : 대학 및 전문대학에 개설되어 있는 토목공학, 건축공학, 해양토목 및\r\n               항만공학 관련학과\r\n③ 시험과목\r\n   - 항만계획, 외곽시설, 접안시설, 입항 교통시설, 보안신호, 하역시설 및 해안의 \r\n     보전 기타 항만과 해안에 관한 사항\r\n④ 검정방법\r\n   - 필기 : 단답형 및 주관식 논술형(매교시당 100분, 총400분)\r\n   - 면접 : 구술형 면접시험(30분 정도)\r\n⑤ 합격기준\r\n   - 전과목 평균 60점이상 득점자",
+            "infogb": "취득방법",
+            "jmfldnm": "항만및해안기술사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 67800, 2차 : 87100",
+            "infogb": "응시수수료",
+            "jmfldnm": "항만및해안기술사",
+            "mdobligfldcd": "142",
+            "mdobligfldnm": "토목",
+            "obligfldcd": "14",
+            "obligfldnm": "건설"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "항만및해안기술사",
+      "certificate_id": "e883ae04-bc94-4997-b324-581abb510c48",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0410"
+    },
+    {
+      "qnet_code": "0780",
+      "details": {
+        "detail_response": {
+          "items": [
+            {
+              "contents": "- 포장에 관한 실무경험, 전문지식 및 응용능력\r\n - 기술사로서의 지도감리·경영관리능력, 자질 및 품위",
+              "infogb": "출제경향",
+              "jmfldnm": "포장기술사",
+              "mdobligfldcd": "024",
+              "mdobligfldnm": "생산관리",
+              "obligfldcd": "02",
+              "obligfldnm": "경영.회계.사무"
+            },
+            {
+              "contents": "포장기술사 출제기준\r\n\r\n\r\n\r\n\r\n포장기술사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+              "infogb": "출제기준",
+              "jmfldnm": "포장기술사",
+              "mdobligfldcd": "024",
+              "mdobligfldnm": "생산관리",
+              "obligfldcd": "02",
+              "obligfldnm": "경영.회계.사무"
+            },
+            {
+              "contents": "① 시 행 처 : 한국산업인력공단② 관련학과 :생산관리와 관련학된 학과 ③ 시험과목 - 필기 : 포장의 계획 및 설계, 포장방법, 포장재료 및 포장설비 기타 포장에 관한 사항 ④ 검정방법 - 필기 : 단답형 및 주관식 논술형 (매교시당 100분, 총 400분) - 면접 : 구술형 면접(30분 정도) ⑤ 합격기준 - 필기·실기 : 100점을 만점으로 하여 60점 이상.",
+              "infogb": "취득방법",
+              "jmfldnm": "포장기술사",
+              "mdobligfldcd": "024",
+              "mdobligfldnm": "생산관리",
+              "obligfldcd": "02",
+              "obligfldnm": "경영.회계.사무"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0780",
+          "retrieved_at": "2026-10-05T09:53:44.221148+00:00",
+          "retry_count": 0
+        },
+        "fee_response": {
+          "items": [
+            {
+              "contents": "1차 : 67800, 2차 : 87100",
+              "infogb": "응시수수료",
+              "jmfldnm": "포장기술사",
+              "mdobligfldcd": "024",
+              "mdobligfldnm": "생산관리",
+              "obligfldcd": "02",
+              "obligfldnm": "경영.회계.사무"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=0780",
+          "retrieved_at": "2026-10-05T09:53:44.823325+00:00",
+          "retry_count": 0
+        },
+        "status": "incomplete",
+        "field_statuses": {
+          "subjects": "partial",
+          "pass_criteria": "partial",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "7b68a2f3-9083-4a00-a622-8f464c56f76c",
+          "subjects": {
+            "status": "partial",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0780",
+            "retrieved_at": "2026-10-05T09:53:44.221148Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": [
+              "포장의 계획 및 설계, 포장방법, 포장재료 및 포장설비 기타 포장에 관한 사항"
+            ],
+            "practical": null,
+            "interview": null,
+            "common": null
+          },
+          "pass_criteria": {
+            "status": "partial",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0780",
+            "retrieved_at": "2026-10-05T09:53:44.221148Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": "100점을 만점으로 하여 60점 이상.",
+            "practical": null,
+            "interview": null,
+            "common": null
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=0780",
+            "retrieved_at": "2026-10-05T09:53:44.823325Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": 67800,
+            "practical": null,
+            "interview": 87100,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "① 시 행 처 : 한국산업인력공단② 관련학과 :생산관리와 관련학된 학과 ③ 시험과목 - 필기 : 포장의 계획 및 설계, 포장방법, 포장재료 및 포장설비 기타 포장에 관한 사항 ④ 검정방법 - 필기 : 단답형 및 주관식 논술형 (매교시당 100분, 총 400분) - 면접 : 구술형 면접(30분 정도) ⑤ 합격기준 - 필기·실기 : 100점을 만점으로 하여 60점 이상.",
+          "raw_fee_text": "1차 : 67800, 2차 : 87100"
+        },
+        "detail_items": [
+          {
+            "contents": "- 포장에 관한 실무경험, 전문지식 및 응용능력\r\n - 기술사로서의 지도감리·경영관리능력, 자질 및 품위",
+            "infogb": "출제경향",
+            "jmfldnm": "포장기술사",
+            "mdobligfldcd": "024",
+            "mdobligfldnm": "생산관리",
+            "obligfldcd": "02",
+            "obligfldnm": "경영.회계.사무"
+          },
+          {
+            "contents": "포장기술사 출제기준\r\n\r\n\r\n\r\n\r\n포장기술사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "포장기술사",
+            "mdobligfldcd": "024",
+            "mdobligfldnm": "생산관리",
+            "obligfldcd": "02",
+            "obligfldnm": "경영.회계.사무"
+          },
+          {
+            "contents": "① 시 행 처 : 한국산업인력공단② 관련학과 :생산관리와 관련학된 학과 ③ 시험과목 - 필기 : 포장의 계획 및 설계, 포장방법, 포장재료 및 포장설비 기타 포장에 관한 사항 ④ 검정방법 - 필기 : 단답형 및 주관식 논술형 (매교시당 100분, 총 400분) - 면접 : 구술형 면접(30분 정도) ⑤ 합격기준 - 필기·실기 : 100점을 만점으로 하여 60점 이상.",
+            "infogb": "취득방법",
+            "jmfldnm": "포장기술사",
+            "mdobligfldcd": "024",
+            "mdobligfldnm": "생산관리",
+            "obligfldcd": "02",
+            "obligfldnm": "경영.회계.사무"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 67800, 2차 : 87100",
+            "infogb": "응시수수료",
+            "jmfldnm": "포장기술사",
+            "mdobligfldcd": "024",
+            "mdobligfldnm": "생산관리",
+            "obligfldcd": "02",
+            "obligfldnm": "경영.회계.사무"
+          }
+        ],
+        "error_type": "missing_information",
+        "message": "필기·실기 과목·기준·수수료를 모두 확인하지 못해 저장하지 않았습니다."
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "포장기술사",
+      "certificate_id": "7b68a2f3-9083-4a00-a622-8f464c56f76c",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0780"
+    },
+    {
+      "qnet_code": "0801",
+      "details": {
+        "detail_response": {
+          "items": [
+            {
+              "contents": "- 산림에 관련된 실무경험, 전문지식 및 응용능력\r\n- 기술사로서의 지도 감리능력, 자질 등",
+              "infogb": "출제경향",
+              "jmfldnm": "산림기술사",
+              "mdobligfldcd": "243",
+              "mdobligfldnm": "임업",
+              "obligfldcd": "24",
+              "obligfldnm": "농림어업"
+            },
+            {
+              "contents": "산림기술사 출제기준\r\n\r\n\r\n\r\n\r\n산림기술사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+              "infogb": "출제기준",
+              "jmfldnm": "산림기술사",
+              "mdobligfldcd": "243",
+              "mdobligfldnm": "임업",
+              "obligfldcd": "24",
+              "obligfldnm": "농림어업"
+            },
+            {
+              "contents": "① 시 행 처 : 한국산업인력공단\r\n② 관련학과 : 대학의 임업관련학과\r\n③ 시험과목 : 조림 및 육림·산림경영·산림토목·임목의 수확 및 임업 기계에 \r\n               관한 사항.\r\n④ 검정방법\r\n  - 필기 : 단답형 및 주관식 논술형(매교시당 100분 총 400분)\r\n  - 면접 : 구술형 면접(시험시간 30분정도)\r\n⑤ 합격기준 \r\n  - 필기·면접 : 100점을 만점으로 하여 60점 이상.",
+              "infogb": "취득방법",
+              "jmfldnm": "산림기술사",
+              "mdobligfldcd": "243",
+              "mdobligfldnm": "임업",
+              "obligfldcd": "24",
+              "obligfldnm": "농림어업"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0801",
+          "retrieved_at": "2026-10-05T09:53:46.369035+00:00",
+          "retry_count": 0
+        },
+        "fee_response": {
+          "items": [
+            {
+              "contents": "1차 : 67800, 2차 : 87100",
+              "infogb": "응시수수료",
+              "jmfldnm": "산림기술사",
+              "mdobligfldcd": "243",
+              "mdobligfldnm": "임업",
+              "obligfldcd": "24",
+              "obligfldnm": "농림어업"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=0801",
+          "retrieved_at": "2026-10-05T09:53:46.970564+00:00",
+          "retry_count": 0
+        },
+        "status": "validated",
+        "field_statuses": {
+          "subjects": "available",
+          "pass_criteria": "available",
+          "fees": "available"
+        },
+        "detail_retry_count": 0,
+        "fee_retry_count": 0,
+        "information": {
+          "certificate_id": "282ef4b0-075e-4885-a912-c4b08d24c0b8",
+          "subjects": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0801",
+            "retrieved_at": "2026-10-05T09:53:46.369035Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": null,
+            "practical": null,
+            "interview": null,
+            "common": [
+              "조림 및 육림·산림경영·산림토목·임목의 수확 및 임업 기계에\n관한 사항."
+            ]
+          },
+          "pass_criteria": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=0801",
+            "retrieved_at": "2026-10-05T09:53:46.369035Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": "100점을 만점으로 하여 60점 이상.",
+            "practical": null,
+            "interview": "100점을 만점으로 하여 60점 이상.",
+            "common": null
+          },
+          "fees": {
+            "status": "available",
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getFeeList?jmCd=0801",
+            "retrieved_at": "2026-10-05T09:53:46.970564Z",
+            "phases": [
+              "written",
+              "interview"
+            ],
+            "written": 67800,
+            "practical": null,
+            "interview": 87100,
+            "currency": "KRW"
+          },
+          "raw_acquisition_text": "① 시 행 처 : 한국산업인력공단\n② 관련학과 : 대학의 임업관련학과\n③ 시험과목 : 조림 및 육림·산림경영·산림토목·임목의 수확 및 임업 기계에\n관한 사항.\n④ 검정방법\n- 필기 : 단답형 및 주관식 논술형(매교시당 100분 총 400분)\n- 면접 : 구술형 면접(시험시간 30분정도)\n⑤ 합격기준\n- 필기·면접 : 100점을 만점으로 하여 60점 이상.",
+          "raw_fee_text": "1차 : 67800, 2차 : 87100"
+        },
+        "detail_items": [
+          {
+            "contents": "- 산림에 관련된 실무경험, 전문지식 및 응용능력\r\n- 기술사로서의 지도 감리능력, 자질 등",
+            "infogb": "출제경향",
+            "jmfldnm": "산림기술사",
+            "mdobligfldcd": "243",
+            "mdobligfldnm": "임업",
+            "obligfldcd": "24",
+            "obligfldnm": "농림어업"
+          },
+          {
+            "contents": "산림기술사 출제기준\r\n\r\n\r\n\r\n\r\n산림기술사 출제기준입니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "infogb": "출제기준",
+            "jmfldnm": "산림기술사",
+            "mdobligfldcd": "243",
+            "mdobligfldnm": "임업",
+            "obligfldcd": "24",
+            "obligfldnm": "농림어업"
+          },
+          {
+            "contents": "① 시 행 처 : 한국산업인력공단\r\n② 관련학과 : 대학의 임업관련학과\r\n③ 시험과목 : 조림 및 육림·산림경영·산림토목·임목의 수확 및 임업 기계에 \r\n               관한 사항.\r\n④ 검정방법\r\n  - 필기 : 단답형 및 주관식 논술형(매교시당 100분 총 400분)\r\n  - 면접 : 구술형 면접(시험시간 30분정도)\r\n⑤ 합격기준 \r\n  - 필기·면접 : 100점을 만점으로 하여 60점 이상.",
+            "infogb": "취득방법",
+            "jmfldnm": "산림기술사",
+            "mdobligfldcd": "243",
+            "mdobligfldnm": "임업",
+            "obligfldcd": "24",
+            "obligfldnm": "농림어업"
+          }
+        ],
+        "fee_items": [
+          {
+            "contents": "1차 : 67800, 2차 : 87100",
+            "infogb": "응시수수료",
+            "jmfldnm": "산림기술사",
+            "mdobligfldcd": "243",
+            "mdobligfldnm": "임업",
+            "obligfldcd": "24",
+            "obligfldnm": "농림어업"
+          }
+        ]
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "산림기술사",
+      "certificate_id": "282ef4b0-075e-4885-a912-c4b08d24c0b8",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0801"
+    },
+    {
+      "qnet_code": "1025",
+      "details": {
+        "detail_response": {
+          "items": [
+            {
+              "contents": "프레스금형기사 출제경향\r\n\r\n\r\n\r\n- 제품도 및 요구사항에 맞추어 경제성 있는 금형구조를 결정하고설계프로그램을 사용하여 프레스금형 설계",
+              "infogb": "출제경향",
+              "jmfldnm": "프레스금형기사",
+              "mdobligfldcd": "167",
+              "mdobligfldnm": "금형.공작기계",
+              "obligfldcd": "16",
+              "obligfldnm": "기계"
+            },
+            {
+              "contents": "프레스금형기사 출제기준\r\n\r\n\r\n\r\n\r\n프레스금형설계기사 출제기준입니다.\r\n\r\n*(2024.1.1.부터) 프레스금형설계기사 &rarr; 프레스금형기사로 명칭이 변경됩니다.\r\n\r\n메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+              "infogb": "출제기준",
+              "jmfldnm": "프레스금형기사",
+              "mdobligfldcd": "167",
+              "mdobligfldnm": "금형.공작기계",
+              "obligfldcd": "16",
+              "obligfldnm": "기계"
+            },
+            {
+              "contents": "프레스금형기사 취득방법\r\n\r\n\r\n\r\n\r\n 시 행 처 : 한국산업인력공단 \r\n 관련학과 : 대학의금형 관련학과 \r\n 시험과목 \r\n- 필기 : 1. 프레스금형 설계 2. 기계가공 3.정밀측정 4.금속재료 \r\n- 실기 : 프레스금형 설계 실무\r\n 검정방법\r\n- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) \r\n- 실기 : 작업형(5시간 정도, 100점) \r\n 합격기준\r\n- 필기 : 100점을 만점으로 하여 과목당 40점이상, 전과목 평균 60점이상 \r\n- 실기 : 100점을 만점으로 하여 60점 이상 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n안전등급(Safety Level) : 1등급\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n▼\r\n\r\n\r\n\r\n위험\r\n\r\n경고\r\n\r\n주의\r\n\r\n관심\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n&bull; 시험장소 구분 \r\n\r\n실내 \r\n\r\n \r\n\r\n\r\n\r\n&bull; 주요시설 및 장비\r\n\r\n컴퓨터, 프린터\r\n\r\n \r\n\r\n\r\n\r\n&bull; 보호구 \r\n\r\n해당사항 없음\r\n\r\n \r\n\r\n\r\n\r\n- 보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다.\r\n- 반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다.",
+              "infogb": "취득방법",
+              "jmfldnm": "프레스금형기사",
+              "mdobligfldcd": "167",
+              "mdobligfldnm": "금형.공작기계",
+              "obligfldcd": "16",
+              "obligfldnm": "기계"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryInformationTradeNTQSVC/getList?jmCd=1025",
+          "retrieved_at": "2026-10-05T09:53:52.630309+00:00",
+          "retry_count": 0
+        },
+        "status": "failed",
+        "step": "fee_api",
+        "retry_count": 1,
+        "error_type": "provider_error",
+        "message": "공식 API 결과코드: 99"
+      },
+      "schedules": {
+        "status": "not_requested"
+      },
+      "name": "프레스금형기사",
+      "certificate_id": "d4fc54fd-069f-4e53-92a1-238a40ac6b26",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1025"
+    }
+  ],
+  "summary": {
+    "details": {
+      "validated": 2,
+      "incomplete": 1,
+      "failed": 1
+    },
+    "schedules": {
+      "not_requested": 4
+    }
+  },
+  "finished_at": "2026-10-05T09:53:53.387572+00:00"
+}

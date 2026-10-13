@@ -1,0 +1,97 @@
+[
+  {
+    "path": "research/preparation/전문자격_예외원인_표본조사.json",
+    "bytes": 58101,
+    "sha256": "954a992951eff2cfddfc1b43b6eef04188868d01a679ebc3103ccc73ff414ef8"
+  },
+  {
+    "path": "research/preparation/청소년상담사_통신단계_진단.json",
+    "bytes": 3853,
+    "sha256": "03d614d7f05e9425fe35744c84d5e422cc0121ca559c2645b3508291d3980f8e"
+  },
+  {
+    "path": "research/preparation/전문자격_예외원인_보완출처.json",
+    "bytes": 8802,
+    "sha256": "4d71d8de6fd5aebf77fda3310e69c577168b8e23a2aaebcceb38a9b8c84dee63"
+  },
+  {
+    "path": "research/responses/cause_probe_api_9666_attempt0.txt",
+    "bytes": 179,
+    "sha256": "d64aab8800cf745edd7a5b5fd6f9ec401deb5a6e7eb14a3bf46382907f821fbc"
+  },
+  {
+    "path": "research/responses/cause_probe_page_9666.html",
+    "bytes": 10525,
+    "sha256": "fe78c90a8deb38311c30cbba54a6e4b7143f2815386eda6ec7d81d45a9fa057c"
+  },
+  {
+    "path": "research/responses/cause_probe_api_9696_attempt0.txt",
+    "bytes": 179,
+    "sha256": "d64aab8800cf745edd7a5b5fd6f9ec401deb5a6e7eb14a3bf46382907f821fbc"
+  },
+  {
+    "path": "research/responses/cause_probe_page_9696.html",
+    "bytes": 4907,
+    "sha256": "1d5d56c86d5ea66fb413ecb7d2b412dd68f8dd949f33c45c5f0ac488e4f9fe01"
+  },
+  {
+    "path": "research/responses/cause_probe_api_9502_attempt0.txt",
+    "bytes": 540,
+    "sha256": "22d9c2a52626047fd538c74b401f90f2b14bd7dbe06223b48762dd68b6a682d4"
+  },
+  {
+    "path": "research/responses/cause_probe_page_9502.html",
+    "bytes": 6796,
+    "sha256": "fe29f1a301391536a0d0eec34f57c3552e68253e8718a3d53850c089f2e7c83f"
+  },
+  {
+    "path": "research/responses/cause_probe_api_9662_attempt0.txt",
+    "bytes": 3752,
+    "sha256": "e158418d7ff40a10ecb5dc10236b94c6477f612ab89d5d07e768c9fa78ed4a9b"
+  },
+  {
+    "path": "research/responses/cause_probe_page_9662.html",
+    "bytes": 58570,
+    "sha256": "3255c092e6bbba55004ada1f78920d06e57ae08ea2c37920ae0725300b54661b"
+  },
+  {
+    "path": "research/responses/cause_probe_api_9754_attempt0.txt",
+    "bytes": 200,
+    "sha256": "2ef1ad816be949aa9f7cebf3dc7f85193f692c291bf6aaad01adb269706ac0a9"
+  },
+  {
+    "path": "research/responses/cause_probe_page_9754.html",
+    "bytes": 130861,
+    "sha256": "cd986ad1f633d3755be027ee64cca5d90b2c179eab701e69b29607f900afd8d7"
+  },
+  {
+    "path": "research/responses/cause_probe_page_9755.html",
+    "bytes": 131188,
+    "sha256": "b96fbe0805661b9691aadcc1ac6aebaa275ae0eda1be68edfe8488ec1205bd00"
+  },
+  {
+    "path": "research/responses/cause_probe_api_9630_attempt0.txt",
+    "bytes": 3726,
+    "sha256": "a3a20f402a1ec16478319bedcd05c605b7b3e9459b3f4b83ceb99913ff8ec7cd"
+  },
+  {
+    "path": "research/responses/cause_probe_basic_9666.html",
+    "bytes": 2457,
+    "sha256": "7be62b731b131701cb0326850de36dce7095cf66535d09a6ec8d9c5bcdd8eb3a"
+  },
+  {
+    "path": "research/responses/cause_probe_basic_9696.html",
+    "bytes": 110558,
+    "sha256": "9d41baf1c6766cb246945b69a709095cb0a64a6298a42c98d68f767af8124b9a"
+  },
+  {
+    "path": "research/responses/cause_probe_auction_faq.html",
+    "bytes": 105997,
+    "sha256": "9302d0a16afa5922f570b0b8eaa2ac4b18b11b7000caba3605a6a339d0a70406"
+  },
+  {
+    "path": "research/responses/cause_probe_trace_9754.txt",
+    "bytes": 200,
+    "sha256": "2ef1ad816be949aa9f7cebf3dc7f85193f692c291bf6aaad01adb269706ac0a9"
+  }
+]

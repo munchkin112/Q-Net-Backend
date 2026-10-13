@@ -1,0 +1,42 @@
+{
+  "title": "2026년도 국가기술자격검정 시행공고 제2025-208호",
+  "year": 2026,
+  "source_url": "https://www.kosca21.or.kr/km_board/upload/km_b_notice/1765809270_01.pdf",
+  "retrieved_at": "2026-10-05T10:45:18.451167+00:00",
+  "response_file": "research/technical_2026_annual_notice.pdf",
+  "registration_overrides": [
+    {
+      "round_label": "2026년 정기 기사 3회",
+      "phase": "practical",
+      "page_number": 2,
+      "periods": [
+        {
+          "starts_on": "2026-09-21",
+          "ends_on": "2026-09-23"
+        },
+        {
+          "starts_on": "2026-09-28",
+          "ends_on": "2026-09-28"
+        }
+      ]
+    }
+  ],
+  "on_demand_page_number": 5,
+  "on_demand_names": [
+    "굴착기운전기능사",
+    "미용사(일반)",
+    "미용사(피부)",
+    "미용사(네일)",
+    "미용사(메이크업)",
+    "양식조리기능사",
+    "일식조리기능사",
+    "제과기능사",
+    "제빵기능사",
+    "중식조리기능사",
+    "지게차운전기능사",
+    "한식조리기능사",
+    "건축도장기능사",
+    "방수기능사"
+  ],
+  "note": "공고의 접수 예외와 상시 종목만 검토하여 옮겼다. 공통 날짜를 모든 종목에 복제하지 않는다."
+}

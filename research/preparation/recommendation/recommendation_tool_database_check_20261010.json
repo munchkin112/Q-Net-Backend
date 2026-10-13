@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-10T04:24:22.519694+00:00",
+  "passed": true,
+  "interest_choices": 24,
+  "samples": [
+    {
+      "case": "it",
+      "returned_count": 3,
+      "has_more": true,
+      "names": [
+        "정보관리기술사",
+        "임베디드기사",
+        "로봇소프트웨어개발기사"
+      ],
+      "next_page_no_duplicates": true
+    },
+    {
+      "case": "finance",
+      "returned_count": 3,
+      "has_more": true,
+      "names": [
+        "정보처리기사",
+        "경영지도사(인적자원관리)",
+        "경영지도사(재무관리)"
+      ],
+      "next_page_no_duplicates": true
+    },
+    {
+      "case": "security",
+      "returned_count": 3,
+      "has_more": true,
+      "names": [
+        "철도신호기술사",
+        "화약류제조기사",
+        "화약류관리기사"
+      ],
+      "next_page_no_duplicates": true
+    }
+  ],
+  "empty_search_verified": true,
+  "database_changed": false,
+  "llm_calls": 0,
+  "external_api_calls": 0,
+  "github_pushed": false,
+  "scope": "actual_read_only_tool_invoke; not_final_recommendation_or_http_api",
+  "known_certificate_checked": {
+    "qnet_code": "1320",
+    "roles": 2,
+    "source_count": 2,
+    "owned_source_ids_verified": true
+  }
+}

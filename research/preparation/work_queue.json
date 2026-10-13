@@ -1,0 +1,2276 @@
+[
+  {
+    "qnet_code": "0080",
+    "name": "건설기계기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0080",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0951",
+    "name": "교통기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0951",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0094",
+    "name": "금속제련기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0094",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0270",
+    "name": "산업계측제어기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0270",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0701",
+    "name": "수산양식기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0701",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0800",
+    "name": "식품기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0800",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0011",
+    "name": "용접기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0011",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0601",
+    "name": "정보관리기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0601",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0825",
+    "name": "지질및지반기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0825",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0261",
+    "name": "철도신호기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0261",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0431",
+    "name": "철도차량기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0431",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0851",
+    "name": "축산기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0851",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0780",
+    "name": "포장기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0780",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0770",
+    "name": "품질관리기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0770",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "0370",
+    "name": "항공기관기술사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0370",
+    "phases": [
+      "written",
+      "interview"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2044",
+    "name": "객화차정비산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2044",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2044",
+    "name": "객화차정비산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2044.html"
+  },
+  {
+    "qnet_code": "2751",
+    "name": "교통산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2751",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "1582",
+    "name": "농림토양평가관리기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1582",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "1582",
+    "name": "농림토양평가관리기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/1582.html"
+  },
+  {
+    "qnet_code": "2582",
+    "name": "농림토양평가관리산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2582",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2582",
+    "name": "농림토양평가관리산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2582.html"
+  },
+  {
+    "qnet_code": "2060",
+    "name": "메카트로닉스산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2060",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2060",
+    "name": "메카트로닉스산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2060.html"
+  },
+  {
+    "qnet_code": "9772",
+    "name": "스마트공장산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=9772",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "9772",
+    "name": "스마트공장산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/9772.html"
+  },
+  {
+    "qnet_code": "1626",
+    "name": "어병기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1626",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "1626",
+    "name": "어병기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/1626.html"
+  },
+  {
+    "qnet_code": "1121",
+    "name": "임베디드기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1121",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2521",
+    "name": "잠수산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "partial",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2521",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2151",
+    "name": "전기기기산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2151",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2151",
+    "name": "전기기기산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2151.html"
+  },
+  {
+    "qnet_code": "2172",
+    "name": "전자회로설계산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2172",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2172",
+    "name": "전자회로설계산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2172.html"
+  },
+  {
+    "qnet_code": "1810",
+    "name": "제판기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1810",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "1810",
+    "name": "제판기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/1810.html"
+  },
+  {
+    "qnet_code": "2042",
+    "name": "철도동력차기관정비산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2042",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2042",
+    "name": "철도동력차기관정비산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2042.html"
+  },
+  {
+    "qnet_code": "2043",
+    "name": "철도동력차전기정비산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2043",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2043",
+    "name": "철도동력차전기정비산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2043.html"
+  },
+  {
+    "qnet_code": "1025",
+    "name": "프레스금형기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "fees"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "available",
+      "fees": "unavailable"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1025",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": {
+      "step": "fee_api",
+      "error_type": "provider_error",
+      "message": "공식 API 결과코드: 99",
+      "retry_count": 1
+    },
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2268",
+    "name": "한복산업기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=2268",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "2268",
+    "name": "한복산업기사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/2268.html"
+  },
+  {
+    "qnet_code": "1563",
+    "name": "화학분석기사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "partial",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1563",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "8070",
+    "name": "공구제작기능사보",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria",
+      "fees"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "unavailable"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=8070",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "8070",
+    "name": "공구제작기능사보",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/8070.html"
+  },
+  {
+    "qnet_code": "7385",
+    "name": "광산보안기능사(화약분야)",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7385",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7385",
+    "name": "광산보안기능사(화약분야)",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7385.html"
+  },
+  {
+    "qnet_code": "7371",
+    "name": "광산차량기계운전기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7371",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7371",
+    "name": "광산차량기계운전기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7371.html"
+  },
+  {
+    "qnet_code": "7372",
+    "name": "광산환경기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7372",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7372",
+    "name": "광산환경기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7372.html"
+  },
+  {
+    "qnet_code": "7862",
+    "name": "굴착기운전기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7862.html"
+  },
+  {
+    "qnet_code": "6903",
+    "name": "메카트로닉스기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=6903",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "6903",
+    "name": "메카트로닉스기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/6903.html"
+  },
+  {
+    "qnet_code": "7872",
+    "name": "모터그레이더운전기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7872",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7872",
+    "name": "모터그레이더운전기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7872.html"
+  },
+  {
+    "qnet_code": "7101",
+    "name": "목재창호기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria",
+      "fees"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "partial"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7101",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7101",
+    "name": "목재창호기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7101.html"
+  },
+  {
+    "qnet_code": "7643",
+    "name": "목질재료기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7643",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7643",
+    "name": "목질재료기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7643.html"
+  },
+  {
+    "qnet_code": "7957",
+    "name": "미용사(네일)",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7957.html"
+  },
+  {
+    "qnet_code": "7967",
+    "name": "미용사(메이크업)",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7967.html"
+  },
+  {
+    "qnet_code": "7937",
+    "name": "미용사(일반)",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7937.html"
+  },
+  {
+    "qnet_code": "7947",
+    "name": "미용사(피부)",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7947.html"
+  },
+  {
+    "qnet_code": "9775",
+    "name": "바이오공정기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=9775",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "9775",
+    "name": "바이오공정기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/9775.html"
+  },
+  {
+    "qnet_code": "9776",
+    "name": "봉제기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "fees"
+    ],
+    "field_statuses": {
+      "subjects": "available",
+      "pass_criteria": "available",
+      "fees": "partial"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=9776",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "8090",
+    "name": "사출금형기능사보",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria",
+      "fees"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "unavailable"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=8090",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "8090",
+    "name": "사출금형기능사보",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/8090.html"
+  },
+  {
+    "qnet_code": "9771",
+    "name": "스마트공장기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=9771",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "9771",
+    "name": "스마트공장기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/9771.html"
+  },
+  {
+    "qnet_code": "7873",
+    "name": "아스팔트피니셔운전기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7873",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7873",
+    "name": "아스팔트피니셔운전기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7873.html"
+  },
+  {
+    "qnet_code": "7911",
+    "name": "양식조리기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7911.html"
+  },
+  {
+    "qnet_code": "9774",
+    "name": "이륜자동차정비기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "available",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=9774",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "9774",
+    "name": "이륜자동차정비기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "정기 일정이 비어 있습니다. 상시시험·공식 공고를 별도 확인합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/9774.html"
+  },
+  {
+    "qnet_code": "7912",
+    "name": "일식조리기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7912.html"
+  },
+  {
+    "qnet_code": "7612",
+    "name": "잠수기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7612",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "7892",
+    "name": "제과기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7892.html"
+  },
+  {
+    "qnet_code": "7893",
+    "name": "제빵기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7893.html"
+  },
+  {
+    "qnet_code": "7913",
+    "name": "중식조리기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7913.html"
+  },
+  {
+    "qnet_code": "7875",
+    "name": "지게차운전기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7875.html"
+  },
+  {
+    "qnet_code": "6032",
+    "name": "컴퓨터응용밀링기능사",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "available"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=6032",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "8080",
+    "name": "프레스금형기능사보",
+    "task": "technical_detail_review",
+    "missing_fields": [
+      "subjects",
+      "pass_criteria",
+      "fees"
+    ],
+    "field_statuses": {
+      "subjects": "unavailable",
+      "pass_criteria": "unavailable",
+      "fees": "unavailable"
+    },
+    "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=8080",
+    "phases": [
+      "written",
+      "practical"
+    ],
+    "collection_error": null,
+    "source_report": "research/all_technical_detail_applied.json",
+    "reason": "공식 원문·단계 충돌·누락을 확인해야 합니다. 미시행으로 단정하지 않습니다."
+  },
+  {
+    "qnet_code": "8080",
+    "name": "프레스금형기능사보",
+    "task": "technical_schedule_review",
+    "collection_status": "failed",
+    "reason": "공식 일정 페이지에서 선택한 종목명을 확인하지 못했습니다.",
+    "response_file": "research/all_technical_schedule_sources_html/8080.html"
+  },
+  {
+    "qnet_code": "7910",
+    "name": "한식조리기능사",
+    "task": "technical_schedule_review",
+    "collection_status": "empty",
+    "reason": "상시검정 시행종목. 지역·시험장별 상시 일정은 별도 연동이 필요합니다.",
+    "response_file": "research/all_technical_schedule_sources_html/7910.html"
+  },
+  {
+    "qnet_code": "9500",
+    "name": "공인노무사",
+    "task": "professional_mapping_review",
+    "series_code": "05",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9503",
+    "name": "가맹거래사",
+    "task": "professional_mapping_review",
+    "series_code": "07",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9630",
+    "name": "공인중개사",
+    "task": "professional_mapping_review",
+    "series_code": "08",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9502",
+    "name": "기계경비지도사",
+    "task": "professional_mapping_review",
+    "series_code": "09",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9501",
+    "name": "일반경비지도사",
+    "task": "professional_mapping_review",
+    "series_code": "09",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9641",
+    "name": "세무사",
+    "task": "professional_mapping_review",
+    "series_code": "22",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9640",
+    "name": "관세사",
+    "task": "professional_mapping_review",
+    "series_code": "24",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9722",
+    "name": "외국어번역행정사",
+    "task": "professional_mapping_review",
+    "series_code": "31",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9721",
+    "name": "일반행정사",
+    "task": "professional_mapping_review",
+    "series_code": "31",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9723",
+    "name": "해사행정사",
+    "task": "professional_mapping_review",
+    "series_code": "31",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9657",
+    "name": "소방안전교육사",
+    "task": "professional_mapping_review",
+    "series_code": "33",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9658",
+    "name": "소방시설관리사",
+    "task": "professional_mapping_review",
+    "series_code": "34",
+    "detail_status": "fetched",
+    "series_status": "failed",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9659",
+    "name": "박물관및미술관준학예사",
+    "task": "professional_mapping_review",
+    "series_code": "35",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9660",
+    "name": "한국어교육능력검정시험",
+    "task": "professional_mapping_review",
+    "series_code": "36",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9625",
+    "name": "관광통역안내사(독어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9627",
+    "name": "관광통역안내사(러시아어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9634",
+    "name": "관광통역안내사(말레이/인도네시아어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9633",
+    "name": "관광통역안내사(베트남어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9624",
+    "name": "관광통역안내사(불어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9626",
+    "name": "관광통역안내사(스페인어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9635",
+    "name": "관광통역안내사(아랍어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9661",
+    "name": "관광통역안내사(영어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9631",
+    "name": "관광통역안내사(이탈리아어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9628",
+    "name": "관광통역안내사(일본어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9629",
+    "name": "관광통역안내사(중국어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9632",
+    "name": "관광통역안내사(태국어)",
+    "task": "professional_mapping_review",
+    "series_code": "37",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9663",
+    "name": "호텔관리사",
+    "task": "professional_mapping_review",
+    "series_code": "38",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9662",
+    "name": "호텔경영사",
+    "task": "professional_mapping_review",
+    "series_code": "39",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9664",
+    "name": "국내여행안내사",
+    "task": "professional_mapping_review",
+    "series_code": "40",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9665",
+    "name": "호텔서비스사",
+    "task": "professional_mapping_review",
+    "series_code": "41",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9667",
+    "name": "국가유산수리기술자(단청)",
+    "task": "professional_mapping_review",
+    "series_code": "42",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9666",
+    "name": "국가유산수리기술자(보수)",
+    "task": "professional_mapping_review",
+    "series_code": "42",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9670",
+    "name": "국가유산수리기술자(보존과학)",
+    "task": "professional_mapping_review",
+    "series_code": "42",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9671",
+    "name": "국가유산수리기술자(식물보호)",
+    "task": "professional_mapping_review",
+    "series_code": "42",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9668",
+    "name": "국가유산수리기술자(실측설계)",
+    "task": "professional_mapping_review",
+    "series_code": "42",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9669",
+    "name": "국가유산수리기술자(조경)",
+    "task": "professional_mapping_review",
+    "series_code": "42",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9674",
+    "name": "국가유산수리기능자(가공석공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9672",
+    "name": "국가유산수리기능자(대목수)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9685",
+    "name": "국가유산수리기능자(도금공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9677",
+    "name": "국가유산수리기능자(드잡이공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9706",
+    "name": "국가유산수리기능자(모사공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9682",
+    "name": "국가유산수리기능자(목조각공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9693",
+    "name": "국가유산수리기능자(박제및표본제작공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9678",
+    "name": "국가유산수리기능자(번와와공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9690",
+    "name": "국가유산수리기능자(보존처리공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9683",
+    "name": "국가유산수리기능자(석조각공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9688",
+    "name": "국가유산수리기능자(세척공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9673",
+    "name": "국가유산수리기능자(소목수)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9691",
+    "name": "국가유산수리기능자(식물보호공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9692",
+    "name": "국가유산수리기능자(실측설계사보)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9675",
+    "name": "국가유산수리기능자(쌓기석공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9694",
+    "name": "국가유산수리기능자(온돌공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9679",
+    "name": "국가유산수리기능자(제작와공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9687",
+    "name": "국가유산수리기능자(조경공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9681",
+    "name": "국가유산수리기능자(철물공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9684",
+    "name": "국가유산수리기능자(칠공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9686",
+    "name": "국가유산수리기능자(표구공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9680",
+    "name": "국가유산수리기능자(한식미장공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9676",
+    "name": "국가유산수리기능자(화공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9689",
+    "name": "국가유산수리기능자(훈증공)",
+    "task": "professional_mapping_review",
+    "series_code": "43",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9695",
+    "name": "농산물품질관리사",
+    "task": "professional_mapping_review",
+    "series_code": "45",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9697",
+    "name": "경매사(수산)",
+    "task": "professional_mapping_review",
+    "series_code": "46",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9700",
+    "name": "경매사(약용)",
+    "task": "professional_mapping_review",
+    "series_code": "46",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9728",
+    "name": "경매사(양곡)",
+    "task": "professional_mapping_review",
+    "series_code": "46",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9696",
+    "name": "경매사(청과)",
+    "task": "professional_mapping_review",
+    "series_code": "46",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9698",
+    "name": "경매사(축산)",
+    "task": "professional_mapping_review",
+    "series_code": "46",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9699",
+    "name": "경매사(화훼)",
+    "task": "professional_mapping_review",
+    "series_code": "46",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9705",
+    "name": "경영지도사(1차공통)",
+    "task": "professional_mapping_review",
+    "series_code": "49",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9704",
+    "name": "경영지도사(마케팅)",
+    "task": "professional_mapping_review",
+    "series_code": "49",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9703",
+    "name": "경영지도사(생산관리)",
+    "task": "professional_mapping_review",
+    "series_code": "49",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9701",
+    "name": "경영지도사(인적자원관리)",
+    "task": "professional_mapping_review",
+    "series_code": "49",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9702",
+    "name": "경영지도사(재무관리)",
+    "task": "professional_mapping_review",
+    "series_code": "49",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9729",
+    "name": "기술지도사(1차공통)",
+    "task": "professional_mapping_review",
+    "series_code": "50",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9758",
+    "name": "기술지도사(기술혁신관리)",
+    "task": "professional_mapping_review",
+    "series_code": "50",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9759",
+    "name": "기술지도사(정보기술관리)",
+    "task": "professional_mapping_review",
+    "series_code": "50",
+    "detail_status": "empty",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9737",
+    "name": "변리사",
+    "task": "professional_mapping_review",
+    "series_code": "51",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9738",
+    "name": "사회복지사 1급",
+    "task": "professional_mapping_review",
+    "series_code": "52",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9739",
+    "name": "정수시설운영관리사1급",
+    "task": "professional_mapping_review",
+    "series_code": "54",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9740",
+    "name": "정수시설운영관리사2급",
+    "task": "professional_mapping_review",
+    "series_code": "54",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9741",
+    "name": "정수시설운영관리사3급",
+    "task": "professional_mapping_review",
+    "series_code": "54",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9714",
+    "name": "산업안전지도사(건설안전)",
+    "task": "professional_mapping_review",
+    "series_code": "56",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9711",
+    "name": "산업안전지도사(기계안전)",
+    "task": "professional_mapping_review",
+    "series_code": "56",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9712",
+    "name": "산업안전지도사(전기안전)",
+    "task": "professional_mapping_review",
+    "series_code": "56",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9713",
+    "name": "산업안전지도사(화공안전)",
+    "task": "professional_mapping_review",
+    "series_code": "56",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9716",
+    "name": "산업보건지도사(산업위생공학)",
+    "task": "professional_mapping_review",
+    "series_code": "57",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9715",
+    "name": "산업보건지도사(직업환경의학)",
+    "task": "professional_mapping_review",
+    "series_code": "57",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9744",
+    "name": "주택관리사보",
+    "task": "professional_mapping_review",
+    "series_code": "59",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9745",
+    "name": "감정평가사",
+    "task": "professional_mapping_review",
+    "series_code": "60",
+    "detail_status": "fetched",
+    "series_status": "failed",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9746",
+    "name": "물류관리사",
+    "task": "professional_mapping_review",
+    "series_code": "61",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9747",
+    "name": "검수사",
+    "task": "professional_mapping_review",
+    "series_code": "62",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9748",
+    "name": "검량사",
+    "task": "professional_mapping_review",
+    "series_code": "63",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9749",
+    "name": "감정사",
+    "task": "professional_mapping_review",
+    "series_code": "64",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9750",
+    "name": "1급 청소년지도사",
+    "task": "professional_mapping_review",
+    "series_code": "66",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9751",
+    "name": "2급 청소년지도사",
+    "task": "professional_mapping_review",
+    "series_code": "66",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9752",
+    "name": "3급 청소년지도사",
+    "task": "professional_mapping_review",
+    "series_code": "66",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9753",
+    "name": "1급 청소년상담사",
+    "task": "professional_mapping_review",
+    "series_code": "67",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9754",
+    "name": "2급 청소년상담사",
+    "task": "professional_mapping_review",
+    "series_code": "67",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9755",
+    "name": "3급 청소년상담사",
+    "task": "professional_mapping_review",
+    "series_code": "67",
+    "detail_status": "failed",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9762",
+    "name": "수산물품질관리사",
+    "task": "professional_mapping_review",
+    "series_code": "72",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  },
+  {
+    "qnet_code": "9763",
+    "name": "손해평가사",
+    "task": "professional_mapping_review",
+    "series_code": "73",
+    "detail_status": "fetched",
+    "series_status": "fetched",
+    "reason": "원문 최신성·종목명·단계·과목·기준·응시료를 검토한 뒤 기존 모델·DB 연결 범위를 정합니다."
+  }
+]

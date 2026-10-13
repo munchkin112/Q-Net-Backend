@@ -1,0 +1,2470 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					
+					<b class="headLine3">시험일정</b>
+					
+
+
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 10:00부터 <span class="c_Red">마지막 날 18:00까지 </span>임)</p>
+					
+
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기사 1회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.01.12<br/> ~ <br/>2026.01.15
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.01.24<br/> ~ <br/>2026.01.25]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.01.30<br/>~<br/>2026.03.03
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.03.11</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.03.23<br/>~<br/>2026.03.26<br/>빈자리접수 :<br/>2026.04.12<br/> ~ <br/>2026.04.13</td><td>2026.04.18<br/> ~ <br/>2026.05.06</td><td>2026.06.12</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">19,400원</td><td scope="col">20,800원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>유기농업산업기사 출제경향</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" /><link rel="stylesheet" href="http://www.q-net.or.kr/editor_css/editor_default.css" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p>- 필기시험의 내용은 고객만족&gt;자료실의 출제기준을 참고바랍니다.</p>
+<p>- 실기시험은 필답형으로 시행되며 고객만족&gt;자료실의 출제기준을 참고바랍니다.</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>유기농업산업기사 취득방법</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p><strong>&#9312; 시 행 처 :</strong> 한국산업인력공단 </p>
+<p>&nbsp;</p>
+<p><strong>&#9313; 관련학과 </strong>: 대학의 농학과, 식물자원학과,&nbsp;농화학과, 생물자원학과 등 </p>
+<p>&nbsp;</p>
+<p><strong>&#9314; 시험과목</strong></p>
+<p>&nbsp;- 필기 1. 재배 2. 토양특성&nbsp;및 관리 3. 유기농업 이해</p>
+<p>&nbsp;- 실기 :&nbsp;유기농업실무</p>
+<p>&nbsp;</p>
+<p><strong>&#9315; 검정방법</strong> </p>
+<p>&nbsp;- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>
+<p>&nbsp;- 실기 : 필답형(2시간 30분) </p>
+<p>&nbsp;</p>
+<p><strong>&#9316; 합격기준</strong></p>
+<p>&nbsp;- 필기 : 100점을 만점으로 하여 과목당 40점이상, 전과목 평균 60점이상</p>
+<p>&nbsp;- 실기 : 100점을 만점으로 하여 60점이상 </p>
+<p>&nbsp;</p><!--StartFragment-->
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 15pt; FONT-FAMILY: 한컴산뜻돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"></span>&nbsp;</p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 15pt; FONT-FAMILY: 한컴산뜻돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">[2027 </span><span style="FONT-SIZE: 15pt; FONT-FAMILY: 한컴산뜻돋움; FONT-WEIGHT: bold">유기농업산업기사 필기과목 변경사항 알림</span><span style="FONT-SIZE: 15pt; FONT-FAMILY: 한컴산뜻돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">]</span></p>
+<p class="0" style="FONT-SIZE: 15pt; WORD-BREAK: keep-all; FONT-WEIGHT: bold; TEXT-ALIGN: center; TEXT-AUTOSPACE: ">&nbsp; </p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 12pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 함초롬돋움">적용시기</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">: 2027</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 함초롬돋움">년부터</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 12pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 함초롬돋움">변경 내용</span></p>
+<table style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: medium none; HEIGHT: 45px; BORDER-RIGHT: #000000 1px solid; WIDTH: 136px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: medium none; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 9pt; WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: ">&nbsp; </p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 45px; BORDER-RIGHT: #000000 1px solid; WIDTH: 206px; VERTICAL-ALIGN: middle; BACKGROUND: #d9d9d9; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">변경 전</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 45px; BORDER-RIGHT: #000000 1px solid; WIDTH: 206px; VERTICAL-ALIGN: middle; BACKGROUND: #d9d9d9; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">변경 후</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 146px; BORDER-RIGHT: #000000 1px solid; WIDTH: 136px; VERTICAL-ALIGN: middle; BACKGROUND: #d9d9d9; BORDER-BOTTOM: #ff0000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">과목</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 146px; BORDER-RIGHT: #000000 1px solid; WIDTH: 206px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #ff0000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">1. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">재배원론</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">2. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">토양비옥도 및 관리</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">3. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">유기농업개론</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">4. </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">유기식품 가공</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">유통론</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 146px; BORDER-RIGHT: #000000 1px solid; WIDTH: 206px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #ff0000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">1. 재배</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">2. 토양특성 및 관리</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">3. 유기농업 이해</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">(20</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움">문제</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; LETTER-SPACING: 0pt">)</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #ff0000 2px solid; HEIGHT: 65px; BORDER-RIGHT: #000000 1px solid; WIDTH: 136px; VERTICAL-ALIGN: middle; BACKGROUND: #d9d9d9; BORDER-BOTTOM: #ff0000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #ff0000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: center; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">주요 변경사항</span></p></td>
+<td style="BORDER-TOP: #ff0000 2px solid; HEIGHT: 65px; BORDER-RIGHT: #ff0000 2px solid; WIDTH: 412px; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #ff0000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px" colspan="2">
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">○ </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">[</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">유기식품 가공</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">유통론</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">] </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">과목 삭제</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">○ </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">총 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">80</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">문제 </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&rarr; </span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">60</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">문제로 축소</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="0" style="TEXT-AUTOSPACE: ">&nbsp; </p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">실기시험은 기존과 같이 필답형으로 진행됩니다.</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold"></span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">※ </span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">자세한 내용은 </span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">Q-net </span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">자료실의 유기농업산업기사 출제기준</span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">(2027.1.1.~)</span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold">을 참고하시기 바랍니다</span><span style="FONT-FAMILY: 함초롬돋움; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">.</span></p>
+<div id="hwpEditorBoardContent" class="hwp_editor_board_content" data-hjsonver="1.0" data-jsonlen="25173"><!--[data-hwpjson]{
+"documentPr": {
+"di": "",
+"dp": {
+"dn": "test.hwp",
+"ta": 1,
+"d1": 5,
+"d2": 1,
+"dv": 0,
+"dr": 1,
+"do": 1,
+"vj": "1.1",
+"an": "Hancom Office Hangul",
+"av": "11, 0, 0, 4278",
+"ao": "WIN",
+"ab": "32",
+"ar": "LE",
+"as": "Windows_8"
+},
+"dis": false,
+"ds": {
+"ti": "",
+"la": "ko",
+"cr": "",
+"su": "",
+"de": "",
+"cd": "2026-08-25T15:03:31.558Z",
+"md": "1601-01-01T09:00:00.000Z",
+"pd": "1601-01-01T09:00:00.000Z",
+"ke": ""
+}
+},
+"dh": {
+"do": {
+"pa": 1,
+"fo": 1,
+"en": 1,
+"pi": 1,
+"tb": 1,
+"eq": 1
+},
+"fo": [ ],
+"cd": {
+"tp": 0,
+"lc": {
+"af": false,
+"ui": false,
+"fu": false,
+"dn": false,
+"ul": false,
+"el": false,
+"at": false,
+"tq": false,
+"da": false,
+"dw": false,
+"dj": false,
+"bc": false,
+"bu": false,
+"al": false,
+"ab": false,
+"ap": false,
+"an": false,
+"aa": false,
+"ds": false,
+"de": false,
+"as": false,
+"cp": false,
+"ao": false,
+"et": false,
+"ay": false,
+"am": false,
+"a1": false,
+"bt": false,
+"av": false,
+"dh": false,
+"dp": false,
+"d1": false,
+"mf": false,
+"bl": false,
+"ag": false,
+"dg": false,
+"ae": false,
+"df": false,
+"do": false,
+"dl": false,
+"di": false,
+"d2": false,
+"d3": false,
+"ob": false,
+"d4": false,
+"ev": false,
+"d5": false,
+"d6": false,
+"a2": false,
+"dc": false
+}
+},
+"ld": {
+"pa": "",
+"pi": true,
+"fo": false
+}
+},
+"bf": {
+"01DD3457777ECA200000005C": {
+"id": 1,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DD3457777ECA200000005D": {
+"id": 2,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"rt": 0,
+"rw": 0,
+"rc": 0,
+"tt": 0,
+"tw": 0,
+"tc": 0,
+"bbt": 0,
+"bbw": 0,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 4294967295,
+"hc": 10066329,
+"al": 0,
+"hs": -1
+}
+}
+},
+"01DD3457777ECA200000005E": {
+"id": 3,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"rt": 1,
+"rw": 1,
+"rc": 0,
+"tt": 1,
+"tw": 1,
+"tc": 0,
+"bbt": 1,
+"bbw": 1,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DD3457777ECA200000005F": {
+"id": 4,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 0,
+"lw": 1,
+"lc": 0,
+"rt": 1,
+"rw": 1,
+"rc": 0,
+"tt": 0,
+"tw": 1,
+"tc": 0,
+"bbt": 1,
+"bbw": 1,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DD3457777ECA2000000060": {
+"id": 5,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"rt": 1,
+"rw": 1,
+"rc": 0,
+"tt": 1,
+"tw": 1,
+"tc": 0,
+"bbt": 1,
+"bbw": 1,
+"bbc": 0,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 14277081,
+"hc": 10066329,
+"al": 0,
+"hs": -1
+}
+}
+},
+"01DD3457777ECA2000000061": {
+"id": 6,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"rt": 1,
+"rw": 1,
+"rc": 0,
+"tt": 1,
+"tw": 1,
+"tc": 0,
+"bbt": 1,
+"bbw": 6,
+"bbc": 255,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 14277081,
+"hc": 10066329,
+"al": 0,
+"hs": -1
+}
+}
+},
+"01DD3457777ECA2000000062": {
+"id": 7,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"rt": 1,
+"rw": 1,
+"rc": 0,
+"tt": 1,
+"tw": 1,
+"tc": 0,
+"bbt": 1,
+"bbw": 6,
+"bbc": 255,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+},
+"01DD3457777ECA2000000063": {
+"id": 8,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 1,
+"lw": 6,
+"lc": 255,
+"rt": 1,
+"rw": 1,
+"rc": 0,
+"tt": 1,
+"tw": 6,
+"tc": 255,
+"bbt": 1,
+"bbw": 6,
+"bbc": 255,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": {
+"wb": {
+"fc": 14277081,
+"hc": 10066329,
+"al": 0,
+"hs": -1
+}
+}
+},
+"01DD3457777ECA2000000064": {
+"id": 9,
+"td": false,
+"sh": false,
+"st": 0,
+"sc": 0,
+"si": false,
+"bt": 0,
+"bi": false,
+"cl": 0,
+"bc": false,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"rt": 1,
+"rw": 6,
+"rc": 255,
+"tt": 1,
+"tw": 6,
+"tc": 255,
+"bbt": 1,
+"bbw": 6,
+"bbc": 255,
+"dt": 1,
+"dw": 0,
+"dc": 0,
+"fi": { }
+}
+},
+"cp": {
+"01DD3457777ECA2000000065": {
+"id": 0,
+"he": 1500,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "한컴산뜻돋움",
+"t1": 1,
+"f2": "한컴산뜻돋움",
+"t2": 1,
+"f3": "한컴산뜻돋움",
+"t3": 1,
+"f4": "한컴산뜻돋움",
+"t4": 1,
+"f5": "한컴산뜻돋움",
+"t5": 1,
+"f6": "한컴산뜻돋움",
+"t6": 1,
+"f7": "한컴산뜻돋움",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": true,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DD3457777ECA2000000066": {
+"id": 1,
+"he": 1500,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "한컴 윤고딕 230",
+"t1": 5,
+"f2": "한컴 윤고딕 230",
+"t2": 5,
+"f3": "한컴 윤고딕 230",
+"t3": 5,
+"f4": "한컴 윤고딕 230",
+"t4": 5,
+"f5": "한컴 윤고딕 230",
+"t5": 5,
+"f6": "한컴 윤고딕 230",
+"t6": 5,
+"f7": "한컴 윤고딕 230",
+"t7": 5,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": true,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DD3457777ECA2000000067": {
+"id": 2,
+"he": 1200,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "함초롬돋움",
+"t1": 1,
+"f2": "함초롬돋움",
+"t2": 1,
+"f3": "함초롬돋움",
+"t3": 1,
+"f4": "함초롬돋움",
+"t4": 1,
+"f5": "함초롬돋움",
+"t5": 1,
+"f6": "함초롬돋움",
+"t6": 1,
+"f7": "함초롬돋움",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DD3457777ECA2000000068": {
+"id": 3,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "함초롬바탕",
+"t1": 1,
+"f2": "함초롬바탕",
+"t2": 1,
+"f3": "함초롬바탕",
+"t3": 1,
+"f4": "함초롬바탕",
+"t4": 1,
+"f5": "함초롬바탕",
+"t5": 1,
+"f6": "함초롬바탕",
+"t6": 1,
+"f7": "함초롬바탕",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DD3457777ECA2000000069": {
+"id": 4,
+"he": 900,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "함초롬돋움",
+"t1": 1,
+"f2": "함초롬돋움",
+"t2": 1,
+"f3": "함초롬돋움",
+"t3": 1,
+"f4": "함초롬돋움",
+"t4": 1,
+"f5": "함초롬돋움",
+"t5": 1,
+"f6": "함초롬돋움",
+"t6": 1,
+"f7": "함초롬돋움",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": false,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DD3457777ECA200000006A": {
+"id": 5,
+"he": 1000,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "함초롬돋움",
+"t1": 1,
+"f2": "함초롬돋움",
+"t2": 1,
+"f3": "함초롬돋움",
+"t3": 1,
+"f4": "함초롬돋움",
+"t4": 1,
+"f5": "함초롬돋움",
+"t5": 1,
+"f6": "함초롬돋움",
+"t6": 1,
+"f7": "함초롬돋움",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": true,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+},
+"01DD3457777ECA200000006B": {
+"id": 6,
+"he": 900,
+"tc": 0,
+"sc": 4294967295,
+"uf": false,
+"uk": false,
+"sm": 0,
+"bf": "01DD3457777ECA200000005D",
+"f1": "함초롬돋움",
+"t1": 1,
+"f2": "함초롬돋움",
+"t2": 1,
+"f3": "함초롬돋움",
+"t3": 1,
+"f4": "함초롬돋움",
+"t4": 1,
+"f5": "함초롬돋움",
+"t5": 1,
+"f6": "함초롬돋움",
+"t6": 1,
+"f7": "함초롬돋움",
+"t7": 1,
+"r1": 100,
+"r2": 100,
+"r3": 100,
+"r4": 100,
+"r5": 100,
+"r6": 100,
+"r7": 100,
+"s1": 0,
+"s2": 0,
+"s3": 0,
+"s4": 0,
+"s5": 0,
+"s6": 0,
+"s7": 0,
+"e1": 100,
+"e2": 100,
+"e3": 100,
+"e4": 100,
+"e5": 100,
+"e6": 100,
+"e7": 100,
+"o1": 0,
+"o2": 0,
+"o3": 0,
+"o4": 0,
+"o5": 0,
+"o6": 0,
+"o7": 0,
+"it": false,
+"bo": true,
+"ut": 0,
+"us": 1,
+"uc": 0,
+"st": false,
+"ss": 1,
+"so": 0,
+"ot": 0,
+"ht": 0,
+"hc": 0,
+"hx": 0,
+"hy": 0,
+"em": false,
+"en": false,
+"su": false,
+"sb": false
+}
+},
+"tp": {
+"01DD3457777ECA200000006C": {
+"id": 0,
+"al": false,
+"ar": false,
+"tp": [ ]
+}
+},
+"nu": {
+"01DD3457777ECA200000006D": {
+"id": 1,
+"sn": 1,
+"ph": [
+{
+"le": 1,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 0,
+"st": 1,
+"sf": "^1."
+},
+{
+"le": 2,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 8,
+"st": 1,
+"sf": "^2."
+},
+{
+"le": 3,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 0,
+"st": 1,
+"sf": "^3)"
+},
+{
+"le": 4,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 8,
+"st": 1,
+"sf": "^4)"
+},
+{
+"le": 5,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 0,
+"st": 1,
+"sf": "(^5)"
+},
+{
+"le": 6,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 8,
+"st": 1,
+"sf": "(^6)"
+},
+{
+"le": 7,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 1,
+"st": 1,
+"sf": "^7"
+},
+{
+"le": 8,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 9,
+"st": 1,
+"sf": "^8"
+},
+{
+"le": 9,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 0,
+"st": 1,
+"sf": ""
+},
+{
+"le": 10,
+"al": 0,
+"ui": true,
+"ai": true,
+"wa": 0,
+"tt": 0,
+"to": 50,
+"cp": "",
+"uf": 0,
+"st": 1,
+"sf": ""
+}
+]
+}
+},
+"bu": { },
+"pp": {
+"01DD3457777ECA200000006E": {
+"id": 0,
+"ah": 3,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DD3457777ECA200000006C",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DD3457777ECA200000005D",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DD3457777ECA200000006F": {
+"id": 1,
+"ah": 1,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DD3457777ECA200000006C",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DD3457777ECA200000005D",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DD3457777ECA2000000070": {
+"id": 2,
+"ah": 1,
+"av": 0,
+"ht": 2,
+"hi": "01DD3457777ECA200000006D",
+"hl": 0,
+"tp": "01DD3457777ECA200000006C",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DD3457777ECA200000005D",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DD3457777ECA2000000071": {
+"id": 3,
+"ah": 0,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DD3457777ECA200000006C",
+"kb": 0,
+"kn": true,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": 0,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DD3457777ECA200000005D",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+},
+"01DD3457777ECA2000000072": {
+"id": 4,
+"ah": 1,
+"av": 0,
+"ht": 0,
+"hi": "",
+"hl": 0,
+"tp": "01DD3457777ECA200000006C",
+"kb": 0,
+"kn": false,
+"ko": false,
+"kk": false,
+"kl": false,
+"kp": false,
+"kw": 0,
+"co": 0,
+"fl": false,
+"st": true,
+"sl": false,
+"ae": false,
+"aa": false,
+"mi": -2384,
+"ml": 0,
+"mr": 0,
+"mp": 0,
+"mn": 0,
+"lt": 0,
+"lv": 160,
+"bf": "01DD3457777ECA200000005D",
+"bl": 0,
+"br": 0,
+"bt": 0,
+"bb": 0,
+"bc": false,
+"bi": false
+}
+},
+"st": {
+"01DD3457777ECA2000000073": {
+"id": 0,
+"ty": 0,
+"na": "바탕글",
+"en": "Normal",
+"pp": "01DD3457777ECA2000000071",
+"cp": "01DD3457777ECA2000000068",
+"ns": "01DD3457777ECA2000000073",
+"li": 1042,
+"lf": false
+}
+},
+"mp": { },
+"ro": {
+"hp": "01DD3457777EA3100000003E",
+"01DD3457777EA3100000003E": {
+"np": "01DD3457777EA3100000003F",
+"id": 0,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 3,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000065",
+"ch": [
+{
+"cc": 2,
+"ci": 1936024420,
+"co": "01DD3457777EA3100000003B"
+}
+,
+{
+"cc": 2,
+"ci": 1668246628,
+"co": "01DD3457777EA3100000003C"
+}
+,
+{
+"t": "[2027 유기농업산업기사 필기과목 변경사항 알림]"
+}
+]
+}
+]
+},
+"01DD3457777EA3100000003F": {
+"np": "01DD3457777EA31000000040",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000066",
+"ch": [
+{
+"t": ""
+}
+]
+}
+]
+},
+"01DD3457777EA31000000040": {
+"np": "01DD3457777EA31000000041",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000067",
+"ch": [
+{
+"t": "1. 적용시기: 2027년부터"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000041": {
+"np": "01DD3457777EA31000000042",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000067",
+"ch": [
+{
+"t": "2. 변경 내용"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000042": {
+"np": "01DD3457777EA31000000043",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000071",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000068",
+"ch": [
+{
+"cc": 11,
+"ci": 1952607264,
+"co": "01DD3457777EA3100000003D"
+}
+,
+{
+"t": ""
+}
+]
+}
+]
+},
+"01DD3457777EA31000000043": {
+"np": "01DD3457777EA31000000044",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000071",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000068",
+"ch": [
+{
+"t": ""
+}
+]
+}
+]
+},
+"01DD3457777EA31000000044": {
+"np": "01DD3457777EA31000000045",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006A",
+"ch": [
+{
+"t": "※ 실기시험은 기존과 같이 필답형으로 진행되며, 내용은 필기과목 변경내용과 같음"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000045": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000072",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006A",
+"ch": [
+{
+"t": "※ 자세한 내용은 Q-net 자료실의 유기농업산업기사 출제기준(2027.1.1.~)을 참고하시기 바랍니다."
+}
+]
+}
+]
+}
+},
+"sl": {
+"01DD3457777EA31000000046": {
+"co": "01DD3457777EA3100000003D",
+"id": 1,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA200000005F",
+"ac": 0,
+"ar": 0,
+"sc": 1,
+"sr": 1,
+"sw": 10205,
+"sh": 3413,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA31000000047"
+},
+"01DD3457777EA31000000047": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": ""
+}
+]
+}
+]
+}
+,
+"01DD3457777EA31000000048": {
+"co": "01DD3457777EA3100000003D",
+"id": 2,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000060",
+"ac": 1,
+"ar": 0,
+"sc": 1,
+"sr": 1,
+"sw": 15450,
+"sh": 3413,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA31000000049"
+},
+"01DD3457777EA31000000049": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006A",
+"ch": [
+{
+"t": "변경 전"
+}
+]
+}
+]
+}
+,
+"01DD3457777EA3100000004A": {
+"co": "01DD3457777EA3100000003D",
+"id": 3,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000060",
+"ac": 2,
+"ar": 0,
+"sc": 1,
+"sr": 1,
+"sw": 15450,
+"sh": 3413,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA3100000004B"
+},
+"01DD3457777EA3100000004B": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006A",
+"ch": [
+{
+"t": "변경 후"
+}
+]
+}
+]
+}
+,
+"01DD3457777EA3100000004C": {
+"co": "01DD3457777EA3100000003D",
+"id": 4,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000061",
+"ac": 0,
+"ar": 1,
+"sc": 1,
+"sr": 1,
+"sw": 10205,
+"sh": 10980,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA3100000004D"
+},
+"01DD3457777EA3100000004D": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006A",
+"ch": [
+{
+"t": "과목"
+}
+]
+}
+]
+}
+,
+"01DD3457777EA3100000004E": {
+"co": "01DD3457777EA3100000003D",
+"id": 5,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000062",
+"ac": 1,
+"ar": 1,
+"sc": 1,
+"sr": 1,
+"sw": 15450,
+"sh": 10980,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA3100000004F"
+},
+"01DD3457777EA3100000004F": {
+"np": "01DD3457777EA31000000050",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "1. 재배원론(20문제)"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000050": {
+"np": "01DD3457777EA31000000051",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "2. 토양비옥도 및 관리(20문제)"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000051": {
+"np": "01DD3457777EA31000000052",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "3. 유기농업개론(20문제)"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000052": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006F",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "4. 유기식품 가공, 유통론(20문제)"
+}
+]
+}
+]
+}
+,
+"01DD3457777EA31000000053": {
+"co": "01DD3457777EA3100000003D",
+"id": 6,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000062",
+"ac": 2,
+"ar": 1,
+"sc": 1,
+"sr": 1,
+"sw": 15450,
+"sh": 10980,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA31000000054"
+},
+"01DD3457777EA31000000054": {
+"np": "01DD3457777EA31000000055",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000070",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "재배(20문제)"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000055": {
+"np": "01DD3457777EA31000000056",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000070",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "토양특성 및 관리(20문제)"
+}
+]
+}
+]
+},
+"01DD3457777EA31000000056": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000070",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA2000000069",
+"ch": [
+{
+"t": "유기농업 이해(20문제)"
+}
+]
+}
+]
+}
+,
+"01DD3457777EA31000000057": {
+"co": "01DD3457777EA3100000003D",
+"id": 7,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000063",
+"ac": 0,
+"ar": 2,
+"sc": 1,
+"sr": 1,
+"sw": 10205,
+"sh": 4911,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA31000000058"
+},
+"01DD3457777EA31000000058": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA200000006E",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006A",
+"ch": [
+{
+"t": "주요 변경사항"
+}
+]
+}
+]
+}
+,
+"01DD3457777EA31000000059": {
+"co": "01DD3457777EA3100000003D",
+"id": 8,
+"td": 0,
+"lw": 0,
+"va": 1,
+"ll": "",
+"ln": "",
+"tc": {
+"he": false,
+"hm": false,
+"pr": false,
+"ed": false,
+"di": false,
+"bf": "01DD3457777ECA2000000064",
+"ac": 1,
+"ar": 2,
+"sc": 2,
+"sr": 1,
+"sw": 30900,
+"sh": 4911,
+"ml": 510,
+"mr": 510,
+"mt": 141,
+"mb": 141
+},
+"hp": "01DD3457777EA3100000005A"
+},
+"01DD3457777EA3100000005A": {
+"np": "01DD3457777EA3100000005B",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000071",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006B",
+"ch": [
+{
+"t": "○ [유기식품 가공, 유통론] 과목 삭제"
+}
+]
+}
+]
+},
+"01DD3457777EA3100000005B": {
+"np": "",
+"id": -2147483648,
+"pp": "01DD3457777ECA2000000071",
+"si": "01DD3457777ECA2000000073",
+"bf": 0,
+"ru": [
+{
+"cp": "01DD3457777ECA200000006B",
+"ch": [
+{
+"t": "○ 총 80문제 → 60문제로 축소"
+}
+]
+}
+]
+}
+},
+"cs": {
+"01DD3457777EA3100000003B": {
+"cc": 2,
+"ci": 1936024420,
+"td": 0,
+"tv": false,
+"sc": 1134,
+"ts": 8000,
+"ms": "",
+"os": "",
+"gl": 0,
+"gc": 0,
+"gw": false,
+"ns": 0,
+"np": 0,
+"ni": 0,
+"nt": 0,
+"ne": 0,
+"hh": false,
+"hf": false,
+"hm": false,
+"fb": false,
+"hb": false,
+"fi": false,
+"hi": false,
+"hp": false,
+"he": false,
+"sl": false,
+"lr": 0,
+"lc": 0,
+"ld": 0,
+"ls": 0,
+"pp": {
+"ls": false,
+"wi": 59528,
+"he": 84188,
+"gt": 0,
+"ml": 8504,
+"mr": 8504,
+"mt": 5668,
+"mb": 4252,
+"mh": 4252,
+"mf": 4252,
+"mg": 0
+},
+"fn": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -1,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 283
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"en": {
+"at": 0,
+"au": "",
+"ap": "",
+"ac": ")",
+"as": false,
+"ll": -4,
+"lt": 1,
+"lw": 1,
+"lc": 0,
+"sa": 850,
+"sb": 567,
+"st": 0
+,
+"nt": 0,
+"nn": 1,
+"pp": 0,
+"pb": false
+},
+"pb": [
+{
+"ty": 0,
+"bf": "01DD3457777ECA200000005C",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 1,
+"bf": "01DD3457777ECA200000005C",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+},
+{
+"ty": 2,
+"bf": "01DD3457777ECA200000005C",
+"tb": true,
+"hi": false,
+"fi": false,
+"fa": 0,
+"ol": 1417,
+"or": 1417,
+"ot": 1417,
+"ob": 1417
+}
+],
+"mp": [ ]
+}
+,
+"01DD3457777EA3100000003C": {
+"cc": 2,
+"ci": 1668246628,
+"ty": 0,
+"la": 0,
+"co": 1,
+"ss": true,
+"sg": 0,
+"lt": 0,
+"lw": 0,
+"lc": 0,
+"cs": [ ]
+}
+,
+"01DD3457777EA3100000003D": {
+"cc": 11,
+"ci": 1952607264,
+"id": 1177116463,
+"zo": 3,
+"nt": 2,
+"tw": 1,
+"tf": 0,
+"lo": false,
+"swi": 41105,
+"she": 19304,
+"swr": 4,
+"shr": 2,
+"spr": false,
+"pta": false,
+"pal": false,
+"pvr": 2,
+"phr": 2,
+"pva": 0,
+"ph1": 0,
+"pvo": 0,
+"ph2": 0,
+"pfw": true,
+"pao": false,
+"pha": false,
+"ole": 283,
+"ori": 283,
+"oto": 283,
+"obo": 283,
+"ca": { },
+"sc": ""
+,
+"pb": 2,
+"rh": true,
+"na": false,
+"ho": false,
+"if": true,
+"sa": false,
+"rc": 3,
+"cco": 3,
+"cs": 0,
+"bf": "01DD3457777ECA200000005E",
+"ile": 510,
+"iri": 510,
+"ito": 141,
+"ibo": 141,
+"cl": [ ],
+"tr": [
+[
+{
+"so": "01DD3457777EA31000000046",
+"li": 1
+}
+,
+{
+"so": "01DD3457777EA31000000048",
+"li": 2
+}
+,
+{
+"so": "01DD3457777EA3100000004A",
+"li": 3
+}
+],
+[
+{
+"so": "01DD3457777EA3100000004C",
+"li": 4
+}
+,
+{
+"so": "01DD3457777EA3100000004E",
+"li": 5
+}
+,
+{
+"so": "01DD3457777EA31000000053",
+"li": 6
+}
+],
+[
+{
+"so": "01DD3457777EA31000000057",
+"li": 7
+}
+,
+{
+"so": "01DD3457777EA31000000059",
+"li": 8
+}
+]
+]
+}
+},
+"bi": [ ],
+"bidt": { }
+}--></div>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('2592', '1268');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 유기농업산업기사 (2027.1.1 ~ 2030.12.31)</span>
+			</a>
+			<br/>
+							
+			<a href="#" onclick="cst006Report('2592', '334');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>2. 유기농업산업기사 (2025.1.1 ~ 2026.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	

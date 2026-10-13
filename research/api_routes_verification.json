@@ -1,0 +1,61 @@
+{
+  "verified_at": "2026-10-07T05:02:15.332158+00:00",
+  "database_mode": "Render read-only through FastAPI TestClient",
+  "openapi_paths": [
+    "/health",
+    "/health/database",
+    "/certificates",
+    "/certificates/{certificate_id}",
+    "/certificates/{certificate_id}/schedules"
+  ],
+  "checks": [
+    {
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "path": "/docs",
+      "status": 200
+    },
+    {
+      "path": "/openapi.json",
+      "status": 200
+    },
+    {
+      "path": "/certificates?q=1320&limit=5&offset=0",
+      "status": 200,
+      "matched_code": "1320"
+    },
+    {
+      "path": "/certificates/79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+      "status": 200,
+      "data_status": "complete"
+    },
+    {
+      "path": "/certificates/79a6a7a3-5fbc-4b64-80dd-732206f3fb81/schedules?year=2026",
+      "status": 200,
+      "schedule_rows": 6
+    },
+    {
+      "path": "/certificates/cb04b877-bcec-4d28-b73f-ea09b3df538b",
+      "status": 404
+    },
+    {
+      "path": "/certificates/not-a-uuid",
+      "status": 422
+    },
+    {
+      "path": "/certificates?limit=101",
+      "status": 422
+    },
+    {
+      "path": "/certificates?offset=-1",
+      "status": 422
+    },
+    {
+      "path": "/certificates/not-a-uuid/schedules?year=2026",
+      "status": 422
+    }
+  ],
+  "passed": true
+}

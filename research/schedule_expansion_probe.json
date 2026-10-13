@@ -1,0 +1,591 @@
+{
+  "started_at": "2026-10-05T10:22:42.731495+00:00",
+  "mode": "live",
+  "apply_requested": false,
+  "requested_codes": [
+    "0011",
+    "0012",
+    "1320",
+    "1431",
+    "6990",
+    "7910"
+  ],
+  "only": "schedules",
+  "interval_seconds": 0.5,
+  "completed": true,
+  "results": [
+    {
+      "qnet_code": "0011",
+      "details": {
+        "status": "not_requested"
+      },
+      "schedules": {
+        "schedule_response": {
+          "items": [
+            {
+              "docexamenddt": "20260207",
+              "docexamstartdt": "20260207",
+              "docpassdt": "20260325",
+              "docregenddt": "20260109",
+              "docregstartdt": "20260106",
+              "docsubmitenddt": "20260403",
+              "docsubmitstartdt": "20260209",
+              "implplannm": "2026년 정기 기술사 138회",
+              "jmfldnm": "용접기술사",
+              "mdobligfldcd": "174",
+              "mdobligfldnm": "용접",
+              "obligfldcd": "17",
+              "obligfldnm": "재료",
+              "pracexamenddt": "20260516",
+              "pracexamstartdt": "20260502",
+              "pracpassenddt": "20260728",
+              "pracpassstartdt": "20260529",
+              "pracregenddt": "20260402",
+              "pracregstartdt": "20260303"
+            },
+            {
+              "docexamenddt": "20260822",
+              "docexamstartdt": "20260822",
+              "docpassdt": "20261007",
+              "docregenddt": "20260716",
+              "docregstartdt": "20260713",
+              "docsubmitenddt": "20261016",
+              "docsubmitstartdt": "20260824",
+              "implplannm": "2026년 정기 기술사 140회",
+              "jmfldnm": "용접기술사",
+              "mdobligfldcd": "174",
+              "mdobligfldnm": "용접",
+              "obligfldcd": "17",
+              "obligfldnm": "재료",
+              "pracexamenddt": "20261128",
+              "pracexamstartdt": "20261114",
+              "pracpassenddt": "20270210",
+              "pracpassstartdt": "20261211",
+              "pracregenddt": "20261015",
+              "pracregstartdt": "20260831"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0011",
+          "retrieved_at": "2026-10-05T10:22:51.006725+00:00",
+          "retry_count": 0
+        },
+        "status": "validated",
+        "schedule_count": 4,
+        "retry_count": 0,
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0011",
+        "retrieved_at": "2026-10-05T10:22:51.006725+00:00",
+        "schedules": [
+          {
+            "certificate_id": "873c7a1a-119b-4734-abc9-1809d4feb955",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 138회",
+            "round_label": "2026년 정기 기술사 138회",
+            "phase": "written",
+            "registration_start": "2026-01-06",
+            "registration_end": "2026-01-09",
+            "exam_start": "2026-02-07",
+            "exam_end": "2026-02-07",
+            "result_date": "2026-03-25",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0011",
+            "last_synced_at": "2026-10-05T10:22:51.006725Z"
+          },
+          {
+            "certificate_id": "873c7a1a-119b-4734-abc9-1809d4feb955",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 138회",
+            "round_label": "2026년 정기 기술사 138회",
+            "phase": "practical",
+            "registration_start": "2026-03-03",
+            "registration_end": "2026-04-02",
+            "exam_start": "2026-05-02",
+            "exam_end": "2026-05-16",
+            "result_date": "2026-05-29",
+            "result_display_end": "2026-07-28",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0011",
+            "last_synced_at": "2026-10-05T10:22:51.006725Z"
+          },
+          {
+            "certificate_id": "873c7a1a-119b-4734-abc9-1809d4feb955",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 140회",
+            "round_label": "2026년 정기 기술사 140회",
+            "phase": "written",
+            "registration_start": "2026-07-13",
+            "registration_end": "2026-07-16",
+            "exam_start": "2026-08-22",
+            "exam_end": "2026-08-22",
+            "result_date": "2026-10-07",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0011",
+            "last_synced_at": "2026-10-05T10:22:51.006725Z"
+          },
+          {
+            "certificate_id": "873c7a1a-119b-4734-abc9-1809d4feb955",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 140회",
+            "round_label": "2026년 정기 기술사 140회",
+            "phase": "practical",
+            "registration_start": "2026-08-31",
+            "registration_end": "2026-10-15",
+            "exam_start": "2026-11-14",
+            "exam_end": "2026-11-28",
+            "result_date": "2026-12-11",
+            "result_display_end": "2027-02-10",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0011",
+            "last_synced_at": "2026-10-05T10:22:51.006725Z"
+          }
+        ]
+      },
+      "name": "용접기술사",
+      "certificate_id": "873c7a1a-119b-4734-abc9-1809d4feb955",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0011"
+    },
+    {
+      "qnet_code": "0012",
+      "details": {
+        "status": "not_requested"
+      },
+      "schedules": {
+        "schedule_response": {
+          "items": [
+            {
+              "docexamenddt": "20260207",
+              "docexamstartdt": "20260207",
+              "docpassdt": "20260325",
+              "docregenddt": "20260109",
+              "docregstartdt": "20260106",
+              "docsubmitenddt": "20260403",
+              "docsubmitstartdt": "20260209",
+              "implplannm": "2026년 정기 기술사 138회",
+              "jmfldnm": "금형기술사",
+              "mdobligfldcd": "167",
+              "mdobligfldnm": "금형.공작기계",
+              "obligfldcd": "16",
+              "obligfldnm": "기계",
+              "pracexamenddt": "20260516",
+              "pracexamstartdt": "20260502",
+              "pracpassenddt": "20260728",
+              "pracpassstartdt": "20260529",
+              "pracregenddt": "20260402",
+              "pracregstartdt": "20260303"
+            },
+            {
+              "docexamenddt": "20260516",
+              "docexamstartdt": "20260516",
+              "docpassdt": "20260624",
+              "docregenddt": "20260416",
+              "docregstartdt": "20260413",
+              "docsubmitenddt": "20260703",
+              "docsubmitstartdt": "20260518",
+              "implplannm": "2026년 정기 기술사 139회",
+              "jmfldnm": "금형기술사",
+              "mdobligfldcd": "167",
+              "mdobligfldnm": "금형.공작기계",
+              "obligfldcd": "16",
+              "obligfldnm": "기계",
+              "pracexamenddt": "20260815",
+              "pracexamstartdt": "20260801",
+              "pracpassenddt": "20261027",
+              "pracpassstartdt": "20260828",
+              "pracregenddt": "20260702",
+              "pracregstartdt": "20260608"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0012",
+          "retrieved_at": "2026-10-05T10:23:00.682751+00:00",
+          "retry_count": 0
+        },
+        "status": "validated",
+        "schedule_count": 4,
+        "retry_count": 0,
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0012",
+        "retrieved_at": "2026-10-05T10:23:00.682751+00:00",
+        "schedules": [
+          {
+            "certificate_id": "4c79d74e-3e3e-4eb4-9ab8-250bf526941d",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 138회",
+            "round_label": "2026년 정기 기술사 138회",
+            "phase": "written",
+            "registration_start": "2026-01-06",
+            "registration_end": "2026-01-09",
+            "exam_start": "2026-02-07",
+            "exam_end": "2026-02-07",
+            "result_date": "2026-03-25",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0012",
+            "last_synced_at": "2026-10-05T10:23:00.682751Z"
+          },
+          {
+            "certificate_id": "4c79d74e-3e3e-4eb4-9ab8-250bf526941d",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 138회",
+            "round_label": "2026년 정기 기술사 138회",
+            "phase": "practical",
+            "registration_start": "2026-03-03",
+            "registration_end": "2026-04-02",
+            "exam_start": "2026-05-02",
+            "exam_end": "2026-05-16",
+            "result_date": "2026-05-29",
+            "result_display_end": "2026-07-28",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0012",
+            "last_synced_at": "2026-10-05T10:23:00.682751Z"
+          },
+          {
+            "certificate_id": "4c79d74e-3e3e-4eb4-9ab8-250bf526941d",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 139회",
+            "round_label": "2026년 정기 기술사 139회",
+            "phase": "written",
+            "registration_start": "2026-04-13",
+            "registration_end": "2026-04-16",
+            "exam_start": "2026-05-16",
+            "exam_end": "2026-05-16",
+            "result_date": "2026-06-24",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0012",
+            "last_synced_at": "2026-10-05T10:23:00.682751Z"
+          },
+          {
+            "certificate_id": "4c79d74e-3e3e-4eb4-9ab8-250bf526941d",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기술사 139회",
+            "round_label": "2026년 정기 기술사 139회",
+            "phase": "practical",
+            "registration_start": "2026-06-08",
+            "registration_end": "2026-07-02",
+            "exam_start": "2026-08-01",
+            "exam_end": "2026-08-15",
+            "result_date": "2026-08-28",
+            "result_display_end": "2026-10-27",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=0012",
+            "last_synced_at": "2026-10-05T10:23:00.682751Z"
+          }
+        ]
+      },
+      "name": "금형기술사",
+      "certificate_id": "4c79d74e-3e3e-4eb4-9ab8-250bf526941d",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=0012"
+    },
+    {
+      "qnet_code": "1320",
+      "details": {
+        "status": "not_requested"
+      },
+      "schedules": {
+        "schedule_response": {
+          "items": [
+            {
+              "docexamenddt": "20260303",
+              "docexamstartdt": "20260130",
+              "docpassdt": "20260311",
+              "docregenddt": "20260115",
+              "docregstartdt": "20260112",
+              "docsubmitenddt": "20260320",
+              "docsubmitstartdt": "20260130",
+              "implplannm": "2026년 정기 기사 1회",
+              "jmfldnm": "정보처리기사",
+              "mdobligfldcd": "211",
+              "mdobligfldnm": "정보기술",
+              "obligfldcd": "21",
+              "obligfldnm": "정보통신",
+              "pracexamenddt": "20260506",
+              "pracexamstartdt": "20260418",
+              "pracpassenddt": "20260811",
+              "pracpassstartdt": "20260612",
+              "pracregenddt": "20260326",
+              "pracregstartdt": "20260323"
+            },
+            {
+              "docexamenddt": "20260529",
+              "docexamstartdt": "20260509",
+              "docpassdt": "20260610",
+              "docregenddt": "20260423",
+              "docregstartdt": "20260420",
+              "docsubmitenddt": "20260619",
+              "docsubmitstartdt": "20260511",
+              "implplannm": "2026년 정기 기사 2회",
+              "jmfldnm": "정보처리기사",
+              "mdobligfldcd": "211",
+              "mdobligfldnm": "정보기술",
+              "obligfldcd": "21",
+              "obligfldnm": "정보통신",
+              "pracexamenddt": "20260805",
+              "pracexamstartdt": "20260718",
+              "pracpassenddt": "20261110",
+              "pracpassstartdt": "20260911",
+              "pracregenddt": "20260625",
+              "pracregstartdt": "20260622"
+            },
+            {
+              "docexamenddt": "20260901",
+              "docexamstartdt": "20260807",
+              "docpassdt": "20260909",
+              "docregenddt": "20260723",
+              "docregstartdt": "20260720",
+              "docsubmitenddt": "20260918",
+              "docsubmitstartdt": "20260807",
+              "implplannm": "2026년 정기 기사 3회",
+              "jmfldnm": "정보처리기사",
+              "mdobligfldcd": "211",
+              "mdobligfldnm": "정보기술",
+              "obligfldcd": "21",
+              "obligfldnm": "정보통신",
+              "pracexamenddt": "20261113",
+              "pracexamstartdt": "20261024",
+              "pracpassenddt": "20270217",
+              "pracpassstartdt": "20261218",
+              "pracregenddt": "20260928",
+              "pracregstartdt": "20260921"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+          "retrieved_at": "2026-10-05T10:23:05.588961+00:00",
+          "retry_count": 1
+        },
+        "status": "validated",
+        "schedule_count": 6,
+        "retry_count": 1,
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+        "retrieved_at": "2026-10-05T10:23:05.588961+00:00",
+        "schedules": [
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기사 1회",
+            "round_label": "2026년 정기 기사 1회",
+            "phase": "written",
+            "registration_start": "2026-01-12",
+            "registration_end": "2026-01-15",
+            "exam_start": "2026-01-30",
+            "exam_end": "2026-03-03",
+            "result_date": "2026-03-11",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+            "last_synced_at": "2026-10-05T10:23:05.588961Z"
+          },
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기사 1회",
+            "round_label": "2026년 정기 기사 1회",
+            "phase": "practical",
+            "registration_start": "2026-03-23",
+            "registration_end": "2026-03-26",
+            "exam_start": "2026-04-18",
+            "exam_end": "2026-05-06",
+            "result_date": "2026-06-12",
+            "result_display_end": "2026-08-11",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+            "last_synced_at": "2026-10-05T10:23:05.588961Z"
+          },
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기사 2회",
+            "round_label": "2026년 정기 기사 2회",
+            "phase": "written",
+            "registration_start": "2026-04-20",
+            "registration_end": "2026-04-23",
+            "exam_start": "2026-05-09",
+            "exam_end": "2026-05-29",
+            "result_date": "2026-06-10",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+            "last_synced_at": "2026-10-05T10:23:05.588961Z"
+          },
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기사 2회",
+            "round_label": "2026년 정기 기사 2회",
+            "phase": "practical",
+            "registration_start": "2026-06-22",
+            "registration_end": "2026-06-25",
+            "exam_start": "2026-07-18",
+            "exam_end": "2026-08-05",
+            "result_date": "2026-09-11",
+            "result_display_end": "2026-11-10",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+            "last_synced_at": "2026-10-05T10:23:05.588961Z"
+          },
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기사 3회",
+            "round_label": "2026년 정기 기사 3회",
+            "phase": "written",
+            "registration_start": "2026-07-20",
+            "registration_end": "2026-07-23",
+            "exam_start": "2026-08-07",
+            "exam_end": "2026-09-01",
+            "result_date": "2026-09-09",
+            "result_display_end": null,
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+            "last_synced_at": "2026-10-05T10:23:05.588961Z"
+          },
+          {
+            "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기사 3회",
+            "round_label": "2026년 정기 기사 3회",
+            "phase": "practical",
+            "registration_start": "2026-09-21",
+            "registration_end": "2026-09-28",
+            "exam_start": "2026-10-24",
+            "exam_end": "2026-11-13",
+            "result_date": "2026-12-18",
+            "result_display_end": "2027-02-17",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=1320",
+            "last_synced_at": "2026-10-05T10:23:05.588961Z"
+          }
+        ]
+      },
+      "name": "정보처리기사",
+      "certificate_id": "79a6a7a3-5fbc-4b64-80dd-732206f3fb81",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1320"
+    },
+    {
+      "qnet_code": "1431",
+      "details": {
+        "status": "not_requested"
+      },
+      "schedules": {
+        "status": "failed",
+        "step": "schedule_api",
+        "retry_count": 1,
+        "error_type": "timeout",
+        "message": "공식 API 응답시간을 초과했습니다."
+      },
+      "name": "산업안전기사",
+      "certificate_id": "f194811b-b634-426d-9e1b-20b2a39def11",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1431"
+    },
+    {
+      "qnet_code": "6990",
+      "details": {
+        "status": "not_requested"
+      },
+      "schedules": {
+        "schedule_response": {
+          "items": [
+            {
+              "implplannm": "2026년 정기 기능사 2회",
+              "jmfldnm": "석공기능사",
+              "mdobligfldcd": "142",
+              "mdobligfldnm": "토목",
+              "obligfldcd": "14",
+              "obligfldnm": "건설",
+              "pracexamenddt": "20260614",
+              "pracexamstartdt": "20260530",
+              "pracpassenddt": "20260825",
+              "pracpassstartdt": "20260626",
+              "pracregenddt": "20260430",
+              "pracregstartdt": "20260427"
+            }
+          ],
+          "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=6990",
+          "retrieved_at": "2026-10-05T10:23:41.738922+00:00",
+          "retry_count": 0
+        },
+        "status": "validated",
+        "schedule_count": 1,
+        "retry_count": 0,
+        "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=6990",
+        "retrieved_at": "2026-10-05T10:23:41.738922+00:00",
+        "schedules": [
+          {
+            "certificate_id": "efd3074b-b082-4a53-ab4a-b59715ad23d4",
+            "year": 2026,
+            "round_key": "qnet-technical:2026년 정기 기능사 2회",
+            "round_label": "2026년 정기 기능사 2회",
+            "phase": "practical",
+            "registration_start": "2026-04-27",
+            "registration_end": "2026-04-30",
+            "exam_start": "2026-05-30",
+            "exam_end": "2026-06-14",
+            "result_date": "2026-06-26",
+            "result_display_end": "2026-08-25",
+            "vacancy_registration_start": null,
+            "vacancy_registration_end": null,
+            "exam_site": null,
+            "source_url": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getJMList?jmCd=6990",
+            "last_synced_at": "2026-10-05T10:23:41.738922Z"
+          }
+        ]
+      },
+      "name": "석공기능사",
+      "certificate_id": "efd3074b-b082-4a53-ab4a-b59715ad23d4",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=6990"
+    },
+    {
+      "qnet_code": "7910",
+      "details": {
+        "status": "not_requested"
+      },
+      "schedules": {
+        "status": "failed",
+        "step": "schedule_api",
+        "retry_count": 1,
+        "error_type": "timeout",
+        "message": "공식 API 응답시간을 초과했습니다."
+      },
+      "name": "한식조리기능사",
+      "certificate_id": "76f9e2b0-e3d5-47c9-916a-5cf5623f2105",
+      "official_url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7910"
+    }
+  ],
+  "summary": {
+    "details": {
+      "not_requested": 6
+    },
+    "schedules": {
+      "validated": 4,
+      "failed": 2
+    }
+  },
+  "finished_at": "2026-10-05T10:24:03.834372+00:00"
+}

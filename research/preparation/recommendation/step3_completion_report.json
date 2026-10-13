@@ -1,0 +1,38 @@
+{
+  "completed_at": "2026-10-09T06:53:36.264579+00:00",
+  "task": 3,
+  "sample_count": 8,
+  "categories": {
+    "T": 5,
+    "S": 3
+  },
+  "official_evidence_documents": 12,
+  "summaries_reviewed": 8,
+  "normalized_related_role_count": 13,
+  "missing_official_sections": [
+    {
+      "name": "정보처리기사",
+      "sections": [
+        "duties"
+      ]
+    },
+    {
+      "name": "공인중개사",
+      "sections": [
+        "career"
+      ]
+    },
+    {
+      "name": "기계경비지도사",
+      "sections": [
+        "duties"
+      ]
+    }
+  ],
+  "remaining_candidate_evidence_pending": 605,
+  "fixed_interest_assignments": 0,
+  "llm_agent_implemented": false,
+  "database_changed": false,
+  "github_pushed": false,
+  "reviewer": "assistant; not institution certification or human team review"
+}

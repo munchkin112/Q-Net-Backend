@@ -4,5 +4,13 @@ fastapi>=0.115,<1
 uvicorn>=0.30,<1
 httpx>=0.28,<1
 python-dotenv>=1,<2
-langgraph>=1,<2
-langchain>=1,<2
+# Google 로그인과 서비스 토큰 검증에 사용한다.
+PyJWT>=2.15,<3
+google-auth>=2.61,<3
+requests>=2.34,<3
+# Google Calendar OAuth 갱신 토큰의 저장 암호화에 사용한다.
+cryptography>=44,<51
+# 추천 자료 조회 함수의 @tool 정의에 사용한다.
+langchain-core>=1.6,<2
+langchain-openai>=1.7,<2
+langgraph>=1.2,<2

@@ -8,7 +8,17 @@ import psycopg
 from backend.db.connection import database_connection
 
 
-REQUIRED_TABLES = ("users", "user_profiles", "certificates", "schedules", "exam_information")
+REQUIRED_TABLES = (
+    "certificates",
+    "schedules",
+    "exam_information",
+    "recommendation_interest_categories",
+    "certificate_recommendation_contexts",
+    "calendar_connections",
+    "calendar_exam_plans",
+    "calendar_registrations",
+    "calendar_events",
+)
 
 
 def check_database() -> dict:

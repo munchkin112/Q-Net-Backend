@@ -1,0 +1,467 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		<!-- 시행종목 정보 -->
+		<div class="contTab on" id="tab1">
+			<div class="groupCont noLine">
+
+
+				<div class="division">
+
+					<b class="headLine3">
+						검정형 자격 시험일정
+					</b>
+
+	
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;" summary=" 구분, 필기원서접수(인터넷), 필기시험, 필기합격(예정자)발표, 실기원서접수, 실기시험, 최종합격자 발표일 정보제공">
+							<caption class="scHdn"> 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">필기원서접수 <br/>(인터넷)<br/>(휴일제외)</th>
+									<th scope="col">필기시험</th>
+									<th scope="col">필기합격<br/>(예정자)발표</th>
+									<th scope="col">실기원서접수<br/>(휴일제외)</th>
+									<th scope="col">실기시험</th>
+									<th scope="col">최종합격자 <br/>발표일</th>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+	
+									<td>2026년 정기 기사 2회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.04.20<br/> ~ <br/>2026.04.23
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.05.03<br/> ~ <br/>2026.05.04]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.05.09<br/>~<br/>2026.05.29
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.06.10</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.06.22<br/>~<br/>2026.06.25<br/>빈자리접수 :<br/>2026.07.12<br/> ~ <br/>2026.07.13</td><td>2026.07.18<br/> ~ <br/>2026.08.05</td><td>2026.09.04</td>
+								</tr>
+	
+								<tr>
+	
+									<td>2026년 정기 기사 3회</td>
+	
+									<!--  필기원서접수    -->
+									<!-- 2016.02.05 jws : 장민우 대리 요청 수시 기능사 제거 -->
+	
+	
+									<td>2026.07.20<br/> ~ <br/>2026.07.23
+	 							
+<!-- 									out.print("<br/>[빈자리접수 :<br/>"+TimeUtil.getCurrentDateType01(addRecptPilRegSt)+ "~<br/>" +TimeUtil.getCurrentDateType01(addRecptPilRegEd)+ "]" ); -->
+										<br/>
+										[빈자리접수 : 2026.08.01<br/> ~ <br/>2026.08.02]
+									</td>
+		
+									<!--  필기시험    -->
+									<td>
+	2026.08.07<br/>~<br/>2026.09.01
+									</td>
+									<!--  필기합격발표    -->
+	
+	
+	<td>2026.09.09</td>
+									<!--  실기원서접수    -->
+	
+										
+	
+	
+
+										
+						<td>2026.09.21<br/>~<br/>2026.09.28<br/>빈자리접수 :<br/>2026.10.18<br/> ~ <br/>2026.10.19</td><td>2026.10.24<br/> ~ <br/>2026.11.13</td><td>2026.12.11</td>
+								</tr>
+	
+
+							</tbody>
+						</table>
+					</div><!-- //contTable typeSm -->
+
+					<ul class="txtList dot">
+	<!-- 				<li><span style="color: red; font-weight: bold;">※ 2022년도 기사/산업기사 제1회 및 2회는 분리시행, 제3회 및 4회는 통합시행되며,<br/> 산업기사는 제3회 시험부터 기사로 통합 표기됩니다.</span> </li> -->
+						<li>원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임</li>
+						<li>필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임</li>
+						
+<!-- 					<li>3. 주말 및 공휴일, 공단창립기념일(3.18)에는 실기시험 원서 접수 불가</li> -->
+						<li>시험 일정은 종목별, 지역별로 상이할수 있음</li>
+						<li>'접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수</li>
+								
+						
+					
+					</ul>
+						
+
+<!-- 				</div>검정기관-산인공 division -->
+
+
+					<b class="headLine3">검정형 자격 시험정보 </b>
+
+
+
+
+
+<!-- 					<b class="contTit1">수수료</b> -->
+					<div class="contTable typeSm">
+						<table>
+							<thead>
+								<tr><span class="contTit1">수수료</span></tr>
+							</thead>
+						</table>
+						<table>
+							<caption class="scHdn">필기, 실기 항목순으로 수수료 안내표 </caption>
+							<colgroup>
+							<col style="width:auto"><col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+								<th scope="col"> 필기  </th><th scope="col"> 실기  </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td scope="col">19,400원</td><td scope="col">42,300원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+<!-- 				</div>//division -->
+	
+
+					<b class="contTit1 mT30">출제경향</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="출제경향 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>농업기계산업기사 출제경향</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" /><link rel="stylesheet" href="http://www.q-net.or.kr/editor_css/editor_default.css" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment--><span style="FONT-FAMILY: 한양신명조">- 필기시험의 내용은 고객만족&gt;자료실의 출제기준을 참고바랍니다.<br />
+- 실기시험은 작업형으로 시행되며 고객만족&gt;자료실의 출제기준을 참고바랍니다.</span> 
+<p class="바탕글" style="LAYOUT-GRID-MODE: char; LINE-HEIGHT: 130%; MARGIN-RIGHT: 19px"><span style="FONT-FAMILY: 한양신명조">- </span><span style="FONT-FAMILY: 한양신명조">농업기계의 특성을 이해하고 기계요소에 관한 전문지식을 활용하여 농업기계 및 관련 기계설비와 제작, 수리, </span></p>
+<p class="바탕글" style="LAYOUT-GRID-MODE: char; LINE-HEIGHT: 130%; MARGIN-RIGHT: 19px"><span style="FONT-FAMILY: 한양신명조">&nbsp; 정비 등과 농업기계 관련 인력에 대한 기술지도 감독 등을 하여 주어진 농업기계를 능률적으로 실무에 활용</span></p>
+<p class="바탕글" style="LAYOUT-GRID-MODE: char; LINE-HEIGHT: 130%; MARGIN-RIGHT: 19px"><span style="FONT-FAMILY: 한양신명조">&nbsp; 하도록 하는 직무를 수행능력평가</span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>농업기계산업기사 취득방법</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p>&#9312; 시 행 처 : 한국산업인력공단 </p>
+<p>&nbsp;</p>
+<p>&#9313; 관련학과 : 전문대학 및 대학의 기계공학, 동력기계 등 관련학과 </p>
+<p>&nbsp;</p>
+<p>&#9314; 시험과목 </p>
+<p>&nbsp;</p>
+<p>&nbsp;- 필기 1. 농업기계공작법 2. 농업기계요소 3. 농업기계학 4. 농업동력학 </p>
+<p>&nbsp;- 실기 : 농업기계정비작업 </p>
+<p>&nbsp;</p>
+<p>&#9315; 검정방법 </p>
+<p>&nbsp;</p>
+<p>&nbsp;- 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>
+<p>&nbsp;- 실기 : 작업형(3시간 정도) </p>
+<p>&nbsp;</p>
+<p>&#9316; 합격기준 </p>
+<p>&nbsp;</p>
+<p>&nbsp;- 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상 </p>
+<p>&nbsp;- 실기 : 100점을 만점으로 하여 60점 이상 </p>
+<table style="FONT-SIZE: 12px; WIDTH: 700px; BORDER-BOTTOM: #000 1px solid; MARGIN: 20px 0px">
+<tbody>
+<tr>
+<td style="FONT-SIZE: 14px; BORDER-TOP: #000 1px solid; BACKGROUND: #ccc; FONT-WEIGHT: bold; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" colspan="3">작업형 실기시험 기본정보</td>
+</tr>
+<tr>
+<td style="WIDTH: 140px" rowspan="3"><img style="HEIGHT: 120px; WIDTH: 120px" alt="" src="http://www.q-net.or.kr/crsedt/websource/jsp/NamoCrsEdtMediaView.jsp?fileName=/images/000040/20210819141511677.jpg" /> </td>
+<td style="WIDTH: 270px; FONT-WEIGHT: bold; TEXT-ALIGN: left; PADDING-TOP: 25px">안전등급(safety Level) : 4 등급</td>
+<td style="WIDTH: 190px; TEXT-ALIGN: right">
+<table style="WIDTH: 100%; BORDER-COLLAPSE: collapse; TEXT-ALIGN: center">
+<tbody>
+<tr>
+<td>▼</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr style="FONT-SIZE: 12px; COLOR: #fff">
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #f00; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">위험</td>
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #5f6062; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">경고</td>
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #7f8084; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">주의</td>
+<td style="BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; BACKGROUND: #a7abae; BORDER-BOTTOM: #000 1px solid; COLOR: #fff; BORDER-LEFT: #000 1px solid">관심</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td colspan="2">
+<table style="FONT-SIZE: 12px; BORDER-TOP: #000 2px solid; BORDER-RIGHT: #000 2px solid; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #000 2px solid; BORDER-LEFT: #000 2px solid">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; WIDTH: 30%; BORDER-BOTTOM: #999 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #999 1px solid; PADDING-RIGHT: 5px">&middot; 시험장소 구분</td>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #000 2px solid; PADDING-RIGHT: 5px">실내</td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; WIDTH: 30%; BORDER-BOTTOM: #999 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #999 1px solid; PADDING-RIGHT: 5px">&middot; 주요시설 및 장비</td>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #000 2px solid; PADDING-RIGHT: 5px">트랙터, 경운기, 콤바인, 이앙기 등</td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; WIDTH: 30%; BORDER-BOTTOM: #999 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #999 1px solid; PADDING-RIGHT: 5px">&middot; 보호구</td>
+<td style="BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 5px; BORDER-LEFT: #000 2px solid; PADDING-RIGHT: 5px">작업복, 작업화</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td style="TEXT-ALIGN: justify" colspan="2">
+<ul style="LIST-STYLE-TYPE: circle; PADDING-LEFT: 20px; MARGIN: 0px">
+<li>보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될수 있습니다.<br />반드시 수험자 지참공구 목록을 확인하여 주시기 바랍니다. </li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+		<b class="contTit1 mT30" style="page-break-before: auto;" >출제기준</b> 
+							
+			<a href="#" onclick="cst006Report('2027', '1263');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>1. 농업기계산업기사 (2027.1.1 ~ 2030.12.31)</span>
+			</a>
+			<br/>
+							
+			<a href="#" onclick="cst006Report('2027', '572');" class="link_s_arrR underline" > <!-- 웹접근성  -->
+				<span>2. 농업기계산업기사 (2025.1.1 ~ 2026.12.31)</span>
+			</a>
+			<br/>
+
+			<br/>
+			<a href="/cst006.do?id=cst00601&code=1202&gSite=Q&gId=" title="고객지원-자료실-출제기준">
+				메뉴상단 <span class="c_Red underline">고객지원-자료실-출제기준</span> 에서도 보실 수 있습니다.
+			</a>
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+		
+     <br/>
+		<b class="contTit1">과정평가형 자격 취득정보</b>
+			<ul class="txtList dot">
+				<li>
+				위 자격은 과정평가형으로도 취득할 수 있습니다.
+					<ul class="txtList hyphen">
+						<li>단, 해당종목을 운영하는 교육훈련기관이 있어야 가능</li>
+					</ul>
+				</li>
+				<li>
+					과정평가형 자격은 국가직무능력표준(NCS)을 기반으로 설계되어 지정된 교육·훈련과정을 충실히 이수한 후, 내·외부평가를 거쳐 일정 합격기준을 충족하는 교육훈련생에게 국가기술자격을 부여하는 제도입니다.
+				</li>
+				<li>
+					더 자세한 사항은 아래의 링크를 통하여 확인하시기 바랍니다.
+				<ul class="txtList hyphen">
+					<li>과정평가형 자격 홈페이지(CQ-Net) <a href="https://c.q-net.or.kr" target="_blank" title="과정평가형 자격 홈페이지(CQ-Net)  새창 열림" class="c_Point underline">https://c.q-net.or.kr</a></li>
+					<li>과정평가형 자격 편성기준
+						<a href="https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do" target="_blank" title="과정평가형 자격 편성기준 새창 열림" class="c_Point underline">
+							https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do
+						</a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+
+
+	
+
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	
